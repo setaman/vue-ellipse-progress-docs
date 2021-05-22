@@ -1,0 +1,23 @@
+{
+  "name": "vue-ellipse-progress-docs",
+  "version": "0.1.0-alpha.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/setaman/vue-ellipse-progress-docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/setaman/vue-ellipse-progress-docs/issues"
+  },
+  "homepage": "https://github.com/setaman/vue-ellipse-progress-docs#readme",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.14"
+  }
+}
