@@ -18,6 +18,17 @@
   },
   "homepage": "https://github.com/setaman/vue-ellipse-progress-docs#readme",
   "devDependencies": {
+    "@vuepress/client": "^2.0.0-beta.12",
+    "@vuepress/theme-default": "^2.0.0-beta.14",
+    "@vuepress/utils": "^2.0.0-beta.11",
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.3.0",
+    "tailwindcss": "^2.1.2",
     "vuepress": "^2.0.0-beta.14"
+  },
+  "dependencies": {
+    "@iconscout/unicons": "^4.0.0",
+    "vue-ellipse-progress": "^2.0.0",
+    "vue-slider-component": "^4.0.0-beta.3"
   }
 }
