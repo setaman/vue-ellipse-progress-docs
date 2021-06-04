@@ -1,22 +1,20 @@
 <template>
-  <div class="example-container rounded-lg" :class="{ code: mode === 'Code' }">
-    <div class="example-container-header rounded-t-lg px-4 py-2 flex justify-end">
-      <link-icon class="mr-2" href="https://github.com/setaman/vue-ellipse-progress/tree/v2-dev" target="_blank">
+  <div class="example-container rounded-lg my-6" :class="{ code: mode === 'Code' }">
+    <div class="example-container-header rounded-t-lg px-4 py-2 flex justify-end" v-if="showModes || exampleLink">
+      <link-icon class="mr-2" :href="exampleLink" target="_blank" v-if="exampleLink">
         <icon icon="github"/>
       </link-icon>
-      <SwitchSlider :options="modes" size="100" v-model="mode" />
+      <SwitchSlider :options="modes" size="100" v-model="mode" v-if="showModes"/>
     </div>
     <div class="example-container-body">
-      <div class="example-container-result p-4 flex-1" v-if="mode === 'Result'">
-        <slot :progress="progress" :state="state">
+      <div class="example-container-result p-4" v-if="mode === 'Result'">
+        <slot :progress="progress" :state="state" :loading="loading" :noData="noData" :determinate="determinate">
 
         </slot>
       </div>
-      <div class="example-container-code p-4 flex-1" v-else>
+      <div class="example-container-code p-4" v-else>
         <slot name="code">
-          <span class="text-indigo-500">
-            code
-          </span>
+
         </slot>
       </div>
     </div>
@@ -47,6 +45,14 @@ export default {
     showStates: {
       type: Boolean,
       default: true,
+    },
+    showModes: {
+      type: Boolean,
+      default: true,
+    },
+    exampleLink: {
+      type: String,
+      default: "",
     }
   },
   data: () => ({
@@ -59,7 +65,16 @@ export default {
   computed: {
     uid() {
       return this._.uid;
-    }
+    },
+    loading() {
+      return this.state === "Loading"
+    },
+    noData() {
+      return this.state === "No data"
+    },
+    determinate() {
+      return this.state === "Determinate"
+    },
   }
 }
 </script>
@@ -108,16 +123,32 @@ export default {
       display: block;
       position: absolute;
       left: -20px;
-      top: -2px;
+      top: -3px;
       background: white;
       width: 2px;
-      height: 109%;
+      height: 110%;
       transform: rotate(20deg);
     }
   }
 }
 .example-container-code {
   max-height: 80vh;
+}
+
+.dark {
+  .example-container-body {
+    border: 2px solid #2a2c3c;
+    min-height: 236px;
+  }
+  .example-container-header {
+    background-color: #2a2c3c;
+  }
+  .example-container-footer {
+    background-color: #2a2c3c;
+  }
+  .example-controls-states:after {
+    background-color: #22272e;
+  }
 }
 
 @media (max-width: 768px) {

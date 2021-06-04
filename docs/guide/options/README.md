@@ -1,4 +1,4 @@
-# Options
+# Options overview
 The **[`progress`](#progress)** is the only required property, and you are ready to go with just following line:
 ```html
 <ve-progress :progress="progress"/>
@@ -38,31 +38,6 @@ The **[`progress`](#progress)** is the only required property, and you are ready
 | **[`reverse`](#reverse)** | Boolean | | false |
 | **[`data`](#data)** | Array | defines multiple circles, takes as values Objects with almost all props defined above | |
 
-
-<br>
-
-
-- ### `progress`
-
-###### Animated: ✔️
-
-Is any Number in range \[-100, 100] (including **decimals**). This property defines the filled area from progress circle line in
-percent and is shown by default as the **legend** in the middle of the circle. `progress` is animated and counts up or down on any value changes with duration defined in
-**[`animation.duration`](#animation)** property. Set a negative value to fill the progress line counterclockwise. Alternatively [`reverse`](#reverse) can be used.
-
-###### Example: 📜
-
-```js
-<ve-progress :progress="myProgress" />
-...
-this.myProgress = 55.5;
-this.myProgress = this.tasksDone * 100 / maxTasks; // the percentage of done tasks
-```
-
->❗ The `progress` is always used to fill the progress circle line, it should be always in the range [-100, 100] and not valid Numbers lead to **[`noData`](#noData)** state.
->For customization purpose please use **[`legend`](#legend)** and take a look at **[`legendFormatter`](#legendformatter)**.
-
->❗ If **[`legend`](#legend)** is defined the `progress` will **not** be displayed as circle legend.
 
 <br>
 

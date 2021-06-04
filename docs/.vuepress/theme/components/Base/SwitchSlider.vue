@@ -163,4 +163,9 @@ export default {
     }
   }
 }
+.dark {
+  .switch-container {
+    background-color: #22272e;
+  }
+}
 </style>

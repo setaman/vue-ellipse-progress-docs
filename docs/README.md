@@ -1,9 +1,6 @@
 ---
-layout: HomeLayout
-sidebar: false
-pageClass: dark
-home: false
+home: true
 ---
-
-# Home page
-<views-Introduction/>
+::: warning Early alpha
+WIP!
+:::
