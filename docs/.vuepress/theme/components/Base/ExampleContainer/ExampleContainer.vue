@@ -4,7 +4,7 @@
       <link-icon class="mr-2" :href="exampleLink" target="_blank" v-if="exampleLink">
         <icon icon="github"/>
       </link-icon>
-      <SwitchSlider :options="modes" size="100" v-model="mode" v-if="showModes"/>
+      <SwitchSlider :options="modes" :size="100" v-model="mode" v-if="showModes"/>
     </div>
     <div class="example-container-body">
       <div class="example-container-result p-4" v-if="mode === 'Result'">

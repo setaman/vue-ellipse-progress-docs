@@ -2,30 +2,30 @@
   <example-container>
     <template #default="{ progress, loading, noData, determinate }">
       <div class="inline-block border-2 border-solid border-indigo-600 m-2">
-        <ve-progress :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate"
+        <v-e-p :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate"
                      :size="150"
                      line-mode="in 30"
                      :empty-thickness="0"
         >
           <span slot="legend-caption">200</span>
-        </ve-progress>
+        </v-e-p>
       </div>
       <div class="inline-block border-2 border-solid border-indigo-600 m-2">
-        <ve-progress :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate"
+        <v-e-p :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate"
                      :size="150"
                      dot="25 gray"
         >
           <span slot="legend-caption">200</span>
-        </ve-progress>
+        </v-e-p>
       </div>
       <div class="inline-block border-2 border-solid border-indigo-600 m-2">
-        <ve-progress :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate"
+        <v-e-p :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate"
                      :size="150"
                      line-mode="out"
                      thickness="10%"
         >
           <span slot="legend-caption">200</span>
-        </ve-progress>
+        </v-e-p>
       </div>
     </template>
   </example-container>
@@ -33,9 +33,10 @@
 
 <script>
 import ExampleContainer from "../../components/Base/ExampleContainer/ExampleContainer";
+import VEP from "../../components/Base/VEP";
 export default {
   name: "SizeDependencies",
-  components: {ExampleContainer}
+  components: {VEP, ExampleContainer}
 }
 </script>
 

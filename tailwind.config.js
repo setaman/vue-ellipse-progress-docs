@@ -2,8 +2,9 @@ module.exports = {
   corePlugins: {
     preflight: false,
   },
-  purge: [],
-  darkMode: "class", // or 'media' or 'class'
+  purge: [
+    './docs/**/*.vue',
+  ],
   theme: {
     extend: {},
   },

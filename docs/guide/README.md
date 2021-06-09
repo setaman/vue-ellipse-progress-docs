@@ -23,4 +23,3 @@ createApp(App).use(veProgress);
 - [Contributing](https://github.com/setaman/vue-ellipse-progress/blob/master/CONTRIBUTING.md)
 
 ❕ Take a look at some interesting examples on the [Demo page](https://vue-ellipse-progress-demo.netlify.com) ❕
-<views-Introduction/>
