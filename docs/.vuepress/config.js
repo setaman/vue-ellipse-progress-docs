@@ -4,7 +4,7 @@ module.exports = {
     lang: 'en-US',
     title: 'vue-ellipse-progress',
     description: 'This is not my first VuePress site',
-    base: isDevMode ? "/" : "/vue-ellipse-progress-guide/",
+    base: isDevMode ? "/" : "/vue-ellipse-progress-docs/",
 
     markdown: {
         code: {

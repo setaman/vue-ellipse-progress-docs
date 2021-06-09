@@ -2,9 +2,9 @@ module.exports = {
   corePlugins: {
     preflight: false,
   },
-  purge: [
-    './docs/**/*.vue',
-  ],
+  /*purge: [
+    './docs/!**!/!*.vue',
+  ],*/
   theme: {
     extend: {},
   },
