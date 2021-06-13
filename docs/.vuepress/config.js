@@ -42,6 +42,10 @@ module.exports = {
                                     link: "/guide/options/progress.md"
                                 },
                                 {
+                                    text: "legend",
+                                    link: "/guide/options/legend.md"
+                                },
+                                {
                                     text: "size",
                                     link:  "/guide/options/size.md",
                                 },

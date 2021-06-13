@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@iconscout/unicons": "^4.0.0",
-    "vue-ellipse-progress": "^2.0.0",
-    "vue-slider-component": "^4.0.0-beta.3"
+    "@vueform/slider": "^1.0.5",
+    "vue-ellipse-progress": "^2.0.0"
   }
 }

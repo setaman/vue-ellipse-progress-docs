@@ -20,8 +20,11 @@
     </div>
     <div class="example-container-footer rounded-b-lg md:flex md:flex-row">
       <div class="example-controls-range flex-1 py-2 px-4" v-if="showProgress">
-        <input class="progress-range mt-4" type="range" :id="`progress_${uid}`" name="progress" step="1"
-               min="-100" max="100" v-model.number="progress">
+        <div class="flex flex-wrap h-full content-center">
+          <slot name="range">
+            <slider class="w-full" :min="range[0]" :max="range[1]" v-model.number="progress"/>
+          </slot>
+        </div>
       </div>
       <div class="example-controls-states flex-2 py-2 px-4 md:ml-8" v-if="showStates">
         <SwitchSlider :options="states" size="100" v-model="state" />
@@ -34,9 +37,12 @@
 import SwitchSlider from "../SwitchSlider";
 import Icon from "../Icon";
 import LinkIcon from "../LinkIcon";
+import Slider from "@vueform/slider";
+import "@vueform/slider/themes/default.css";
+
 export default {
   name: "ExampleContainer",
-  components: {LinkIcon, Icon, SwitchSlider},
+  components: { LinkIcon, Icon, SwitchSlider, Slider },
   props: {
     showProgress: {
       type: Boolean,
@@ -53,19 +59,22 @@ export default {
     exampleLink: {
       type: String,
       default: "",
+    },
+    range: {
+      type: Array,
+      default: () => [-100, 100]
     }
   },
-  data: () => ({
-    progress: 50,
-    state: "Normal",
-    mode: "Result",
-    states: ["Normal", 'Loading', 'Determinate', 'No data'],
-    modes: ["Result", "Code"]
-  }),
+  data() {
+    return {
+      progress: (Math.abs(this.range[0] - this.range[1]) / 2) * 100 / Math.abs(this.range[0] - this.range[1]),
+      state: "Normal",
+      mode: "Result",
+      states: ["Normal", 'Loading', 'Determinate', 'No data'],
+      modes: ["Result", "Code"]
+    }
+  },
   computed: {
-    uid() {
-      return this._.uid;
-    },
     loading() {
       return this.state === "Loading"
     },
@@ -75,11 +84,11 @@ export default {
     determinate() {
       return this.state === "Determinate"
     },
-  }
+  },
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .example-container-body {
   border: 2px solid #f5f6fa;
   min-height: 236px;
@@ -89,33 +98,6 @@ export default {
 }
 .example-container-footer {
   background-color: #f5f6fa;
-  .progress-range {
-    width: 100%;
-    -webkit-appearance: none;
-    &::-webkit-slider-runnable-track {
-      width: 300px;
-      height: 5px;
-      background: #ddd;
-      border: none;
-      border-radius: 3px;
-    }
-    &::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      transition: 0.1s;
-      border: none;
-      height: 12px;
-      width: 12px;
-      border-radius: 50%;
-      background: #265cff;
-      margin-top: -3px;
-      cursor: pointer;
-      &:hover{
-        height: 16px;
-        width: 16px;
-        margin-top: -5px;
-      }
-    }
-  }
   .example-controls-states {
     position: relative;
     &:after {
@@ -135,6 +117,14 @@ export default {
   max-height: 80vh;
 }
 
+.example-controls-range {
+  &:hover {
+    .slider-tooltip {
+      opacity: 1;
+    }
+  }
+}
+
 .dark {
   .example-container-body {
     border: 2px solid #2a2c3c;
@@ -149,6 +139,17 @@ export default {
   .example-controls-states:after {
     background-color: #22272e;
   }
+}
+
+.slider-connect {
+  background: #265cff;
+}
+
+.slider-tooltip {
+  transition: 0.2s;
+  opacity: 0;
+  background: #265cff;
+  border: 1px solid #265cff;
 }
 
 @media (max-width: 768px) {

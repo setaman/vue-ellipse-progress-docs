@@ -26,6 +26,6 @@ If **[`legend`](#legend)** is defined the `progress` will **not** be displayed a
 <ve-progress :progress="50" />
 ```
 
-### Basic Example nach
+### Basic Example
 
 <ProgressBasic/>

@@ -226,40 +226,6 @@ Defines the fill color of the empty circle. Takes the same value as **[`color`](
 
 Boolean that defines whether the legend value (**[`progress`](#progress)** or  **[`legend`](#legend)**) is hidden.
 
-<br>
-
-- ### `legend`
-
-###### Animated: ✔️
-
-Is any Number or String. Use this property if you want to show the progress value as the legend of the circle that is not in
-the range [-100, 100]. If defined, `legend` will replace [`progress`](#progress) as the circle legend! Defining the value as
-string you can apply very simple formatting with `"."` or `","` as delimiter to set initial counter placeholder (e.g "0045.00").
-Apart from this the value must generally be a valid JavaScript Number. For more customization possibilities please
-use [`legendFormatter`](#legendformatter) or [`scoped slot`](#default).
-
-###### Example: 📜
-
-Let's say you need to display a rating from 0 to 5 of a product with 3.5 stars. Setting the [`progress`](#progress) to 3.5 will
-fill the circle to 3.5 percent, and this is not what we need, since we want to display the percentage of 5 as progress.
-At this point we need an additional property `legend`. We can show the product rating like in the following example:
-
-```js
-<ve-progress :progress="progress" :legend="rating" />
-...
-this.rating = 3.5;
-this.progress = this.rating * 100 / 5; // the rating percentage
-```
-Now you can display custom progress value that still animated and circle progress fills properly!
-
-```vue
-<ve-progress legend="0100,450" /> // counts up from "0000,000"
-```
-
->❗ note that `legend` replaces **[`progress`](#progress)** as circle legend.
-
-
-<br>
 
 - ### `legendFormatter`
 
