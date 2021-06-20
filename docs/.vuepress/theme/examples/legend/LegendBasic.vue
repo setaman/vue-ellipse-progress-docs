@@ -1,7 +1,7 @@
 <template>
   <example-container :range="[-4000, maxLegendValue]">
-    <template #default="{ progress, loading, noData, determinate }">
-      <v-e-p :progress="calculateProgress(progress)" :loading="loading" :no-data="noData" :determinate="determinate" :legend="progress"/>
+    <template #default="{ progress, loading, slider, noData, determinate }">
+      <v-e-p :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" :legend="slider"/>
     </template>
   </example-container>
 </template>
@@ -15,11 +15,6 @@ export default {
   data: () => ({
     maxLegendValue: 4000
   }),
-  methods: {
-    calculateProgress(currentValue) {
-      return currentValue * 100 / this.maxLegendValue;
-    }
-  },
 }
 </script>
 

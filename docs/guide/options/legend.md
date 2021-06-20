@@ -29,11 +29,11 @@ the circle legend
 <ve-progress legend="200,50" />
 ```
 
-### Basic Example
+### Examples
 
 <LegendBasic/>
 
-### Relation to `progress`
+#### Relation to `progress`
 
 The following example brings more clarity to the relationship between `legend` and [`progress`](./progress.md).
 Let's say you need to display a rating from 0 to 5 of a product with 3.5 stars. Setting the [`progress`](./progress.md) to 3.5 will

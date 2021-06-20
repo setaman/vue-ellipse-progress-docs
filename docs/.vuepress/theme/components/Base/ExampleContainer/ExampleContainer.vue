@@ -1,14 +1,17 @@
 <template>
   <div class="example-container rounded-lg my-6" :class="{ code: mode === 'Code' }">
     <div class="example-container-header rounded-t-lg px-4 py-2 flex justify-end" v-if="showModes || exampleLink">
+      <btn icon class="mr-2" @click="reload">
+        <icon style="font-size: 1.2rem" icon="redo"/>
+      </btn>
       <link-icon class="mr-2" :href="exampleLink" target="_blank" v-if="exampleLink">
         <icon icon="github"/>
       </link-icon>
       <SwitchSlider :options="modes" :size="100" v-model="mode" v-if="showModes"/>
     </div>
     <div class="example-container-body">
-      <div class="example-container-result p-4" v-if="mode === 'Result'">
-        <slot :progress="progress" :state="state" :loading="loading" :noData="noData" :determinate="determinate">
+      <div class="example-container-result p-4" v-if="mode === 'Result'" :key="componentKey">
+        <slot :progress="progress" :slider="slider" :state="state" :loading="loading" :noData="noData" :determinate="determinate">
 
         </slot>
       </div>
@@ -22,7 +25,7 @@
       <div class="example-controls-range flex-1 py-2 px-4" v-if="showProgress">
         <div class="flex flex-wrap h-full content-center">
           <slot name="range">
-            <slider class="w-full" :min="range[0]" :max="range[1]" v-model.number="progress"/>
+            <slider class="w-full" :min="range[0]" :max="range[1]" v-model.number="slider"/>
           </slot>
         </div>
       </div>
@@ -39,10 +42,11 @@ import Icon from "../Icon";
 import LinkIcon from "../LinkIcon";
 import Slider from "@vueform/slider";
 import "@vueform/slider/themes/default.css";
+import Btn from "../Btn";
 
 export default {
   name: "ExampleContainer",
-  components: { LinkIcon, Icon, SwitchSlider, Slider },
+  components: {Btn, LinkIcon, Icon, SwitchSlider, Slider },
   props: {
     showProgress: {
       type: Boolean,
@@ -67,14 +71,18 @@ export default {
   },
   data() {
     return {
-      progress: (Math.abs(this.range[0] - this.range[1]) / 2) * 100 / Math.abs(this.range[0] - this.range[1]),
+      slider: Math.round(this.range[1] / 2),
       state: "Normal",
       mode: "Result",
       states: ["Normal", 'Loading', 'Determinate', 'No data'],
-      modes: ["Result", "Code"]
+      modes: ["Result", "Code"],
+      componentKey: 0,
     }
   },
   computed: {
+    progress() {
+      return this.slider * 100 / this.range[1]
+    },
     loading() {
       return this.state === "Loading"
     },
@@ -84,6 +92,12 @@ export default {
     determinate() {
       return this.state === "Determinate"
     },
+  },
+  methods: {
+    reload(){
+      console.log("REEEE")
+      this.componentKey ++;
+    }
   },
 }
 </script>
