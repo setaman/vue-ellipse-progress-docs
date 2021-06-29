@@ -1,6 +1,6 @@
 <template>
   <div class="example-container rounded-lg my-6" :class="{ code: mode === 'Code' }">
-    <div class="example-container-header rounded-t-lg px-4 py-2 flex justify-end" v-if="showModes || exampleLink">
+    <div class="example-container-header rounded-t-lg px-4 py-2 flex justify-end">
       <btn icon class="mr-2" @click="reload">
         <icon style="font-size: 1.2rem" icon="redo"/>
       </btn>
@@ -15,15 +15,15 @@
 
         </slot>
       </div>
-      <div class="example-container-code p-4" v-else>
+      <div class="example-container-code" v-else>
         <slot name="code">
 
         </slot>
       </div>
     </div>
     <div class="example-container-footer rounded-b-lg md:flex md:flex-row">
-      <div class="example-controls-range flex-1 py-2 px-4" v-if="showProgress">
-        <div class="flex flex-wrap h-full content-center">
+      <div class="example-controls-range flex-1 py-2 px-4">
+        <div class="flex flex-wrap h-full content-center" v-if="showProgress">
           <slot name="range">
             <slider class="w-full" :min="range[0]" :max="range[1]" v-model.number="slider"/>
           </slot>
@@ -129,6 +129,16 @@ export default {
 }
 .example-container-code {
   max-height: 80vh;
+  .code-group__nav {
+    display: none;
+  }
+  .language-vue.ext-vue {
+    background-color: transparent;
+  }
+  pre.language-vue {
+    margin: 0;
+    padding: 16px;
+  }
 }
 
 .example-controls-range {

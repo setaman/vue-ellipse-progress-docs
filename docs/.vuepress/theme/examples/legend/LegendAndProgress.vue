@@ -3,6 +3,11 @@
     <template #default="{ progress, slider, loading, noData, determinate }">
       <v-e-p :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" :legend="slider"/>
     </template>
+    <template #code>
+      <slot name="code">
+
+      </slot>
+    </template>
   </example-container>
 </template>
 

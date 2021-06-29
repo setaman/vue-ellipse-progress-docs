@@ -31,9 +31,34 @@ the circle legend
 
 ### Examples
 
-<LegendBasic/>
+<LegendBasic class="mb-16">
+<template #code>
+<CodeGroup>
+<CodeGroupItem >
 
-#### Relation to `progress`
+```vue
+<template>
+  <ve-progress :progress="progress" :legend="legend"/>
+</template>
+
+<script>
+export default {
+  data: () => ({
+    maxLegendValue: 4000,
+    legend: 2000,
+  }),
+  computed: {
+    progress() {
+      return this.legend * 100 / this.maxLegendValue;
+    }
+  },
+}
+</script>
+```
+</CodeGroupItem>
+</CodeGroup>
+</template>
+</LegendBasic>
 
 The following example brings more clarity to the relationship between `legend` and [`progress`](./progress.md).
 Let's say you need to display a rating from 0 to 5 of a product with 3.5 stars. Setting the [`progress`](./progress.md) to 3.5 will
@@ -51,5 +76,57 @@ And then apply the values:
 ```
 As a result, Rating can be displayed as a circle legend and progress will be calculated correctly:
 
-<LegendAndProgress/>
+<LegendAndProgress class="mb-16">
+<template #code>
+<CodeGroup>
+<CodeGroupItem >
+
+```vue
+<template>
+  <ve-progress :progress="progress" :legend="rating"/>
+</template>
+
+<script>
+export default {
+  data: () => ({
+    rating: 3.5,
+  }),
+  computed: {
+    progress() {
+      return this.rating * 100 / 5;
+    }
+  },
+}
+</script>
+```
+</CodeGroupItem>
+</CodeGroup>
+</template>
+</LegendAndProgress>
+
+With the `legend` defined as String we can set custom decimals delimiter and apply simplest formatting of the displayed
+value:
+
+<example-container :show-progress="false">
+<template #default="{ loading, slider, noData, determinate }">
+<v-e-p class="mr-2" size="160" :progress="50" :loading="loading" :no-data="noData" :determinate="determinate" legend="20,50" font-size="1.6rem"/>
+<v-e-p class="mr-2" size="160" :progress="50" :loading="loading" :no-data="noData" :determinate="determinate" legend="01000" font-size="1.6rem"/>
+<v-e-p class="mr-2" size="160" :progress="50" :loading="loading" :no-data="noData" :determinate="determinate" legend="0050,51100" font-size="1.6rem"/>
+</template>
+<template #code>
+<CodeGroup>
+<CodeGroupItem >
+
+```vue
+<template>
+  <ve-progress :progress="50" legend="20,50"/>
+  <ve-progress :progress="50" legend="01000"/>
+  <ve-progress :progress="50" legend="0050,51100"/>
+</template>
+```
+</CodeGroupItem>
+</CodeGroup>
+</template>
+</example-container>
+
 

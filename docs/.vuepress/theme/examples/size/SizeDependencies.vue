@@ -1,5 +1,5 @@
 <template>
-  <example-container>
+  <example-container :show-modes="false">
     <template #default="{ progress, loading, noData, determinate }">
       <div class="inline-block border-2 border-solid border-indigo-600 m-2">
         <v-e-p :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate"
