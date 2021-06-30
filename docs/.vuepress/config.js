@@ -32,6 +32,7 @@ module.exports = {
                             text: 'Quick start',
                             link: "/guide/README.md",
                         },
+                        "/guide/installation.md",
                         {
                             isGroup: true,
                             text: "Options",
