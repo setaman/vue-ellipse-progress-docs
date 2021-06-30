@@ -33,6 +33,7 @@ module.exports = {
                             link: "/guide/README.md",
                         },
                         "/guide/installation.md",
+                        "/guide/usage.md",
                         {
                             isGroup: true,
                             text: "Options",

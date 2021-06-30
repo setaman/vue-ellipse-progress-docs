@@ -93,6 +93,5 @@ Just add the following line to your HTML and initialize the component as plugin:
     </script>
   </body>
 </html>
-
 ```
 
