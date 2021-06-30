@@ -17,6 +17,11 @@
         <span slot="legend-caption">40</span>
       </v-e-p>
     </template>
+    <template #code>
+      <slot name="code">
+
+      </slot>
+    </template>
   </example-container>
 </template>
 

@@ -25,7 +25,34 @@ by default the **[`thickness`](#thickness)** and **[`emptyThickness`](#emptyThic
 
 ### Basic Example
 
-<SizeBasic/>
+<SizeBasic>
+<template #code>
+<CodeGroup>
+<CodeGroupItem >
+
+```vue
+<template>
+  <ve-progress :progress="50" :size="200">
+    <span slot="legend-caption">200</span>
+  </ve-progress>
+  <ve-progress :progress="50" :size="160">
+    <span slot="legend-caption">160</span>
+  </ve-progress>
+  <ve-progress :progress="50" :size="120">
+    <span slot="legend-caption">120</span>
+  </ve-progress>
+  <ve-progress :progress="50" :size="80">
+    <span slot="legend-caption">80</span>
+  </ve-progress>
+  <ve-progress :progress="50" :size="40">
+    <span slot="legend-caption">40</span>
+  </ve-progress>
+</template>
+```
+</CodeGroupItem>
+</CodeGroup>
+</template>
+</SizeBasic>
 
 ### Size depending calculations
 

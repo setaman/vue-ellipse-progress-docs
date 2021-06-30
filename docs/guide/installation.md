@@ -16,7 +16,7 @@ Use the package manager of your choice to install the library from NPM. After th
 initialize the component as a plugin or to import it directly.
 
 <CodeGroup>
-  <CodeGroupItem title="NPM">
+  <CodeGroupItem title="NPM" active>
 
 ```bash:no-line-numbers
 npm i vue-ellipse-progress
@@ -24,12 +24,11 @@ npm i vue-ellipse-progress
 
   </CodeGroupItem>
 
-  <CodeGroupItem title="Yarn" active>
+  <CodeGroupItem title="Yarn">
 
 ```bash:no-line-numbers
 yarn add vue-ellipse-progress
 ```
-
   </CodeGroupItem>
 </CodeGroup>
 
@@ -47,7 +46,6 @@ createApp(App).use(veProgress);
 
 // define custom name and use as <vep .../>
 // createApp(App).use(veProgress, "vep");
-
 ```
 
 ### Import component
