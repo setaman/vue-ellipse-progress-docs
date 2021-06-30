@@ -1,5 +1,6 @@
 @tailwind base;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand:wght@500&display=swap');
 
 :root {
   scroll-behavior: smooth;
@@ -11,4 +12,12 @@
 .custom-container {
   border-left: none !important;
   border-radius: .5rem;
+}
+
+.quick-start {
+  .theme-default-content {
+    .icon.outbound {
+      display: none;
+    }
+  }
 }
