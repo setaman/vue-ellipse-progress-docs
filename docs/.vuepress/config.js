@@ -59,6 +59,10 @@ module.exports = {
                                     text: "thickness",
                                     link:  "/guide/options/thickness.md",
                                 },
+                                {
+                                    text: "emptyThickness",
+                                    link:  "/guide/options/emptyThickness.md",
+                                },
                             ]
                         },
                         '/guide/slots.md',

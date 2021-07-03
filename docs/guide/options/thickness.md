@@ -9,6 +9,11 @@
 Is a Number >=0 or a String that defines the progress line thickness. If you set the value in percent as String, 
 the thickness will be calculated in relation to **[`size`](./size.md)**.
 
+::: tip
+Make sure to take a look at **[`emptyThickness`](./emptyThickness.md)**, **[`lineMode`](./lineMode.md)**, **[`linePosition`](./linePostition.md)**
+and other properties to learn how you can create unique circles
+:::
+
 ###### Usage: 📜
 
 ```vue
@@ -35,9 +40,10 @@ the thickness will be calculated in relation to **[`size`](./size.md)**.
 
 ```vue
 <template>
-  <ve-progress :progress="50" :thickness="15" line="round"/>
-  <ve-progress :progress="50" :thickness="15" line="butt"/>
-  <ve-progress :progress="50" :thickness="15" line="square"/>
+  <ve-progress :progress="50" :thickness="1"/>
+  <ve-progress :progress="50" :thickness="5"/>
+  <ve-progress :progress="50" :thickness="15"/>
+  <ve-progress :progress="50" :thickness="25"/>
 </template>
 ```
 </CodeGroupItem>
