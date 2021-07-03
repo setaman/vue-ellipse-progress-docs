@@ -8,6 +8,7 @@ import LegendBasic from "./theme/examples/legend/LegendBasic";
 import LegendAndProgress from "./theme/examples/legend/LegendAndProgress";
 import SizeBasic from "./theme/examples/size/SizeBasic";
 import SizeDependencies from "./theme/examples/size/SizeDependencies";
+import Thickness from "./theme/examples/thickness/Thickness";
 import "@iconscout/unicons/css/line.css";
 
 export default defineClientAppEnhance(async ({ app, router, siteData }) => {
@@ -20,4 +21,5 @@ export default defineClientAppEnhance(async ({ app, router, siteData }) => {
     app.component("LegendAndProgress", LegendAndProgress)
     app.component("SizeBasic", SizeBasic)
     app.component("SizeDependencies", SizeDependencies)
+    app.component("Thickness", Thickness)
 })

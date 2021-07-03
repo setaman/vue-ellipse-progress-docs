@@ -4,7 +4,7 @@
 
 | type    | values                                 | default |
 |---------|----------------------------------------|---------|
-| Number  |"round \| square \| butt"               |"round   |
+| Number  |"round \| square \| butt"               |"round"  |
 
 Is a String value from `round | square | butt`. Defines the progress circle line cap. 
 Internally the CSS property `stroke-linecap` is used.

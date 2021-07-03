@@ -7,7 +7,7 @@
 | Number  | >= 0                                   |   200   |
 
 Defines the width and height of the circle in pixel. Specifically, the value defines the dimensions of the circle container, 
-exact size of the circle circumference and diameter depends on the properties **[`lineMode`](#linemode)**, **[`thickness`](#thickness)**,
+exact size of the circle circumference and diameter depends on the properties **[`lineMode`](#linemode)**, **[`thickness`](./thickness.md)**,
 **[`emptyThickness`](#emptythickness)** and **[`dot`](#dot)**! The `size` property defines the absolut width and height the component
 will take on the page.
 

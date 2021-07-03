@@ -39,34 +39,6 @@ The **[`progress`](#progress)** is the only required property, and you are ready
 | **[`data`](#data)** | Array | defines multiple circles, takes as values Objects with almost all props defined above | |
 
 
-<br>
-
-- ### `size`
-
-###### Animated: ✔️
-
-Is any number >=0. It defines the width and height of the circle in pixel. The calculation of the circumference of the
-circle depends on the properties **[`lineMode`](#linemode)**, **[`thickness`](#thickness)**,
-**[`emptyThickness`](#emptythickness)** and **[`dot`](#dot)**, so the circle never exceeds the `size` value!
-
->❗ Check **[`lineMode`](#linemode)** property to understand how the progress circle behaves depending on the line mode and offset.
-
-<br>
-
-- ### `line`
-
-###### Animated: ✔️
-
-Is a String value from `round | square | butt`. Defines the progress circle line cap. Internally the CSS property `stroke-linecap` is used.
-
-###### Example: 📜
-
-```vue
-<ve-progress line="round" />
-```
-
-<br>
-
 - ### `thickness`
 
 ###### Animated: ✔️

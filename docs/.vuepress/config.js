@@ -55,6 +55,10 @@ module.exports = {
                                     text: "line",
                                     link:  "/guide/options/line.md",
                                 },
+                                {
+                                    text: "thickness",
+                                    link:  "/guide/options/thickness.md",
+                                },
                             ]
                         },
                         '/guide/slots.md',
