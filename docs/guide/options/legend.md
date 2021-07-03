@@ -18,7 +18,7 @@ as the displayed circle legend! How the [`progress`](./progress.md) is calculate
 
 ::: tip
 With [`legendFormatter`](./legendformatter) or [`scoped slot`](#default) you have countless possibilities to customize
-the circle legend
+the circle legend. To hide the circle legend use the [`hideLegend`](./hideLegend.md) property.
 :::
 
 ###### Usage: 📜

@@ -7,7 +7,7 @@
       <template #legend>
         <slot name="legend"></slot>
       </template>
-      <template #caption>
+      <template #legend-caption>
         <slot name="caption"></slot>
       </template>
     </component>
@@ -17,7 +17,6 @@
 <script>
 export default {
   name: "VEP",
-  props: ["options"],
   data() {
     return {
       component: null

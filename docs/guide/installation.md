@@ -12,7 +12,7 @@ to use <Badge type="tip" text="1.x" vertical="middle" /> version.
 
 ## Package Manager
 
-Use the package manager of your choice to install the library from NPM. After the installation you have the choice to 
+Use your favorite package manager to install the library from NPM. After the installation you have the choice to 
 initialize the component as a plugin or to import it directly.
 
 <CodeGroup>
@@ -35,7 +35,7 @@ yarn add vue-ellipse-progress
 ### Initialize as Plugin
 
 Import and initialize the component in your `main.js`. By default, after initialization, the component is available as 
-`<ve-progress/>` and can be use anywhere. You also are free to define a custom name:
+`<ve-progress/>` and can be used everywhere. You also are free to define a custom name:
 
 ```js
 import { createApp } from "vue";

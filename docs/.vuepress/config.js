@@ -51,12 +51,19 @@ module.exports = {
                                     text: "size",
                                     link:  "/guide/options/size.md",
                                 },
+                                {
+                                    text: "line",
+                                    link:  "/guide/options/line.md",
+                                },
                             ]
                         },
                         '/guide/slots.md',
                     ],
                 },
-            ],
+                "/guide/compatibility.md",
+                "/guide/contribution.md",
+                "/guide/development.md"
+            ]
         }
     },
 }
