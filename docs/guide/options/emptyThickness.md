@@ -54,7 +54,7 @@ and other properties to learn how you can create unique circles
 
 
 With a value defined as a string, the empty line thickness can be specified as a percentage. 
-This way we can let the thickness scale relative to the size:
+This way we can let the thickness scale relative to the **[`size`](./size.md)**:
 
 <example-container class="mb-16">
 <template #default="{ loading, slider, noData, determinate }">

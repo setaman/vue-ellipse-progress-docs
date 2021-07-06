@@ -16,7 +16,7 @@
         </slot>
       </div>
       <div class="example-container-code" v-else>
-        <slot name="code">
+        <slot name="code" :progress="progress" :slider="slider" :state="state" :loading="loading" :noData="noData" :determinate="determinate">
 
         </slot>
       </div>

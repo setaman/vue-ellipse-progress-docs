@@ -60,6 +60,10 @@ module.exports = {
                                     link:  "/guide/options/lineMode.md",
                                 },
                                 {
+                                    text: "linePosition",
+                                    link:  "/guide/options/linePosition.md",
+                                },
+                                {
                                     text: "thickness",
                                     link:  "/guide/options/thickness.md",
                                 },

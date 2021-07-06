@@ -12,6 +12,7 @@ import SizeBasic from "./theme/examples/size/SizeBasic";
 import SizeDependencies from "./theme/examples/size/SizeDependencies";
 import Thickness from "./theme/examples/thickness/Thickness";
 import LineMode from "./theme/examples/lineMode/LineMode";
+import LinePosition from "./theme/examples/linePosition/linePosition";
 import "@iconscout/unicons/css/line.css";
 
 export default defineClientAppEnhance(async ({ app, router, siteData }) => {
@@ -27,4 +28,5 @@ export default defineClientAppEnhance(async ({ app, router, siteData }) => {
     app.component("SizeDependencies", SizeDependencies)
     app.component("Thickness", Thickness)
     app.component("LineMode", LineMode)
+    app.component("LinePosition", LinePosition)
 })

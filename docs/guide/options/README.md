@@ -38,51 +38,6 @@ The **[`progress`](#progress)** is the only required property, and you are ready
 | **[`reverse`](#reverse)** | Boolean | | false |
 | **[`data`](#data)** | Array | defines multiple circles, takes as values Objects with almost all props defined above | |
 
-- ### `lineMode`
-
-###### Animated: ✔️
-
-Descriptive string in form `"mode [offset]"` that defines, how the progress line is aligned in relation to empty line.
-The first value ist the `mode` and the optional second is the `offset`. You can understand the modes as the presets that
-help you to align lines as you want to.
-
-- `mode`:
-    - `center`: this is the default value and both lines are aligned at the baseline (centered).
-      <img width="100" height="50" src="https://github.com/setaman/Bilder/blob/master/ellipse-normal.png">
-
-    - `in`: the progress line is inside the empty line
-      <img width="100" height="40" src="https://github.com/setaman/Bilder/blob/master/ellipse-in.png">
-
-    - `in-over`: the progress line is both inside the empty circle and overlaps the empty line
-      <img width="100" height="35" src="https://github.com/setaman/Bilder/blob/master/ellipse-in.over.png">
-
-    - `out`: the progress line is outside the empty line
-      <img width="100" height="35" src="https://github.com/setaman/Bilder/blob/master/ellipse-out.png">
-
-    - `out-over`: the progress line is both outside the empty circle and overlaps the empty line
-      <img width="100" height="35" src="https://github.com/setaman/Bilder/blob/master/ellipse-out-over.png">
-
-    - `bottom`: the progress line is aligned at the bottom of the empty line
-      <img width="100" height="35" src="https://github.com/setaman/Bilder/blob/master/ellipse-bottom.png">
-
-    - `top`: the progress line is aligned at the top of the empty line
-      <img width="100" height="35" src="https://github.com/setaman/Bilder/blob/master/ellipse-top.png">
-
-- `offset`: is any negative or positive Number and defines the distance between the progress and empty lines. It can be **only** combined with the `in` and `out` modes
-
-###### Example: 📜
-
-Let's take a look at few examples:
-
-| `line-mode="in 10"`  | `line-mode="in 10"`   | `line-mode="out 10"`  | `line-mode="out 15"` |
-|----------|--------|---------|---------|
-| <img width="100" height="100" src="https://github.com/setaman/Bilder/blob/master/ellipse-exmp1.png">|<img width="100" height="100" src="https://github.com/setaman/Bilder/blob/master/ellipse-exmp2.png">|<img width="100" height="100" src="https://github.com/setaman/Bilder/blob/master/ellipse-exmp3.png">|<img width="100" height="100" src="https://github.com/setaman/Bilder/blob/master/ellipse-exmp4.png"> |
-
-In general, any positioning can already be achieved with values `in` and `out` in a combination with certain `offset`. The modes, however, act like presets, which reduce the effort for the manual calculations.
-
-<br>
-
-
 - ### `linePosition`
 
 ###### Animated: ✔️
