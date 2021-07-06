@@ -12,6 +12,37 @@
 .custom-container {
   border-left: none !important;
   border-radius: .5rem;
+  position: relative;
+  &:after {
+    content: "";
+    width: 3px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: red;
+    height: 80%;
+    border-radius: 0 4px 4px 0;
+  }
+  &.warning {
+    &:after {
+      background-color: var(--c-warning);
+    }
+  }
+  &.tip {
+    &:after {
+      background-color: var(--c-tip);
+    }
+    code {
+      background-color: var(--c-bg);
+    }
+  }
+  &.danger {
+    &:after {
+      background-color: var(--c-danger);
+    }
+  }
 }
 
 .quick-start {

@@ -1,4 +1,6 @@
 import { defineClientAppEnhance } from '@vuepress/client';
+import Slider from "@vueform/slider";
+import "@vueform/slider/themes/default.css";
 import HomeLayout from "./theme/layouts/HomeLayout";
 import ExampleContainer from "./theme/components/Base/ExampleContainer/ExampleContainer";
 import VEP from "./theme/components/Base/VEP";
@@ -9,9 +11,11 @@ import LegendAndProgress from "./theme/examples/legend/LegendAndProgress";
 import SizeBasic from "./theme/examples/size/SizeBasic";
 import SizeDependencies from "./theme/examples/size/SizeDependencies";
 import Thickness from "./theme/examples/thickness/Thickness";
+import LineMode from "./theme/examples/lineMode/LineMode";
 import "@iconscout/unicons/css/line.css";
 
 export default defineClientAppEnhance(async ({ app, router, siteData }) => {
+    app.component("Slider", Slider)
     app.component("VEP", VEP)
     app.component("CardLink", CardLink)
     app.component("HomeLayout", HomeLayout)
@@ -22,4 +26,5 @@ export default defineClientAppEnhance(async ({ app, router, siteData }) => {
     app.component("SizeBasic", SizeBasic)
     app.component("SizeDependencies", SizeDependencies)
     app.component("Thickness", Thickness)
+    app.component("LineMode", LineMode)
 })

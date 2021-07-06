@@ -38,30 +38,6 @@ The **[`progress`](#progress)** is the only required property, and you are ready
 | **[`reverse`](#reverse)** | Boolean | | false |
 | **[`data`](#data)** | Array | defines multiple circles, takes as values Objects with almost all props defined above | |
 
-
-- ### `thickness`
-
-###### Animated: ✔️
-
-Is a Number >=0 or a String that defines the progress line thickness. If you set the value in percent as String, the thickness will be calculated in relation to **[`size`](#size)**.
-
-###### Example: 📜
-
-```vue
-<ve-progress :thickness="10" />
-<ve-progress thickness="5%" />
-```
-
-<br>
-
-- ### `emptyThickness`
-
-###### Animated: ✔️
-
-Is a Number >=0 or a String. It defines the empty circle line thickness. If you set the value in percent, thickness will be calculated in relation to **[`size`](#size)**.
-
-<br>
-
 - ### `lineMode`
 
 ###### Animated: ✔️

@@ -12,9 +12,9 @@ exact size of the circle circumference and diameter depends on the properties **
 will take on the page.
 
 ::: tip
-Check the **[`lineMode`](#linemode)**, **[`thickness`](#thickness)**, **[`emptyThickness`](#emptythickness)** and 
-**[`dot`](#dot)** properties to understand how the progress and empty lines behaves depending on the different values. Also,
-by default the **[`thickness`](#thickness)** and **[`emptyThickness`](#emptyThickness)** scale relative to the `size`.
+Check the **[`lineMode`](./linemode.md)**, **[`thickness`](./thickness.md)**, **[`emptyThickness`](./emptyThickness.md)** and 
+**[`dot`](./dot.md)** properties to understand how the progress and empty lines behaves depending on the different values. Also,
+by default the **[`thickness`](./thickness.md)** and **[`emptyThickness`](./emptyThickness.md)** scale relative to the `size`.
 :::
 
 ###### Usage: 📜

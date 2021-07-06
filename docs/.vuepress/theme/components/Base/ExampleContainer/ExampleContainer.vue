@@ -41,15 +41,12 @@
 import SwitchSlider from "../SwitchSlider";
 import Icon from "../Icon";
 import LinkIcon from "../LinkIcon";
-import Slider from "@vueform/slider";
 import "@vueform/slider/themes/default.css";
 import Btn from "../Btn";
 
-import { usePageData, useSiteData } from "@vuepress/client"
-
 export default {
   name: "ExampleContainer",
-  components: {Btn, LinkIcon, Icon, SwitchSlider, Slider },
+  components: {Btn, LinkIcon, Icon, SwitchSlider },
   props: {
     showProgress: {
       type: Boolean,
@@ -70,17 +67,6 @@ export default {
     range: {
       type: Array,
       default: () => [-100, 100]
-    }
-  },
-  setup() {
-    const pageData = usePageData();
-    const siteData = useSiteData();
-
-    console.log(pageData, siteData)
-
-    return {
-      pageData,
-      siteData
     }
   },
   data() {

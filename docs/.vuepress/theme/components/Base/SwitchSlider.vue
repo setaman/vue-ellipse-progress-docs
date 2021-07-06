@@ -91,8 +91,6 @@ export default {
   padding: 4px;
   background-color: white;
   height: 32px;
-  /*box-shadow: 0 0.07em 0.1em -0.1em rgba(#000, 0.2) inset,
-  0 0.05em 0.08em -0.01em rgba(#fff, 0.5);*/
   box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.1);
   &.round {
     border-radius: 30px;
