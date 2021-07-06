@@ -21,7 +21,7 @@
         </slot>
       </div>
     </div>
-    <div class="example-container-footer rounded-b-lg md:flex md:flex-row">
+    <div class="example-container-footer rounded-b-lg lg:flex lg:flex-row">
       <div class="example-controls-range flex-1 py-2 px-4">
         <div class="flex flex-wrap h-full content-center" v-if="showProgress">
           <slot name="range">
@@ -29,8 +29,9 @@
           </slot>
         </div>
       </div>
-      <div class="example-controls-states flex-2 py-2 px-4 md:ml-8" v-if="showStates">
-        <SwitchSlider :options="states" size="100" v-model="state" />
+      <div class="example-controls-states flex-2 py-2 px-4 lg:ml-8" v-if="showStates">
+        <SwitchSlider class="smAndUp" :options="states" size="100" v-model="state" />
+        <SwitchSlider class="xs" :options="states" size="82" mini v-model="state" />
       </div>
     </div>
   </div>
@@ -43,6 +44,8 @@ import LinkIcon from "../LinkIcon";
 import Slider from "@vueform/slider";
 import "@vueform/slider/themes/default.css";
 import Btn from "../Btn";
+
+import { usePageData, useSiteData } from "@vuepress/client"
 
 export default {
   name: "ExampleContainer",
@@ -67,6 +70,17 @@ export default {
     range: {
       type: Array,
       default: () => [-100, 100]
+    }
+  },
+  setup() {
+    const pageData = usePageData();
+    const siteData = useSiteData();
+
+    console.log(pageData, siteData)
+
+    return {
+      pageData,
+      siteData
     }
   },
   data() {
@@ -99,6 +113,9 @@ export default {
       this.componentKey ++;
     }
   },
+  mounted() {
+    console.log(this)
+  }
 }
 </script>
 
@@ -133,11 +150,17 @@ export default {
     display: none;
   }
   .language-vue.ext-vue {
+    min-height: 236px;
     background-color: transparent;
+    margin: 0;
+    &:before {
+      display: none;
+    }
   }
   pre.language-vue {
     margin: 0;
     padding: 16px;
+    min-height: 236px;
   }
 }
 
@@ -152,7 +175,6 @@ export default {
 .dark {
   .example-container-body {
     border: 2px solid #2a2c3c;
-    min-height: 236px;
   }
   .example-container-header {
     background-color: #2a2c3c;
@@ -176,7 +198,38 @@ export default {
   border: 1px solid #265cff;
 }
 
-@media (max-width: 768px) {
+.smAndUp {
+  display: block;
+}
+.xs {
+  display: none;
+}
+@media (max-width: 419px) {
+  .example-container {
+    margin: .85rem -1.5rem;
+    border-radius: 0;
+  }
+  .example-container-header {
+    border-radius: 0;
+  }
+  .example-container-body {
+    border: none !important;
+  }
+  .example-container-footer {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 779px) {
+  .xs {
+    display: block;
+  }
+  .smAndUp {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
   .example-controls-states:after {
     display: none !important;
   }
