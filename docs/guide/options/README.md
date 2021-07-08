@@ -38,33 +38,6 @@ The **[`progress`](#progress)** is the only required property, and you are ready
 | **[`reverse`](#reverse)** | Boolean | | false |
 | **[`data`](#data)** | Array | defines multiple circles, takes as values Objects with almost all props defined above | |
 
-- ### `linePosition`
-
-###### Animated: ✔️
-
-Descriptive string in form `"mode [offset]"` that defines how the progress line is aligned in relation to the circle fill area.
-Available modes are  `center`, `in` and `out`. Additionally, with the `out` mode you can provide an `offset` value as any Number.
-In general, this prop makes it possible to mimic the SVG2 `stroke-aligment`, which is currently not supported in any browser.
-
-###### Example: 📜
-
-The following examples visualize the modes differences:
-
-| `line-position="center"`  | `line-position="out"`   | `line-position="out 20"`  | `line-position="in"` |
-|----------|--------|---------|---------|
-| <img width="100" height="100" src="https://github.com/setaman/Bilder/blob/master/e-lineMode-1.png">|<img width="100" height="100" src="https://github.com/setaman/Bilder/blob/master/e-lineMode-2.png">|<img width="100" height="100" src="https://github.com/setaman/Bilder/blob/master/e-lineMode-3.png">|<img width="100" height="100" src="https://github.com/setaman/Bilder/blob/master/e-lineMode-4.png"> |
-
-<br>
-
-- ### `emptyLinePosition`
-
-###### Animated: ✔️
-
-Descriptive string in form `"mode [offset]"` that defines how the empty line is aligned in relation to the empty circle fill area.
-The usage is similar to [linePosition](#lineposition).
-
-<br>
-
 - ### `color`
 
 ###### Animated: ✔️

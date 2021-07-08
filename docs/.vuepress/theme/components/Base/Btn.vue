@@ -21,8 +21,8 @@ export default {
 button {
   cursor: pointer;
   &.icon {
-    width: 38px;
-    height: 38px;
+    width: 32px;
+    height: 32px;
     padding: 2px;
     border: none;
     background-color: transparent;

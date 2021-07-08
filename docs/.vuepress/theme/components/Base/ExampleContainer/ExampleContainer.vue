@@ -75,7 +75,7 @@ export default {
       state: "Normal",
       mode: "Result",
       states: ["Normal", 'Loading', 'Determinate', 'No data'],
-      modes: ["Result", "Code"],
+      modes: ["Result", "Code", "Side by Side"],
       componentKey: 0,
     }
   },

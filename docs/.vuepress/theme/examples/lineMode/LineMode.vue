@@ -1,5 +1,5 @@
 <template>
-  <example-container :show-modes="false">
+  <example-container>
     <template #default="{ progress, slider, loading, noData, determinate }">
       <div>
         <switch-slider v-model="mode" :options="modes" mini :size="50"/>
@@ -13,6 +13,11 @@
         <slider class="mt-3 w-full sm:w-1/2" :min="0" :max="40" v-model.number="thickness"/>
       </label>
       <v-e-p class="col-span-2" :progress="progress" :thickness="thickness" :line-mode="`${mode} ${offset}`" :empty-thickness="20" :loading="loading" :no-data="noData" :determinate="determinate"/>
+    </template>
+    <template #code="{ progress }">
+      <slot name="code" :data="{ mode, offset, progress }">
+
+      </slot>
     </template>
   </example-container>
 </template>

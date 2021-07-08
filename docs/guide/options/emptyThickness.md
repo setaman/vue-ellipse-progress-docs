@@ -68,9 +68,9 @@ This way we can let the thickness scale relative to the **[`size`](./size.md)**:
 
 ```vue
 <template>
-  <ve-progress :progress="50" :size="100" thickness="10%"/>
-  <ve-progress :progress="50" :size="200" thickness="10%"/>
-  <ve-progress :progress="50" :size="300" thickness="10%"/>
+  <ve-progress :progress="50" :size="100" empty-thickness="10%"/>
+  <ve-progress :progress="50" :size="200" empty-thickness="10%"/>
+  <ve-progress :progress="50" :size="300" empty-thickness="10%"/>
 </template>
 ```
 </CodeGroupItem>

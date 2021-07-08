@@ -30,4 +30,17 @@ modes. You can understand the modes as the presets that help you to align lines 
 
 ### Example
 
-<LineMode/>
+<LineMode>
+<template #code="{ data }">
+<CodeGroup>
+<CodeGroupItem >
+
+```vue:no-v-pre
+<template>
+  <ve-progress :progress="{{data.progress}}" line-mode="{{data.mode}} {{data.offset}}"/>
+</template>
+```
+</CodeGroupItem>
+</CodeGroup>
+</template>
+</LineMode>
