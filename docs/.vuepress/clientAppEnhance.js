@@ -14,6 +14,9 @@ import Thickness from "./theme/examples/thickness/Thickness";
 import LineMode from "./theme/examples/lineMode/LineMode";
 import LinePosition from "./theme/examples/linePosition/LinePosition";
 import EmptyLinePosition from "./theme/examples/linePosition/EmptyLinePosition";
+import ColorRandom from "./theme/examples/colors/ColorRandom";
+import ColorGradient from "./theme/examples/colors/ColorGradient";
+import ColorGradientCrazy from "./theme/examples/colors/ColorGradientCrazy";
 import "@iconscout/unicons/css/line.css";
 
 export default defineClientAppEnhance(async ({ app, router, siteData }) => {
@@ -31,4 +34,7 @@ export default defineClientAppEnhance(async ({ app, router, siteData }) => {
     app.component("LineMode", LineMode)
     app.component("LinePosition", LinePosition)
     app.component("EmptyLinePosition", EmptyLinePosition)
+    app.component("ColorRandom", ColorRandom)
+    app.component("ColorGradient", ColorGradient)
+    app.component("ColorGradientCrazy", ColorGradientCrazy)
 })

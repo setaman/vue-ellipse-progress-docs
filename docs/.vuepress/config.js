@@ -75,6 +75,10 @@ module.exports = {
                                     text: "emptyThickness",
                                     link:  "/guide/options/emptyThickness.md",
                                 },
+                                {
+                                    text: "color",
+                                    link:  "/guide/options/color.md",
+                                },
                             ]
                         },
                         '/guide/slots.md',

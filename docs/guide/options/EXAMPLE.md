@@ -1,4 +1,4 @@
-<example-container :show-progress="false">
+<example-container>
 <template #default="{ loading, slider, noData, determinate }">
 <v-e-p class="mr-2" size="160" :progress="50" :loading="loading" :no-data="noData" :determinate="determinate" legend="20,50" font-size="1.6rem"/>
 <v-e-p class="mr-2" size="160" :progress="50" :loading="loading" :no-data="noData" :determinate="determinate" legend="01000" font-size="1.6rem"/>

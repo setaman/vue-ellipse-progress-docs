@@ -75,7 +75,7 @@ export default {
       state: "Normal",
       mode: "Result",
       states: ["Normal", 'Loading', 'Determinate', 'No data'],
-      modes: ["Result", "Code", "Side by Side"],
+      modes: ["Result", "Code"],
       componentKey: 0,
     }
   },
@@ -95,13 +95,9 @@ export default {
   },
   methods: {
     reload(){
-      console.log("REEEE")
       this.componentKey ++;
     }
   },
-  mounted() {
-    console.log(this)
-  }
 }
 </script>
 
@@ -131,7 +127,8 @@ export default {
   }
 }
 .example-container-code {
-  max-height: 80vh;
+  max-height: 50vh;
+  overflow-y: auto;
   .code-group__nav {
     display: none;
   }
