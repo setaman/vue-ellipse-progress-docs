@@ -8,7 +8,7 @@
 <CodeGroup>
 <CodeGroupItem >
 
-```vue
+```vue:no-v-pre
 <template>
   <ve-progress :progress="50" legend="20,50"/>
   <ve-progress :progress="50" legend="01000"/>

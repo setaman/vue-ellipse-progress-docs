@@ -6,8 +6,8 @@
       <v-e-p class="mr-1" :size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" :color="gradient3" thickness="30%"/>
       <v-e-p class="mr-1" :size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" :color="gradientRandom" thickness="30%"/>
     </template>
-    <template #code>
-      <slot name="code">
+    <template #code="{progress, state}">
+      <slot name="code" :progress="progress" :state="state">
 
       </slot>
     </template>

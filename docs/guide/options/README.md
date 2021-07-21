@@ -38,55 +38,11 @@ The **[`progress`](#progress)** is the only required property, and you are ready
 | **[`reverse`](#reverse)** | Boolean | | false |
 | **[`data`](#data)** | Array | defines multiple circles, takes as values Objects with almost all props defined above | |
 
-- ### `color`
-
-###### Animated: ✔️
-
-Defines the color of progress circle line. Is any CSS color like `#123` or `lime` or an object that defines the gradient.
-
-- `color="#3f79ff"` - as String
-
-- `:color="{ colors [, radial ]}"` - as Object
-    - `radial` - default `false`. Boolean that defines, whether the gradient is radial or linear
-    - `colors` - array that contains the gradient colors as objects `{ color: "#6546f7", offset: "10" [, opacity: 1] }`
-
-###### Example: 📜
-```js
-<ve-progress :color="gradient" />
-
-gradient: {
-    radial: false,
-    colors: [
-      {
-        color: '#6546f7',
-        offset: "0",
-        opacity: '1',
-      },
-      {
-        color: 'lime',
-        offset: "100",
-        opacity: '0.6',
-      },
-    ]
-  }
-```
-<img width="100" height="100" src="https://github.com/setaman/Bilder/blob/master/ellipse-gradient.png" alt="gradient demo">
-
-<br>
-
 - ### `colorFill`
 
 ###### Animated: ✔️
 
 Defines the fill color of the progress circle. Takes the same value as **[`color`](#color)**
-
-<br>
-
-- ### `emptyColor`
-
-###### Animated: ✔️
-
-Defines the color of the empty circle **line**. Takes the same value as **[`color`](#color)**
 
 <br>
 

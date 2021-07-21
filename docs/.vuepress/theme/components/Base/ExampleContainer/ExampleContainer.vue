@@ -7,15 +7,15 @@
       <link-icon class="mr-2" :href="exampleLink" target="_blank" v-if="exampleLink">
         <icon icon="github"/>
       </link-icon>
-      <SwitchSlider :options="modes" :size="100" v-model="mode" v-if="showModes"/>
+      <SwitchSlider :options="modes" :size="70" v-model="mode" v-if="showModes"/>
     </div>
-    <div class="example-container-body">
-      <div class="example-container-result p-4" v-if="mode === 'Result'" :key="componentKey">
+    <div class="example-container-body grid-cols-1 lg:grid-cols-2" :class="{grid: mode === 'both'}">
+      <div class="example-container-result p-4" :class="{'side-by-side': mode === 'both'}" v-if="['Result', 'both'].includes(mode)" :key="componentKey">
         <slot :progress="progress" :slider="slider" :state="state" :loading="loading" :noData="noData" :determinate="determinate">
 
         </slot>
       </div>
-      <div class="example-container-code" v-else>
+      <div class="example-container-code" v-if="['Code', 'both'].includes(mode)">
         <slot name="code" :progress="progress" :slider="slider" :state="state" :loading="loading" :noData="noData" :determinate="determinate">
 
         </slot>
@@ -75,7 +75,20 @@ export default {
       state: "Normal",
       mode: "Result",
       states: ["Normal", 'Loading', 'Determinate', 'No data'],
-      modes: ["Result", "Code"],
+      modes: [
+        {
+          title: "Result",
+          icon: "monitor"
+        },
+        {
+          title: "Code",
+          icon: "code"
+        },
+        {
+          title: "both",
+          icon: "rows"
+        }
+      ],
       componentKey: 0,
     }
   },
@@ -109,6 +122,11 @@ export default {
 .example-container-header {
   background-color: #f5f6fa;
 }
+.example-container-result {
+  &.side-by-side{
+    border-right: 2px solid #f5f6fa;
+  }
+}
 .example-container-footer {
   background-color: #f5f6fa;
   .example-controls-states {
@@ -132,6 +150,9 @@ export default {
   .code-group__nav {
     display: none;
   }
+  div {
+    height: 100%;
+  }
   .language-vue.ext-vue {
     min-height: 236px;
     background-color: transparent;
@@ -144,6 +165,7 @@ export default {
     margin: 0;
     padding: 16px;
     min-height: 236px;
+    height: 100%;
   }
 }
 
@@ -158,6 +180,11 @@ export default {
 .dark {
   .example-container-body {
     border: 2px solid #2a2c3c;
+  }
+  .example-container-result {
+    &.side-by-side{
+      border-right: 2px solid #2a2c3c;
+    }
   }
   .example-container-header {
     background-color: #2a2c3c;

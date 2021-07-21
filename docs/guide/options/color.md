@@ -66,7 +66,7 @@ affects you can achieve with gradient colors.
 
 ```vue:no-v-pre
 <template>
-  <ve-progress :progress="{{ progress }}" :color="gradient1"/>
+  <ve-progress :progress="{{ progress }}" state :color="gradient1"/>
   <ve-progress :progress="{{ progress }}" :color="gradient2"/>
   <ve-progress :progress="{{ progress }}" :color="gradient3"/>
 </template>

@@ -8,6 +8,7 @@ import CardLink from "./theme/components/Base/CardLink";
 import ProgressBasic from "./theme/examples/progress/ProgressBasic";
 import LegendBasic from "./theme/examples/legend/LegendBasic";
 import LegendAndProgress from "./theme/examples/legend/LegendAndProgress";
+import HideLegend from "./theme/examples/hideLegend/HideLegend";
 import SizeBasic from "./theme/examples/size/SizeBasic";
 import SizeDependencies from "./theme/examples/size/SizeDependencies";
 import Thickness from "./theme/examples/thickness/Thickness";
@@ -17,6 +18,7 @@ import EmptyLinePosition from "./theme/examples/linePosition/EmptyLinePosition";
 import ColorRandom from "./theme/examples/colors/ColorRandom";
 import ColorGradient from "./theme/examples/colors/ColorGradient";
 import ColorGradientCrazy from "./theme/examples/colors/ColorGradientCrazy";
+import DefaultSlot from "./theme/examples/slots/DefaultSlot";
 import "@iconscout/unicons/css/line.css";
 
 export default defineClientAppEnhance(async ({ app, router, siteData }) => {
@@ -37,4 +39,6 @@ export default defineClientAppEnhance(async ({ app, router, siteData }) => {
     app.component("ColorRandom", ColorRandom)
     app.component("ColorGradient", ColorGradient)
     app.component("ColorGradientCrazy", ColorGradientCrazy)
+    app.component("HideLegend", HideLegend)
+    app.component("DefaultSlot", DefaultSlot)
 })

@@ -48,6 +48,10 @@ module.exports = {
                                     link: "/guide/options/legend.md"
                                 },
                                 {
+                                    text: "hideLegend",
+                                    link: "/guide/options/hideLegend.md"
+                                },
+                                {
                                     text: "size",
                                     link:  "/guide/options/size.md",
                                 },
@@ -79,6 +83,10 @@ module.exports = {
                                     text: "color",
                                     link:  "/guide/options/color.md",
                                 },
+                                {
+                                    text: "emptyColor",
+                                    link:  "/guide/options/emptyColor.md",
+                                },
                             ]
                         },
                         '/guide/slots.md',
@@ -90,4 +98,7 @@ module.exports = {
             ]
         }
     },
+    plugins: [
+        ["@vuepress/plugin-medium-zoom", { selector: "img.zoom"}]
+    ]
 }

@@ -21,20 +21,23 @@
       ></span>
       <label
           :style="{ color: color }"
-          :class="{ active: option === modelValue }"
+          :class="{ active: (option.title || option) === modelValue }"
           v-for="option in options"
-          :key="option"
+          :key="option.title || option"
       >
-        <input type="radio" :checked="option === modelValue" :value="option" @input="$emit('update:modelValue', $event.target.value)" />
-        <span>{{ option }}</span>
+        <input type="radio" :checked="(option.title || option) === modelValue" :value="(option.title || option)" @input="$emit('update:modelValue', $event.target.value)" />
+        <svg-icon v-if="option.icon" :icon="option.icon"/>
+        <span v-else>{{ option }}</span>
       </label>
     </div>
   </div>
 </template>
 
 <script>
+import SvgIcon from "./SvgIcon";
 export default {
   name: "SwitchSlider",
+  components: {SvgIcon},
   emits: ['update:modelValue'],
   props: {
     modelValue: String,
@@ -77,7 +80,7 @@ export default {
   },
   computed: {
     selectedIndex() {
-      return this.options.findIndex((option) => option === this.modelValue);
+      return this.options.findIndex((option) => (option.title || option) === this.modelValue);
     },
     indicatorWidth() {
       return 100 / this.options.length;
