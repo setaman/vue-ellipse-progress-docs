@@ -57,9 +57,6 @@ export default {
   name: "DefaultSlotColored",
   components: { VEP, ExampleContainer },
   data: () => ({
-    progress: 0,
-    price: 0,
-    priceColor: "red",
     colorSteps: {
       20: "RED",
       40: "LIGHTCORAL",
@@ -71,12 +68,9 @@ export default {
   methods: {
     determineColor(value) {
       const progress = (value * 100) / 1000;
-      const closest = [20, 40, 60, 80, 100].reduce((prev, curr) => {
-        return Math.abs(curr - progress) < Math.abs(prev - progress)
-          ? curr
-          : prev;
-      });
-      this.priceColor = this.colorSteps[closest];
+      const closest = [20, 40, 60, 80, 100].reduce((prev, curr) =>
+        Math.abs(curr - progress) < Math.abs(prev - progress) ? curr : prev
+      );
       return this.colorSteps[closest];
     },
   },

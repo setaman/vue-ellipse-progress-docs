@@ -7,7 +7,7 @@
 <script>
 export default {
   name: "Btn",
-  props: {    
+  props: {
     icon: {
       type: Boolean,
       default: false,

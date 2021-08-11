@@ -30,7 +30,7 @@ There are really no limits and you can customize the appearance of the legend as
 
 ```vue
 <template>
-  <ve-progress>
+  <ve-progress :progress="50">
     <template #default="{ counterTick }">
       <div>
         <span>i can</span> <br />
@@ -58,8 +58,7 @@ There are really no limits and you can customize the appearance of the legend as
 
 ```vue
 <template>
-  
-  <ve-progress>
+  <ve-progress :progress="50">
     <template #default="{ counterTick: { currentValue } }">
       <div :style="{ color: determineColor(currentValue), fontSize: '2rem' }">
         <span>
@@ -74,7 +73,7 @@ There are really no limits and you can customize the appearance of the legend as
     </template>
   </ve-progress>
 
-  <ve-progress>
+  <ve-progress :progress="50">
     <template #default="{ counterTick }">
       <span>
         <span class="mr-2" style="font-size: 0.9rem">WON</span>
@@ -88,15 +87,11 @@ There are really no limits and you can customize the appearance of the legend as
       <span>Manchester United</span>
     </template>
   </ve-progress>
-  
 </template>
 <script>
 export default {
   name: "Example",
   data: () => ({
-    progress: 0,
-    price: 0,
-    priceColor: "red",
     colorSteps: {
       20: "RED",
       40: "LIGHTCORAL",
@@ -108,12 +103,9 @@ export default {
   methods: {
     determineColor(value) {
       const progress = (value * 100) / 1000;
-      const closest = [20, 40, 60, 80, 100].reduce((prev, curr) => {
-        return Math.abs(curr - progress) < Math.abs(prev - progress)
-          ? curr
-          : prev;
-      });
-      this.priceColor = this.colorSteps[closest];
+      const closest = [20, 40, 60, 80, 100].reduce((prev, curr) =>
+        Math.abs(curr - progress) < Math.abs(prev - progress) ? curr : prev
+      );
       return this.colorSteps[closest];
     },
   },
@@ -128,7 +120,7 @@ export default {
 
 ## `legend`
 
-In this slot you can put an additional element that you want to display beside the circle legend. 
+In this slot you can put an additional element that you want to display beside the circle legend.
 This is simply a legacy slot from the time when the [**`default`**](#default) slot did not exist yet.
 It can be helpful in some situations, but is much less powerful.
 
@@ -137,7 +129,7 @@ It can be helpful in some situations, but is much less powerful.
 ```vue
 <ve-progress :progress="50">
   <template #legend>
-    <span></span>
+    <span>/150</span>
   </template>
 </ve-progress>
 ```
@@ -146,26 +138,37 @@ It can be helpful in some situations, but is much less powerful.
 
 <example-container>
 <template #default="{ loading, slider, noData, determinate }">
-<v-e-p :progress="50">
+<v-e-p :progress="slider" :loading="loading"
+        :no-data="noData"
+        :determinate="determinate">
   <template #legend>
     <span> / 100</span>
   </template>
 </v-e-p>
-<v-e-p :progress="50">
+<v-e-p :progress="slider" :loading="loading"
+        :no-data="noData"
+        :determinate="determinate">
   <template #legend>
     <div> / 100</div>
   </template>
 </v-e-p>
 </template>
-<template #code>
+<template #code="{ progress }">
 <CodeGroup>
 <CodeGroupItem >
 
 ```vue:no-v-pre
 <template>
-  <ve-progress :progress="50" legend="20,50"/>
-  <ve-progress :progress="50" legend="01000"/>
-  <ve-progress :progress="50" legend="0050,51100"/>
+  <ve-progress :progress="{{ progress }}">
+     <template #legend>
+        <span> / 100</span>
+     </template>
+  </ve-progress>
+  <ve-progress :progress="{{ progress }}">
+     <template #legend>
+        <div> / 100</div>
+     </template>
+  </ve-progress>
 </template>
 ```
 
@@ -174,31 +177,55 @@ It can be helpful in some situations, but is much less powerful.
 </template>
 </example-container>
 
-
-
-
-
-
-
-
 ## `legend-caption`
-  In this slot you can put any HTML and style it on your own. This slot is aligned below the progress.
 
-###### Example: 📜
+In this slot you can put any HTML and style it on your own. This slot is aligned below the progress.
 
-This code ...
+### Usage 📜
 
-```html
-<ve-progress ....>
-  <template #legend>
-    <span>/200</span>
-  </template>
+```vue
+<ve-progress :progress="50">
   <template #legend-caption>
-    <p>TASKS DONE</p>
+    <div>
+      Some caption
+    </div>
   </template>
 </ve-progress>
 ```
 
-... produces following result. The slots are marked corresponding:
+### Examples
 
-<img width="100" height="100" src="https://github.com/setaman/Bilder/blob/master/ellipse-slots.png" alt="slot example">
+<example-container :range="[0, 200]">
+<template #default="{ loading, slider, progress, noData, determinate }">
+<v-e-p :progress="progress" :legend="slider" :loading="loading"
+        :no-data="noData"
+        :determinate="determinate">
+  <template #legend>
+    <span> /200</span>
+  </template>
+  <template #caption>
+    <div>Tasks Done</div>
+  </template>
+</v-e-p>
+</template>
+<template #code="{ progress, slider }">
+<CodeGroup>
+<CodeGroupItem >
+
+```vue:no-v-pre
+<template>
+  <ve-progress :progress="{{ progress }}" :legend="{{ slider }}">
+    <template #legend>
+      <span> /200</span>
+    </template>
+    <template #caption>
+      <div>Tasks Done</div>
+    </template>
+  </ve-progress>
+</template>
+```
+
+</CodeGroupItem>
+</CodeGroup>
+</template>
+</example-container>

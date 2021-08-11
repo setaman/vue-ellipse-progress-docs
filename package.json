@@ -6,7 +6,8 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "lint": "eslint --fix ."
+    "lint": "eslint --fix .",
+    "prettier": "prettier --write ."
   },
   "repository": {
     "type": "git",
