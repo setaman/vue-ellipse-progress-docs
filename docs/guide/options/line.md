@@ -2,11 +2,11 @@
 
 ###### Animated: ✔️
 
-| type    | values                                 | default |
-|---------|----------------------------------------|---------|
-| Number  |"round \| square \| butt"               |"round"  |
+| type   | values                    | default |
+| ------ | ------------------------- | ------- |
+| Number | "round \| square \| butt" | "round" |
 
-Is a String value from `round | square | butt`. Defines the progress circle line cap. 
+Is a String value from `round | square | butt`. Defines the progress circle line cap.
 Internally the CSS property `stroke-linecap` is used.
 
 ###### Usage: 📜
@@ -35,11 +35,12 @@ Internally the CSS property `stroke-linecap` is used.
 
 ```vue
 <template>
-  <ve-progress :progress="50" :thickness="15" line="round"/>
-  <ve-progress :progress="50" :thickness="15" line="butt"/>
-  <ve-progress :progress="50" :thickness="15" line="square"/>
+  <ve-progress :progress="50" :thickness="15" line="round" />
+  <ve-progress :progress="50" :thickness="15" line="butt" />
+  <ve-progress :progress="50" :thickness="15" line="square" />
 </template>
 ```
+
 </CodeGroupItem>
 </CodeGroup>
 </template>

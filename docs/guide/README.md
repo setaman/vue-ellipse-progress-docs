@@ -3,6 +3,7 @@ pageClass: quick-start
 ---
 
 # vue-ellipse-progress
+
 [![npm (tag)](https://img.shields.io/npm/v/vue-ellipse-progress/next?color=success&label=NPM&style=for-the-badge)](https://www.npmjs.com/package/vue-ellipse-progress)
 [![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/setaman/vue-ellipse-progress?style=for-the-badge)](https://snyk.io/test/npm/vue-ellipse-progress/1.3.0)
 ![GitHub](https://img.shields.io/github/license/setaman/vue-ellipse-progress?style=for-the-badge)
@@ -10,6 +11,7 @@ pageClass: quick-start
 
 A dependency-free simple, flexible and smooth Vue.js plugin to create beautiful circle progress bars, implemented with SVG.
 Start creating circles in three steps:
+
 ```js
 // install
 npm i vue-ellipse-progress@next
@@ -42,4 +44,3 @@ createApp(App).use(veProgress);
     </CardLink>
   </div>
 </div>
-

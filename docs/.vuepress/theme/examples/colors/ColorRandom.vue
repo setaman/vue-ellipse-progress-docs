@@ -1,24 +1,24 @@
 <template>
-  <v-e-p :size="160" v-bind="$attrs" :color="color"/>
+  <v-e-p :size="160" v-bind="$attrs" :color="color" />
 </template>
 
 <script>
 import ExampleContainer from "../../components/Base/ExampleContainer/ExampleContainer";
 import VEP from "../../components/Base/VEP";
-import randomColor from  "../../../utils/randomColor";
-import IntervalTask from  "../../../utils/intervalTask";
+import randomColor from "../../../utils/randomColor";
+import IntervalTask from "../../../utils/intervalTask";
 
 export default {
   name: "ColorRandom",
-  components: {VEP, ExampleContainer},
+  components: { VEP, ExampleContainer },
   data: () => ({
     color: "blue",
-    task: null
+    task: null,
   }),
   methods: {
     randomizeColor() {
       this.color = randomColor();
-    }
+    },
   },
   mounted() {
     this.task = new IntervalTask(this.randomizeColor);
@@ -26,10 +26,8 @@ export default {
   },
   beforeUnmount() {
     this.task.stop();
-  }
-}
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

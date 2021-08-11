@@ -1,20 +1,109 @@
 <template>
   <example-container>
     <template #default="{ progress, loading, slider, noData, determinate }">
-      <v-e-p class="mr-1" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" :color="gradient1" :thickness="40"/>
-      <v-e-p class="mr-1" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" :color="gradient1" line="butt" :thickness="50"/>
-      <v-e-p class="mr-1" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" :color="gradient3" line="round" :thickness="10" :empty-thickness="2"/>
-      <v-e-p class="mr-1" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" :color="gradient4" line="butt" line-mode="in-over" :thickness="100" :empty-thickness="2"/>
-      <v-e-p class="mr-1" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" :color="gradient5" line="round" line-mode="out-over" :thickness="20" :empty-thickness="2"/>
-      <v-e-p class="mr-1" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" :color="gradient6" line="round" line-mode="out-over" :thickness="20" :empty-thickness="2"/>
-      <v-e-p class="mr-1" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" :color="gradient7" line="round" line-mode="out-over" :thickness="20" :empty-thickness="1"/>
-      <v-e-p class="mr-1" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" :color="gradient2" line="butt" :thickness="100" :empty-thickness="1"/>
-      <v-e-p class="mr-1" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" :color="gradient2" line="butt" :thickness="150" :empty-thickness="1"/>
+      <v-e-p
+        class="mr-1"
+        :progress="progress"
+        :loading="loading"
+        :no-data="noData"
+        :determinate="determinate"
+        :color="gradient1"
+        :thickness="40"
+      />
+      <v-e-p
+        class="mr-1"
+        :progress="progress"
+        :loading="loading"
+        :no-data="noData"
+        :determinate="determinate"
+        :color="gradient1"
+        line="butt"
+        :thickness="50"
+      />
+      <v-e-p
+        class="mr-1"
+        :progress="progress"
+        :loading="loading"
+        :no-data="noData"
+        :determinate="determinate"
+        :color="gradient3"
+        line="round"
+        :thickness="10"
+        :empty-thickness="2"
+      />
+      <v-e-p
+        class="mr-1"
+        :progress="progress"
+        :loading="loading"
+        :no-data="noData"
+        :determinate="determinate"
+        :color="gradient4"
+        line="butt"
+        line-mode="in-over"
+        :thickness="100"
+        :empty-thickness="2"
+      />
+      <v-e-p
+        class="mr-1"
+        :progress="progress"
+        :loading="loading"
+        :no-data="noData"
+        :determinate="determinate"
+        :color="gradient5"
+        line="round"
+        line-mode="out-over"
+        :thickness="20"
+        :empty-thickness="2"
+      />
+      <v-e-p
+        class="mr-1"
+        :progress="progress"
+        :loading="loading"
+        :no-data="noData"
+        :determinate="determinate"
+        :color="gradient6"
+        line="round"
+        line-mode="out-over"
+        :thickness="20"
+        :empty-thickness="2"
+      />
+      <v-e-p
+        class="mr-1"
+        :progress="progress"
+        :loading="loading"
+        :no-data="noData"
+        :determinate="determinate"
+        :color="gradient7"
+        line="round"
+        line-mode="out-over"
+        :thickness="20"
+        :empty-thickness="1"
+      />
+      <v-e-p
+        class="mr-1"
+        :progress="progress"
+        :loading="loading"
+        :no-data="noData"
+        :determinate="determinate"
+        :color="gradient2"
+        line="butt"
+        :thickness="100"
+        :empty-thickness="1"
+      />
+      <v-e-p
+        class="mr-1"
+        :progress="progress"
+        :loading="loading"
+        :no-data="noData"
+        :determinate="determinate"
+        :color="gradient2"
+        line="butt"
+        :thickness="150"
+        :empty-thickness="1"
+      />
     </template>
     <template #code>
-      <slot name="code">
-
-      </slot>
+      <slot name="code"> </slot>
     </template>
   </example-container>
 </template>
@@ -24,7 +113,7 @@ import ExampleContainer from "../../components/Base/ExampleContainer/ExampleCont
 import VEP from "../../components/Base/VEP";
 export default {
   name: "ColorGradientCrazy",
-  components: {VEP, ExampleContainer},
+  components: { VEP, ExampleContainer },
   data: () => ({
     gradient1: {
       radial: true,
@@ -237,9 +326,7 @@ export default {
       ],
     },
   }),
-}
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

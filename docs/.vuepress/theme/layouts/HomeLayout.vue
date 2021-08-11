@@ -1,10 +1,14 @@
 <template>
   <section id="home" class="p-8">
-    <h1> hello home</h1>
+    <h1>hello home</h1>
     <ExampleContainer>
       <template #default="{ progress, state }">
-        <ve-progress :progress="progress" :loading="state === 'Loading'" :determinate="state === 'Determinate'"
-                     :no-data="state === 'No data'"/>
+        <ve-progress
+          :progress="progress"
+          :loading="state === 'Loading'"
+          :determinate="state === 'Determinate'"
+          :no-data="state === 'No data'"
+        />
       </template>
     </ExampleContainer>
   </section>
@@ -15,10 +19,8 @@ import ExampleContainer from "../components/Base/ExampleContainer/ExampleContain
 
 export default {
   name: "HomeLayout",
-  components: {ExampleContainer}
-}
+  components: { ExampleContainer },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

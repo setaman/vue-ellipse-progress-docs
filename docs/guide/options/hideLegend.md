@@ -2,16 +2,15 @@
 
 ###### Animated: ✔️
 
-| type    | values                                 | default |
-|---------|----------------------------------------|---------|
-| Boolean\|                                        |  false  |
+| type      | values | default |
+| --------- | ------ | ------- |
+| Boolean\| | false  |
 
-Boolean that defines whether the circle legend value (**[`progress`](./progress.md)** or  **[`legend`](./legend.md)**) 
+Boolean that defines whether the circle legend value (**[`progress`](./progress.md)** or **[`legend`](./legend.md)**)
 should be hidden.
 
-
 ::: warning Legend behavior
-A non-valid value for **[`progress`](./progress.md)**, the use of the **[`data`](./data.md)** property 
+A non-valid value for **[`progress`](./progress.md)**, the use of the **[`data`](./data.md)** property
 and the **[`loading`](./loading.md)** state also hide the legend.
 :::
 
@@ -56,6 +55,7 @@ and the **[`loading`](./loading.md)** state also hide the legend.
   </ve-progress>
 </template>
 ```
+
 </CodeGroupItem>
 </CodeGroup>
 </template>

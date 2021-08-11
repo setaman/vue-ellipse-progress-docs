@@ -7,7 +7,7 @@
 <script>
 export default {
   name: "LinkIcon",
-}
+};
 </script>
 
 <style scoped lang="scss">
@@ -22,5 +22,4 @@ export default {
     background-color: rgba(38, 92, 255, 0.11);
   }
 }
-
 </style>

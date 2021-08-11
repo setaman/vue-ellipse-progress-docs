@@ -1,9 +1,27 @@
 <template>
-  <example-container :range="[0, 100]" :show-modes="false">
+  <example-container>
     <template #default="{ progress, slider, loading, noData, determinate }">
-      <div class="border-2 border-solid border-indigo-600 inline-block">
-        <v-e-p :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :thickness="slider" dot="20 white"/>
-      </div>
+      <v-e-p
+        :progress="slider"
+        :loading="loading"
+        :no-data="noData"
+        :determinate="determinate"
+      >
+        <template #default="{ counterTick }">
+          <div>
+            <span>i can</span> <br />
+            <span>put </span>
+            <b style="color: #2d68fc; font-size: 1.5rem">
+              {{ counterTick.currentValue }}
+            </b>
+            <span> anything</span><br />
+            <span>here</span>
+          </div>
+        </template>
+      </v-e-p>
+    </template>
+    <template #code>
+      <slot name="code"> </slot>
     </template>
   </example-container>
 </template>
@@ -13,10 +31,8 @@ import ExampleContainer from "../../components/Base/ExampleContainer/ExampleCont
 import VEP from "../../components/Base/VEP";
 export default {
   name: "DefaultSlot",
-  components: {VEP, ExampleContainer}
-}
+  components: { VEP, ExampleContainer },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

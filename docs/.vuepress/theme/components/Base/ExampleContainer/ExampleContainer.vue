@@ -1,23 +1,62 @@
 <template>
-  <div class="example-container rounded-lg my-6" :class="{ code: mode === 'Code' }">
-    <div class="example-container-header rounded-t-lg px-4 py-2 flex justify-end">
+  <div
+    class="example-container rounded-lg my-6"
+    :class="{ code: mode === 'Code' }"
+  >
+    <div
+      class="example-container-header rounded-t-lg px-4 py-2 flex justify-end"
+    >
       <btn icon class="mr-2" @click="reload">
-        <icon style="font-size: 1.2rem" icon="redo"/>
+        <icon style="font-size: 1.2rem" icon="redo" />
       </btn>
-      <link-icon class="mr-2" :href="exampleLink" target="_blank" v-if="exampleLink">
-        <icon icon="github"/>
+      <link-icon
+        class="mr-2"
+        :href="exampleLink"
+        target="_blank"
+        v-if="exampleLink"
+      >
+        <icon icon="github" />
       </link-icon>
-      <SwitchSlider :options="modes" :size="70" v-model="mode" v-if="showModes"/>
+      <SwitchSlider
+        :options="modes"
+        :size="70"
+        v-model="mode"
+        v-if="showModes"
+      />
     </div>
-    <div class="example-container-body grid-cols-1 lg:grid-cols-2" :class="{grid: mode === 'both'}">
-      <div class="example-container-result p-4" :class="{'side-by-side': mode === 'both'}" v-if="['Result', 'both'].includes(mode)" :key="componentKey">
-        <slot :progress="progress" :slider="slider" :state="state" :loading="loading" :noData="noData" :determinate="determinate">
-
+    <div
+      class="example-container-body grid-cols-1 lg:grid-cols-2"
+      :class="{ grid: mode === 'both' }"
+    >
+      <div
+        class="example-container-result p-4"
+        :class="{ 'side-by-side': mode === 'both' }"
+        v-if="['Result', 'both'].includes(mode)"
+        :key="componentKey"
+      >
+        <slot
+          :progress="progress"
+          :slider="slider"
+          :state="state"
+          :loading="loading"
+          :noData="noData"
+          :determinate="determinate"
+        >
         </slot>
       </div>
-      <div class="example-container-code" v-if="['Code', 'both'].includes(mode)">
-        <slot name="code" :progress="progress" :slider="slider" :state="state" :loading="loading" :noData="noData" :determinate="determinate">
-
+      <div
+        class="example-container-code"
+        v-if="['Code', 'both'].includes(mode)"
+      >
+        <slot
+          name="code"
+          :progress="progress"
+          :slider="slider"
+          :state="state"
+          :loading="loading"
+          :noData="noData"
+          :determinate="determinate"
+        >
         </slot>
       </div>
     </div>
@@ -25,13 +64,33 @@
       <div class="example-controls-range flex-1 py-2 px-4">
         <div class="flex flex-wrap h-full content-center" v-if="showProgress">
           <slot name="range">
-            <slider class="w-full" :min="range[0]" :max="range[1]" v-model.number="slider"/>
+            <slider
+              class="w-full"
+              :min="range[0]"
+              :max="range[1]"
+              v-model.number="slider"
+              :step="step"
+            />
           </slot>
         </div>
       </div>
-      <div class="example-controls-states flex-2 py-2 px-4 lg:ml-8" v-if="showStates">
-        <SwitchSlider class="smAndUp" :options="states" size="100" v-model="state" />
-        <SwitchSlider class="xs" :options="states" size="82" mini v-model="state" />
+      <div
+        class="example-controls-states flex-2 py-2 px-4 lg:ml-8"
+        v-if="showStates"
+      >
+        <SwitchSlider
+          class="smAndUp"
+          :options="states"
+          size="100"
+          v-model="state"
+        />
+        <SwitchSlider
+          class="xs"
+          :options="states"
+          size="82"
+          mini
+          v-model="state"
+        />
       </div>
     </div>
   </div>
@@ -46,7 +105,7 @@ import Btn from "../Btn";
 
 export default {
   name: "ExampleContainer",
-  components: {Btn, LinkIcon, Icon, SwitchSlider },
+  components: { Btn, LinkIcon, Icon, SwitchSlider },
   props: {
     showProgress: {
       type: Boolean,
@@ -66,52 +125,56 @@ export default {
     },
     range: {
       type: Array,
-      default: () => [-100, 100]
-    }
+      default: () => [-100, 100],
+    },
+    step: {
+      type: Number,
+      default: 1,
+    },
   },
   data() {
     return {
       slider: Math.round(this.range[1] / 2),
       state: "Normal",
       mode: "Result",
-      states: ["Normal", 'Loading', 'Determinate', 'No data'],
+      states: ["Normal", "Loading", "Determinate", "No data"],
       modes: [
         {
           title: "Result",
-          icon: "monitor"
+          icon: "monitor",
         },
         {
           title: "Code",
-          icon: "code"
+          icon: "code",
         },
         {
           title: "both",
-          icon: "rows"
-        }
+          icon: "rows",
+        },
       ],
       componentKey: 0,
-    }
+    };
   },
   computed: {
     progress() {
-      return this.slider * 100 / this.range[1]
+      return (this.slider * 100) / this.range[1];
     },
     loading() {
-      return this.state === "Loading"
+      return this.state === "Loading";
     },
     noData() {
-      return this.state === "No data"
+      return this.state === "No data";
     },
     determinate() {
-      return this.state === "Determinate"
+      return this.state === "Determinate";
     },
   },
   methods: {
-    reload(){
-      this.componentKey ++;
-    }
+    reload() {
+      this.componentKey++;
+    },
   },
-}
+};
 </script>
 
 <style lang="scss">
@@ -123,7 +186,7 @@ export default {
   background-color: #f5f6fa;
 }
 .example-container-result {
-  &.side-by-side{
+  &.side-by-side {
     border-right: 2px solid #f5f6fa;
   }
 }
@@ -182,7 +245,7 @@ export default {
     border: 2px solid #2a2c3c;
   }
   .example-container-result {
-    &.side-by-side{
+    &.side-by-side {
       border-right: 2px solid #2a2c3c;
     }
   }
@@ -216,7 +279,7 @@ export default {
 }
 @media (max-width: 419px) {
   .example-container {
-    margin: .85rem -1.5rem;
+    margin: 0.85rem -1.5rem;
     border-radius: 0;
   }
   .example-container-header {

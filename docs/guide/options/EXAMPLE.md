@@ -15,6 +15,7 @@
   <ve-progress :progress="50" legend="0050,51100"/>
 </template>
 ```
+
 </CodeGroupItem>
 </CodeGroup>
 </template>

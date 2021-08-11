@@ -1,8 +1,8 @@
 <template>
   <ClientOnly>
-    <component v-if="component" :is="component" v-bind="$attrs" >
-      <template #default>
-        <slot></slot>
+    <component v-if="component" :is="component" v-bind="$attrs">
+      <template #default="{ counterTick }">
+        <slot :counterTick="counterTick"></slot>
       </template>
       <template #legend>
         <slot name="legend"></slot>
@@ -19,17 +19,15 @@ export default {
   name: "VEP",
   data() {
     return {
-      component: null
-    }
+      component: null,
+    };
   },
-  mounted () {
-    import("vue-ellipse-progress").then(module => {
+  mounted() {
+    import("vue-ellipse-progress").then((module) => {
       this.component = module.VeProgress;
-    })
-  }
-}
+    });
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

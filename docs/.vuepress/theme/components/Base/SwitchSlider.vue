@@ -1,8 +1,8 @@
 <template>
   <div
-      class="switch-container"
-      :style="{ width: `${size * options.length}px` }"
-      :class="{
+    class="switch-container"
+    :style="{ width: `${size * options.length}px` }"
+    :class="{
       inverse,
       large,
       small,
@@ -12,21 +12,26 @@
   >
     <div class="switch">
       <span
-          class="switch-indicator shadow-sm"
-          :style="{
+        class="switch-indicator shadow-sm"
+        :style="{
           backgroundColor: bg,
           width: `${indicatorWidth}%`,
           left: `${indicatorWidth * selectedIndex}%`,
         }"
       ></span>
       <label
-          :style="{ color: color }"
-          :class="{ active: (option.title || option) === modelValue }"
-          v-for="option in options"
-          :key="option.title || option"
+        :style="{ color: color }"
+        :class="{ active: (option.title || option) === modelValue }"
+        v-for="option in options"
+        :key="option.title || option"
       >
-        <input type="radio" :checked="(option.title || option) === modelValue" :value="(option.title || option)" @input="$emit('update:modelValue', $event.target.value)" />
-        <svg-icon v-if="option.icon" :icon="option.icon"/>
+        <input
+          type="radio"
+          :checked="(option.title || option) === modelValue"
+          :value="option.title || option"
+          @input="$emit('update:modelValue', $event.target.value)"
+        />
+        <svg-icon v-if="option.icon" :icon="option.icon" />
         <span v-else>{{ option }}</span>
       </label>
     </div>
@@ -37,8 +42,8 @@
 import SvgIcon from "./SvgIcon";
 export default {
   name: "SwitchSlider",
-  components: {SvgIcon},
-  emits: ['update:modelValue'],
+  components: { SvgIcon },
+  emits: ["update:modelValue"],
   props: {
     modelValue: String,
     options: {
@@ -80,7 +85,9 @@ export default {
   },
   computed: {
     selectedIndex() {
-      return this.options.findIndex((option) => (option.title || option) === this.modelValue);
+      return this.options.findIndex(
+        (option) => (option.title || option) === this.modelValue
+      );
     },
     indicatorWidth() {
       return 100 / this.options.length;
@@ -94,7 +101,7 @@ export default {
   padding: 4px;
   background-color: white;
   height: 32px;
-  box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.1);
+  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
   &.round {
     border-radius: 30px;
     label,

@@ -1,17 +1,17 @@
 @tailwind base;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand:wght@500&display=swap");
 
 :root {
   scroll-behavior: smooth;
 }
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 .custom-container {
   border-left: none !important;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   position: relative;
   &:after {
     content: "";

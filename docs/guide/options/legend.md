@@ -2,13 +2,13 @@
 
 ###### Animated: ✔️
 
-| type    | values                                 | default |
-|---------|----------------------------------------|---------|
+| type             | values                                             | default |
+| ---------------- | -------------------------------------------------- | ------- |
 | Number \| String | any number with `.` or `","` as decimals delimiter |         |
 
-Is any Number or String. This property can be applied for simple formatting of the circle legend. As [`progress`](./progress.md) only 
+Is any Number or String. This property can be applied for simple formatting of the circle legend. As [`progress`](./progress.md) only
 accepts values in the range [-100, 100], it is usually useful when values outside this range need to be displayed as circle
-legend. Defining the value as String you can apply very simple formatting with `"."` or `","` as delimiter or set the initial 
+legend. Defining the value as String you can apply very simple formatting with `"."` or `","` as delimiter or set the initial
 counter placeholder (e.g "0045.00"). Apart from this the value must be a valid JavaScript Number.
 
 ::: warning Legend vs progress
@@ -38,7 +38,7 @@ the circle legend. To hide the circle legend use the [`hideLegend`](./hideLegend
 
 ```vue
 <template>
-  <ve-progress :progress="progress" :legend="legend"/>
+  <ve-progress :progress="progress" :legend="legend" />
 </template>
 
 <script>
@@ -49,12 +49,13 @@ export default {
   }),
   computed: {
     progress() {
-      return this.legend * 100 / this.maxLegendValue;
-    }
+      return (this.legend * 100) / this.maxLegendValue;
+    },
   },
-}
+};
 </script>
 ```
+
 </CodeGroupItem>
 </CodeGroup>
 </template>
@@ -70,10 +71,13 @@ At this moment `legend` becomes very useful. In our component we can calculate t
 this.rating = 3.5;
 this.progress = this.rating * 100 / 5; // the rating percentage
 ```
+
 And then apply the values:
+
 ```vue
 <ve-progress :progress="progress" :legend="rating" />
 ```
+
 As a result, Rating can be displayed as a circle legend and progress will be calculated correctly:
 
 <LegendAndProgress class="mb-16">
@@ -83,7 +87,7 @@ As a result, Rating can be displayed as a circle legend and progress will be cal
 
 ```vue
 <template>
-  <ve-progress :progress="progress" :legend="rating"/>
+  <ve-progress :progress="progress" :legend="rating" />
 </template>
 
 <script>
@@ -93,12 +97,13 @@ export default {
   }),
   computed: {
     progress() {
-      return this.rating * 100 / 5;
-    }
+      return (this.rating * 100) / 5;
+    },
   },
-}
+};
 </script>
 ```
+
 </CodeGroupItem>
 </CodeGroup>
 </template>
@@ -119,14 +124,13 @@ value:
 
 ```vue
 <template>
-  <ve-progress :progress="50" legend="20,50"/>
-  <ve-progress :progress="50" legend="01000"/>
-  <ve-progress :progress="50" legend="0050,51100"/>
+  <ve-progress :progress="50" legend="20,50" />
+  <ve-progress :progress="50" legend="01000" />
+  <ve-progress :progress="50" legend="0050,51100" />
 </template>
 ```
+
 </CodeGroupItem>
 </CodeGroup>
 </template>
 </example-container>
-
-

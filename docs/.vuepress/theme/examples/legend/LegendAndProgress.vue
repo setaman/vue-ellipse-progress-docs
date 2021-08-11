@@ -1,12 +1,16 @@
 <template>
   <example-container :range="[0, 5]">
     <template #default="{ progress, slider, loading, noData, determinate }">
-      <v-e-p :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" :legend="slider"/>
+      <v-e-p
+        :progress="progress"
+        :loading="loading"
+        :no-data="noData"
+        :determinate="determinate"
+        :legend="slider"
+      />
     </template>
     <template #code>
-      <slot name="code">
-
-      </slot>
+      <slot name="code"> </slot>
     </template>
   </example-container>
 </template>
@@ -16,10 +20,8 @@ import ExampleContainer from "../../components/Base/ExampleContainer/ExampleCont
 import VEP from "../../components/Base/VEP";
 export default {
   name: "LegendBasic",
-  components: {VEP, ExampleContainer},
-}
+  components: { VEP, ExampleContainer },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

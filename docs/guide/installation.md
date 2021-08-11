@@ -1,18 +1,18 @@
 # Installation
 
-The library is available as NPM package and can be alternatively included via CDN. 
-The installation with a package manager is recommended, 
+The library is available as NPM package and can be alternatively included via CDN.
+The installation with a package manager is recommended,
 this way there is the possibility to use the library either in plugin mode or to import it directly as a component.
 
 ::: warning Vue compatibility
-Please note that for Vue 3 compatibility you have to use most recent <Badge type="tip" text="2.x" vertical="middle" /> 
+Please note that for Vue 3 compatibility you have to use most recent <Badge type="tip" text="2.x" vertical="middle" />
 version of the library. Vue 2 users have
 to use <Badge type="tip" text="1.x" vertical="middle" /> version.
 :::
 
 ## Package Manager
 
-Use your favorite package manager to install the library from NPM. After the installation you have the choice to 
+Use your favorite package manager to install the library from NPM. After the installation you have the choice to
 initialize the component as a plugin or to import it directly.
 
 <CodeGroup>
@@ -29,12 +29,13 @@ npm i vue-ellipse-progress
 ```bash:no-line-numbers
 yarn add vue-ellipse-progress
 ```
+
   </CodeGroupItem>
 </CodeGroup>
 
 ### Initialize as Plugin
 
-Import and initialize the component in your `main.js`. By default, after initialization, the component is available as 
+Import and initialize the component in your `main.js`. By default, after initialization, the component is available as
 `<ve-progress/>` and can be used everywhere. You also are free to define a custom name:
 
 ```js
@@ -54,17 +55,18 @@ You also have the option to import the component directly:
 
 ```vue
 <template>
-  <ve-progress :progress="50"/>    
+  <ve-progress :progress="50" />
 </template>
 <script>
-  import { VeProgress } from "vue-ellipse-progress";
+import { VeProgress } from "vue-ellipse-progress";
 
-  export default {
+export default {
   name: "MyComponent",
   components: { VeProgress },
-}
+};
 </script>
 ```
+
 ## CDN
 
 To use the component without a build tool you can customize and get the `veprogress.umd.min.js` file from [JSDelivr](https://www.jsdelivr.com/package/npm/vue-ellipse-progress).
@@ -92,4 +94,3 @@ Just add the following line to your HTML and initialize the component as plugin:
   </body>
 </html>
 ```
-

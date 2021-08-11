@@ -3,8 +3,7 @@
     <div class="card-link-container p-3">
       <h4 class="card-link-title m-0">{{ title }}</h4>
       <p class="card-link-content m-0 mt-2">
-        <slot>
-        </slot>
+        <slot> </slot>
       </p>
     </div>
   </router-link>
@@ -13,8 +12,8 @@
 <script>
 export default {
   name: "CardLink",
-  props: ["link", "title"]
-}
+  props: ["link", "title"],
+};
 </script>
 
 <style scoped lang="scss">
@@ -41,5 +40,4 @@ export default {
   letter-spacing: 0.05rem;
   font-size: 1rem;
 }
-
 </style>
