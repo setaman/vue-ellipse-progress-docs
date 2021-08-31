@@ -95,6 +95,14 @@ module.exports = {
                   text: "emptyColor",
                   link: "/guide/options/emptyColor.md",
                 },
+                {
+                  text: "half",
+                  link: "/guide/options/half.md",
+                },
+                {
+                  text: "reverse",
+                  link: "/guide/options/reverse.md",
+                },
               ],
             },
             "/guide/slots.md",

@@ -185,18 +185,6 @@ Descriptive string in form `"[strict] count spacing"` that adds dashed empty pro
 
 `<ve-progress dash="10 10" />` - 10 pixels big dashes with 10 pixels spacing, the number of dashes depends on the empty circle circumference
 
-<br>
-
-- ### `half`
-
-Boolean that specifies the type of the circle. If it is set to true, only the half of the circle will be drawn.
-
-###### Example: 📜
-
-```vue
-<ve-progress half />
-```
-
 <img width="350px" src="https://github.com/setaman/Bilder/blob/master/ep_half_example.png" alt="half circle example"/>
 
 <br>
@@ -245,19 +233,6 @@ dot="5% red" // adds red dot
 ```
 
 <img width="100px" src="https://github.com/setaman/Bilder/blob/master/Anmerkung%202020-05-19%20220917.png" alt="dot example"/>
-
-<br>
-
-- ### `reverse`
-
-Is a Boolean. `reverse` prop flips the circle, and the progress circle fills counterclockwise. Alternatively you can just set
-a negative value for [`progress`](#progress).
-
-###### Example: 📜
-
-```vue
-<ve-progress reverse />
-```
 
 <br>
 

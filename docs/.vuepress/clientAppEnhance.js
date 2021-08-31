@@ -9,6 +9,8 @@ import ProgressBasic from "./theme/examples/progress/ProgressBasic";
 import LegendBasic from "./theme/examples/legend/LegendBasic";
 import LegendAndProgress from "./theme/examples/legend/LegendAndProgress";
 import HideLegend from "./theme/examples/hideLegend/HideLegend";
+import Reverse from "./theme/examples/reverse/Reverse";
+import Half from "./theme/examples/half/Half";
 import SizeBasic from "./theme/examples/size/SizeBasic";
 import SizeDependencies from "./theme/examples/size/SizeDependencies";
 import Thickness from "./theme/examples/thickness/Thickness";
@@ -43,4 +45,6 @@ export default defineClientAppEnhance(async ({ app, router, siteData }) => {
   app.component("HideLegend", HideLegend);
   app.component("DefaultSlot", DefaultSlot);
   app.component("DefaultSlotColored", DefaultSlotColored);
+  app.component("Reverse", Reverse);
+  app.component("Half", Half);
 });
