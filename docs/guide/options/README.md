@@ -9,9 +9,9 @@ The **[`progress`](#progress)** is the only required property, and you are ready
 > Also make sure to check **[slot options](#slot-options)**
 
 | Prop                                          | Type                       | Values                                                                                                                                              | Default            |
-| --------------------------------------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | --- |
-| **[`progress`](#progress)**                   | Number                     | \[-100, 100]                                                                                                                                        |
-| **[`size`](#size)**                           | Number                     | >=0                                                                                                                                                 | 200                |     |
+| --------------------------------------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| **[`progress`](#progress)**                   | Number                     | \[-100, 100]                                                                                                                                        |                    |
+| **[`size`](#size)**                           | Number                     | >=0                                                                                                                                                 | 200                |
 | **[`line`](#line)**                           | String                     | "round \| square \| butt"                                                                                                                           | "round"            |
 | **[`thickness`](#thickness)**                 | Number \| String           | \>=0 as Number or percent value as String                                                                                                           | "5%"               |
 | **[`lineMode`](#linemode)**                   | String                     | "center \| out \| out-over \| in \| in-over \| top \| bottom [offset]"                                                                              | "center"           |
@@ -123,26 +123,6 @@ Descriptive string in form `"type [duration delay]"` that defines the initial an
 ```js
 animation = "rs 700 200";
 animation = "bounce 1000";
-```
-
-<br>
-
-- ### `loading`
-
-Boolean that forces loading state. The component provides an indeterminate loading state for the case that your data is not available immediately. With this property set to `true` you can use the component as the indeterminate progress.
-
-<br>
-
-- ### `loader`
-
-With this option defined as Object you can customize the loading circle that is shown in the states
-[loading](#loading) and [determinate](#determinate). Accepted properties are [`color`](#color), [`thickness`](#thickness), [`line`](#line),
-[`lineMode`](#linemode) and `opactity`. `opacity` is specific for loading circle and can be any valid CSS opacity value. If the option is not specified, the loading circle replicates the progress circle with a 0.55 default value for `opacity`.
-
-###### Example: 📜
-
-```vue
-<ve-progress :loader="{ color: 'green', lineMode: 'in 10', opacity: '0.6' }" />
 ```
 
 <br>

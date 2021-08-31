@@ -29,17 +29,17 @@ createApp(App).use(veProgress);
     </CardLink>
   </div>
   <div>
-    <CardLink class="fill" link="/guide/options/" title="Configuration">
+    <CardLink class="fill" link="/guide/options.html" title="Configuration">
       Explore wide range of configuration options through the properties and slots
     </CardLink>
   </div>
 <div>
-    <CardLink link="/guide/compatibility/" title="Compatibility">
+    <CardLink link="/guide/compatibility.html" title="Compatibility">
       Check, if the plugin meets your compatibility requirements 
     </CardLink>
   </div>
   <div>
-    <CardLink class="fill" link="/guide/contribution" title="Contribution">
+    <CardLink class="fill" link="/guide/contribution.html" title="Contribution">
       Any help is very much appreciated
     </CardLink>
   </div>

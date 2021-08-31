@@ -1,7 +1,5 @@
 # `legend`
 
-###### Animated: ✔️
-
 | type      | values | default |
 | --------- | ------ | ------- |
 | Boolean\| | false  |

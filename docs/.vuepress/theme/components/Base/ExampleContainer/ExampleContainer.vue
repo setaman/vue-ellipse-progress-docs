@@ -131,11 +131,15 @@ export default {
       type: Number,
       default: 1,
     },
+    preselectedState: {
+      types: String,
+      default: "Normal"
+    }
   },
   data() {
     return {
       slider: Math.round(this.range[1] / 2),
-      state: "Normal",
+      state: this.preselectedState,
       mode: "Result",
       states: ["Normal", "Loading", "Determinate", "No data"],
       modes: [

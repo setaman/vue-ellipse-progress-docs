@@ -56,6 +56,14 @@ module.exports = {
                   link: "/guide/options/size.md",
                 },
                 {
+                  text: "loading",
+                  link: "/guide/options/loading.md",
+                },
+                {
+                  text: "loader",
+                  link: "/guide/options/loader.md",
+                },
+                {
                   text: "line",
                   link: "/guide/options/line.md",
                 },
