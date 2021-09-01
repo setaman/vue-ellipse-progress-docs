@@ -127,12 +127,6 @@ animation = "bounce 1000";
 
 <br>
 
-- ### `determinate`
-
-Boolean that provides a determinate loading state that indicates that your data loading is still in progress but allows to show the **[`progress`](#progress)**.
-
-<br>
-
 - ### `noData`
 
 ###### Animated: ✔️

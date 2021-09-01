@@ -64,6 +64,14 @@ module.exports = {
                   link: "/guide/options/loader.md",
                 },
                 {
+                  text: "determinate",
+                  link: "/guide/options/determinate.md",
+                },
+                {
+                  text: "noData",
+                  link: "/guide/options/nodata.md",
+                },
+                {
                   text: "line",
                   link: "/guide/options/line.md",
                 },
