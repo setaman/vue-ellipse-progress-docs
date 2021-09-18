@@ -127,16 +127,6 @@ animation = "bounce 1000";
 
 <br>
 
-- ### `noData`
-
-###### Animated: ✔️
-
-Boolean that forces no data state. The component provides a no data state for the case that your data is not available. The circle progress is still empty.
-
-> ❗ The component will take the no data state even if you provide an invalid **[`progress`](#progress)** value
-
-<br>
-
 - ### `angle`
 
 ###### Animated: ✔️

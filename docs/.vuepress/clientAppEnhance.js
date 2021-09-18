@@ -15,6 +15,7 @@ import SizeBasic from "./theme/examples/size/SizeBasic";
 import SizeDependencies from "./theme/examples/size/SizeDependencies";
 import Thickness from "./theme/examples/thickness/Thickness";
 import LineMode from "./theme/examples/lineMode/LineMode";
+import Angle from "./theme/examples/angle/Angle";
 import LinePosition from "./theme/examples/linePosition/LinePosition";
 import EmptyLinePosition from "./theme/examples/linePosition/EmptyLinePosition";
 import ColorRandom from "./theme/examples/colors/ColorRandom";
@@ -25,26 +26,33 @@ import DefaultSlotColored from "./theme/examples/slots/DefaultSlotColored";
 import "@iconscout/unicons/css/line.css";
 
 export default defineClientAppEnhance(async ({ app, router, siteData }) => {
-  app.component("Slider", Slider);
-  app.component("VEP", VEP);
-  app.component("CardLink", CardLink);
-  app.component("HomeLayout", HomeLayout);
-  app.component("ExampleContainer", ExampleContainer);
-  app.component("ProgressBasic", ProgressBasic);
-  app.component("LegendBasic", LegendBasic);
-  app.component("LegendAndProgress", LegendAndProgress);
-  app.component("SizeBasic", SizeBasic);
-  app.component("SizeDependencies", SizeDependencies);
-  app.component("Thickness", Thickness);
-  app.component("LineMode", LineMode);
-  app.component("LinePosition", LinePosition);
-  app.component("EmptyLinePosition", EmptyLinePosition);
-  app.component("ColorRandom", ColorRandom);
-  app.component("ColorGradient", ColorGradient);
-  app.component("ColorGradientCrazy", ColorGradientCrazy);
-  app.component("HideLegend", HideLegend);
-  app.component("DefaultSlot", DefaultSlot);
-  app.component("DefaultSlotColored", DefaultSlotColored);
-  app.component("Reverse", Reverse);
-  app.component("Half", Half);
+  const components = [
+    Slider,
+    VEP,
+    Angle,
+    CardLink,
+    HomeLayout,
+    ExampleContainer,
+    ProgressBasic,
+    LegendBasic,
+    LegendAndProgress,
+    SizeBasic,
+    SizeDependencies,
+    Thickness,
+    LineMode,
+    LinePosition,
+    EmptyLinePosition,
+    ColorRandom,
+    ColorGradient,
+    ColorGradientCrazy,
+    HideLegend,
+    DefaultSlot,
+    DefaultSlotColored,
+    Reverse,
+    Half,
+  ];
+
+  for (const c of components) {
+    app.component(c.name, c);
+  }
 });

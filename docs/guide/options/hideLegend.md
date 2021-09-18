@@ -1,4 +1,4 @@
-# `legend`
+# `hideLegend`
 
 | type      | values | default |
 | --------- | ------ | ------- |
@@ -8,8 +8,8 @@ Boolean that defines whether the circle legend value (**[`progress`](./progress.
 should be hidden.
 
 ::: warning Legend behavior
-A non-valid value for **[`progress`](./progress.md)**, the use of the **[`data`](./data.md)** property
-and the **[`loading`](./loading.md)** state also hide the legend.
+A non-valid value for **[`progress`](./progress.md)**, the use of the **[`data`](./data.md)** property,
+the **[`loading`](./loading.md)** and **[`noData`](./noData.md)** states also hide the legend.
 :::
 
 ### Usage 📜

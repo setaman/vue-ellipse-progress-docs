@@ -111,6 +111,10 @@ module.exports = {
                   text: "reverse",
                   link: "/guide/options/reverse.md",
                 },
+                {
+                  text: "angle",
+                  link: "/guide/options/angle.md",
+                },
               ],
             },
             "/guide/slots.md",

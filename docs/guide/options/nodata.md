@@ -40,7 +40,14 @@ The component will take the no data state even if you provide an invalid **[`pro
 
 ```vue:no-v-pre
 <template>
-  <ve-progress :progress="{{ progress }}" :noData="{{ noData }}"/>
+  <ve-progress :progress="{{ progress }}" :noData="{{ noData }}">
+    <template #legend>
+        <span>/100</span>
+    </template>
+    <template #legend-caption>
+        <span>i'm a caption</span>
+    </template>
+  </ve-progress>
 </template>
 ```
 
