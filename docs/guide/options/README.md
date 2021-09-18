@@ -57,10 +57,6 @@ Defines the fill color of the empty circle. Takes the same value as **[`color`](
 
 <br>
 
-- ### `hideLegend`
-
-Boolean that defines whether the legend value (**[`progress`](#progress)** or **[`legend`](#legend)**) is hidden.
-
 - ### `legendFormatter`
 
 Is a Function that must return your custom formatted value. The function takes counter properties object as argument and

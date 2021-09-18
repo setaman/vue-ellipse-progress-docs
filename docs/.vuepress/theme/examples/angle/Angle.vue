@@ -1,4 +1,4 @@
-<Angle>
+<template>
   <example-container>
     <template #default="{ progress, slider, loading, noData, determinate }">
       <label class="block my-4">
@@ -23,7 +23,7 @@
       <slot name="code" :data="{ angle, progress }"> </slot>
     </template>
   </example-container>
-</Angle>
+</template>
 
 <script>
 import ExampleContainer from "../../components/Base/ExampleContainer/ExampleContainer";
