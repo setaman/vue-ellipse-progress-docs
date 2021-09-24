@@ -14,7 +14,7 @@ Custom loading circle can be created with **[`loader`](./loader.md)** !
 :::
 
 ::: warning Legend behavior
-The use of the `loading` state hide the legend.
+The use of the `loading` state hides the legend.
 :::
 
 ### Usage 📜

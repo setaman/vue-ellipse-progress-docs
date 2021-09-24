@@ -1,10 +1,12 @@
 # `hideLegend`
 
+###### Animated: ✔️
+
 | type      | values | default |
 | --------- | ------ | ------- |
-| Boolean\| | false  |
+| Boolean   | false  |
 
-Boolean that defines whether the circle legend value (**[`progress`](./progress.md)** or **[`legend`](./legend.md)**)
+Boolean that defines whether the circle legend (**[`progress`](./progress.md)** or **[`legend`](./legend.md)**)
 should be hidden.
 
 ::: warning Legend behavior

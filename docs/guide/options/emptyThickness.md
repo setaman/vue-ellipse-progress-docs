@@ -10,7 +10,7 @@ Is a Number >=0 or a String that defines the empty line thickness. If you set th
 the thickness will be calculated in relation to **[`size`](./size.md)**.
 
 ::: tip
-Make sure to take a look at **[`thickness`](./thickness.md)**, **[`lineMode`](./lineMode.md)**, **[`linePosition`](./linePostition.md)**
+Make sure to take a look at **[`thickness`](./thickness.md)**, **[`lineMode`](./lineMode.md)**, **[`linePosition`](./linePosition.md)**
 and other properties to learn how you can create unique circles
 :::
 

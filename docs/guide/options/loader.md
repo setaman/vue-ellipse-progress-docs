@@ -8,7 +8,7 @@
 
 With this option defined as Object you can customize the loading circle that is shown in the states
 [loading](#loading) and [determinate](#determinate). Accepted properties are [`color`](#color), [`thickness`](#thickness), [`line`](#line),
-[`lineMode`](#linemode) and `duration`, `opacity`. `duration` and `opacity` are specific for loading circle. Any valid CSS 
+[`lineMode`](#linemode), `duration` and `opacity`. `duration` and `opacity` are specific for loading circle. Any valid CSS 
 opacity value can be set as `opacity`. `duration` specifies the speed of the loader animation. If the loader option is not 
 specified, the loading circle replicates the progress circle with a 0.55 default value for `opacity` and 1000 `duration`.
 

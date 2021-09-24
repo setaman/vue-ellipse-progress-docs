@@ -7,7 +7,7 @@
 | String | "center \| out \| in [offset]" | "center" |
 
 Descriptive string in form `"mode [offset]"` that defines how the empty line is aligned in relation to the empty circle fill area.
-Available modes are `center`, `in` and `out`. Additionally, with the `out` mode you can provide an `offset` value as any Number.
+Available modes are `center`, `in` and `out`. Additionally, with the `out` mode you can provide any `offset` Number value.
 In general, this prop makes it possible to mimic the SVG2 `stroke-aligment`, which is currently not supported in any browser.
 
 ###### Usage: 📜
