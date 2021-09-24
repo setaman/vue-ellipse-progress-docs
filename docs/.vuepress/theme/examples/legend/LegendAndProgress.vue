@@ -19,7 +19,7 @@
 import ExampleContainer from "../../components/Base/ExampleContainer/ExampleContainer";
 import VEP from "../../components/Base/VEP";
 export default {
-  name: "LegendBasic",
+  name: "LegendAndProgress",
   components: { VEP, ExampleContainer },
 };
 </script>
