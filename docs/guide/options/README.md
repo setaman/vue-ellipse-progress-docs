@@ -106,31 +106,6 @@ Finally, set your formatter as prop:
 
 <br>
 
-- ### `animation`
-
-Descriptive string in form `"type [duration delay]"` that defines the initial animation of progress circle line filling. `type` is one from predefined animations and the optional `duration` and `delay` are Number values. Note that the order is important and that you can only define `delay` after `duration`.
-
-- `type` - is one of the predefined animations: `default | rs | reverse | bounce| loop`
-- `duration` - number in milliseconds, default `1000`
-- `delay` - number in milliseconds, default `400`
-
-###### Example: 📜
-
-```js
-animation = "rs 700 200";
-animation = "bounce 1000";
-```
-
-<br>
-
-- ### `angle`
-
-###### Animated: ✔️
-
-Is any number. It defines the starting point of the progress circle line.
-
-<br>
-
 - ### `fontSize`
 
 ###### Animated: ✔️

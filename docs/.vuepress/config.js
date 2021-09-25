@@ -115,6 +115,10 @@ module.exports = {
                   text: "angle",
                   link: "/guide/options/angle.md",
                 },
+                {
+                  text: "animation",
+                  link: "/guide/options/animation.md",
+                },
               ],
             },
             "/guide/slots.md",

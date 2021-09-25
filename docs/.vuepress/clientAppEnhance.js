@@ -21,6 +21,7 @@ import EmptyLinePosition from "./theme/examples/linePosition/EmptyLinePosition";
 import ColorRandom from "./theme/examples/colors/ColorRandom";
 import ColorGradient from "./theme/examples/colors/ColorGradient";
 import ColorGradientCrazy from "./theme/examples/colors/ColorGradientCrazy";
+import Animation from "./theme/examples/animation/Animation";
 import DefaultSlot from "./theme/examples/slots/DefaultSlot";
 import DefaultSlotColored from "./theme/examples/slots/DefaultSlotColored";
 import "@iconscout/unicons/css/line.css";
@@ -50,6 +51,7 @@ export default defineClientAppEnhance(async ({ app, router, siteData }) => {
     DefaultSlotColored,
     Reverse,
     Half,
+    Animation,
   ];
 
   for (const c of components) {
