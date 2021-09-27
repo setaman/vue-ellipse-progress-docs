@@ -48,6 +48,10 @@ module.exports = {
                   link: "/guide/options/legend.md",
                 },
                 {
+                  text: "legendFormatter",
+                  link: "/guide/options/legendFormatter.md",
+                },
+                {
                   text: "hideLegend",
                   link: "/guide/options/hideLegend.md",
                 },

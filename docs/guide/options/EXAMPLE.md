@@ -1,18 +1,14 @@
-<example-container>
-<template #default="{ loading, slider, noData, determinate }">
-<v-e-p class="mr-2" size="160" :progress="50" :loading="loading" :no-data="noData" :determinate="determinate" legend="20,50" font-size="1.6rem"/>
-<v-e-p class="mr-2" size="160" :progress="50" :loading="loading" :no-data="noData" :determinate="determinate" legend="01000" font-size="1.6rem"/>
-<v-e-p class="mr-2" size="160" :progress="50" :loading="loading" :no-data="noData" :determinate="determinate" legend="0050,51100" font-size="1.6rem"/>
+<example-container >
+<template #default="{ loading, progress, slider, noData, determinate }">
+<v-e-p :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate"></v-e-p>
 </template>
-<template #code>
+<template #code="{ progress }">
 <CodeGroup>
 <CodeGroupItem >
 
 ```vue:no-v-pre
 <template>
-  <ve-progress :progress="50" legend="20,50"/>
-  <ve-progress :progress="50" legend="01000"/>
-  <ve-progress :progress="50" legend="0050,51100"/>
+  <ve-progress :progress="{{ progress }}" />
 </template>
 ```
 

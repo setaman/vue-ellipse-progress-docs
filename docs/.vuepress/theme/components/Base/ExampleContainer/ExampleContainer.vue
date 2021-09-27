@@ -133,8 +133,8 @@ export default {
     },
     preselectedState: {
       types: String,
-      default: "Normal"
-    }
+      default: "Normal",
+    },
   },
   data() {
     return {
