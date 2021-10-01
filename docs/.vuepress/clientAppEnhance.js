@@ -21,6 +21,9 @@ import EmptyLinePosition from "./theme/examples/linePosition/EmptyLinePosition";
 import ColorRandom from "./theme/examples/colors/ColorRandom";
 import ColorGradient from "./theme/examples/colors/ColorGradient";
 import ColorGradientCrazy from "./theme/examples/colors/ColorGradientCrazy";
+import EmptyColorRandom from "./theme/examples/emptyColor/EmptyColorRandom";
+import EmptyColorGradient from "./theme/examples/emptyColor/EmptyColorGradient";
+import EmptyColorGradientCrazy from "./theme/examples/emptyColor/EmptyColorGradientCrazy";
 import Animation from "./theme/examples/animation/Animation";
 import LegendFormatterProps from "./theme/examples/legendFormatter/LegendFormatterProps";
 import LegendFormatterHtml from "./theme/examples/legendFormatter/LegendFormatterHtml";
@@ -56,6 +59,9 @@ export default defineClientAppEnhance(async ({ app, router, siteData }) => {
     Animation,
     LegendFormatterProps,
     LegendFormatterHtml,
+    EmptyColorRandom,
+    EmptyColorGradient,
+    EmptyColorGradientCrazy,
   ];
 
   for (const c of components) {
