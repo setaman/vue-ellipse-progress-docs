@@ -5,7 +5,7 @@ module.exports = {
   title: "vue-ellipse-progress",
   description: "This is not my first VuePress site",
   base: isDevMode ? "/" : "/vue-ellipse-progress-docs/",
-
+  bundler: "@vuepress/bundler-webpack",
   markdown: {
     code: {
       lineNumbers: false,
