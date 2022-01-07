@@ -37,6 +37,7 @@ module.exports = {
             {
               isGroup: true,
               text: "Options",
+              collapsible: true,
               children: [
                 "/guide/options/README.md",
                 {

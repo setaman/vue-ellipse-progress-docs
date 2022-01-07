@@ -154,7 +154,7 @@ export default {
       mode: "Result",
       states: ["Normal", "Loading", "Determinate", "No data"],
       componentKey: 0,
-      isDarkMode: true,
+      isDarkMode: false,
     };
   },
   computed: {
@@ -198,6 +198,8 @@ export default {
     },
   },
   mounted() {
+    this.isDarkMode =
+      document.documentElement.classList.contains("dark")
     document
       .querySelector(".toggle-dark-button")
       .addEventListener(
