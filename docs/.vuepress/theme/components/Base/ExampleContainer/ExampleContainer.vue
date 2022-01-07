@@ -81,13 +81,13 @@
         <SwitchSlider
           class="smAndUp"
           :options="states"
-          size="100"
+          :size="100"
           v-model="state"
         />
         <SwitchSlider
           class="xs"
           :options="states"
-          size="82"
+          :size="82"
           mini
           v-model="state"
         />
@@ -102,10 +102,13 @@ import Icon from "../Icon";
 import LinkIcon from "../LinkIcon";
 import "@vueform/slider/themes/default.css";
 import Btn from "../Btn";
+import CodeIcon from "../../SvgIcons/CodeIcon";
+import MonitorIcon from "../../SvgIcons/MonitorIcon";
+import RowsIcon from "../../SvgIcons/RowsIcon";
 
 export default {
   name: "ExampleContainer",
-  components: { Btn, LinkIcon, Icon, SwitchSlider },
+  components: { RowsIcon, MonitorIcon, CodeIcon, Btn, LinkIcon, Icon, SwitchSlider },
   props: {
     showProgress: {
       type: Boolean,

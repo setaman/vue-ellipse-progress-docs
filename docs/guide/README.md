@@ -29,7 +29,7 @@ createApp(App).use(veProgress);
     </CardLink>
   </div>
   <div>
-    <CardLink class="fill" link="/guide/options.html" title="Configuration">
+    <CardLink class="fill" link="/guide/options/" title="Configuration">
       Explore wide range of configuration options through the properties and slots
     </CardLink>
   </div>

@@ -7,18 +7,19 @@
         :no-data="noData"
         :determinate="determinate"
         :legend-formatter="
-            ({ currentValue }) => `
-            <span style='color: ${currentValue < 0 ? 'red' : 'green'}; font-weight: bold; border-bottom: 2px gray solid'>
+          ({ currentValue }) => `
+            <span style='color: ${
+              currentValue < 0 ? 'red' : 'green'
+            }; font-weight: bold; border-bottom: 2px gray solid'>
               ${new Intl.NumberFormat('de-DE', {
                 style: 'currency',
                 currency: 'EUR',
               })
                 .format(currentValue)
-                .trim()
-              }
+                .trim()}
             </span>
           `
-          "
+        "
       />
     </template>
     <template #code="{ progress }">

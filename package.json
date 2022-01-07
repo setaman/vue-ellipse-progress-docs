@@ -37,6 +37,7 @@
     "@iconscout/unicons": "^4.0.0",
     "@vueform/slider": "^1.0.5",
     "randomcolor": "^0.6.2",
-    "vue-ellipse-progress": "^2.0.0"
+    "vue-ellipse-progress": "^2.0.0",
+    "vue-ellipse-progress-dev": "git://github.com/setaman/vue-ellipse-progress.git#dev"
   }
 }

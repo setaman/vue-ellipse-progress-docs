@@ -15,7 +15,11 @@
           <div v-for="pair in Object.entries(counterProps)">
             <span> {{ pair[0] }}: </span>
             <span>
-              {{ (pair[1].toString().split(".")[1] ?? "").length > 4 ? parseFloat(pair[1]).toFixed(4) : pair[1] }}
+              {{
+                (pair[1].toString().split(".")[1] ?? "").length > 4
+                  ? parseFloat(pair[1]).toFixed(4)
+                  : pair[1]
+              }}
             </span>
           </div>
         </div>
