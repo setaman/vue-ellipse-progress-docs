@@ -108,7 +108,15 @@ import RowsIcon from "../../SvgIcons/RowsIcon";
 
 export default {
   name: "ExampleContainer",
-  components: { RowsIcon, MonitorIcon, CodeIcon, Btn, LinkIcon, Icon, SwitchSlider },
+  components: {
+    RowsIcon,
+    MonitorIcon,
+    CodeIcon,
+    Btn,
+    LinkIcon,
+    Icon,
+    SwitchSlider,
+  },
   props: {
     showProgress: {
       type: Boolean,
@@ -145,21 +153,8 @@ export default {
       state: this.preselectedState,
       mode: "Result",
       states: ["Normal", "Loading", "Determinate", "No data"],
-      modes: [
-        {
-          title: "Result",
-          icon: "monitor",
-        },
-        {
-          title: "Code",
-          icon: "code",
-        },
-        {
-          title: "both",
-          icon: "rows",
-        },
-      ],
       componentKey: 0,
+      isDarkMode: false,
     };
   },
   computed: {
@@ -175,11 +170,44 @@ export default {
     determinate() {
       return this.state === "Determinate";
     },
+    modes() {
+      const color = this.isDarkMode ? "white" : "#22272e"
+      return [
+        {
+          title: "Result",
+          icon: "monitor",
+          color,
+        },
+        {
+          title: "Code",
+          icon: "code",
+          color,
+        },
+        {
+          title: "both",
+          icon: "rows",
+          color,
+        },
+      ]
+    }
+
   },
   methods: {
     reload() {
       this.componentKey++;
     },
+  },
+  mounted() {
+    this.isDarkMode =
+      document.documentElement.classList.contains("dark")
+    document
+      .querySelector(".toggle-dark-button")
+      .addEventListener(
+        "click",
+        () =>
+          (this.isDarkMode =
+            document.documentElement.classList.contains("dark"))
+      );
   },
 };
 </script>

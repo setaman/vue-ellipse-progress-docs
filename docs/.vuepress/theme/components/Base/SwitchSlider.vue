@@ -31,7 +31,7 @@
           :value="option.title || option"
           @input="$emit('update:modelValue', $event.target.value)"
         />
-        <svg-icon v-if="option.icon" :icon="option.icon" />
+        <component v-if="option.icon" :is="iconComponent(option.icon)" :color="option.color"/>
         <span v-else>{{ option }}</span>
       </label>
     </div>
@@ -40,9 +40,12 @@
 
 <script>
 import SvgIcon from "./SvgIcon";
+import CodeIcon from "../SvgIcons/CodeIcon";
+import MonitorIcon from "../SvgIcons/MonitorIcon";
+import RowsIcon from "../SvgIcons/RowsIcon";
 export default {
   name: "SwitchSlider",
-  components: { SvgIcon },
+  components: { RowsIcon, MonitorIcon, CodeIcon, SvgIcon },
   emits: ["update:modelValue"],
   props: {
     modelValue: String,
@@ -93,6 +96,16 @@ export default {
       return 100 / this.options.length;
     },
   },
+  methods: {
+    iconComponent(icon) {
+      const iconsMap = {
+        "code": CodeIcon,
+        "monitor": MonitorIcon,
+        "rows": RowsIcon,
+      }
+      return iconsMap[icon];
+    },
+  }
 };
 </script>
 
@@ -101,7 +114,7 @@ export default {
   padding: 4px;
   background-color: white;
   height: 32px;
-  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.1);
   &.round {
     border-radius: 30px;
     label,
