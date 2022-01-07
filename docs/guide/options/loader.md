@@ -4,11 +4,11 @@
 
 | type      | values | default |
 | --------- | ------ | ------- |
-| Object    | { [thickness, color, lineMode, line, opacity ]}  |
+| Object    | {[ thickness, color, lineMode, line, opacity ]}  |
 
 With this option defined as Object you can customize the loading circle that is shown in the states
-[loading](#loading) and [determinate](#determinate). Accepted properties are [`color`](#color), [`thickness`](#thickness), [`line`](#line),
-[`lineMode`](#linemode), `duration` and `opacity`. `duration` and `opacity` are specific for loading circle. Any valid CSS 
+[loading](./loading.md) and [determinate](./determinate.md). Accepted properties are [`color`](./color.md), [`thickness`](./thickness.md), [`line`](./line.md),
+[`lineMode`](./linemode.md), `duration` and `opacity`. `duration` and `opacity` are specific for loading circle. Any valid CSS 
 opacity value can be set as `opacity`. `duration` specifies the speed of the loader animation. If the loader option is not 
 specified, the loading circle replicates the progress circle with a 0.55 default value for `opacity` and 1000 `duration`.
 
@@ -21,10 +21,10 @@ specified, the loading circle replicates the progress circle with a 0.55 default
 ### Examples
 
 <example-container preselectedState="Determinate">
-<template #default="{ loading, slider, noData, determinate }">
+<template #default="{ progress, loading, slider, noData, determinate }">
 <v-e-p class="mr-2" 
     size="160" 
-    :progress="50" 
+    :progress="progress" 
     :loading="loading" 
     :no-data="noData" 
     :determinate="determinate"
@@ -32,7 +32,7 @@ specified, the loading circle replicates the progress circle with a 0.55 default
 ></v-e-p>
 <v-e-p class="mr-2" 
     size="160" 
-    :progress="50" 
+    :progress="progress" 
     :loading="loading" 
     :no-data="noData" 
     :determinate="determinate"
@@ -40,11 +40,11 @@ specified, the loading circle replicates the progress circle with a 0.55 default
 ></v-e-p>
 <v-e-p class="mr-2" 
     size="160" 
-    :progress="50" 
+    :progress="progress" 
     :loading="loading" 
     :no-data="noData" 
     :determinate="determinate"
-    :loader="{ color: 'blue', lineMode: 'in 10', opacity: 1, thickness: 15, duration: 2000 }"    
+    :loader="{ color: 'blue', lineMode: 'in 10', opacity: 0.7, thickness: 15, duration: 4000 }"    
 ></v-e-p>
 </template>
 <template #code="{ loading, progress }">
@@ -67,8 +67,8 @@ specified, the loading circle replicates the progress circle with a 0.55 default
     :loader="{ 
       color: 'blue', 
       lineMode: 'in 10', 
-      opacity: 15, 
-      thickness: 4,  
+      opacity: 0.7, 
+      thickness: 15,  
       duration: 2000 
     }"
   />

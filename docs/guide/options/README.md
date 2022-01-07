@@ -57,55 +57,6 @@ Defines the fill color of the empty circle. Takes the same value as **[`color`](
 
 <br>
 
-- ### `legendFormatter`
-
-Is a Function that must return your custom formatted value. The function takes counter properties object as argument and
-is called on every counter tick. Here the formatting of [legend](#legend) or [progress](#progress)
-is completely up to you and you have the full freedom to adjust the presentation to your needs. The function can return any
-value, even HTML.
-
-> ❕ alternatively you can use **[`scoped slot`](#default)** for custom formatting.
-
-###### Example: 📜
-
-The function takes counter properties Object as argument that you can use to define custom formatting.
-`currentValue` is the most relevant value, as it is the actual value at specific counter tick. The return value will be
-displayed as the legend of the circle.
-
-```js
-const myFormatter = ({ currentValue, ...otherProps }) => {
-  return new Intl.NumberFormat("de-DE", {
-    style: "currency",
-    currency: "EUR",
-  }).format(currentValue);
-};
-```
-
-The function can also return HTML:
-
-```js
-const myFormatter = ({ currentValue }) => {
-  return `
-        <span style="font-weight: bold; font-size: 1.6rem">${new Intl.NumberFormat(
-          "de-DE"
-        ).format(currentValue)}</span>
-        <span>€</span>
-      `;
-};
-```
-
-Finally, set your formatter as prop:
-
-```vue
-<ve-progress :legend-formatter="myFormatter" />
-<!-- shorter version-->
-<ve-progress
-  :legend-formatter="({ currentValue }) => `My Format ${currentValue}`"
-/>
-```
-
-<br>
-
 - ### `fontSize`
 
 ###### Animated: ✔️
