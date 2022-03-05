@@ -95,20 +95,6 @@ Descriptive string in form `"[strict] count spacing"` that adds dashed empty pro
 
 <br>
 
-- ### `gap`
-
-###### Animated: ✔️
-
-Defines the gap in pixels from one circle to the previous circle. It will be applied only if [`data`](#data) prop is used.
-
-###### Example: 📜
-
-```vue
-<ve-progress :gap="10" />
-```
-
-<br>
-
 - ### `dot`
 
 ###### Animated: ✔️

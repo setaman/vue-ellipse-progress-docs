@@ -179,7 +179,7 @@ It can be helpful in some situations, but is much less powerful.
 
 ## `legend-caption`
 
-In this slot you can put any HTML and style it on your own. This slot is aligned below the progress.
+In this slot you can put any HTML and style it on your own. This slot is aligned below the legend.
 
 ### Usage 📜
 

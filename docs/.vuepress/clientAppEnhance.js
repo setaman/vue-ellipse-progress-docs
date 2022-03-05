@@ -29,6 +29,9 @@ import LegendFormatterProps from "./theme/examples/legendFormatter/LegendFormatt
 import LegendFormatterHtml from "./theme/examples/legendFormatter/LegendFormatterHtml";
 import DefaultSlot from "./theme/examples/slots/DefaultSlot";
 import DefaultSlotColored from "./theme/examples/slots/DefaultSlotColored";
+import Gap from "./theme/examples/gap/Gap";
+import GapAnimation from "./theme/examples/gap/GapAnimation";
+import Dash from "./theme/examples/dash/Dash";
 import "@iconscout/unicons/css/line.css";
 
 export default defineClientAppEnhance(async ({ app, router, siteData }) => {
@@ -62,6 +65,9 @@ export default defineClientAppEnhance(async ({ app, router, siteData }) => {
     EmptyColorRandom,
     EmptyColorGradient,
     EmptyColorGradientCrazy,
+    Gap,
+    GapAnimation,
+    Dash,
   ];
 
   for (const c of components) {

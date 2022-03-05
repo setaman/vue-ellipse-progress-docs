@@ -36,7 +36,7 @@ module.exports = {
             "/guide/usage.md",
             {
               isGroup: true,
-              text: "Options",
+              text: "Props",
               collapsible: true,
               children: [
                 "/guide/options/README.md",
@@ -123,6 +123,14 @@ module.exports = {
                 {
                   text: "animation",
                   link: "/guide/options/animation.md",
+                },
+                {
+                  text: "gap",
+                  link: "/guide/options/gap.md",
+                },
+                {
+                  text: "dash",
+                  link: "/guide/options/dash.md",
                 },
               ],
             },
