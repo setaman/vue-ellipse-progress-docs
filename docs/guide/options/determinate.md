@@ -7,7 +7,7 @@
 | Boolean   |        | false   |
 
 In determinate state the component indicates that the data is being loaded, but also shows the progress circle and the
-**[`legend`](./legend.md)** that are faded out in the **[`loading`](./loading.md)** state.
+**[`legend`](./legend.md)** that is faded out in the **[`loading`](./loading.md)** state.
 
 ### Usage 📜
 

@@ -1,5 +1,9 @@
 <template>
-  <example-container :show-states="false" :show-progress="false" :show-modes="false">
+  <example-container
+    :show-states="false"
+    :show-progress="false"
+    :show-modes="false"
+  >
     <template #default>
       <v-e-p
         :progress="100"
@@ -30,30 +34,30 @@ import VEP from "../../components/Base/VEP";
 import IntervalTask from "../../../utils/intervalTask";
 export default {
   name: "GapAnimation",
-  components: {VEP, ExampleContainer },
+  components: { VEP, ExampleContainer },
   data: () => ({
     gap: 10,
     data: [
       {
-        thickness: 0
+        thickness: 0,
       },
       {
-        thickness: 1
+        thickness: 1,
       },
       {
-        thickness: 1
+        thickness: 1,
       },
       {
-        thickness: 1
+        thickness: 1,
       },
       {
-        thickness: 1
+        thickness: 1,
       },
       {
-        thickness: 1
+        thickness: 1,
       },
       {
-        thickness: 1
+        thickness: 1,
       },
     ],
     data2: [
@@ -62,22 +66,22 @@ export default {
         gap: 20,
       },
       {
-        thickness: 4
+        thickness: 4,
       },
       {
-        thickness: 4
+        thickness: 4,
       },
       {
-        thickness: 4
+        thickness: 4,
       },
       {
-        thickness: 4
+        thickness: 4,
       },
       {
-        thickness: 4
+        thickness: 4,
       },
       {
-        thickness: 4
+        thickness: 4,
       },
     ],
   }),
@@ -96,7 +100,7 @@ export default {
       } else {
         this.data2[1].gap = 20;
       }
-      console.log(this.data2)
+      console.log(this.data2);
     },
   },
   mounted() {

@@ -39,21 +39,21 @@ export default {
     data: [
       {
         color: "blue",
-        thickness: 1
+        thickness: 1,
       },
       {
         color: "red",
-        thickness: 3
+        thickness: 3,
       },
       {
         color: "green",
-        thickness: 5
+        thickness: 5,
       },
       {
         color: "yellow",
-        thickness: 7
-      }
-    ]
+        thickness: 7,
+      },
+    ],
   }),
 };
 </script>

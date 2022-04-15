@@ -129,6 +129,10 @@ module.exports = {
                   link: "/guide/options/gap.md",
                 },
                 {
+                  text: "dot",
+                  link: "/guide/options/dot.md",
+                },
+                {
                   text: "dash",
                   link: "/guide/options/dash.md",
                 },

@@ -31,7 +31,11 @@
           :value="option.title || option"
           @input="$emit('update:modelValue', $event.target.value)"
         />
-        <component v-if="option.icon" :is="iconComponent(option.icon)" :color="option.color"/>
+        <component
+          v-if="option.icon"
+          :is="iconComponent(option.icon)"
+          :color="option.color"
+        />
         <span v-else>{{ option }}</span>
       </label>
     </div>
@@ -99,13 +103,13 @@ export default {
   methods: {
     iconComponent(icon) {
       const iconsMap = {
-        "code": CodeIcon,
-        "monitor": MonitorIcon,
-        "rows": RowsIcon,
-      }
+        code: CodeIcon,
+        monitor: MonitorIcon,
+        rows: RowsIcon,
+      };
       return iconsMap[icon];
     },
-  }
+  },
 };
 </script>
 

@@ -1,5 +1,7 @@
 # `gap`
 
+###### Animated: ✔️
+
 | type   | values     | default |
 |--------|------------|---------|
 | Number | any Number |         |

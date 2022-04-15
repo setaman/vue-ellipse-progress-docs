@@ -171,7 +171,7 @@ export default {
       return this.state === "Determinate";
     },
     modes() {
-      const color = this.isDarkMode ? "white" : "#22272e"
+      const color = this.isDarkMode ? "white" : "#22272e";
       return [
         {
           title: "Result",
@@ -188,9 +188,8 @@ export default {
           icon: "rows",
           color,
         },
-      ]
-    }
-
+      ];
+    },
   },
   methods: {
     reload() {
@@ -198,8 +197,7 @@ export default {
     },
   },
   mounted() {
-    this.isDarkMode =
-      document.documentElement.classList.contains("dark")
+    this.isDarkMode = document.documentElement.classList.contains("dark");
     document
       .querySelector(".toggle-dark-button")
       .addEventListener(

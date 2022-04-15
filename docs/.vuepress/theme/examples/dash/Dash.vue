@@ -3,7 +3,7 @@
     <template #default="{ progress, slider, loading, noData, determinate }">
       <div>
         <label>
-          <input type="checkbox" v-model="strict"/>
+          <input type="checkbox" v-model="strict" />
           strict
         </label>
       </div>
@@ -22,7 +22,7 @@
         <slider
           class="mt-3 w-full sm:w-1/2"
           :min="0"
-          :max=" this.strict ? 0.99 : 100"
+          :max="this.strict ? 0.99 : 100"
           :step="this.strict ? 0.01 : 1"
           v-model.number="spacing"
         />
@@ -57,8 +57,8 @@ export default {
   }),
   computed: {
     dash() {
-      const mode = this.strict ? "strict" : ""
-      return `${mode} ${this.count} ${this.spacing}`
+      const mode = this.strict ? "strict" : "";
+      return `${mode} ${this.count} ${this.spacing}`;
     },
   },
 };
