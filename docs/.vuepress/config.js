@@ -61,6 +61,14 @@ module.exports = {
                   link: "/guide/options/size.md",
                 },
                 {
+                  text: "fontSize",
+                  link: "/guide/options/fontSize.md",
+                },
+                {
+                  text: "fontColor",
+                  link: "/guide/options/fontColor.md",
+                },
+                {
                   text: "loading",
                   link: "/guide/options/loading.md",
                 },

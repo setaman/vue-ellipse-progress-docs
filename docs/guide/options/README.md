@@ -57,22 +57,6 @@ Defines the fill color of the empty circle. Takes the same value as **[`color`](
 
 <br>
 
-- ### `fontSize`
-
-###### Animated: ✔️
-
-Is any valid CSS size value. It defines the font size of the circle legend. You will have to use **[`legendClass`](#legendClass)** if you want to apply more specific styles.
-
-<br>
-
-- ### `fontColor`
-
-###### Animated: ✔️
-
-Is any valid CSS color value. It defines the color of the circle legend. You will have to use **[`legendClass`](#legendClass)** if you want to apply more specific styles.
-
-<br>
-
 - ### `legendClass`
 
 Adds class to the circles legend to give you the possibility to style it.
