@@ -2,27 +2,20 @@
 
 ###### Animated: ✔️
 
-| type   | values                                                                 | default  |
-| ------ | ---------------------------------------------------------------------- | -------- |
-| String | "default \| rs \| loop \| reverse \| bounce [duration delay]"| "default 1000 400" |
+| type   | values                   | default |
+|--------|--------------------------|---------|
+| String | "[strict] count spacing" |         |
 
-Descriptive string in form `type [duration delay]` that defines the initial animation of progress circle line filling. 
-`type` is one from predefined animations and the optional `duration` and `delay` are Number values. 
-Note that the order is important and that you can define `delay` only after `duration`.
-
-
-|            | values                                                                     |
-| ---------- | ------------------------------------------------------------------------------- |
-| `type`     | `default \| rs \| reverse \| bounce\| loop`                                     |
-| `duration` | any positiv Number                                                              |
-| `delay  `  | any positiv Number                                                              |
+Descriptive string in form `"[strict] count spacing"` that adds dashed empty progress line. This property provides the 
+optional strict mode. In this mode you can define the explicit number of dashes as count with the given relative 
+spacing as number in range >= 0 and < 1. Without strict mode the default behavior of the SVG stroke-dasharray property is 
+used, where the size and spacings of the dashes are defined. Both values `count` and `spacing` are mandatory.
 
 ###### Usage: 📜
 
 ```vue
-<ve-progress animation="rs" />
-<ve-progress animation="reverse 1000" />
-<ve-progress animation="loop 2000 500" />
+<ve-progress dash="strict 60 0.5" /> - 60 dashes with 0.5 relative spacing
+<ve-progress dash="10 10" /> - 10 pixels big dashes with 10 pixels spacing, the number of dashes depends on the empty circle circumference
 ```
 
 ### Example
@@ -34,7 +27,7 @@ Note that the order is important and that you can define `delay` only after `dur
 
 ```vue:no-v-pre
 <template>
-  <ve-progress :progress="{{data.progress}}" animation="{{data.type}} {{data.duration}} {{data.delay}}"/>
+  <ve-progress :progress="{{data.progress}}" dash="{{data.dash}}"/>
 </template>
 ```
 

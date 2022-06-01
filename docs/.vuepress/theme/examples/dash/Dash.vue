@@ -22,8 +22,8 @@
         <slider
           class="mt-3 w-full sm:w-1/2"
           :min="0"
-          :max="this.strict ? 0.99 : 100"
-          :step="this.strict ? 0.01 : 1"
+          :max="strict ? 0.99 : 100"
+          :step="strict ? 0.01 : 1"
           v-model.number="spacing"
         />
       </label>
@@ -55,6 +55,15 @@ export default {
     spacing: 0.1,
     strict: true,
   }),
+  watch: {
+    strict() {
+      if (this.strict) {
+        this.spacing = 0.5
+      } else {
+        this.spacing = 10
+      }
+    }
+  },
   computed: {
     dash() {
       const mode = this.strict ? "strict" : "";
