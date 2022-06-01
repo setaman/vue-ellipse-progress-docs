@@ -149,7 +149,7 @@ export default {
   },
   data() {
     return {
-      slider: Math.round(this.range[1] / 2),
+      slider: Math.round(this.range[1] / 2) || 0,
       state: this.preselectedState,
       mode: "Result",
       states: ["Normal", "Loading", "Determinate", "No data"],

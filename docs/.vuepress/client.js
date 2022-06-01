@@ -1,4 +1,4 @@
-import { defineClientAppEnhance } from "@vuepress/client";
+import { defineClientConfig } from "@vuepress/client";
 import Slider from "@vueform/slider";
 import "@vueform/slider/themes/default.css";
 import HomeLayout from "./theme/layouts/HomeLayout";
@@ -34,45 +34,46 @@ import GapAnimation from "./theme/examples/gap/GapAnimation";
 import Dash from "./theme/examples/dash/Dash";
 import Dot from "./theme/examples/dot/Dot";
 import "@iconscout/unicons/css/line.css";
+const components = [
+  Slider,
+  VEP,
+  Angle,
+  CardLink,
+  HomeLayout,
+  ExampleContainer,
+  ProgressBasic,
+  LegendBasic,
+  LegendAndProgress,
+  SizeBasic,
+  SizeDependencies,
+  Thickness,
+  LineMode,
+  LinePosition,
+  EmptyLinePosition,
+  ColorRandom,
+  ColorGradient,
+  ColorGradientCrazy,
+  HideLegend,
+  DefaultSlot,
+  DefaultSlotColored,
+  Reverse,
+  Half,
+  Animation,
+  LegendFormatterProps,
+  LegendFormatterHtml,
+  EmptyColorRandom,
+  EmptyColorGradient,
+  EmptyColorGradientCrazy,
+  Gap,
+  GapAnimation,
+  Dash,
+  Dot,
+];
 
-export default defineClientAppEnhance(async ({ app, router, siteData }) => {
-  const components = [
-    Slider,
-    VEP,
-    Angle,
-    CardLink,
-    HomeLayout,
-    ExampleContainer,
-    ProgressBasic,
-    LegendBasic,
-    LegendAndProgress,
-    SizeBasic,
-    SizeDependencies,
-    Thickness,
-    LineMode,
-    LinePosition,
-    EmptyLinePosition,
-    ColorRandom,
-    ColorGradient,
-    ColorGradientCrazy,
-    HideLegend,
-    DefaultSlot,
-    DefaultSlotColored,
-    Reverse,
-    Half,
-    Animation,
-    LegendFormatterProps,
-    LegendFormatterHtml,
-    EmptyColorRandom,
-    EmptyColorGradient,
-    EmptyColorGradientCrazy,
-    Gap,
-    GapAnimation,
-    Dash,
-    Dot,
-  ];
-
-  for (const c of components) {
-    app.component(c.name, c);
-  }
+export default defineClientConfig({
+  enhance({ app }) {
+    for (const c of components) {
+      app.component(c.name, c);
+    }
+  },
 });

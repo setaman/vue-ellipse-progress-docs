@@ -1,3 +1,6 @@
+const { mediumZoomPlugin } = require("@vuepress/plugin-medium-zoom");
+const { webpackBundler } = require("@vuepress/bundler-webpack");
+const { defaultTheme } = require("@vuepress/theme-default");
 const isDevMode = process.env.NODE_ENV === "development";
 
 module.exports = {
@@ -5,16 +8,19 @@ module.exports = {
   title: "vue-ellipse-progress",
   description: "This is not my first VuePress site",
   base: isDevMode ? "/" : "/vue-ellipse-progress-docs/",
-  bundler: "@vuepress/bundler-webpack",
+  bundler: webpackBundler({
+    evergreen: true,
+  }),
   markdown: {
     code: {
       lineNumbers: false,
     },
   },
-  themeConfig: {
+  theme: defaultTheme({
     logo: "https://vuejs.org/images/logo.png",
     repo: "https://github.com/setaman/vue-ellipse-progress/tree/v2-dev",
     repoLabel: "GitHub",
+    darkMode: true,
     navbar: [
       {
         text: "Guide",
@@ -154,6 +160,6 @@ module.exports = {
         "/guide/development.md",
       ],
     },
-  },
-  plugins: [["@vuepress/plugin-medium-zoom", { selector: "img.zoom" }]],
+  }),
+  plugins: [mediumZoomPlugin({ selector: "img.zoom" })],
 };
