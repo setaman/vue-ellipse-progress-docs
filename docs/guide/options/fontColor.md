@@ -1,4 +1,4 @@
-# `size`
+# `fontColor`
 
 ###### Animated: ✔️
 

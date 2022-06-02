@@ -1,4 +1,4 @@
-# `size`
+# `fontSize`
 
 ###### Animated: ✔️
 
@@ -15,7 +15,7 @@ The property **[`legendFormatter`](./legendFormatter.md)** and **[`slots`](../sl
 ###### Usage: 📜
 
 ```vue
-<ve-progress font-color="2rem" />
+<ve-progress font-size="2rem" />
 ```
 
 ### Examples
