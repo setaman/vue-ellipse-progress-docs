@@ -94,3 +94,87 @@ Just add the following line to your HTML and initialize the component as plugin:
   </body>
 </html>
 ```
+
+## SSR
+
+In this section we will look on how to initialize the plugin in Nuxt.js - a popular Vue.js framework 
+for SSR development. We will follow the official Nuxt documentation for Vue [plugins initialization](https://v3.nuxtjs.org/guide/directory-structure/plugins)
+to register the plugin on **client** side.
+
+### Nuxt.js 3
+
+In the `/plugins` directory create the file `veProgress.client.js` with the content:
+```js
+import veProgress from "vue-ellipse-progress";
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.use(veProgress);
+});
+```
+Note that Nuxt 3 will automatically scann your `/plugins` directory to register plugins. Then use can immediately use the 
+component everywhere
+```vue
+<template>
+    <client-only>
+      <ve-progress :progress="50" />
+    </client-only>
+</template>
+```
+
+### Nuxt.js 2
+
+:::warning
+Please note that Nuxt.js 2 works with Vue.js 2 and you have to use the compatible plugin version
+:::
+
+In the `/plugins` directory create the file `vue-ellipse-progress.js` with the content:
+```js
+import Vue from 'vue';
+import VueEllipseProgress from "vue-ellipse-progress";
+Vue.use(VueEllipseProgress);
+```
+In your ` nuxt.config.js` register the plugin:
+
+```js
+plugins: [
+    {
+      src: '@/plugins/vue-ellipse-progress.js',
+      mode: 'client'
+    }
+  ]
+```
+Now the component can be used everywhere:
+```vue
+<template>
+  <client-only>
+     <vue-ellipse-progress :progress="50" />
+  </client-only>
+</template>
+```
+
+### Advanced use cases
+
+In some development environments or tools there is no plugin system. To use the plugin, it must be imported dynamically 
+during hydration. This is the case for example in static site generator (SSG) like Vuepress that powers this documentation.
+In such case you can import the library in a lifecycle hook and initialize the plugin in your custom wrapper component. Example:
+
+```vue
+<!-- /MyVeProgressWrapper.vue-->
+<template>
+  <ClientOnly>
+    <component v-if="component" :is="component" />
+  </ClientOnly>
+</template>
+
+<script>
+export default {
+  data: () => ({
+      component: null,
+  }),
+  mounted() {
+    import("vue-ellipse-progress").then((module) => {
+      this.component = module.VeProgress;
+    });
+  },
+};
+</script>
+```

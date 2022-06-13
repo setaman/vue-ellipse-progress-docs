@@ -20,7 +20,7 @@ module.exports = {
     logo: "https://vuejs.org/images/logo.png",
     repo: "https://github.com/setaman/vue-ellipse-progress/tree/v2-dev",
     repoLabel: "GitHub",
-    darkMode: true,
+    colorMode: "auto",
     navbar: [
       {
         text: "Guide",
