@@ -4,7 +4,7 @@ module.exports = {
     ecmaVersion: 2021,
   },
 
-  extends: ["plugin:prettier/recommended", "eslint:recommended"],
+  extends: ["eslint:recommended", "plugin:prettier/recommended"],
   rules: {
     "prettier/prettier": ["warn"],
     quotes: [2, "double"],

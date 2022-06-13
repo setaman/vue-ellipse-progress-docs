@@ -58,11 +58,11 @@ export default {
   watch: {
     strict() {
       if (this.strict) {
-        this.spacing = 0.5
+        this.spacing = 0.5;
       } else {
-        this.spacing = 10
+        this.spacing = 10;
       }
-    }
+    },
   },
   computed: {
     dash() {

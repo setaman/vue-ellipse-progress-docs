@@ -1,8 +1,10 @@
 <template>
   <router-link class="card-link m-0" :to="link">
     <div class="card-link-container p-3">
-      <h4 class="card-link-title m-0">{{ title }}</h4>
-      <p class="card-link-content m-0 mt-2">
+      <h4 class="card-link-title m-0 pt-0" style="padding-top: 0; margin: 0">
+        {{ title }}
+      </h4>
+      <p class="card-link-content m-0 mt-2" style="margin-top: 16px">
         <slot> </slot>
       </p>
     </div>

@@ -198,14 +198,15 @@ export default {
   },
   mounted() {
     this.isDarkMode = document.documentElement.classList.contains("dark");
-    document
-      .querySelector(".toggle-dark-button")
-      .addEventListener(
+    const btn = document.querySelector(".toggle-color-mode-button");
+    if (btn) {
+      btn.addEventListener(
         "click",
         () =>
           (this.isDarkMode =
             document.documentElement.classList.contains("dark"))
       );
+    }
   },
 };
 </script>
