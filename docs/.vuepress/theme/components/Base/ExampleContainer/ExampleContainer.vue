@@ -247,6 +247,9 @@ export default {
   .code-group__nav {
     display: none;
   }
+  .code-group-item {
+    display: block !important;
+  }
   div {
     height: 100%;
   }
