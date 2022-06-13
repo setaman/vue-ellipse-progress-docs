@@ -143,6 +143,10 @@ module.exports = {
                   link: "/guide/options/gap.md",
                 },
                 {
+                  text: "data",
+                  link: "/guide/options/data.md",
+                },
+                {
                   text: "dot",
                   link: "/guide/options/dot.md",
                 },
