@@ -1,6 +1,7 @@
 const { mediumZoomPlugin } = require("@vuepress/plugin-medium-zoom");
 const { webpackBundler } = require("@vuepress/bundler-webpack");
 const { defaultTheme } = require("@vuepress/theme-default");
+
 const isDevMode = process.env.NODE_ENV === "development";
 
 module.exports = {

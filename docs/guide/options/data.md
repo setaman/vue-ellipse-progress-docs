@@ -18,6 +18,10 @@ Excluded props: lineMode, emptyThickness, legend. These properties will be ignor
 Also, the legend of this circle remains hidden.
 :::
 
+:::tip Gap
+The [`gap`](./gap.md) property defines the distance between circles.
+:::
+
 ### Usage 📜
 
 ```vue
@@ -26,8 +30,8 @@ Also, the legend of this circle remains hidden.
 
 ### Examples
 
-<gap class="mb-16">
-<template #code="{ progress, gap }">
+<DataExamples class="mb-16">
+<template #code="{ progress, data, gap }">
 <CodeGroup>
 <CodeGroupItem >
 
@@ -36,24 +40,7 @@ Also, the legend of this circle remains hidden.
   <ve-progress 
     :progress="{{ progress }}" 
     :gap="{{ gap }}"
-    :data="[
-      {
-        color: 'blue',
-        thickness: 1
-      },
-      {
-        color: 'red',
-        thickness: 3
-      },
-      {
-        color: 'green',
-        thickness: 5
-      },
-      {
-        color: 'yellow',
-        thickness: 7
-      }
-    ]"
+    :data="{{ data }}"
   />
 </template>
 ```
@@ -61,14 +48,81 @@ Also, the legend of this circle remains hidden.
 </CodeGroupItem>
 </CodeGroup>
 </template>
-</gap>
+<template #code2="{ progress, data, gap }">
+<CodeGroup>
+<CodeGroupItem >
 
-The `gap` can also be used to create hypnotising loading animations. Below are some examples that can be created by changing the
-`gap` property dynamically in intervalls.
+```vue:no-v-pre
+<template>
+  <ve-progress 
+    :progress="{{ progress }}" 
+    :gap="{{ gap }}"
+    :data="{{ data }}"
+  />
+</template>
+```
 
-::: warning Different behavior
-In different browsers the behavior may vary depending on the implementation of SVG. Make sure that your animations behave consistently.
-:::
+</CodeGroupItem>
+</CodeGroup>
+</template>
+<template #code3="{ progress, data }">
+<CodeGroup>
+<CodeGroupItem >
 
-<gap-animation>
-</gap-animation>
+```vue:no-v-pre
+<template>
+  <ve-progress 
+    :progress="{{ progress }}" 
+    :data="{{ data }}"
+  />
+</template>
+```
+
+</CodeGroupItem>
+</CodeGroup>
+</template>
+<template #code4="{ progress, data }">
+<CodeGroup>
+<CodeGroupItem >
+
+```vue:no-v-pre
+<template>
+  <ve-progress 
+    :progress="{{ progress }}"
+    color="rgb(51,54,177)"
+    empty-color="transparent"
+    :loading="true"
+    thickness="2"
+    :gap="4"
+    :data="{{ data }}"
+  />
+</template>
+```
+
+</CodeGroupItem>
+</CodeGroup>
+</template>
+<template #code5="{ progress, data, reverse, angle }">
+<CodeGroup>
+<CodeGroupItem >
+
+```vue:no-v-pre
+<template>
+  <ve-progress 
+    :progress="{{ progress }}"
+    color="transparent"
+    empty-color="transparent"
+    :thickness="2"
+    :gap="-4"
+    dot="4 blue"
+    :angle="{{ angle }}"
+    :reverse="{{ reverse }}"
+    :data="{{ data }}"
+  />
+</template>
+```
+
+</CodeGroupItem>
+</CodeGroup>
+</template>
+</DataExamples>
