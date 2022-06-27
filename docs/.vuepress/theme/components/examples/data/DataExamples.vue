@@ -187,6 +187,51 @@
         <slot name="code8" :progress="progress" :data="data8"> </slot>
       </template>
     </example-container>
+
+    <p class="mt-16">
+      Even almost real charts can be created. But this requires tricky manual calculations
+      The following example is for demonstration purposes only and should not be taken too seriously.
+      For such use cases, appropriate chart libraries should be used
+    </p>
+    <example-container>
+      <template #default="{ progress, loading, noData, determinate }">
+        <div class="flex gap-4">
+          <v-e-p
+            :progress="progress"
+            :loading="loading"
+            :no-data="noData"
+            :determinate="determinate"
+            :size="150"
+            line="butt"
+            :thickness="40"
+            :gap="-40"
+            :data="data9"
+          >
+          </v-e-p>
+          <div class="">
+            <div>
+              <span class="chart-legend" style="background-color: #7B68EE"></span>
+              <span>Data</span>
+            </div>
+            <div>
+              <span class="chart-legend" style="background-color: #F08080"></span>
+              <span>Data</span>
+            </div>
+            <div>
+              <span class="chart-legend" style="background-color: LightSeaGreen"></span>
+              <span>Data</span>
+            </div>
+            <div>
+              <span class="chart-legend" style="background-color: #3CB371"></span>
+              <span>Data</span>
+            </div>
+          </div>
+        </div>
+      </template>
+      <template #code="{ progress }">
+        <slot name="code8" :progress="progress" :data="data9"> </slot>
+      </template>
+    </example-container>
   </div>
 </template>
 
@@ -274,6 +319,30 @@ export default {
     data6Circles: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
     data7Circles: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
     data8: [{}, {}, {}],
+    data9: [
+      {
+        color: "#7B68EE",
+        progress: 15
+      },
+      {
+        color: "#F08080",
+        emptyColor: "transparent",
+        progress: 40,
+        angle: -45
+      },
+      {
+        color: "LightSeaGreen",
+        emptyColor: "transparent",
+        progress: 20,
+        angle: 90
+      },
+      {
+        color: "#3CB371",
+        emptyColor: "transparent",
+        progress: 31,
+        angle: 160
+      },
+    ],
     intervalProgress: 0,
     angle: -90,
     intervals: [],
@@ -317,4 +386,12 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.chart-legend {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+</style>

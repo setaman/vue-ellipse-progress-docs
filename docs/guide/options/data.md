@@ -185,4 +185,24 @@ The [`gap`](./gap.md) property defines the distance between circles.
 </CodeGroupItem>
 </CodeGroup>
 </template>
+<template #code9="{ progress, data }">
+<CodeGroup>
+<CodeGroupItem >
+
+```vue:no-v-pre
+<template>
+  <ve-progress 
+    :progress="{{ progress }}"
+    :size="150"
+    line="butt"
+    :thickness="40"
+    :gap="-40"
+    :data="{{ data }}"
+  />
+</template>
+```
+
+</CodeGroupItem>
+</CodeGroup>
+</template>
 </DataExamples>
