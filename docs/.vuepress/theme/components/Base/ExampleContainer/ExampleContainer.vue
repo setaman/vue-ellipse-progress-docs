@@ -4,27 +4,35 @@
     :class="{ code: mode === 'Code' }"
   >
     <div
-      class="example-container-header rounded-t-lg px-4 py-2 flex justify-end"
+      class="example-container-header rounded-t-lg px-4 py-2 flex justify-between"
     >
-      <btn icon class="mr-2" @click="reload">
-        <icon style="font-size: 1.2rem" icon="redo" />
-      </btn>
-      <link-icon
-        class="mr-2"
-        :href="exampleLink"
-        target="_blank"
-        v-if="exampleLink"
-      >
-        <icon icon="github" />
-      </link-icon>
-      <SwitchSlider
-        :options="modes"
-        :size="70"
-        v-model="mode"
-        v-if="showModes"
-      />
+      <div class="flex">
+        <btn icon @click="toggleCollapse">
+          <icon style="font-size: 1.2rem" :icon="isCollapsed ? 'angle-down' : 'minus'" />
+        </btn>
+      </div>
+      <div v-if="!isCollapsed" class="flex">
+        <btn icon class="mr-2" @click="reload">
+          <icon style="font-size: 1.2rem" icon="redo" />
+        </btn>
+        <link-icon
+          class="mr-2"
+          :href="exampleLink"
+          target="_blank"
+          v-if="exampleLink"
+        >
+          <icon icon="github" />
+        </link-icon>
+        <SwitchSlider
+          :options="modes"
+          :size="70"
+          v-model="mode"
+          v-if="showModes"
+        />
+      </div>
     </div>
     <div
+      v-if="!isCollapsed"
       class="example-container-body grid-cols-1 lg:grid-cols-2"
       :class="{ grid: mode === 'both' }"
     >
@@ -60,7 +68,7 @@
         </slot>
       </div>
     </div>
-    <div class="example-container-footer rounded-b-lg lg:flex lg:flex-row">
+    <div  v-if="!isCollapsed" class="example-container-footer rounded-b-lg lg:flex lg:flex-row">
       <div class="example-controls-range flex-1 py-2 px-4">
         <div class="flex flex-wrap h-full content-center" v-if="showProgress">
           <slot name="range">
@@ -130,6 +138,10 @@ export default {
       type: Boolean,
       default: true,
     },
+    collapsed: {
+      type: Boolean,
+      default: false,
+    },
     exampleLink: {
       type: String,
       default: "",
@@ -155,6 +167,7 @@ export default {
       states: ["Normal", "Loading", "Determinate", "No data"],
       componentKey: 0,
       isDarkMode: false,
+      isCollapsed: this.collapsed,
     };
   },
   computed: {
@@ -194,6 +207,9 @@ export default {
   methods: {
     reload() {
       this.componentKey++;
+    },
+    toggleCollapse() {
+      this.isCollapsed = !this.isCollapsed;
     },
   },
   mounted() {
@@ -251,7 +267,7 @@ export default {
     display: block !important;
   }
   div {
-    height: 100%;
+    //height: 100%;
   }
   .language-vue.ext-vue {
     min-height: 236px;
