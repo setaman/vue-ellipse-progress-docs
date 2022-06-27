@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.47">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <title>vue-ellipse-progress</title><meta name="description" content="This is not my first VuePress site">
+    <link rel="preload" href="/vue-ellipse-progress-docs/assets/js/runtime~app.846fd010.js" as="script"><link rel="preload" href="/vue-ellipse-progress-docs/assets/css/styles.387ef7f1.css" as="style"><link rel="preload" href="/vue-ellipse-progress-docs/assets/js/608.449df57e.js" as="script"><link rel="preload" href="/vue-ellipse-progress-docs/assets/js/app.42822e57.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/576.6e842d11.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-39082953.efe4bf5b.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-3aaa3eb4.2983c7ff.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-433985b0.6ed95da7.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-c4182326.5e051d29.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-73ec345c.64a2e5bf.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-d7be191a.7a52ae0e.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/127.b95f9c62.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-2a5d0a8f.b044a4b1.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-eaa9e50e.2c2395ce.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-0d62d84a.84b4fee4.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-414a5335.a9db65a6.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-21497d62.e19800a1.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-46b0ce6d.73c45f1d.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-00aada3d.49c17bcb.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-7873bc78.ce5054d0.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-0f8b7249.b30f9515.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-7dea16fc.7e7f15da.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-8a0c971e.bae124a7.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-70a4c3c8.c892a119.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-2f3e26cc.bd35eac3.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-2ba65600.8b2475fd.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-2cd4426c.5da5bd34.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-9c87af36.c603a217.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-77f46352.5b70fd69.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-0bdc2bda.93e2e2ca.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-28bd65c2.62bfeb3d.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-0ca7ae16.90c32771.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-c5d4d22c.ff7c8251.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-564a3946.dcdbd7bb.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-fffb8e28.0f7ae4d0.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-820f78a2.f8c25e02.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-993c5c18.5bec4f8f.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-787202e9.b8a3ff4c.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-002d743a.85d94f3e.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-531add2c.6b1e43e4.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-3e55c88c.5d18f42c.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-6ed3b755.c4abd434.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/491.3bcb4bbf.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-8daa1a0e.c93aee05.js"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/js/v-3706649a.7950ff6f.js">
+    <link rel="stylesheet" href="/vue-ellipse-progress-docs/assets/css/styles.387ef7f1.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><div class="theme-default-content"><h1>404</h1><blockquote>There&#39;s nothing here.</blockquote><a href="/vue-ellipse-progress-docs/" class="">Take me home</a></div></div><!----><!--]--></div>
+    <script src="/vue-ellipse-progress-docs/assets/js/runtime~app.846fd010.js" defer></script><script src="/vue-ellipse-progress-docs/assets/js/608.449df57e.js" defer></script><script src="/vue-ellipse-progress-docs/assets/js/app.42822e57.js" defer></script>
+  </body>
+</html>
