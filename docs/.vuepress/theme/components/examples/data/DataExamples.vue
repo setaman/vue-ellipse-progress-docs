@@ -56,8 +56,8 @@
 
     <p class="mt-16">
       It also applies to
-      <code><router-link to="./dash.md">dash</router-link></code
-      >, <code><router-link to="./loader.md">loader</router-link></code> and
+      <code><router-link to="./dash.md">dash</router-link></code>,
+      <code><router-link to="./loader.md">loader</router-link></code> and
       <code><router-link to="./animation.md">animation</router-link></code>
       properties
     </p>
@@ -81,11 +81,11 @@
     <p class="mt-16">
       <code>data</code> enables us to create stunning loader like this
     </p>
-    <example-container>
+    <example-container :show-progress="false" :show-states="false">
       <template #default="{ progress, loading, noData, determinate }">
         <v-e-p
           :progress="progress"
-          :size="150"
+          :size="200"
           :loading="true"
           :no-data="noData"
           :determinate="determinate"
@@ -98,7 +98,7 @@
         </v-e-p>
         <v-e-p
           :progress="50"
-          :size="150"
+          :size="200"
           :loading="false"
           :no-data="noData"
           :determinate="determinate"
@@ -109,7 +109,36 @@
           dot="4 blue"
           :data="data5"
           :angle="angle"
-          :reverse="reverse"
+        >
+        </v-e-p>
+        <v-e-p
+          :progress="50"
+          :size="200"
+          :loading="false"
+          :no-data="noData"
+          :determinate="determinate"
+          color="transparent"
+          empty-color="transparent"
+          :thickness="2"
+          :gap="-4"
+          dot="4 blue"
+          :data="data6"
+          :angle="angle"
+          :half="true"
+        >
+        </v-e-p>
+        <v-e-p
+          :progress="50"
+          :size="200"
+          :loading="false"
+          :no-data="noData"
+          :determinate="determinate"
+          color="blue"
+          empty-color="transparent"
+          :thickness="2"
+          dot="4 blue"
+          :data="data7"
+          :gap="5"
         >
         </v-e-p>
       </template>
@@ -119,10 +148,43 @@
           name="code5"
           :progress="progress"
           :data="data5"
-          :reverse="reverse"
           :angle="angle"
         >
         </slot>
+        <slot
+          name="code6"
+          :progress="progress"
+          :data="data6"
+        >
+        </slot>
+        <slot
+          name="code7"
+          :progress="progress"
+          :data="data7"
+        >
+        </slot>
+      </template>
+    </example-container>
+
+    <p class="mt-16">
+      It is also important to mention that no property in `data` objects is required.
+      We can create circles by just passing an array of empty objects.
+      But <code><router-link to="./progress.md">progress</router-link></code> must still be set.
+    </p>
+    <example-container>
+      <template #default="{ progress, loading, noData, determinate }">
+        <v-e-p
+          :progress="progress"
+          :size="200"
+          :loading="loading"
+          :no-data="noData"
+          :determinate="determinate"
+          :data="data8"
+        >
+        </v-e-p>
+      </template>
+      <template #code="{ progress }">
+        <slot name="code8" :progress="progress" :data="data8"> </slot>
       </template>
     </example-container>
   </div>
@@ -209,15 +271,31 @@ export default {
       },
     ],
     data5Circles: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+    data6Circles: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+    data7Circles: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+    data8: [{}, {}, {}],
     intervalProgress: 0,
-    reverse: false,
     angle: -90,
+    intervals: [],
   }),
   computed: {
     data5() {
       return this.data5Circles.map((data, index) => ({
         ...data,
         progress: this.intervalProgress * (index + 1),
+      }));
+    },
+    data6() {
+      return this.data6Circles.map((data, index) => ({
+        ...data,
+        progress: this.intervalProgress * (index + 1),
+      }));
+    },
+    data7() {
+      return this.data6Circles.map((data, index) => ({
+        ...data,
+        progress: this.intervalProgress * (index + 1),
+        angle: 90 + 15 * index,
       }));
     },
   },
@@ -229,9 +307,13 @@ export default {
         this.angle = this.angle + 360;
         this.intervalProgress = 0;
       }
-    }, 1000);
+    }, 900);
+    this.intervals.push(interval)
     interval.run();
   },
+  beforeUnmount() {
+    this.intervals.forEach(interval => interval.stop())
+  }
 };
 </script>
 

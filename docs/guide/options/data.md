@@ -102,7 +102,7 @@ The [`gap`](./gap.md) property defines the distance between circles.
 </CodeGroupItem>
 </CodeGroup>
 </template>
-<template #code5="{ progress, data, reverse, angle }">
+<template #code5="{ progress, data, angle }">
 <CodeGroup>
 <CodeGroupItem >
 
@@ -117,6 +117,66 @@ The [`gap`](./gap.md) property defines the distance between circles.
     dot="4 blue"
     :angle="{{ angle }}"
     :reverse="{{ reverse }}"
+    :data="{{ data }}"
+  />
+</template>
+```
+
+</CodeGroupItem>
+</CodeGroup>
+</template>
+<template #code6="{ progress, data, angle }">
+<CodeGroup>
+<CodeGroupItem >
+
+```vue:no-v-pre
+<template>
+  <ve-progress 
+    :progress="{{ progress }}"
+    color="transparent"
+    empty-color="transparent"
+    :thickness="2"
+    :gap="-4"
+    dot="4 blue"
+    :angle="{{ angle }}"
+    :reverse="{{ reverse }}"
+    :data="{{ data }}"
+  />
+</template>
+```
+
+</CodeGroupItem>
+</CodeGroup>
+</template>
+<template #code7="{ progress, data }">
+<CodeGroup>
+<CodeGroupItem >
+
+```vue:no-v-pre
+<template>
+  <ve-progress 
+    :progress="{{ progress }}"
+    color="blue"
+    empty-color="transparent"
+    :thickness="2"
+    :gap="5"
+    dot="4 blue"
+    :data="{{ data }}"
+  />
+</template>
+```
+
+</CodeGroupItem>
+</CodeGroup>
+</template>
+<template #code8="{ progress, data }">
+<CodeGroup>
+<CodeGroupItem >
+
+```vue:no-v-pre
+<template>
+  <ve-progress 
+    :progress="{{ progress }}"
     :data="{{ data }}"
   />
 </template>
