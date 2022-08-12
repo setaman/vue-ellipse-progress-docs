@@ -79,7 +79,7 @@
     </example-container>
 
     <p class="mt-16">
-      <code>data</code> enables us to create stunning loader like this
+      <code>data</code> enables us to create stunning loaders like these
     </p>
     <example-container :show-progress="false" :show-states="false">
       <template #default="{ progress, loading, noData, determinate }">
@@ -167,9 +167,9 @@
     </example-container>
 
     <p class="mt-16">
-      It is also important to mention that no property in `data` objects is required.
+      It is also important to mention that no property in <code>data</code> Objects is required.
       We can create circles by just passing an array of empty objects.
-      But <code><router-link to="./progress.md">progress</router-link></code> must still be set.
+      But (global) <code><router-link to="./progress.md">progress</router-link></code> must still be set.
     </p>
     <example-container>
       <template #default="{ progress, loading, noData, determinate }">

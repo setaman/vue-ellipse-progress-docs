@@ -110,8 +110,8 @@ export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(veProgress);
 });
 ```
-Note that Nuxt 3 will automatically scann your `/plugins` directory to register plugins. Then use can immediately use the 
-component everywhere
+Note that Nuxt 3 will automatically scann your `/plugins` directory to register plugins. Then you can immediately use the 
+component everywhere:
 ```vue
 <template>
     <client-only>
@@ -123,7 +123,7 @@ component everywhere
 ### Nuxt.js 2
 
 :::warning
-Please note that Nuxt.js 2 works with Vue.js 2 and you have to use the compatible plugin version
+Please note that Nuxt.js 2 works with Vue.js 2 and you have to use the compatible `1.x` plugin version
 :::
 
 In the `/plugins` directory create the file `vue-ellipse-progress.js` with the content:
@@ -178,3 +178,17 @@ export default {
 };
 </script>
 ```
+
+## TypeScript
+
+Currently, the plugin does not officially support TypeScript. But the transfer to TypeScript with proper typing is 
+planned for future releases.
+
+If you encounter some TS related errors while trying to use the plugin for example in your fresh Vue 3 app, add the file 
+`veProgress.d.ts` in the root of your app:
+
+```ts
+declare module "vue-ellipse-progress";
+```
+
+Any contributions to improve the TS support are very welcome!
