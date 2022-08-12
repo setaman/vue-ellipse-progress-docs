@@ -1,6 +1,7 @@
 const { mediumZoomPlugin } = require("@vuepress/plugin-medium-zoom");
 const { webpackBundler } = require("@vuepress/bundler-webpack");
 const { defaultTheme } = require("@vuepress/theme-default");
+const { searchPlugin } = require("@vuepress/plugin-search");
 
 const isDevMode = process.env.NODE_ENV === "development";
 
@@ -166,5 +167,10 @@ module.exports = {
       ],
     },
   }),
-  plugins: [mediumZoomPlugin({ selector: "img.zoom" })],
+  plugins: [
+    mediumZoomPlugin({ selector: "img.zoom" }),
+    searchPlugin({
+      isSearchable: (page) => page.path !== "/",
+    }),
+  ],
 };

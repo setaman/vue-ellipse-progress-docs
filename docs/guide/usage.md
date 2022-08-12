@@ -43,7 +43,6 @@ All available options and their usage you can find below in the overview:
   reverse
   font-size="5rem"
 >
-
     <template #legend>
       <span>/200</span>
     </template>
