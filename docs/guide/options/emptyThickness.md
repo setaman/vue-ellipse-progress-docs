@@ -25,13 +25,13 @@ and other properties to learn how you can create unique circles
 
 <example-container class="mb-16">
 <template #default="{ loading, slider, noData, determinate }">
-<v-e-p class="mr-2" size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :empty-thickness="1">
+<v-e-p class="mr-2" :size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :empty-thickness="1">
 </v-e-p>
-<v-e-p class="mr-2" size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :empty-thickness="5">
+<v-e-p class="mr-2" :size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :empty-thickness="5">
 </v-e-p>
-<v-e-p class="mr-2" size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :empty-thickness="15">
+<v-e-p class="mr-2" :size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :empty-thickness="15">
 </v-e-p>
-<v-e-p class="mr-2" size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :empty-thickness="25">
+<v-e-p class="mr-2" :size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :empty-thickness="25">
 </v-e-p>
 </template>
 <template #code>

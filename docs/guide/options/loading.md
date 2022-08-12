@@ -28,7 +28,7 @@ The use of the `loading` state hides the legend.
 
 <example-container preselectedState="Loading">
 <template #default="{ loading, progress, slider, noData, determinate }">
-<v-e-p class="mr-2" size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate"></v-e-p>
+<v-e-p class="mr-2" :size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate"></v-e-p>
 </template>
 <template #code="{ loading, progress }">
 <CodeGroup>

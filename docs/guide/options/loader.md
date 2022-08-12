@@ -23,7 +23,7 @@ specified, the loading circle replicates the progress circle with a 0.55 default
 <example-container preselectedState="Determinate">
 <template #default="{ progress, loading, slider, noData, determinate }">
 <v-e-p class="mr-2" 
-    size="160" 
+    :size="160" 
     :progress="progress" 
     :loading="loading" 
     :no-data="noData" 
@@ -31,7 +31,7 @@ specified, the loading circle replicates the progress circle with a 0.55 default
     :loader="{ color: '#F08080' }"    
 ></v-e-p>
 <v-e-p class="mr-2" 
-    size="160" 
+    :size="160" 
     :progress="progress" 
     :loading="loading" 
     :no-data="noData" 
@@ -39,7 +39,7 @@ specified, the loading circle replicates the progress circle with a 0.55 default
     :loader="{ color: 'MediumPurple', lineMode: 'in 10', opacity: 1, thickness: 4 }"    
 ></v-e-p>
 <v-e-p class="mr-2" 
-    size="160" 
+    :size="160" 
     :progress="progress" 
     :loading="loading" 
     :no-data="noData" 

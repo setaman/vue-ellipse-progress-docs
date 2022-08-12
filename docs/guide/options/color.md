@@ -36,9 +36,9 @@ The general scheme to define the gradient is defined like follows:
 
 <example-container class="mb-16">
 <template #default="{ progress, loading, slider, noData, determinate }">
-<v-e-p class="mr-2" size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" color="DimGray"/>
-<v-e-p class="mr-2" size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" color="#1ABC9C"/>
-<v-e-p class="mr-2" size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" color="rgba(255, 87, 51, 0.7)"/>
+<v-e-p class="mr-2" :size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" color="DimGray"/>
+<v-e-p class="mr-2" :size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" color="#1ABC9C"/>
+<v-e-p class="mr-2" :size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" color="rgba(255, 87, 51, 0.7)"/>
 <color-random :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate"/>
 </template>
 <template #code="{ progress }">

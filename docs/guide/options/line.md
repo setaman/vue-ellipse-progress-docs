@@ -2,8 +2,8 @@
 
 ###### Animated: ✔️
 
-| type   | values                    | default |
-| ------ | ------------------------- | ------- |
+| type   | values                   | default |
+| ------ | -------------------------| ------- |
 | Number | "round \| square \| butt" | "round" |
 
 Is a String value from `round | square | butt`. Defines the progress circle line cap.
@@ -19,13 +19,13 @@ Internally the CSS property `stroke-linecap` is used.
 
 <example-container>
 <template #default="{ loading, slider, noData, determinate }">
-<v-e-p class="mr-2" size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :thickness="15" line="round">
+<v-e-p class="mr-2" :size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :thickness="15" line="round">
 <span slot="caption">round</span>
 </v-e-p>
-<v-e-p class="mr-2" size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :thickness="15" line="butt">
+<v-e-p class="mr-2" :size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :thickness="15" line="butt">
 <span slot="caption">butt</span>
 </v-e-p>
-<v-e-p class="mr-2" size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :thickness="15" line="square">
+<v-e-p class="mr-2" :size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :thickness="15" line="square">
 <span slot="caption">square</span>
 </v-e-p>
 </template>

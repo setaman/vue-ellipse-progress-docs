@@ -75,7 +75,7 @@ const components = [
 export default defineClientConfig({
   enhance({ app }) {
     for (const c of components) {
-      app.component(c.name, c);
+      app.component(c.name ?? c.__name, c);
     }
   },
 });

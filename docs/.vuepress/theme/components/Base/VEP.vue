@@ -1,33 +1,28 @@
 <template>
-  <ClientOnly>
-    <component v-if="component" :is="component" v-bind="$attrs">
-      <template #default="{ counterTick }">
-        <slot :counterTick="counterTick"></slot>
-      </template>
-      <template #legend>
-        <slot name="legend"></slot>
-      </template>
-      <template #legend-caption>
-        <slot name="caption"></slot>
-      </template>
-    </component>
-  </ClientOnly>
+  <div class="inline-block">
+    <ClientOnly>
+      <component v-if="component" :is="component" v-bind="$attrs">
+        <template #default="{ counterTick }">
+          <slot :counterTick="counterTick"></slot>
+        </template>
+        <template #legend>
+          <slot name="legend"></slot>
+        </template>
+        <template #legend-caption>
+          <slot name="caption"></slot>
+        </template>
+      </component>
+    </ClientOnly>
+  </div>
 </template>
 
-<script>
-export default {
-  name: "VEP",
-  data() {
-    return {
-      component: null,
-    };
-  },
-  mounted() {
-    import("vue-ellipse-progress").then((module) => {
-      this.component = module.VeProgress;
-    });
-  },
-};
+<script setup>
+import { shallowRef, onMounted } from "vue";
+
+const component = shallowRef(null)
+onMounted(() => import("vue-ellipse-progress").then((module) => {
+  component.value = module.VeProgress;
+}))
 </script>
 
 <style scoped></style>

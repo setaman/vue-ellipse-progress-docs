@@ -25,7 +25,7 @@ The component will take the no data state even if you provide an invalid **[`pro
 
 <example-container preselectedState="No data">
 <template #default="{ loading, progress, slider, noData, determinate }">
-<v-e-p class="mr-2" size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate">
+<v-e-p class="mr-2" :size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate">
     <template #legend>
         <span>/100</span>
     </template>
