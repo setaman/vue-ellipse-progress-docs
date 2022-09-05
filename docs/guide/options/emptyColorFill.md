@@ -1,4 +1,4 @@
-# `colorFill`
+# `emptyColorFill`
 
 ###### Animated: ✔️
 
@@ -6,7 +6,7 @@
 | ---------------- | ----------------------------------------------------- | --------- |
 | String \| Object | any CSS color as String or Object to specify gradient | "transparent" |
 
-Defines the fill color of the progress circle. The property accepts any CSS color like `#123`, `rgba(230, 233, 240, 0.1)`
+Defines the fill color of the empty circle. The property accepts any CSS color like `#123`, `rgba(230, 233, 240, 0.1)`
 or `lime` or an Object to define gradients.
 
 The general scheme to define the gradient is defined like follows:
@@ -16,22 +16,22 @@ The general scheme to define the gradient is defined like follows:
   - `colors` - array that contains the gradient colors as Objects `{ color: "#6546f7", offset: "10" [, opacity: 1] }`
 
 ::: warning
-Progress circle overlaps the emtpy circle! In the examples you will see the fill color partially covering the empty line.
+If you define the [`colorFill`](./colorFill.md), the empty circle fill area wil be covered by the progress circle.
 :::
 
 ::: tip
-According to default SVG behaviour, the fill area of the circle is aligned at the baseline of the progress line. With the
-[`linePosition`](./linePosition.md) property this behaviour can be adjusted.
+According to default SVG behaviour, the fill area of the circle is aligned at the baseline of the empty line. With the
+[`emptyLinePosition`](./emptyLinePosition.md) property this behaviour can be adjusted.
 :::
 
 ###### Usage: 📜
 
 ```vue
-<ve-progress color-fill="#3f79ff" />
-<ve-progress color-fill="lime" />
-<ve-progress color-fill="rgba(230, 233, 240, 0.1)" />
+<ve-progress empty-color-fill="#3f79ff" />
+<ve-progress empty-color-fill="lime" />
+<ve-progress empty-color-fill="rgba(230, 233, 240, 0.1)" />
 <ve-progress
-  :color-fill="{
+  :empty-color-fill="{
     radial: false,
     colors: [
       { color: '#6546f7', offset: '0', opacity: 1 },
@@ -45,10 +45,10 @@ According to default SVG behaviour, the fill area of the circle is aligned at th
 
 <example-container class="mb-16">
 <template #default="{ progress, loading, slider, noData, determinate }">
-<v-e-p class="mr-2" :size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" color-fill="DimGray"/>
-<v-e-p class="mr-2" :size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" color-fill="#1ABC9C"/>
-<v-e-p class="mr-2" :size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" color-fill="rgba(255, 87, 51, 0.7)"/>
-<color-fill-random :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate"/>
+<v-e-p class="mr-2" :size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" empty-color-fill="DimGray"/>
+<v-e-p class="mr-2" :size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" color-fill="blue" empty-color-fill="#1ABC9C" line-mode="in 10"/>
+<v-e-p class="mr-2" :size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" empty-color-fill="rgba(255, 87, 51, 0.7)"/>
+<empty-color-fill-random :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate"/>
 </template>
 <template #code="{ progress }">
 <CodeGroup>
@@ -56,9 +56,9 @@ According to default SVG behaviour, the fill area of the circle is aligned at th
 
 ```vue:no-v-pre
 <template>
-  <ve-progress :progress="{{ progress }}" color-fill="DimGray"/>
-  <ve-progress :progress="{{ progress }}" color-fill="#1ABC9C"/>
-  <ve-progress :progress="{{ progress }}" color-fill="rgba(255, 87, 51, 0.7)"/>
+  <ve-progress :progress="{{ progress }}" empty-color-fill="DimGray"/>
+  <ve-progress :progress="{{ progress }}" color-fill="blue" line-mode="in 10" empty-color-fill="#1ABC9C"/>
+  <ve-progress :progress="{{ progress }}" empty-color-fill="rgba(255, 87, 51, 0.7)"/>
 </template>
 ```
 
@@ -69,16 +69,16 @@ According to default SVG behaviour, the fill area of the circle is aligned at th
 
 The examples below demonstrate how gradient colors can be defined
 
-<color-fill-gradient class="mb-16">
+<empty-color-fill-gradient class="mb-16">
 <template #code="{ progress }">
 <CodeGroup>
 <CodeGroupItem >
 
 ```vue:no-v-pre
 <template>
-  <ve-progress :progress="{{ progress }}" :color-fill="gradient1"/>
-  <ve-progress :progress="{{ progress }}" :color-fill="gradient2"/>
-  <ve-progress :progress="{{ progress }}" :color-fill="gradient3"/>
+  <ve-progress :progress="{{ progress }}" :empty-color-fill="gradient1"/>
+  <ve-progress :progress="{{ progress }}" :empty-color-fill="gradient2"/>
+  <ve-progress :progress="{{ progress }}" :empty-color-fill="gradient3"/>
 </template>
 <script>
   export default {
@@ -142,22 +142,22 @@ The examples below demonstrate how gradient colors can be defined
 </CodeGroupItem>
 </CodeGroup>
 </template>
-</color-fill-gradient>
+</empty-color-fill-gradient>
 
 The gradients give a lot of room for experimentation and you can achieve a lot of exciting effects with colors alone.
 The following examples give some inspiration:
 
-<color-fill-gradient-crazy>
+<empty-color-fill-gradient-crazy>
 <template #code="{ progress }">
 <CodeGroup>
 <CodeGroupItem >
 
 ```vue:no-v-pre
 <template>
-  <ve-progress :progress="{{ progress }}" :color-fill="gradient1"/>
+  <ve-progress :progress="{{ progress }}" :empty-color-fill="gradient1"/>
   <ve-progress 
     :progress="{{ progress }}" 
-    :color-fill="gradient2" 
+    :empty-color-fill="gradient2" 
     color="#7579ff"
     empty-color="transparent"
     :thickness="5"
@@ -165,12 +165,12 @@ The following examples give some inspiration:
     lineMode="out 5"/>
   <ve-progress 
     :progress="{{ progress }}" 
-    :color-fill="gradient3" 
+    :empty-color-fill="gradient3" 
     thickness="2"
     empty-color="transparent"/>
   <ve-progress 
     :progress="{{ progress }}" 
-    :color-fill="gradient4" 
+    :empty-color-fill="gradient4" 
     line="butt"
     empty-color="#324c7e"
     :thickness="46"
@@ -178,10 +178,10 @@ The following examples give some inspiration:
     :size="180"
     dash="strict 60 0.8"
     lineMode="in"/>
-  <ve-progress :progress="{{ progress }}" :color-fill="gradient5" :empty-thickness="2"/>
+  <ve-progress :progress="{{ progress }}" :empty-color-fill="gradient5" :empty-thickness="2"/>
   <ve-progress 
     :progress="{{ progress }}" 
-    :color-fill="gradient4" 
+    :empty-color-fill="gradient4" 
     :thickness="2"
     :empty-thickness="1"
     color="#7579ff"
@@ -400,4 +400,4 @@ The following examples give some inspiration:
 </CodeGroupItem>
 </CodeGroup>
 </template>
-</color-fill-gradient-crazy>
+</empty-color-fill-gradient-crazy>

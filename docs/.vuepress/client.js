@@ -24,6 +24,9 @@ import ColorGradientCrazy from "./theme/components/examples/colors/ColorGradient
 import ColorFillGradientCrazy from "./theme/components/examples/colorFill/ColorFillGradientCrazy";
 import ColorFillRandom from "./theme/components/examples/colorFill/ColorFillRandom";
 import ColorFillGradient from "./theme/components/examples/colorFill/ColorFillGradient";
+import EmptyColorFillGradient from "./theme/components/examples/emptyColorFill/EmptyColorFillGradient";
+import EmptyColorFillGradientCrazy from "./theme/components/examples/emptyColorFill/EmptyColorFillGradientCrazy";
+import EmptyColorFillRandom from "./theme/components/examples/emptyColorFill/EmptyColorFillRandom";
 import EmptyColorRandom from "./theme/components/examples/emptyColor/EmptyColorRandom";
 import EmptyColorGradient from "./theme/components/examples/emptyColor/EmptyColorGradient";
 import EmptyColorGradientCrazy from "./theme/components/examples/emptyColor/EmptyColorGradientCrazy";
@@ -76,6 +79,9 @@ const components = [
   ColorFillRandom,
   ColorFillGradient,
   ColorFillGradientCrazy,
+  EmptyColorFillGradient,
+  EmptyColorFillGradientCrazy,
+  EmptyColorFillRandom,
 ];
 
 export default defineClientConfig({

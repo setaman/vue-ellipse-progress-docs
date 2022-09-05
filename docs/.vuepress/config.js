@@ -129,6 +129,10 @@ module.exports = {
                   link: "/guide/options/emptyColor.md",
                 },
                 {
+                  text: "emptyColorFill",
+                  link: "/guide/options/emptyColorFill.md",
+                },
+                {
                   text: "half",
                   link: "/guide/options/half.md",
                 },

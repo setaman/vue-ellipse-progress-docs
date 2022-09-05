@@ -41,14 +41,6 @@ The **[`progress`](#progress)** is the only required property, and you are ready
 | **[`reverse`](#reverse)**                     | Boolean                    |                                                                                                                                                     | false              |
 | **[`data`](#data)**                           | Array                      | defines multiple circles, takes as values Objects with almost all props defined above                                                               |                    |
 
-- ### `emptyColorFill`
-
-###### Animated: ✔️
-
-Defines the fill color of the empty circle. Takes the same value as **[`color`](#color)**
-
-<br>
-
 - ### `legendClass`
 
 Adds class to the circles legend to give you the possibility to style it.
