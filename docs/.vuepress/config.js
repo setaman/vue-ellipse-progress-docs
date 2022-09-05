@@ -164,6 +164,10 @@ module.exports = {
                   text: "dash",
                   link: "/guide/options/dash.md",
                 },
+                {
+                  text: "legendClass",
+                  link: "/guide/options/legendClass.md",
+                },
               ],
             },
             "/guide/slots.md",
