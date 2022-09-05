@@ -41,14 +41,6 @@ The **[`progress`](#progress)** is the only required property, and you are ready
 | **[`reverse`](#reverse)**                     | Boolean                    |                                                                                                                                                     | false              |
 | **[`data`](#data)**                           | Array                      | defines multiple circles, takes as values Objects with almost all props defined above                                                               |                    |
 
-- ### `colorFill`
-
-###### Animated: ✔️
-
-Defines the fill color of the progress circle. Takes the same value as **[`color`](#color)**
-
-<br>
-
 - ### `emptyColorFill`
 
 ###### Animated: ✔️

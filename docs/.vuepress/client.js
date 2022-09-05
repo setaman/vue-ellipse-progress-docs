@@ -21,6 +21,9 @@ import EmptyLinePosition from "./theme/components/examples/linePosition/EmptyLin
 import ColorRandom from "./theme/components/examples/colors/ColorRandom";
 import ColorGradient from "./theme/components/examples/colors/ColorGradient";
 import ColorGradientCrazy from "./theme/components/examples/colors/ColorGradientCrazy";
+import ColorFillGradientCrazy from "./theme/components/examples/colorFill/ColorFillGradientCrazy";
+import ColorFillRandom from "./theme/components/examples/colorFill/ColorFillRandom";
+import ColorFillGradient from "./theme/components/examples/colorFill/ColorFillGradient";
 import EmptyColorRandom from "./theme/components/examples/emptyColor/EmptyColorRandom";
 import EmptyColorGradient from "./theme/components/examples/emptyColor/EmptyColorGradient";
 import EmptyColorGradientCrazy from "./theme/components/examples/emptyColor/EmptyColorGradientCrazy";
@@ -70,6 +73,9 @@ const components = [
   Dash,
   Dot,
   DataExamples,
+  ColorFillRandom,
+  ColorFillGradient,
+  ColorFillGradientCrazy,
 ];
 
 export default defineClientConfig({
