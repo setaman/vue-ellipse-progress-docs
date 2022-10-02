@@ -20,7 +20,7 @@ In determinate state the component indicates that the data is being loaded, but 
 
 <example-container preselectedState="Determinate">
 <template #default="{ loading, slider, noData, determinate }">
-<v-e-p class="mr-2" :size="160" :progress="50" :loading="loading" :no-data="noData" :determinate="determinate"></v-e-p>
+<v-e-p class="mr-2" :size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate"></v-e-p>
 </template>
 <template #code="{ determinate, progress }">
 <CodeGroup>

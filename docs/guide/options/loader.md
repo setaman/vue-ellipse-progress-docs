@@ -2,14 +2,14 @@
 
 ###### Animated: ✔️
 
-| type      | values | default |
-| --------- | ------ | ------- |
-| Object    | {[ thickness, color, lineMode, line, opacity ]}  |
+| type      | values                                                    | default |
+| --------- |-----------------------------------------------------------| ------- |
+| Object    | {[ thickness, color, lineMode, line, duration, opacity ]} |
 
 With this option defined as Object you can customize the loading circle that is shown in the states
 [loading](./loading.md) and [determinate](./determinate.md). Accepted properties are [`color`](./color.md), [`thickness`](./thickness.md), [`line`](./line.md),
 [`lineMode`](./linemode.md), `duration` and `opacity`. `duration` and `opacity` are specific for loading circle. Any valid CSS 
-opacity value can be set as `opacity`. `duration` specifies the speed of the loader animation. If the loader option is not 
+opacity value can be set as `opacity`. `duration` specifies the speed of the loader animation in milliseconds. If the loader option is not 
 specified, the loading circle replicates the progress circle with a 0.55 default value for `opacity` and 1000 `duration`.
 
 ### Usage 📜
