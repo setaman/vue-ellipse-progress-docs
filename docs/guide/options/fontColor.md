@@ -6,7 +6,7 @@
 |--------|-----------------------------|---------|
 | String | any valid CSS value         | "gray"  |
 
-Defines the font size of the circle legend and accepts any valid CSS value.
+Defines the font color of the circle legend and accepts any valid CSS value.
 
 ::: tip
 The property **[`legendFormatter`](./legendFormatter.md)** and **[`slots`](../slots.md)** offer much more flexibility for customization

@@ -40,8 +40,3 @@ The **[`progress`](#progress)** is the only required property, and you are ready
 | **[`dot`](./dot.md)**                             | String \| Number \| Object | Accepts size, color and other styles as Number, descriptive string `"size [color]"` or object `{size [, backgroundColor, widht, borderRadius ...]}` | 0                  |
 | **[`reverse`](./reverse.md)**         | Boolean                    |                                                                                                                                                     | false              |
 | **[`data`](./data.md)**                           | Array                      | defines multiple circles, takes as values Objects with almost all props defined above                                                               |                    |
-
-
-- ### `legendClass`
-
-Adds class to the circles legend to give you the possibility to style it.
