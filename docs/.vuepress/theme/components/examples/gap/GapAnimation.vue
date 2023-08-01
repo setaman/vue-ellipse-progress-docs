@@ -29,9 +29,9 @@
 </template>
 
 <script>
-import ExampleContainer from "../../Base/ExampleContainer/ExampleContainer";
-import VEP from "../../Base/VEP";
-import IntervalTask from "../../../../utils/intervalTask";
+import ExampleContainer from "../../Base/ExampleContainer/ExampleContainer.vue";
+import VEP from "../../Base/VEP.vue";
+import IntervalTask from "../../../../utils/intervalTask.js";
 export default {
   name: "GapAnimation",
   components: { VEP, ExampleContainer },

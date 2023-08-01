@@ -22,10 +22,10 @@
 </template>
 
 <script>
-import ExampleContainer from "../../Base/ExampleContainer/ExampleContainer";
-import VEP from "../../Base/VEP";
-import Icon from "../../Base/Icon";
-import SvgIcon from "../../Base/SvgIcon";
+import ExampleContainer from "../../Base/ExampleContainer/ExampleContainer.vue";
+import VEP from "../../Base/VEP.vue";
+import Icon from "../../Base/Icon.vue";
+import SvgIcon from "../../Base/SvgIcon.vue";
 export default {
   name: "Reverse",
   components: { SvgIcon, Icon, VEP, ExampleContainer },

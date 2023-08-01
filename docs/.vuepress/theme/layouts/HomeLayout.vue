@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import ExampleContainer from "../components/Base/ExampleContainer/ExampleContainer";
+import ExampleContainer from "../components/Base/ExampleContainer/ExampleContainer.vue";
 
 export default {
   name: "HomeLayout",

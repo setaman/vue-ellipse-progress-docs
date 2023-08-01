@@ -1,23 +1,27 @@
-const { mediumZoomPlugin } = require("@vuepress/plugin-medium-zoom");
-const { webpackBundler } = require("@vuepress/bundler-webpack");
-const { defaultTheme } = require("@vuepress/theme-default");
-const { searchPlugin } = require("@vuepress/plugin-search");
+import { defaultTheme } from "vuepress";
+import { searchPlugin } from "@vuepress/plugin-search";
+import { viteBundler } from "vuepress";
 
 const isDevMode = process.env.NODE_ENV === "development";
+const basePath = process.env.BASE_PATH || "/vue-ellipse-progress-docs/";
 
-module.exports = {
+export default {
   lang: "en-US",
   title: "vue-ellipse-progress",
   description: "This is not my first VuePress site",
-  base: isDevMode ? "/" : "/vue-ellipse-progress-docs/",
-  bundler: webpackBundler({
-    evergreen: true,
-  }),
+  base: isDevMode ? "/" : basePath,
   markdown: {
     code: {
       lineNumbers: false,
     },
   },
+  bundler: viteBundler({
+    viteOptions: {
+      ssr: {
+        noExternal: "@vueform/slider",
+      },
+    },
+  }),
   theme: defaultTheme({
     logo: "https://vuejs.org/images/logo.png",
     repo: "https://github.com/setaman/vue-ellipse-progress/tree/v2-dev",
@@ -180,7 +184,7 @@ module.exports = {
     },
   }),
   plugins: [
-    mediumZoomPlugin({ selector: "img.zoom" }),
+    /*mediumZoomPlugin({ selector: "img.zoom" }),*/
     searchPlugin({
       isSearchable: (page) => page.path !== "/",
     }),

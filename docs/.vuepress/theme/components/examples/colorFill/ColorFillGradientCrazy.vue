@@ -79,8 +79,8 @@
 </template>
 
 <script>
-import ExampleContainer from "../../Base/ExampleContainer/ExampleContainer";
-import VEP from "../../Base/VEP";
+import ExampleContainer from "../../Base/ExampleContainer/ExampleContainer.vue";
+import VEP from "../../Base/VEP.vue";
 export default {
   name: "ColorFillGradientCrazy",
   components: { VEP, ExampleContainer },
@@ -250,7 +250,7 @@ export default {
         },
       ],
     },
-    colorGradient:  {
+    colorGradient: {
       radial: true,
       colors: [
         {

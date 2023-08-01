@@ -56,8 +56,8 @@
 
     <p class="mt-16">
       It also applies to
-      <code><router-link to="./dash.md">dash</router-link></code>,
-      <code><router-link to="./loader.md">loader</router-link></code> and
+      <code><router-link to="./dash.md">dash</router-link></code
+      >, <code><router-link to="./loader.md">loader</router-link></code> and
       <code><router-link to="./animation.md">animation</router-link></code>
       properties
     </p>
@@ -144,32 +144,19 @@
       </template>
       <template #code="{ progress }">
         <slot name="code4" :progress="progress" :data="data4"> </slot>
-        <slot
-          name="code5"
-          :progress="progress"
-          :data="data5"
-          :angle="angle"
-        >
+        <slot name="code5" :progress="progress" :data="data5" :angle="angle">
         </slot>
-        <slot
-          name="code6"
-          :progress="progress"
-          :data="data6"
-        >
-        </slot>
-        <slot
-          name="code7"
-          :progress="progress"
-          :data="data7"
-        >
-        </slot>
+        <slot name="code6" :progress="progress" :data="data6"> </slot>
+        <slot name="code7" :progress="progress" :data="data7"> </slot>
       </template>
     </example-container>
 
     <p class="mt-16">
-      It is also important to mention that no property in <code>data</code> Objects is required.
-      We can create circles by just passing an array of empty objects.
-      But (global) <code><router-link to="./progress.md">progress</router-link></code> must still be set.
+      It is also important to mention that no property in
+      <code>data</code> Objects is required. We can create circles by just
+      passing an array of empty objects. But (global)
+      <code><router-link to="./progress.md">progress</router-link></code> must
+      still be set.
     </p>
     <example-container>
       <template #default="{ progress, loading, noData, determinate }">
@@ -189,9 +176,10 @@
     </example-container>
 
     <p class="mt-16">
-      Even almost real charts can be created. But this requires tricky manual calculations
-      The following example is for demonstration purposes only and should not be taken too seriously.
-      For such use cases, appropriate chart libraries should be used
+      Even almost real charts can be created. But this requires tricky manual
+      calculations The following example is for demonstration purposes only and
+      should not be taken too seriously. For such use cases, appropriate chart
+      libraries should be used
     </p>
     <example-container>
       <template #default="{ progress, loading, noData, determinate }">
@@ -210,19 +198,31 @@
           </v-e-p>
           <div class="">
             <div>
-              <span class="chart-legend" style="background-color: #7B68EE"></span>
+              <span
+                class="chart-legend"
+                style="background-color: #7b68ee"
+              ></span>
               <span>Data</span>
             </div>
             <div>
-              <span class="chart-legend" style="background-color: #F08080"></span>
+              <span
+                class="chart-legend"
+                style="background-color: #f08080"
+              ></span>
               <span>Data</span>
             </div>
             <div>
-              <span class="chart-legend" style="background-color: LightSeaGreen"></span>
+              <span
+                class="chart-legend"
+                style="background-color: LightSeaGreen"
+              ></span>
               <span>Data</span>
             </div>
             <div>
-              <span class="chart-legend" style="background-color: #3CB371"></span>
+              <span
+                class="chart-legend"
+                style="background-color: #3cb371"
+              ></span>
               <span>Data</span>
             </div>
           </div>
@@ -236,8 +236,8 @@
 </template>
 
 <script>
-import ExampleContainer from "../../Base/ExampleContainer/ExampleContainer";
-import VEP from "../../Base/VEP";
+import ExampleContainer from "../../Base/ExampleContainer/ExampleContainer.vue";
+import VEP from "../../Base/VEP.vue";
 import IntervalTask from "../../../../utils/intervalTask";
 export default {
   name: "DataExamples",
@@ -322,25 +322,25 @@ export default {
     data9: [
       {
         color: "#7B68EE",
-        progress: 15
+        progress: 15,
       },
       {
         color: "#F08080",
         emptyColor: "transparent",
         progress: 40,
-        angle: -45
+        angle: -45,
       },
       {
         color: "LightSeaGreen",
         emptyColor: "transparent",
         progress: 20,
-        angle: 90
+        angle: 90,
       },
       {
         color: "#3CB371",
         emptyColor: "transparent",
         progress: 31,
-        angle: 160
+        angle: 160,
       },
     ],
     intervalProgress: 0,
@@ -377,12 +377,12 @@ export default {
         this.intervalProgress = 0;
       }
     }, 900);
-    this.intervals.push(interval)
+    this.intervals.push(interval);
     interval.run();
   },
   beforeUnmount() {
-    this.intervals.forEach(interval => interval.stop())
-  }
+    this.intervals.forEach((interval) => interval.stop());
+  },
 };
 </script>
 

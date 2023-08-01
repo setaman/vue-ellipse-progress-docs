@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import ExampleContainer from "../../Base/ExampleContainer/ExampleContainer";
-import VEP from "../../Base/VEP";
+import ExampleContainer from "../../Base/ExampleContainer/ExampleContainer.vue";
+import VEP from "../../Base/VEP.vue";
 export default {
   name: "DefaultSlot",
   components: { VEP, ExampleContainer },
