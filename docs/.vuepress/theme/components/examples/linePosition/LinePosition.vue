@@ -34,9 +34,9 @@
 </template>
 
 <script>
-import ExampleContainer from "../../Base/ExampleContainer/ExampleContainer";
-import VEP from "../../Base/VEP";
-import SwitchSlider from "../../Base/SwitchSlider";
+import ExampleContainer from "../../Base/ExampleContainer/ExampleContainer.vue";
+import VEP from "../../Base/VEP.vue";
+import SwitchSlider from "../../Base/SwitchSlider.vue";
 export default {
   name: "LinePosition",
   components: { SwitchSlider, VEP, ExampleContainer },

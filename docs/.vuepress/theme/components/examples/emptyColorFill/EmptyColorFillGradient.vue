@@ -46,8 +46,8 @@
 </template>
 
 <script>
-import ExampleContainer from "../../Base/ExampleContainer/ExampleContainer";
-import VEP from "../../Base/VEP";
+import ExampleContainer from "../../Base/ExampleContainer/ExampleContainer.vue";
+import VEP from "../../Base/VEP.vue";
 import randomColor from "../../../../utils/randomColor";
 import IntervalTask from "../../../../utils/intervalTask";
 export default {

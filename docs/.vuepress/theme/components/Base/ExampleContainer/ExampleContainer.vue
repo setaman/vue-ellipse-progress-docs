@@ -8,7 +8,10 @@
     >
       <div class="flex">
         <btn icon @click="toggleCollapse">
-          <icon style="font-size: 1.2rem" :icon="isCollapsed ? 'angle-down' : 'minus'" />
+          <icon
+            style="font-size: 1.2rem"
+            :icon="isCollapsed ? 'angle-down' : 'minus'"
+          />
         </btn>
       </div>
       <div v-if="!isCollapsed" class="flex">
@@ -68,7 +71,10 @@
         </slot>
       </div>
     </div>
-    <div  v-if="!isCollapsed" class="example-container-footer rounded-b-lg lg:flex lg:flex-row">
+    <div
+      v-if="!isCollapsed"
+      class="example-container-footer rounded-b-lg lg:flex lg:flex-row"
+    >
       <div class="example-controls-range flex-1 py-2 px-4">
         <div class="flex flex-wrap h-full content-center" v-if="showProgress">
           <slot name="range">
@@ -105,14 +111,14 @@
 </template>
 
 <script>
-import SwitchSlider from "../SwitchSlider";
-import Icon from "../Icon";
-import LinkIcon from "../LinkIcon";
+import SwitchSlider from "../SwitchSlider.vue";
+import Icon from "../Icon.vue";
+import LinkIcon from "../LinkIcon.vue";
 import "@vueform/slider/themes/default.css";
-import Btn from "../Btn";
-import CodeIcon from "../../SvgIcons/CodeIcon";
-import MonitorIcon from "../../SvgIcons/MonitorIcon";
-import RowsIcon from "../../SvgIcons/RowsIcon";
+import Btn from "../Btn.vue";
+import CodeIcon from "../../SvgIcons/CodeIcon.vue";
+import MonitorIcon from "../../SvgIcons/MonitorIcon.vue";
+import RowsIcon from "../../SvgIcons/RowsIcon.vue";
 
 export default {
   name: "ExampleContainer",

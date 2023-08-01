@@ -43,10 +43,10 @@
 </template>
 
 <script>
-import SvgIcon from "./SvgIcon";
-import CodeIcon from "../SvgIcons/CodeIcon";
-import MonitorIcon from "../SvgIcons/MonitorIcon";
-import RowsIcon from "../SvgIcons/RowsIcon";
+import SvgIcon from "./SvgIcon.vue";
+import CodeIcon from "../SvgIcons/CodeIcon.vue";
+import MonitorIcon from "../SvgIcons/MonitorIcon.vue";
+import RowsIcon from "../SvgIcons/RowsIcon.vue";
 export default {
   name: "SwitchSlider",
   components: { RowsIcon, MonitorIcon, CodeIcon, SvgIcon },
