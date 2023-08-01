@@ -1,13 +1,10 @@
-name: docs
+name: Deploy to gh-pages
 
 on:
   # trigger deployment on every push to main branch
   push:
     branches: [main]
-  pull_request:
-    branches:
-      - main
-      # trigger deployment manually
+  # trigger deployment manually
   workflow_dispatch:
 
 jobs:
