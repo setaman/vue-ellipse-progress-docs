@@ -16,6 +16,7 @@ export default {
   base: isDevMode ? "/" : basePath,
   define: {
     SENTRY_DSN: process.env.SENTRY_DSN,
+    IS_PRODUCTION: isDevMode,
   },
   markdown: {
     code: {
