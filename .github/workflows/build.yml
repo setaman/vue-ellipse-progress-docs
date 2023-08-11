@@ -24,4 +24,6 @@ jobs:
         run: npm ci
 
       - name: Build VuePress site
+        env:
+          SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
         run: yarn docs:build

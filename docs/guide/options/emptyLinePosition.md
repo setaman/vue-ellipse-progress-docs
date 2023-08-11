@@ -14,7 +14,7 @@ In general, this prop makes it possible to mimic the SVG2 `stroke-aligment`, whi
 
 ```vue
 <ve-progress empty-line-position="in 10" />
-<ve-progress empty-line-mode="out" />
+<ve-progress empty-line-position="out" />
 ```
 
 ### Example

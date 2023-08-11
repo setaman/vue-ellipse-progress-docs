@@ -37,8 +37,11 @@
   },
   "dependencies": {
     "@iconscout/unicons": "^4.0.0",
+    "@sentry/browser": "^7.63.0",
+    "@sentry/vue": "^7.63.0",
     "@vueform/slider": "^2.1.7",
     "@vuepress/plugin-medium-zoom": "2.0.0-beta.66",
+    "dotenv": "^16.3.1",
     "randomcolor": "^0.6.2",
     "vite": "^4.4.7",
     "vue-ellipse-progress": "^2.1.1"

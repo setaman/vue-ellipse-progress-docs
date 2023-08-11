@@ -1,6 +1,9 @@
 import { defaultTheme } from "vuepress";
 import { searchPlugin } from "@vuepress/plugin-search";
 import { viteBundler } from "vuepress";
+import * as dotenv from "dotenv";
+
+dotenv.config();
 
 const isDevMode = process.env.NODE_ENV === "development";
 const basePath = process.env.BASE_PATH || "/vue-ellipse-progress-docs/";
@@ -10,6 +13,9 @@ export default {
   title: "vue-ellipse-progress",
   description: "This is not my first VuePress site",
   base: isDevMode ? "/" : basePath,
+  define: {
+    SENTRY_DSN: process.env.SENTRY_DSN,
+  },
   markdown: {
     code: {
       lineNumbers: false,
@@ -17,6 +23,9 @@ export default {
   },
   bundler: viteBundler({
     viteOptions: {
+      server: {
+        port: 8081,
+      },
       ssr: {
         noExternal: "@vueform/slider",
       },

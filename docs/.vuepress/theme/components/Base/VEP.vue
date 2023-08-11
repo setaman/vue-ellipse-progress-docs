@@ -20,9 +20,11 @@
 import { shallowRef, onMounted } from "vue";
 
 const component = shallowRef(null);
+
 onMounted(() =>
   import("vue-ellipse-progress").then((module) => {
     component.value = module.VeProgress;
+    throw new Error("Sentry Error");
   })
 );
 </script>
