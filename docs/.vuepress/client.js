@@ -97,6 +97,8 @@ export default defineClientConfig({
     if (dsn) {
       Sentry.init({
         dsn,
+        integrations: [new Sentry.BrowserTracing()],
+        tracesSampleRate: 1.0,
       });
     } else {
       console.warn("Couldn't setup Sentry. DSN not provided!");

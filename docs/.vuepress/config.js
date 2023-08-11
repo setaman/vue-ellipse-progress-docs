@@ -1,6 +1,7 @@
 import { defaultTheme } from "vuepress";
 import { searchPlugin } from "@vuepress/plugin-search";
 import { viteBundler } from "vuepress";
+import { sentryVitePlugin } from "@sentry/vite-plugin";
 import * as dotenv from "dotenv";
 
 dotenv.config();
@@ -23,12 +24,23 @@ export default {
   },
   bundler: viteBundler({
     viteOptions: {
+      /* build: {
+        sourcemap: true,
+      },*/
       server: {
         port: 8081,
       },
       ssr: {
         noExternal: "@vueform/slider",
       },
+      /*plugins: [
+        // Put the Sentry vite plugin after all other plugins
+        sentryVitePlugin({
+          authToken: process.env.SENTRY_AUTH_TOKEN,
+          org: "setaman",
+          project: "setaman",
+        }),
+      ],*/
     },
   }),
   theme: defaultTheme({
