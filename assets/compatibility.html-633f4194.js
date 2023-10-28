@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-6ed3b755","path":"/guide/compatibility.html","title":"Compatibility","lang":"en-US","frontmatter":{"pageClass":"compatibility"},"headers":[],"git":{"updatedTime":1628685785000,"contributors":[{"name":"Sergej Atamantschuk","email":"sergejatam@gmail.com","commits":2}]},"filePathRelative":"guide/compatibility.md"}');export{t as data};

@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-00aada3d","path":"/guide/options/","title":"Options overview","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1664742431000,"contributors":[{"name":"Sergej Atamantschuk","email":"sergejatam@gmail.com","commits":23}]},"filePathRelative":"guide/options/README.md"}');export{e as data};

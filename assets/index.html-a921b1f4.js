@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-fffb8e28","path":"/guide/","title":"vue-ellipse-progress","lang":"en-US","frontmatter":{"pageClass":"quick-start"},"headers":[],"git":{"updatedTime":1698496795000,"contributors":[{"name":"Sergej Atamantschuk","email":"sergejatam@gmail.com","commits":8}]},"filePathRelative":"guide/README.md"}');export{e as data};
