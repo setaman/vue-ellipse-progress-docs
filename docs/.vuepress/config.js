@@ -8,7 +8,7 @@ const basePath = process.env.BASE_PATH || "/vue-ellipse-progress-docs/";
 export default {
   lang: "en-US",
   title: "vue-ellipse-progress",
-  description: "This is not my first VuePress site",
+  description: "Beautiful and smooth circular progress bars for your Vue app",
   base: isDevMode ? "/" : basePath,
   markdown: {
     code: {
@@ -23,7 +23,7 @@ export default {
     },
   }),
   theme: defaultTheme({
-    logo: "https://vuejs.org/images/logo.png",
+    //logo: "https://vuejs.org/images/logo.png",
     repo: "https://github.com/setaman/vue-ellipse-progress/tree/v2-dev",
     repoLabel: "GitHub",
     colorMode: "auto",

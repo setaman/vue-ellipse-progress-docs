@@ -19,7 +19,7 @@ initialize the component as a plugin or to import it directly.
   <CodeGroupItem title="NPM" active>
 
 ```bash:no-line-numbers
-npm i vue-ellipse-progress
+npm i vue-ellipse-progress@next
 ```
 
   </CodeGroupItem>
@@ -27,7 +27,7 @@ npm i vue-ellipse-progress
   <CodeGroupItem title="Yarn">
 
 ```bash:no-line-numbers
-yarn add vue-ellipse-progress
+yarn add vue-ellipse-progress@next
 ```
 
   </CodeGroupItem>

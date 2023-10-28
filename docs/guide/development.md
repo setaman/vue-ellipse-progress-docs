@@ -28,7 +28,3 @@ Start the project and open the displayed link in your browser:
 ```
 npm run serve
 ```
-
-## Working with code
-
-// TODO
