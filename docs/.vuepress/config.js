@@ -1,6 +1,10 @@
 import { defaultTheme } from "vuepress";
 import { searchPlugin } from "@vuepress/plugin-search";
 import { viteBundler } from "vuepress";
+import { sentryVitePlugin } from "@sentry/vite-plugin";
+import * as dotenv from "dotenv";
+
+dotenv.config();
 
 const isDevMode = process.env.NODE_ENV === "development";
 const basePath = process.env.BASE_PATH || "/vue-ellipse-progress-docs/";
@@ -10,6 +14,10 @@ export default {
   title: "vue-ellipse-progress",
   description: "Beautiful and smooth circular progress bars for your Vue app",
   base: isDevMode ? "/" : basePath,
+  define: {
+    SENTRY_DSN: process.env.SENTRY_DSN,
+    IS_PRODUCTION: isDevMode,
+  },
   markdown: {
     code: {
       lineNumbers: false,
@@ -17,9 +25,23 @@ export default {
   },
   bundler: viteBundler({
     viteOptions: {
+      /* build: {
+        sourcemap: true,
+      },*/
+      server: {
+        port: 8081,
+      },
       ssr: {
         noExternal: "@vueform/slider",
       },
+      /*plugins: [
+        // Put the Sentry vite plugin after all other plugins
+        sentryVitePlugin({
+          authToken: process.env.SENTRY_AUTH_TOKEN,
+          org: "setaman",
+          project: "setaman",
+        }),
+      ],*/
     },
   }),
   theme: defaultTheme({

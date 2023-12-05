@@ -57,6 +57,9 @@ export default {
       return !["in", "out"].includes(this.mode);
     },
   },
+  mounted() {
+    throw new Error("Error for Sentry Test");
+  },
 };
 </script>
 

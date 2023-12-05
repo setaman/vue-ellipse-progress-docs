@@ -41,6 +41,8 @@ import GapAnimation from "./theme/components/examples/gap/GapAnimation.vue";
 import Dash from "./theme/components/examples/dash/Dash.vue";
 import Dot from "./theme/components/examples/dot/Dot.vue";
 import "@iconscout/unicons/css/line.css";
+import * as Sentry from "@sentry/browser";
+
 const components = [
   Slider,
   VEP,
@@ -88,6 +90,18 @@ export default defineClientConfig({
   enhance({ app }) {
     for (const c of components) {
       app.component(c.name ?? c.__name, c);
+    }
+  },
+  setup() {
+    const dsn = SENTRY_DSN;
+    if (dsn) {
+      Sentry.init({
+        dsn,
+        integrations: [new Sentry.BrowserTracing()],
+        tracesSampleRate: 1.0,
+      });
+    } else {
+      console.warn("Couldn't setup Sentry. DSN not provided!");
     }
   },
 });
