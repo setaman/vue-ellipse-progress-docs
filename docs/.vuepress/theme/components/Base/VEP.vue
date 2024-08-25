@@ -5,6 +5,9 @@
         <template #default="{ counterTick }">
           <slot :counterTick="counterTick"></slot>
         </template>
+        <template #circle-progress="{ attrs }">
+          <slot name="circle-progress" :attrs="attrs"></slot>
+        </template>
         <template #legend>
           <slot name="legend"></slot>
         </template>

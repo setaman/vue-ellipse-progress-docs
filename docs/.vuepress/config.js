@@ -174,6 +174,29 @@ export default {
                 },
               ],
             },
+            {
+              isGroup: true,
+              text: "Slots",
+              collapsible: true,
+              children: [
+                {
+                  text: "default",
+                  link: "/guide/slots/default.md",
+                },
+                {
+                  text: "legend-caption",
+                  link: "/guide/slots/legend-caption.md",
+                },
+                {
+                  text: "circle-progress",
+                  link: "/guide/slots/circle-progress.md",
+                },
+                {
+                  text: "legend",
+                  link: "/guide/slots/legend.md",
+                },
+              ],
+            },
             "/guide/slots.md",
           ],
         },

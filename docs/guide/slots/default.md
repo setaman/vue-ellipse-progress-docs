@@ -1,6 +1,4 @@
-# Slots
-
-## `default`
+# `default` <Badge type="tip" text="1.x" vertical="middle" />
 
 Use this scoped slot, if you want to customize the presentation of the circle legend and make a use of the animated counter,
 so your formatting still animated. This works similar to the [`legendFormatter`](#legendformatter) and is just
@@ -117,6 +115,3 @@ export default {
 </CodeGroup>
 </template>
 </default-slot-colored>
-
-
-
