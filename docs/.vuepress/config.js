@@ -197,7 +197,6 @@ export default {
                 },
               ],
             },
-            "/guide/slots.md",
           ],
         },
         "/guide/compatibility.md",

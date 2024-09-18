@@ -43,6 +43,9 @@
     "vite": "^4.4.7",
     "vue-ellipse-progress": "^2.1.2"
   },
+  "peerDependencies": {
+    "vue": "^3.5.6"
+  },
   "packageRules": [
     {
       "packageNames": [

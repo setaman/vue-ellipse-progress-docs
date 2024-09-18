@@ -6,7 +6,7 @@ The **[`progress`](#progress)** is the only required property, and you are ready
 <ve-progress :progress="progress" />
 ```
 
-> Also make sure to check **[slot options](#slot-options)**
+> Also make sure to check **[slots](../slots/default.md)**
 
 | Prop                                              | Type                       | Values                                                                                                                                              | Default            |
 |---------------------------------------------------| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |

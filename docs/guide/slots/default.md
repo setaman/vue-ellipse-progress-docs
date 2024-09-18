@@ -1,4 +1,4 @@
-# `default` <Badge type="tip" text="1.x" vertical="middle" />
+# `default`
 
 Use this scoped slot, if you want to customize the presentation of the circle legend and make a use of the animated counter,
 so your formatting still animated. This works similar to the [`legendFormatter`](#legendformatter) and is just

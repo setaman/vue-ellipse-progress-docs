@@ -41,7 +41,7 @@ The `attrs` object contains all the necessary data to create a circle progress. 
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | `radius`                  | radius of the circle calculated depending on other props                                                                  |
 | `postion`                 | calculated position to place the circle correctly inside the SVG                                                          |
-| `circumference`           | the circumference of the progress circle                                                                                  |
+| `circumference`           | the circumference (SVG path length) of the progress circle                                                                |
 | `styles`                  | all the necessary styles to add smooth animations                                                                         |
 | `strokeDashOffset`        | offset calculated based on the progress value, applicable only for circle elements like `<circle>` or `<ellipse>`         |
 | `calculateProgressOffset` | helper function accepting element path length to help you to calculate progress offset for SVG elements other than circle |
@@ -50,8 +50,12 @@ Inspect the `attrs` object to see all the available properties and their values.
 the plugin will provide you with a better type definitions.
 The following examples will explain how and when to use these properties.
 
-// TODO: need a short recepie for the slot, 1. need to set "stroke-dasharray".
-2. need to set "stroke-dashoffset" for circle elements etc.
+### Slot recipe
+
+1. Draw your SVG element inside the slot. If the element is not an ellipse-like element, you have to position it correctly by yourself.
+2. Set the `stroke-dasharray` attribute to the path length of the SVG element. For the ellipse-like elements, you can use the `attrs.circumference` value.
+3. Set the `stroke-dashoffset` attribute to the `attrs.strokeDashOffset` value for the ellipse-like elements. This value is calculated depending on the progress value.
+For other SVG elements, you can use the `attrs.calculateProgressOffset(pathLength)` function to calculate the progress offset.
 
 ### Recreating the circle
 
@@ -225,3 +229,55 @@ Let's start with a simple example. Here we are drawing a polygon that still can 
 </CodeGroup>
 </template>
 </polygon-progress>
+
+::: warning
+Pay attention to the behavior in different modes.
+In the modes [`loading`](../options/loading.md) and [`determinate`](../options/determinate.md) the circle fallbacks 
+to the default [`loader`](../options/loader.md) circle.
+In the future, you might get more control over this behavior.
+:::
+
+<p class="mt-16">
+Below are a few custom examples
+taken directly from <a href="https://www.svgshapes.in" target="_blank">https://www.svgshapes.in</a>.
+</p>
+<custom-svg-examples>
+<template #code>
+<CodeGroup>
+<CodeGroupItem >
+
+```vue
+<template>
+  <ve-progress :progress="50">
+    <template #circle-progress="{ attrs }">
+      <polygon
+        ref="polygon"
+        :stroke-dashoffset="attrs.calculateProgressOffset(pathLength)"
+        :stroke-dasharray="pathLength"
+        points="10,10 190,100 10,190"
+        style="fill: #7b68ee"
+        :stroke-width="attrs.thickness"
+        :stroke-linecap="attrs.line"
+        :stroke="attrs.color"
+        :style="attrs.styles"
+      />
+    </template>
+  </ve-progress>
+</template>
+
+<script setup>
+  import { ref, watch } from "vue";
+
+  const pathLength = ref(0);
+  const polygon = ref();
+
+  watch(polygon, () => {
+    pathLength.value = polygon.value?.getTotalLength() ?? 0;
+  });
+</script>
+```
+
+</CodeGroupItem>
+</CodeGroup>
+</template>
+</custom-svg-examples>
