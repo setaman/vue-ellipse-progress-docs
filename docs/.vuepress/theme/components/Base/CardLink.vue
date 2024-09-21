@@ -35,7 +35,7 @@ export default {
   // padding: 14px;
   .card-link-content {
     font-size: 1rem;
-    color: var(--c-text-lighter);
+    color: var(--vp-c-text);
   }
 }
 .card-link-title {

@@ -20,10 +20,12 @@
   },
   "homepage": "https://github.com/setaman/vue-ellipse-progress-docs#readme",
   "devDependencies": {
-    "@vuepress/client": "2.0.0-beta.66",
-    "@vuepress/plugin-search": "2.0.0-beta.66",
-    "@vuepress/theme-default": "2.0.0-beta.66",
-    "@vuepress/utils": "2.0.0-beta.66",
+    "@vuepress/bundler-vite": "^2.0.0-rc.15",
+    "@vuepress/client": "2.0.0-rc.15",
+    "@vuepress/plugin-prismjs": "^2.0.0-rc.46",
+    "@vuepress/plugin-search": "2.0.0-rc.46",
+    "@vuepress/theme-default": "^2.0.0-rc.46",
+    "@vuepress/utils": "2.0.0-rc.15",
     "autoprefixer": "^10.2.6",
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
@@ -31,20 +33,17 @@
     "eslint-plugin-vue": "^7.14.0",
     "postcss": "^8.4.14",
     "prettier": "^2.6.2",
-    "sass-loader": "^13.0.2",
-    "tailwindcss": "^3.0.24",
-    "vuepress": "2.0.0-beta.66"
+    "sass-loader": "^16.0.2",
+    "tailwindcss": "^3.4.12",
+    "vuepress": "2.0.0-rc.15"
   },
   "dependencies": {
     "@iconscout/unicons": "^4.0.0",
     "@vueform/slider": "^2.1.7",
     "@vuepress/plugin-medium-zoom": "2.0.0-beta.66",
     "randomcolor": "^0.6.2",
-    "vite": "^4.4.7",
+    "vite": "^5.4.7",
     "vue-ellipse-progress": "^2.1.2"
-  },
-  "peerDependencies": {
-    "vue": "^3.5.6"
   },
   "packageRules": [
     {

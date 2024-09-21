@@ -1,6 +1,7 @@
-import { defaultTheme } from "vuepress";
+import { viteBundler } from "@vuepress/bundler-vite";
+import { defaultTheme } from "@vuepress/theme-default";
 import { searchPlugin } from "@vuepress/plugin-search";
-import { viteBundler } from "vuepress";
+import { prismjsPlugin } from "@vuepress/plugin-prismjs";
 
 const isDevMode = process.env.NODE_ENV === "development";
 const basePath = process.env.BASE_PATH || "/vue-ellipse-progress-docs/";
@@ -10,11 +11,6 @@ export default {
   title: "vue-ellipse-progress",
   description: "Beautiful and smooth circular progress bars for your Vue app",
   base: isDevMode ? "/" : basePath,
-  markdown: {
-    code: {
-      lineNumbers: false,
-    },
-  },
   bundler: viteBundler({
     viteOptions: {
       ssr: {
@@ -33,7 +29,7 @@ export default {
         link: "/guide/",
       },
     ],
-    sidebarDepth: 3,
+    sidebarDepth: 1,
     sidebar: {
       "/guide/": [
         {
@@ -209,6 +205,9 @@ export default {
     /*mediumZoomPlugin({ selector: "img.zoom" }),*/
     searchPlugin({
       isSearchable: (page) => page.path !== "/",
+    }),
+    prismjsPlugin({
+      lineNumbers: false,
     }),
   ],
 };

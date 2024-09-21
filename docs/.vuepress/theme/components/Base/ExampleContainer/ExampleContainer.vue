@@ -56,19 +56,21 @@
         </slot>
       </div>
       <div
-        class="example-container-code"
         v-if="['Code', 'both'].includes(mode)"
+        class="example-container-code-wrapper relative overflow-auto h-full"
       >
-        <slot
-          name="code"
-          :progress="progress"
-          :slider="slider"
-          :state="state"
-          :loading="loading"
-          :noData="noData"
-          :determinate="determinate"
-        >
-        </slot>
+        <div class="example-container-code absolute w-full h-full">
+          <slot
+            name="code"
+            :progress="progress"
+            :slider="slider"
+            :state="state"
+            :loading="loading"
+            :noData="noData"
+            :determinate="determinate"
+          >
+          </slot>
+        </div>
       </div>
     </div>
     <div
@@ -119,6 +121,7 @@ import Btn from "../Btn.vue";
 import CodeIcon from "../../SvgIcons/CodeIcon.vue";
 import MonitorIcon from "../../SvgIcons/MonitorIcon.vue";
 import RowsIcon from "../../SvgIcons/RowsIcon.vue";
+import { nextTick } from "vue";
 
 export default {
   name: "ExampleContainer",
@@ -217,23 +220,31 @@ export default {
     toggleCollapse() {
       this.isCollapsed = !this.isCollapsed;
     },
+    getThemeFromHtml() {
+      return document.documentElement.getAttribute("data-theme");
+    },
   },
   mounted() {
-    this.isDarkMode = document.documentElement.classList.contains("dark");
-    const btn = document.querySelector(".toggle-color-mode-button");
+    const btn = document.querySelector(".vp-toggle-color-mode-button");
     if (btn) {
       btn.addEventListener(
         "click",
-        () =>
-          (this.isDarkMode =
-            document.documentElement.classList.contains("dark"))
+        () => (this.isDarkMode = this.getThemeFromHtml()?.includes("dark"))
       );
     }
+    nextTick(() => {
+      this.isDarkMode = this.getThemeFromHtml()?.includes("dark");
+    });
   },
 };
 </script>
 
 <style lang="scss">
+.example-container.code {
+  .example-container-code-wrapper {
+    height: 40svh;
+  }
+}
 .example-container-body {
   border: 2px solid #f5f6fa;
   min-height: 236px;
@@ -264,29 +275,32 @@ export default {
   }
 }
 .example-container-code {
-  max-height: 50vh;
-  overflow-y: auto;
-  .code-group__nav {
+  height: 100%;
+  .code-group,
+  .code-group-item {
+    height: 100%;
+  }
+  .code-group-nav {
     display: none;
   }
   .code-group-item {
     display: block !important;
   }
-  div {
-    //height: 100%;
-  }
-  .language-vue.ext-vue {
-    min-height: 236px;
-    background-color: transparent;
+  .language-vue {
+    height: 100%;
+    background-color: var(--code-c-bg);
     margin: 0;
+    border-radius: 0 !important;
     &:before {
       display: none;
+    }
+    pre {
+      height: 100%;
     }
   }
   pre.language-vue {
     margin: 0;
     padding: 16px;
-    min-height: 236px;
     height: 100%;
   }
 }
@@ -299,7 +313,7 @@ export default {
   }
 }
 
-.dark {
+[data-theme="dark"] {
   .example-container-body {
     border: 2px solid #2a2c3c;
   }
@@ -316,6 +330,11 @@ export default {
   }
   .example-controls-states:after {
     background-color: #22272e;
+  }
+  .example-container-code {
+    .language-vue {
+      background-color: transparent;
+    }
   }
 }
 
@@ -364,6 +383,9 @@ export default {
 @media (max-width: 1023px) {
   .example-controls-states:after {
     display: none !important;
+  }
+  .example-container-code-wrapper {
+    height: 40svh;
   }
 }
 </style>

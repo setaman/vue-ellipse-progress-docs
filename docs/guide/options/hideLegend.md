@@ -11,7 +11,7 @@ should be hidden.
 
 ::: warning Legend behavior
 A non-valid value for **[`progress`](./progress.md)**, the use of the **[`data`](./data.md)** property,
-the **[`loading`](./loading.md)** and **[`noData`](./noData.md)** states also hide the legend.
+the **[`loading`](./loading.md)** and **[`noData`](./nodata.md)** states also hide the legend.
 :::
 
 ### Usage 📜

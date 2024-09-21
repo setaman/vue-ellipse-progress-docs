@@ -12,7 +12,7 @@ is completely up to you and you have the full freedom to adjust the presentation
 String value, even HTML.
 
 ::: tip
-Alternatively you can use [`scoped slot`](../slots.md#default) for custom formatting.
+Alternatively you can use [`scoped slot`](../slots/default.md) for custom formatting.
 :::
 
 ### Usage
