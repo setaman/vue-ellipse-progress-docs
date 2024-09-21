@@ -72,8 +72,8 @@
         lineMode="in-over"
       />
     </template>
-    <template #code>
-      <slot name="code"> </slot>
+    <template #code="{ progress }">
+      <slot name="code" :progress="progress"> </slot>
     </template>
   </example-container>
 </template>

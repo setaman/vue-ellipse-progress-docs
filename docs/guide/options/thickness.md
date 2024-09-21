@@ -6,8 +6,8 @@
 | -------------- | ----------------------------------------- | ------- |
 | Number\|String | \>=0 as Number or percent value as String | "5%"    |
 
-Is a Number >=0 or a String that defines the progress line thickness. If you set the value in percent as String,
-the thickness will be calculated in relation to **[`size`](./size.md)**.
+Defines the progress line thickness, which can be a Number >=0 or a percentage value as a String.
+When specified as a percentage, the thickness is calculated relative to the **[`size`](./size.md)**.
 
 ::: tip
 Make sure to take a look at **[`emptyThickness`](./emptyThickness.md)**, **[`lineMode`](./lineMode.md)**, **[`linePosition`](./linePosition.md)**
@@ -52,8 +52,8 @@ and other properties to learn how you can create unique circles
 </template>
 </example-container>
 
-With a value defined as a string, the thickness can be specified as a percentage.
-This way we can let the thickness of the line scale relative to the **[`size`](./size.md)**:
+When defined as a string, the thickness can be specified as a percentage,
+allowing it to scale relative to the **[`size`](./size.md)**:
 
 <example-container class="mb-16">
 <template #default="{ loading, slider, noData, determinate }">

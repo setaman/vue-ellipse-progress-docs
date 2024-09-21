@@ -39,7 +39,7 @@ the **[`loading`](./loading.md)** and **[`noData`](./nodata.md)** states also hi
       </p>
     </template>
   </ve-progress>
-  <ve-progress :progress="{{ progress }}" :hide-legend="{{ hideLegend }}">
+  <ve-progress :progress="{{ progress }}" :hide-legend="{{ hideLegend }}" legend="0150">
     <template #legend-caption>
       <p>
         "legend"as circle legend

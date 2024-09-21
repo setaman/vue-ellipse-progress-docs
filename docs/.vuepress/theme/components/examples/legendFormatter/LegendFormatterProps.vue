@@ -25,8 +25,9 @@
         </div>
       </div>
     </template>
-    <template #code="{ progress }">
-      <slot name="code" :progress="progress"> </slot>
+    <template #code="{ progress, slider }">
+      <slot name="code" :progress="progress" :legend="`00${slider}.000`">
+      </slot>
     </template>
   </example-container>
 </template>

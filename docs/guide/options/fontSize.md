@@ -33,8 +33,6 @@ and **[`slots`](../slots/default.md)** offer much more flexibility for customiza
 ```vue:no-v-pre
 <template>
   <ve-progress :progress="{{ progress }}" font-size="2rem" />
-</template>
-<template>
   <ve-progress :progress="{{ progress }}" font-size="10px" />
 </template>
 ```

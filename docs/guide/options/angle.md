@@ -16,8 +16,6 @@ With the `angle` prop the circle can be rotated and thus the starting point can 
 
 ### Examples
 
-huo
-
 <Angle>
 <template #code="{ data }">
 <CodeGroup>

@@ -33,11 +33,7 @@ The property **[`legendFormatter`](./legendFormatter.md)** and **[`slots`](../sl
 ```vue:no-v-pre
 <template>
   <ve-progress :progress="{{ progress }}" font-color="blue" />
-</template>
-<template>
   <ve-progress :progress="{{ progress }}" font-color="#7B68EE" />
-</template>
-<template>
   <ve-progress :progress="{{ progress }}" font-color="DarkSalmon" />
 </template>
 ```

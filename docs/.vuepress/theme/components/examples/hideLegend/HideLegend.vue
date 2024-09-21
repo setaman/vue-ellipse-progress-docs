@@ -54,7 +54,6 @@
         :loading="loading"
         :no-data="noData"
         :determinate="determinate"
-        legend="0150"
         :hide-legend="hideLegend"
       >
         <template #caption>

@@ -9,6 +9,10 @@
 In determinate state the component indicates that the data is being loaded, but also shows the progress circle and the
 **[`legend`](./legend.md)** that is faded out in the **[`loading`](./loading.md)** state.
 
+::: tip Custom loader
+Custom loading circle can be created with **[`loader`](./loader.md)** !
+:::
+
 ### Usage 📜
 
 ```vue

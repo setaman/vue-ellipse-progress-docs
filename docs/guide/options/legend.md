@@ -36,23 +36,18 @@ the circle legend. To hide the circle legend use the [`hideLegend`](./hideLegend
 <CodeGroup>
 <CodeGroupItem >
 
-```vue
+```vue:no-v-pre
 <template>
   <ve-progress :progress="progress" :legend="legend" />
 </template>
 
-<script>
-export default {
-  data: () => ({
-    maxLegendValue: 4000,
-    legend: 2000,
-  }),
-  computed: {
-    progress() {
-      return (this.legend * 100) / this.maxLegendValue;
-    },
-  },
-};
+<script setup>
+  const maxLegendValue = ref(4000);
+  const legend = ref(2000);
+  
+  const progress = computed(() => {
+    return (legend.value * 100) / maxLegendValue.value;
+  });
 </script>
 ```
 
@@ -85,22 +80,17 @@ As a result, Rating can be displayed as a circle legend and progress will be cal
 <CodeGroup>
 <CodeGroupItem >
 
-```vue
+```vue:no-v-pre
 <template>
-  <ve-progress :progress="progress" :legend="rating" />
+  <ve-progress :progress="progress" :legend="legend" />
 </template>
 
-<script>
-export default {
-  data: () => ({
-    rating: 3.5,
-  }),
-  computed: {
-    progress() {
-      return (this.rating * 100) / 5;
-    },
-  },
-};
+<script setup>
+  const rating = ref(3.5);
+ 
+  const progress = computed(() => {
+    return (legend.rating * 100) / 5;
+  });
 </script>
 ```
 

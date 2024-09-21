@@ -14,7 +14,7 @@ will take on the page.
 ::: tip
 Check the **[`lineMode`](./lineMode.md)**, **[`thickness`](./thickness.md)**, **[`emptyThickness`](./emptyThickness.md)** and
 **[`dot`](./dot.md)** properties to understand how the progress and empty lines behaves depending on the different values. Also,
-by default the **[`thickness`](./thickness.md)** and **[`emptyThickness`](./emptyThickness.md)** scale relative to the `size`.
+by default the **[`thickness`](./thickness.md)** and **[`emptyThickness`](./emptyThickness.md)** scale relatively to the `size`.
 :::
 
 ###### Usage: 📜

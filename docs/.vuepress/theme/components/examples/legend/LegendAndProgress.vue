@@ -9,8 +9,8 @@
         :legend="slider"
       />
     </template>
-    <template #code>
-      <slot name="code"> </slot>
+    <template #code="{ progress, slider }">
+      <slot name="code" :progress="progress" :legend="slider"> </slot>
     </template>
   </example-container>
 </template>

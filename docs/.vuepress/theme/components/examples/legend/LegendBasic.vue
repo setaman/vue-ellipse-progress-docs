@@ -9,22 +9,18 @@
         :legend="slider"
       />
     </template>
-    <template #code>
-      <slot name="code"> </slot>
+    <template #code="{ progress, slider }">
+      <slot name="code" :progress="progress" :legend="slider"> </slot>
     </template>
   </example-container>
 </template>
 
-<script>
+<script setup>
 import ExampleContainer from "../../Base/ExampleContainer/ExampleContainer.vue";
 import VEP from "../../Base/VEP.vue";
-export default {
-  name: "LegendBasic",
-  components: { VEP, ExampleContainer },
-  data: () => ({
-    maxLegendValue: 4000,
-  }),
-};
+import { ref } from "vue";
+
+const maxLegendValue = ref(4000);
 </script>
 
 <style scoped></style>
