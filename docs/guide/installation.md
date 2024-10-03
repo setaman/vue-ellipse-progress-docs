@@ -9,6 +9,7 @@ Please note that for Vue 3 compatibility you have to use most recent <Badge type
 version of the library which is a default version starting with `v2.2.0` tag. 
 Vue 2 users have
 to use <Badge type="tip" text="1.x" vertical="middle" /> version that is now considered as legacy.
+The docs for the legacy version can be found in [v1-legacy](https://github.com/setaman/vue-ellipse-progress/tree/v1-legacy?tab=readme-ov-file) branch.
 :::
 
 ## Package Manager
