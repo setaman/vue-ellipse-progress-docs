@@ -4,7 +4,7 @@ pageClass: quick-start
 
 # vue-ellipse-progress
 
-[![npm (tag)](https://img.shields.io/npm/v/vue-ellipse-progress/next?color=success&label=NPM&style=for-the-badge)](https://www.npmjs.com/package/vue-ellipse-progress)
+[![NPM Version](https://img.shields.io/npm/v/vue-ellipse-progress?style=for-the-badge&color=success)](https://www.npmjs.com/package/vue-ellipse-progress)
 ![GitHub](https://img.shields.io/github/license/setaman/vue-ellipse-progress?style=for-the-badge)
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/setaman/vue-ellipse-progress/build.yml?style=for-the-badge)
 
@@ -13,7 +13,7 @@ Start creating circles in three steps:
 
 ```js
 // install
-npm i vue-ellipse-progress@next
+npm i vue-ellipse-progress
 // initialize
 import veProgress from "vue-ellipse-progress";
 createApp(App).use(veProgress);

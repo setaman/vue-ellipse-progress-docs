@@ -6,8 +6,9 @@ this way there is the possibility to use the library either in plugin mode or to
 
 ::: warning Vue compatibility
 Please note that for Vue 3 compatibility you have to use most recent <Badge type="tip" text="2.x" vertical="middle" />
-version of the library. Vue 2 users have
-to use <Badge type="tip" text="1.x" vertical="middle" /> version.
+version of the library which is a default version starting with `v2.2.0` tag. 
+Vue 2 users have
+to use <Badge type="tip" text="1.x" vertical="middle" /> version that is now considered as legacy.
 :::
 
 ## Package Manager
@@ -15,23 +16,21 @@ to use <Badge type="tip" text="1.x" vertical="middle" /> version.
 Use your favorite package manager to install the library from NPM. After the installation you have the choice to
 initialize the component as a plugin or to import it directly.
 
-<CodeGroup>
-  <CodeGroupItem title="NPM" active>
+::: tabs
 
-```bash:no-line-numbers
-npm i vue-ellipse-progress@next
+@tab npm
+
+```bash
+npm i vue-ellipse-progress
 ```
 
-  </CodeGroupItem>
+@tab yarn
 
-  <CodeGroupItem title="Yarn">
-
-```bash:no-line-numbers
-yarn add vue-ellipse-progress@next
+```bash
+yarn add vue-ellipse-progress
 ```
+:::
 
-  </CodeGroupItem>
-</CodeGroup>
 
 ### Initialize as Plugin
 
