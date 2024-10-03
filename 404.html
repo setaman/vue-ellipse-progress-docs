@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.17" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme')
+      const systemDarkMode =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (userMode === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (userMode === 'dark' || systemDarkMode) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <title>vue-ellipse-progress</title><meta name="description" content="Beautiful and smooth circular progress bars for your Vue app">
+    <link rel="preload" href="/vue-ellipse-progress-docs/assets/style-Cgelccs3.css" as="style"><link rel="stylesheet" href="/vue-ellipse-progress-docs/assets/style-Cgelccs3.css">
+    <link rel="modulepreload" href="/vue-ellipse-progress-docs/assets/app-BcF75F8Y.js"><link rel="modulepreload" href="/vue-ellipse-progress-docs/assets/404.html-CFiTW7sY.js">
+    <link rel="prefetch" href="/vue-ellipse-progress-docs/assets/index.html-bp8fGy3k.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/index.html-CjohfLsQ.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/compatibility.html-R4ouYpK_.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/contribution.html-D7nXKzCM.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/development.html-B8Gs1PAl.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/installation.html-fD8hu1rx.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/usage.html-6x3kynkD.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/EXAMPLE.html-DelC1pQJ.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/index.html-BHLRI16Y.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/angle.html-DuCZ9JTC.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/animation.html-SPZl8T8e.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/color.html-CHNVCQLg.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/colorFill.html-CnbvmI4r.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/dash.html-CAJgO8xa.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/data.html-BhcB0uV-.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/determinate.html-TkDk9w5J.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/dot.html-CkXOy0vS.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/emptyColor.html-BvlXarzg.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/emptyColorFill.html-Yhh1Rd7F.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/emptyLinePosition.html-_JGT8gzE.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/emptyThickness.html-DSGj2ohk.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/fontColor.html-CynEAUr8.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/fontSize.html-DxH30FCG.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/gap.html-BneAs4Zz.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/half.html-6tfftrFE.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/hideLegend.html-C_i4YNcV.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/legend.html-vR5rHnSm.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/legendClass.html-BQGKzqMF.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/legendFormatter.html-CJIYghGo.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/line.html-CcxGDpX9.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/lineMode.html-BCVa07b-.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/linePosition.html-Cf_mr24W.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/loader.html-C58UAFr-.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/loading.html-Ai6RaBu_.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/nodata.html-DeVRnUaI.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/progress.html-D0xyJEa4.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/reverse.html-CsSTIiKj.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/size.html-By6GRuVL.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/thickness.html-B4W-FbEp.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/circle-progress.html-DsW_5gMa.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/default.html-DvyJ2e9K.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/legend-caption.html-Dbba3P7d.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/legend.html-BY3L3wY5.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/veprogress.umd.min-ki31jrQp.js" as="script"><link rel="prefetch" href="/vue-ellipse-progress-docs/assets/setupDevtools-7MC2TMWH-CnLC1TXF.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container" vp-container data-v-67c08c1d><main class="page" data-v-67c08c1d><div class="theme-default-content" vp-content data-v-67c08c1d><h1 data-v-67c08c1d>404</h1><blockquote data-v-67c08c1d>How did we get here?</blockquote><a class="route-link" href="/vue-ellipse-progress-docs/" data-v-67c08c1d>Take me home</a></div></main></div><!--[--><!----><!--]--><!--]--></div>
+    <script type="module" src="/vue-ellipse-progress-docs/assets/app-BcF75F8Y.js" defer></script>
+  </body>
+</html>
