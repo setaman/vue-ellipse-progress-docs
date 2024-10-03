@@ -33,10 +33,10 @@
 <script setup>
 import ExampleContainer from "../../Base/ExampleContainer/ExampleContainer.vue";
 import VEP from "../../Base/VEP.vue";
-import { ref, watch } from "vue";
+import { ref, watch, useTemplateRef } from "vue";
 
+const polygon = useTemplateRef("polygon");
 const pathLength = ref(0);
-const polygon = ref();
 
 watch(polygon, () => {
   pathLength.value = polygon.value?.getTotalLength() ?? 0;

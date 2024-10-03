@@ -215,10 +215,10 @@ Let's start with a simple example. Here we are drawing a polygon that still can 
 </template>
 
 <script setup>
-  import { ref, watch } from "vue";
+  import { ref, watch, useTemplateRef } from "vue";
 
+  const polygon = useTemplateRef("polygon");
   const pathLength = ref(0);
-  const polygon = ref();
 
   watch(polygon, () => {
     pathLength.value = polygon.value?.getTotalLength() ?? 0;
