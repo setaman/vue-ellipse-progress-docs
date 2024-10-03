@@ -20,12 +20,13 @@
   },
   "homepage": "https://github.com/setaman/vue-ellipse-progress-docs#readme",
   "devDependencies": {
-    "@vuepress/bundler-vite": "^2.0.0-rc.15",
-    "@vuepress/client": "2.0.0-rc.15",
-    "@vuepress/plugin-prismjs": "^2.0.0-rc.46",
-    "@vuepress/plugin-search": "2.0.0-rc.46",
-    "@vuepress/theme-default": "^2.0.0-rc.46",
-    "@vuepress/utils": "2.0.0-rc.15",
+    "@vuepress/bundler-vite": "^2.0.0-rc.17",
+    "@vuepress/client": "2.0.0-rc.17",
+    "@vuepress/plugin-prismjs": "^2.0.0-rc.52",
+    "@vuepress/plugin-search": "2.0.0-rc.52",
+    "@vuepress/shared": "^2.0.0-rc.17",
+    "@vuepress/theme-default": "^2.0.0-rc.52",
+    "@vuepress/utils": "2.0.0-rc.17",
     "autoprefixer": "^10.2.6",
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
@@ -35,7 +36,7 @@
     "prettier": "^2.6.2",
     "sass-loader": "^16.0.2",
     "tailwindcss": "^3.4.12",
-    "vuepress": "2.0.0-rc.15"
+    "vuepress": "2.0.0-rc.17"
   },
   "dependencies": {
     "@iconscout/unicons": "^4.0.0",
