@@ -14,7 +14,7 @@ In general, this prop makes it possible to mimic the SVG2 `stroke-aligment`, whi
 
 ```vue
 <ve-progress empty-line-position="in 10" />
-<ve-progress empty-line-mode="out" />
+<ve-progress empty-line-position="out" />
 ```
 
 ### Example
@@ -30,8 +30,8 @@ In general, this prop makes it possible to mimic the SVG2 `stroke-aligment`, whi
     :progress="{{data.progress}}"
     empty-color-fill="#265cff"
     :empty-thickness="30"
-    emptyColor="rgba(230, 233, 240, 0.1)"
-    empty-line-position="{{data.mode}}{{ data.offset}}"
+    empty-color="rgba(230, 233, 240, 0.1)"
+    empty-line-position="{{ data.mode }}{{ data.offset}}"
   />
 </template>
 ```

@@ -143,11 +143,16 @@
         </v-e-p>
       </template>
       <template #code="{ progress }">
-        <slot name="code4" :progress="progress" :data="data4"> </slot>
-        <slot name="code5" :progress="progress" :data="data5" :angle="angle">
+        <slot
+          name="code4"
+          :progress="progress"
+          :data4="data4"
+          :data5="data5"
+          :data6="data6"
+          :data7="data7"
+          :angle="angle"
+        >
         </slot>
-        <slot name="code6" :progress="progress" :data="data6"> </slot>
-        <slot name="code7" :progress="progress" :data="data7"> </slot>
       </template>
     </example-container>
 
@@ -196,7 +201,7 @@
             :data="data9"
           >
           </v-e-p>
-          <div class="">
+          <div>
             <div>
               <span
                 class="chart-legend"
@@ -229,7 +234,7 @@
         </div>
       </template>
       <template #code="{ progress }">
-        <slot name="code8" :progress="progress" :data="data9"> </slot>
+        <slot name="code9" :progress="progress" :data="data9"> </slot>
       </template>
     </example-container>
   </div>

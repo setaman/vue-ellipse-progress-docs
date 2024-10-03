@@ -9,7 +9,7 @@
 Defines the font color of the circle legend and accepts any valid CSS value.
 
 ::: tip
-The property **[`legendFormatter`](./legendFormatter.md)** and **[`slots`](../slots.md)** offer much more flexibility for customization
+The property **[`legendFormatter`](./legendFormatter.md)** and **[`slots`](../slots/default.md)** offer much more flexibility for customization
 :::
 
 ###### Usage: 📜
@@ -33,11 +33,7 @@ The property **[`legendFormatter`](./legendFormatter.md)** and **[`slots`](../sl
 ```vue:no-v-pre
 <template>
   <ve-progress :progress="{{ progress }}" font-color="blue" />
-</template>
-<template>
   <ve-progress :progress="{{ progress }}" font-color="#7B68EE" />
-</template>
-<template>
   <ve-progress :progress="{{ progress }}" font-color="DarkSalmon" />
 </template>
 ```

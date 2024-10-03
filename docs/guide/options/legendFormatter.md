@@ -12,7 +12,7 @@ is completely up to you and you have the full freedom to adjust the presentation
 String value, even HTML.
 
 ::: tip
-Alternatively you can use [`scoped slot`](../slots.md#default) for custom formatting.
+Alternatively you can use [`scoped slot`](../slots/default.md) for custom formatting.
 :::
 
 ### Usage
@@ -22,6 +22,10 @@ Alternatively you can use [`scoped slot`](../slots.md#default) for custom format
   :legend-formatter="({ currentValue }) => `My Format ${currentValue}`"
 />
 ```
+| Exposed props           |                                                                                                                                                                   |
+|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `currentValue`          | The current value of the counter at specific tick. It's always a Number                                                                                           |
+| `currentFormattedValue` | Current value formatted as a String. It's a String representation of the `currentValue` including the formatting wich may be applied with [`legend`](./legend.md) |
 
 ### Examples
 
@@ -94,24 +98,20 @@ You can add more elements, images and pretty much anything here
 The internal counter component provides additional properties that might be useful. The properties are calculated for each counter tick.
 
 <LegendFormatterProps>
-<template #code="{ progress }">
+<template #code="{ progress, legend }">
 <CodeGroup>
 <CodeGroupItem >
 
 ```vue:no-v-pre
 <template>
-  <ve-progress :progress="{{progress}}" :legend-formatter="customFormatter"/>
+  <ve-progress :progress="{{ progress }}" :legend="{{ legend }}" :legend-formatter="customFormatter"/>
 </template>
-<script>
-export default {
-  methods: {
-    customFormatter(counterTickProps) {
-      return `"currentFormattedValue":
-        ${counterTickProps.currentFormattedValue}
-        `;
-    }
-  }
-};
+<script setup>
+const customFormatter = (counterTickProps) => {
+  return `"currentFormattedValue":
+    ${counterTickProps.currentFormattedValue}
+  `;
+ }
 </script>
 ```
 

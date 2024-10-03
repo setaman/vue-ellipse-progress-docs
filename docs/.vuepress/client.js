@@ -41,6 +41,9 @@ import GapAnimation from "./theme/components/examples/gap/GapAnimation.vue";
 import Dash from "./theme/components/examples/dash/Dash.vue";
 import Dot from "./theme/components/examples/dot/Dot.vue";
 import "@iconscout/unicons/css/line.css";
+import PolygonProgress from "./theme/components/examples/slots/PolygonProgress.vue";
+import CustomSvgExamples from "./theme/components/examples/slots/CustomSvgExamples.vue";
+
 const components = [
   Slider,
   VEP,
@@ -82,6 +85,8 @@ const components = [
   EmptyColorFillGradient,
   EmptyColorFillGradientCrazy,
   EmptyColorFillRandom,
+  PolygonProgress,
+  CustomSvgExamples,
 ];
 
 export default defineClientConfig({

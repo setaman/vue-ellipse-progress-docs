@@ -9,7 +9,7 @@
 Is any Number or String. This property can be applied for simple formatting of the circle legend. As [`progress`](./progress.md) only
 accepts values in the range [-100, 100], it is usually useful when values outside this range need to be displayed as circle
 legend. Defining the value as String you can apply very simple formatting with `"."` or `","` as delimiter or set the initial
-counter placeholder (e.g "0045.00"). Apart from this the value must be a valid JavaScript Number.
+counter-placeholder (e.g. "0045.00"). Apart from this the value must be a valid JavaScript Number.
 
 ::: warning Legend vs progress
 The [`progress`](./progress.md) must be defined in any case, if defined, `legend` will replace [`progress`](./progress.md) only
@@ -17,7 +17,7 @@ as the displayed circle legend! How the [`progress`](./progress.md) is calculate
 :::
 
 ::: tip
-With [`legendFormatter`](./legendformatter) or [`scoped slot`](#default) you have countless possibilities to customize
+With [`legendFormatter`](./legendFormatter.md) or [`scoped slot`](../slots/default.md) you have countless possibilities to customize
 the circle legend. To hide the circle legend use the [`hideLegend`](./hideLegend.md) property.
 :::
 
@@ -36,23 +36,18 @@ the circle legend. To hide the circle legend use the [`hideLegend`](./hideLegend
 <CodeGroup>
 <CodeGroupItem >
 
-```vue
+```vue:no-v-pre
 <template>
   <ve-progress :progress="progress" :legend="legend" />
 </template>
 
-<script>
-export default {
-  data: () => ({
-    maxLegendValue: 4000,
-    legend: 2000,
-  }),
-  computed: {
-    progress() {
-      return (this.legend * 100) / this.maxLegendValue;
-    },
-  },
-};
+<script setup>
+  const maxLegendValue = ref(4000);
+  const legend = ref(2000);
+  
+  const progress = computed(() => {
+    return (legend.value * 100) / maxLegendValue.value;
+  });
 </script>
 ```
 
@@ -85,22 +80,17 @@ As a result, Rating can be displayed as a circle legend and progress will be cal
 <CodeGroup>
 <CodeGroupItem >
 
-```vue
+```vue:no-v-pre
 <template>
   <ve-progress :progress="progress" :legend="rating" />
 </template>
 
-<script>
-export default {
-  data: () => ({
-    rating: 3.5,
-  }),
-  computed: {
-    progress() {
-      return (this.rating * 100) / 5;
-    },
-  },
-};
+<script setup>
+  const rating = ref(3);
+ 
+  const progress = computed(() => {
+    return (rating.value * 100) / 5;
+  });
 </script>
 ```
 
