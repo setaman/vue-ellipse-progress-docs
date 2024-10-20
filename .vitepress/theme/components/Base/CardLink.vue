@@ -6,17 +6,23 @@ defineProps<{
 </script>
 
 <template>
-  <router-link class="card-link m-0" :to="link">
-    {{link}}
-    <div class="card-link-container p-3 px-3">
-      <h4 class="card-link-title m-0 pt-0" style="padding-top: 0; margin: 0">
-        {{ title }}
-      </h4>
-      <p class="card-link-content m-0 mt-2" style="margin-top: 16px">
-        <slot> </slot>
-      </p>
-    </div>
-  </router-link>
+  <a
+    :href="link"
+    class="h-full block max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-zinc-800 dark:border-gray-700 dark:hover:bg-gray-700 no-underline"
+    style="text-decoration: none; background-color: var(--vp-c-bg-soft)"
+  >
+    <h5
+      class="mb-2 text-2xl font-bold tracking-tight text-gray-500 dark:text-white"
+    >
+      {{ title }}
+    </h5>
+    <p
+      class="font-normal text-gray-700 dark:text-gray-400 my-0"
+      style="margin: 0"
+    >
+      <slot> </slot>
+    </p>
+  </a>
 </template>
 
 <style scoped lang="scss">

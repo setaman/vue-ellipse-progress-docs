@@ -8,35 +8,66 @@ The **[`progress`](./progress)** is the only required property, and you are read
 
 > Also make sure to check **[slots](../slots/default)**
 
-| Prop                                              | Type                       | Values                                                                                                                                              | Default            |
-|---------------------------------------------------| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| **[`progress`](./progress)**                   | Number                     | \[-100, 100]                                                                                                                                        |                    |
-| **[`size`](./size)**                           | Number                     | >=0                                                                                                                                                 | 200                |
-| **[`line`](./line)**                           | String                     | "round \| square \| butt"                                                                                                                           | "round"            |
-| **[`thickness`](./thickness)**                 | Number \| String           | \>=0 as Number or percent value as String                                                                                                           | "5%"               |
-| **[`lineMode`](./lineMode)**                   | String                     | "center \| out \| out-over \| in \| in-over \| top \| bottom [offset]"                                                                              | "center"           |
-| **[`linePosition`](./linePosition)**           | String                     | "center \| out \| in [offset]"                                                                                                                      | "center"           |
-| **[`emptyLinePosition`](./emptyLinePosition)** | String                     | "center \| out \| in [offset]"                                                                                                                      | "center"           |
-| **[`emptyThickness`](./emptyThickness)**       | Number \| String           | \>=0 as Number or percent value as String                                                                                                           | "5%"               |
-| **[`color`](./color)**                         | String \| Object           | any color as String or Object to specify gradient (see details)                                                                                     | "#3f79ff"          |
-| **[`colorFill`](./colorFill)**                 | String \| Object           | same as `color`                                                                                                                                     | "transparent"      |
-| **[`emptyColor`](./emptyColor)**               | String \| Object           | same as `color`                                                                                                                                     | "#e6e9f0"          |
-| **[`emptyColorFill`](./emptyColorFill)**       | String \| Object           | same as `color`                                                                                                                                     | "transparent"      |
-| **[`hideLegend`](./hideLegend)**               | Boolean                    |                                                                                                                                                     | true               |
-| **[`legend`](./legend)**                       | Number \| String           | any number, accepts a `.` or `","` as decimals delimiter and simple formatting                                                                      |                    |
-| **[`legendFormatter`](./legendFormatter)**     | Function                   | Function that returns formatted value                                                                                                               |                    |
-| **[`animation`](./animation)**                 | String                     | "default \| rs \| loop \| reverse \| bounce [duration delay]"                                                                                       | "default 1000 400" |
-| **[`loading`](./loading)**                     | Boolean                    |                                                                                                                                                     | false              |
-| **[`loader`](./loader)**                       | Object                     | { [thickness, color, lineMode, line, opacity ]}                                                                                                     |                    |
-| **[`determinate`](./determinate)**             | Boolean                    |                                                                                                                                                     | false              |
-| **[`nodata`](./nodata)**                       | Boolean                    |                                                                                                                                                     | false              |
-| **[`angle`](./angle)**                         | Number                     | any Number                                                                                                                                          | -90                |
-| **[`fontSize`](./fontSize)**                   | String                     | any valid CSS value                                                                                                                                 | "1rem"             |
-| **[`fontColor`](./fontColor)**                 | String                     | any valid CSS value                                                                                                                                 | "gray"             |
-| **[`legendClass`](./legendClass)**             | String                     | any                                                                                                                                                 |                    |
-| **[`dash`](./dash)**                           | String                     | "[strict] count spacing"                                                                                                                            |                    |
-| **[`half`](./half)**                           | Boolean                    |                                                                                                                                                     | false              |
-| **[`gap`](./gap)**                             | Number                     | any Number that defines the gap between multiple circles in pixel                                                                                   | 0                  |
-| **[`dot`](./dot)**                             | String \| Number \| Object | Accepts size, color and other styles as Number, descriptive string `"size [color]"` or object `{size [, backgroundColor, widht, borderRadius ...]}` | 0                  |
-| **[`reverse`](./reverse)**                     | Boolean                    |                                                                                                                                                     | false              |
-| **[`data`](./data)**                           | Array                      | defines multiple circles, takes as values Objects with almost all props defined above                                                               |                    |
+[//]: # (| Prop                                              | Type                       | Values                                                                                                                                              | Default            |)
+
+[//]: # (|---------------------------------------------------| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |)
+
+[//]: # (| **[`progress`]&#40;./progress&#41;**                   | Number                     | \[-100, 100]                                                                                                                                        |                    |)
+
+[//]: # (| **[`size`]&#40;./size&#41;**                           | Number                     | >=0                                                                                                                                                 | 200                |)
+
+[//]: # (| **[`line`]&#40;./line&#41;**                           | String                     | "round \| square \| butt"                                                                                                                           | "round"            |)
+
+[//]: # (| **[`thickness`]&#40;./thickness&#41;**                 | Number \| String           | \>=0 as Number or percent value as String                                                                                                           | "5%"               |)
+
+[//]: # (| **[`lineMode`]&#40;./lineMode&#41;**                   | String                     | "center \| out \| out-over \| in \| in-over \| top \| bottom [offset]"                                                                              | "center"           |)
+
+[//]: # (| **[`linePosition`]&#40;./linePosition&#41;**           | String                     | "center \| out \| in [offset]"                                                                                                                      | "center"           |)
+
+[//]: # (| **[`emptyLinePosition`]&#40;./emptyLinePosition&#41;** | String                     | "center \| out \| in [offset]"                                                                                                                      | "center"           |)
+
+[//]: # (| **[`emptyThickness`]&#40;./emptyThickness&#41;**       | Number \| String           | \>=0 as Number or percent value as String                                                                                                           | "5%"               |)
+
+[//]: # (| **[`color`]&#40;./color&#41;**                         | String \| Object           | any color as String or Object to specify gradient &#40;see details&#41;                                                                                     | "#3f79ff"          |)
+
+[//]: # (| **[`colorFill`]&#40;./colorFill&#41;**                 | String \| Object           | same as `color`                                                                                                                                     | "transparent"      |)
+
+[//]: # (| **[`emptyColor`]&#40;./emptyColor&#41;**               | String \| Object           | same as `color`                                                                                                                                     | "#e6e9f0"          |)
+
+[//]: # (| **[`emptyColorFill`]&#40;./emptyColorFill&#41;**       | String \| Object           | same as `color`                                                                                                                                     | "transparent"      |)
+
+[//]: # (| **[`hideLegend`]&#40;./hideLegend&#41;**               | Boolean                    |                                                                                                                                                     | true               |)
+
+[//]: # (| **[`legend`]&#40;./legend&#41;**                       | Number \| String           | any number, accepts a `.` or `","` as decimals delimiter and simple formatting                                                                      |                    |)
+
+[//]: # (| **[`legendFormatter`]&#40;./legendFormatter&#41;**     | Function                   | Function that returns formatted value                                                                                                               |                    |)
+
+[//]: # (| **[`animation`]&#40;./animation&#41;**                 | String                     | "default \| rs \| loop \| reverse \| bounce [duration delay]"                                                                                       | "default 1000 400" |)
+
+[//]: # (| **[`loading`]&#40;./loading&#41;**                     | Boolean                    |                                                                                                                                                     | false              |)
+
+[//]: # (| **[`loader`]&#40;./loader&#41;**                       | Object                     | { [thickness, color, lineMode, line, opacity ]}                                                                                                     |                    |)
+
+[//]: # (| **[`determinate`]&#40;./determinate&#41;**             | Boolean                    |                                                                                                                                                     | false              |)
+
+[//]: # (| **[`nodata`]&#40;./nodata&#41;**                       | Boolean                    |                                                                                                                                                     | false              |)
+
+[//]: # (| **[`angle`]&#40;./angle&#41;**                         | Number                     | any Number                                                                                                                                          | -90                |)
+
+[//]: # (| **[`fontSize`]&#40;./fontSize&#41;**                   | String                     | any valid CSS value                                                                                                                                 | "1rem"             |)
+
+[//]: # (| **[`fontColor`]&#40;./fontColor&#41;**                 | String                     | any valid CSS value                                                                                                                                 | "gray"             |)
+
+[//]: # (| **[`legendClass`]&#40;./legendClass&#41;**             | String                     | any                                                                                                                                                 |                    |)
+
+[//]: # (| **[`dash`]&#40;./dash&#41;**                           | String                     | "[strict] count spacing"                                                                                                                            |                    |)
+
+[//]: # (| **[`half`]&#40;./half&#41;**                           | Boolean                    |                                                                                                                                                     | false              |)
+
+[//]: # (| **[`gap`]&#40;./gap&#41;**                             | Number                     | any Number that defines the gap between multiple circles in pixel                                                                                   | 0                  |)
+
+[//]: # (| **[`dot`]&#40;./dot&#41;**                             | String \| Number \| Object | Accepts size, color and other styles as Number, descriptive string `"size [color]"` or object `{size [, backgroundColor, widht, borderRadius ...]}` | 0                  |)
+
+[//]: # (| **[`reverse`]&#40;./reverse&#41;**                     | Boolean                    |                                                                                                                                                     | false              |)
+
+[//]: # (| **[`data`]&#40;./data&#41;**                           | Array                      | defines multiple circles, takes as values Objects with almost all props defined above                                                               |                    |)

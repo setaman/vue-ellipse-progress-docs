@@ -34,6 +34,10 @@ export default defineConfig({
             link: "/guide/options/index",
             items: [
               {
+                text: "Props overview",
+                link: "/guide/options/index",
+              },
+              {
                 text: "progress",
                 link: "/guide/options/progress",
               },

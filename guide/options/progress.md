@@ -28,4 +28,16 @@ If **[`legend`](legend.md)** is defined the `progress` will **not** be displayed
 
 ### Basic Example
 
-<ProgressBasic/>
+<p>
+
+<ExampleCode>
+<template #code="{progress}">
+
+```vue
+<ve-progress :progress="{{ progress }}" />
+```
+
+</template>
+</ExampleCode>
+
+</p>
