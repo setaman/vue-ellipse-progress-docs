@@ -19,7 +19,7 @@ Also, the legend of this circle remains hidden.
 :::
 
 :::tip Gap
-The [`gap`](./gap.md) property defines the distance between circles.
+The [`gap`](gap.md) property defines the distance between circles.
 :::
 
 ### Usage 📜

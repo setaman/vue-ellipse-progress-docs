@@ -10,7 +10,7 @@ Boolean that forces loading state. The component provides an indeterminate loadi
 not available immediately. With this property set to true you can use the component as the indeterminate progress.
 
 ::: tip Custom loader
-Custom loading circle can be created with **[`loader`](./loader.md)** !
+Custom loading circle can be created with **[`loader`](loader.md)** !
 :::
 
 ::: warning Legend behavior

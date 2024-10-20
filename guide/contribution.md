@@ -33,4 +33,4 @@ However, before you submit your pull request, consider the following guidelines:
 - Remember compatibility. When adding new features, please test them (if possible) in different browsers (Chrome, Firefox, Safari...) on different platforms (Android, IOS...).
 - If your PR satisfies all points, I will merge it into the dev branch, test the introduced changes live on the demo page and finally release a new stable version.
 
-I thank you in advance for your contribution! You can learn how to get started wit the development in the [development guide](./development.md).
+I thank you in advance for your contribution! You can learn how to get started wit the development in the [development guide](development.md).

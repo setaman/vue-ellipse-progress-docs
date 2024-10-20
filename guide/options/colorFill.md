@@ -21,7 +21,7 @@ Progress circle overlaps the emtpy circle! In the examples you will see the fill
 
 ::: tip
 According to default SVG behaviour, the fill area of the circle is aligned at the baseline of the progress line. With the
-[`linePosition`](./linePosition.md) property this behaviour can be adjusted.
+[`linePosition`](linePosition.md) property this behaviour can be adjusted.
 :::
 
 ###### Usage: 📜

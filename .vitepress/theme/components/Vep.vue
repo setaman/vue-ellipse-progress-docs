@@ -1,13 +1,28 @@
 <script setup lang="ts">
-import { defineClientComponent } from 'vitepress'
+import { Component, onMounted, shallowRef } from "vue";
 
-const VueEllipseProgress = defineClientComponent(() => {
-  return import('vue-ellipse-progress').then((mod) => {
-    return mod.VeProgress;
+const VueEllipseProgress = shallowRef<Component | null>(null)
+
+onMounted(() => {
+  import('vue-ellipse-progress').then((mod) => {
+    VueEllipseProgress.value = mod.VeProgress;
   })
 })
 </script>
 
 <template>
-  <VueEllipseProgress :progress="50" />
+  <VueEllipseProgress v-if="VueEllipseProgress" :progress="50" v-bind="$attrs">
+    <template #default="{ counterTick }">
+      <slot :counterTick="counterTick">AA</slot>
+    </template>
+    <template #circle-progress="{ attrs }">
+      <slot name="circle-progress" :attrs="attrs"></slot>
+    </template>
+    <template #legend>
+      <slot name="legend">ASD</slot>
+    </template>
+    <template #legend-caption>
+      <slot name="caption"></slot>
+    </template>
+  </VueEllipseProgress>
 </template>

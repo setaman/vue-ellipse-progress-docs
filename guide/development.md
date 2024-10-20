@@ -1,6 +1,6 @@
 # Development
 
-Make sure to take a look at the [contribution](./contribution.md) guide to be prepared to the maximum to contribute to this project.
+Make sure to take a look at the [contribution](contribution.md) guide to be prepared to the maximum to contribute to this project.
 This plugin is a usual Vue CLI project, and it is very easy to start with the development. 
 
 ## Requirements

@@ -7,7 +7,7 @@
 | Function | Function that returns formatted value  as string |         |
 
 Is a Function that must return a legend value or HTML string. The function takes counter properties object as argument and
-is called on every counter tick. Here the formatting of [`legend`](./legend.md) or [`progress`](./progress.md)
+is called on every counter tick. Here the formatting of [`legend`](legend.md) or [`progress`](progress.md)
 is completely up to you and you have the full freedom to adjust the presentation to your needs. The function can return any
 String value, even HTML.
 
@@ -25,7 +25,7 @@ Alternatively you can use [`scoped slot`](../slots/default.md) for custom format
 | Exposed props           |                                                                                                                                                                   |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `currentValue`          | The current value of the counter at specific tick. It's always a Number                                                                                           |
-| `currentFormattedValue` | Current value formatted as a String. It's a String representation of the `currentValue` including the formatting wich may be applied with [`legend`](./legend.md) |
+| `currentFormattedValue` | Current value formatted as a String. It's a String representation of the `currentValue` including the formatting wich may be applied with [`legend`](legend.md) |
 
 ### Examples
 

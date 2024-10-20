@@ -16,12 +16,12 @@ The general scheme to define the gradient is defined like follows:
   - `colors` - array that contains the gradient colors as Objects `{ color: "#6546f7", offset: "10" [, opacity: 1] }`
 
 ::: warning
-If you define the [`colorFill`](./colorFill.md), the empty circle fill area wil be covered by the progress circle.
+If you define the [`colorFill`](colorFill.md), the empty circle fill area wil be covered by the progress circle.
 :::
 
 ::: tip
 According to default SVG behaviour, the fill area of the circle is aligned at the baseline of the empty line. With the
-[`emptyLinePosition`](./emptyLinePosition.md) property this behaviour can be adjusted.
+[`emptyLinePosition`](emptyLinePosition.md) property this behaviour can be adjusted.
 :::
 
 ###### Usage: 📜

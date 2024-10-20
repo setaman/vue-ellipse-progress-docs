@@ -1,7 +1,3 @@
----
-pageClass: quick-start
----
-
 # vue-ellipse-progress
 
 [![NPM Version](https://img.shields.io/npm/v/vue-ellipse-progress?style=for-the-badge&color=success)](https://www.npmjs.com/package/vue-ellipse-progress)
@@ -21,9 +17,9 @@ createApp(App).use(veProgress);
 <ve-progress :progress="50"/>
 ```
 
-<div class="flex grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
   <div>
-    <CardLink link="/guide/installation" title="Installation options">
+    <CardLink link="/guide/installation.html" title="Installation options">
       Learn what possibilities you have to include the component in your project
     </CardLink>
   </div>

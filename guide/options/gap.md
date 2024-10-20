@@ -6,8 +6,8 @@
 |--------|------------|---------|
 | Number | any Number | 0       |
 
-Defines the gap in pixels from one circle to the previous circle. It will be applied only if [`data`](./data.md) prop is used.
-The gap ca be specified for each circle in the [`data`](./data.md).
+Defines the gap in pixels from one circle to the previous circle. It will be applied only if [`data`](data.md) prop is used.
+The gap ca be specified for each circle in the [`data`](data.md).
 
 ### Usage 📜
 

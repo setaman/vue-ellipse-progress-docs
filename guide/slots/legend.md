@@ -1,7 +1,7 @@
 # `legend`
 
 In this slot, you can put an additional element that you want to display beside the circle legend.
-This is simply a legacy slot from the time when the [**`default`**](./default.md) slot did not exist yet.
+This is simply a legacy slot from the time when the [**`default`**](default.md) slot did not exist yet.
 It can be helpful in some situations, but is much less powerful.
 
 ### Usage 📜

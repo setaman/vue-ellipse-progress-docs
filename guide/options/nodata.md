@@ -7,11 +7,11 @@
 | Boolean   |        | false   |
 
 The component provides a `noData` state for the case that your data is not available. The circle progress is still empty.
-In the `noData` state the component visually communicates that the data is not present and hides the **[`legend`](./legend.md)**.
+In the `noData` state the component visually communicates that the data is not present and hides the **[`legend`](legend.md)**.
 This behavior is useful if there is no data or an error occurred during loading.
 
 ::: warning Invalid progress
-The component will take the no data state even if you provide an invalid **[`progress`](./progress.md)** value
+The component will take the no data state even if you provide an invalid **[`progress`](progress.md)** value
 :::
 
 ### Usage 📜

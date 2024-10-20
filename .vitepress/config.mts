@@ -31,11 +31,11 @@ export default defineConfig({
           {
             text: 'Props',
             collapsed: true,
-            link: "/guide/compatibility",
+            link: "/guide/options/index",
             items: [
               {
-                text: "fontSize",
-                link: "/guide/options/fontSize",
+                text: "progress",
+                link: "/guide/options/progress",
               },
             ]
             /*items: [

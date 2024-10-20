@@ -9,7 +9,7 @@
 Defines the font color of the circle legend and accepts any valid CSS value.
 
 ::: tip
-The property **[`legendFormatter`](./legendFormatter.md)**
+The property **[`legendFormatter`](legendFormatter.md)**
 and **[`slots`](../slots/default.md)** offer much more flexibility for customization
 :::
 

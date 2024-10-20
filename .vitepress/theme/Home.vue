@@ -1,6 +1,7 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme'
 import Vep from "./components/Vep.vue";
+import ExampleCode from "./components/ExampleCode/ExampleCode.vue";
 
 const { Layout } = DefaultTheme
 </script>
@@ -8,12 +9,17 @@ const { Layout } = DefaultTheme
 <template>
   <Layout>
     <template #home-hero-image>
-      <Vep/>
-      <p class="italic">
-        Hdaskjdh jaskhdkj asjd
-      </p>
+<!--      <Vep :progress="10">
+        <template #default>
+          <p class="italic">
+            Hdaskjdh jaskhdkj asjd
+          </p>
+        </template>
+      </Vep>-->
+
     </template>
   </Layout>
+  <example-code/>
 </template>
 
 <style scoped>

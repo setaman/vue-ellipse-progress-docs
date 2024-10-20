@@ -6,12 +6,12 @@
 | --------- | ------ | ------- |
 | Boolean   | false  |
 
-Boolean that defines whether the circle legend (**[`progress`](./progress.md)** or **[`legend`](./legend.md)**)
+Boolean that defines whether the circle legend (**[`progress`](progress.md)** or **[`legend`](legend.md)**)
 should be hidden.
 
 ::: warning Legend behavior
-A non-valid value for **[`progress`](./progress.md)**, the use of the **[`data`](./data.md)** property,
-the **[`loading`](./loading.md)** and **[`noData`](./nodata.md)** states also hide the legend.
+A non-valid value for **[`progress`](progress.md)**, the use of the **[`data`](data.md)** property,
+the **[`loading`](loading.md)** and **[`noData`](nodata.md)** states also hide the legend.
 :::
 
 ### Usage 📜

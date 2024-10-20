@@ -17,17 +17,13 @@ The docs for the legacy version can be found in [v1-legacy](https://github.com/s
 Use your favorite package manager to install the library from NPM. After the installation you have the choice to
 initialize the component as a plugin or to import it directly.
 
-::: tabs
+::: code-group
 
-@tab npm
-
-```bash
+```bash [npm]
 npm i vue-ellipse-progress
 ```
 
-@tab yarn
-
-```bash
+```bash [yarn]
 yarn add vue-ellipse-progress
 ```
 :::
@@ -154,35 +150,35 @@ Now the component can be used everywhere:
 ### Advanced use cases
 
 In some development environments or tools there is no plugin system. To use the plugin, it must be imported dynamically 
-during hydration. This is the case for example in static site generator (SSG) like Vuepress that powers this documentation.
-In such case you can import the library in a lifecycle hook and initialize the plugin in your custom wrapper component. Example:
+during hydration only on client side.
+This is the case for example in static site generator (SSG) like Vitepress that powers this documentation.
+In such a case, you can import the library in a lifecycle hook and initialize the plugin in your custom wrapper component. Example:
 
 ```vue
 <!-- /MyVeProgressWrapper.vue-->
 <template>
   <ClientOnly>
-    <component v-if="component" :is="component" />
+    <VueEllipseProgress :progress="50" />
   </ClientOnly>
 </template>
 
-<script>
-export default {
-  data: () => ({
-      component: null,
-  }),
-  mounted() {
-    import("vue-ellipse-progress").then((module) => {
+<script setup>
+  import { ref, onMounted } from "vue";
+
+  const VueEllipseProgress = ref(null);
+  
+  onMounted(async () => {
+    VueEllipseProgress.value = import("vue-ellipse-progress").then((module) => {
       this.component = module.VeProgress;
     });
-  },
-};
+  })
 </script>
 ```
 
 ## TypeScript
 
 Currently, the plugin does not officially support TypeScript. But the transfer to TypeScript with proper typing is 
-planned for future releases.
+planned for v3 release.
 
 If you encounter some TS related errors while trying to use the plugin for example in your fresh Vue 3 app, add the file 
 `veProgress.d.ts` in the root of your app:
