@@ -1,8 +1,0 @@
-build
-coverage
-.cache
-.temp
-dist
-public
-node_modules
-*.md

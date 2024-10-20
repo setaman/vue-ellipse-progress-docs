@@ -1,58 +1,18 @@
 {
-  "name": "vue-ellipse-progress-docs",
-  "version": "0.1.0-alpha.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "lint": "eslint --fix .",
-    "prettier": "prettier --write ."
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/setaman/vue-ellipse-progress-docs.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/setaman/vue-ellipse-progress-docs/issues"
-  },
-  "homepage": "https://github.com/setaman/vue-ellipse-progress-docs#readme",
   "devDependencies": {
-    "@vuepress/bundler-vite": "^2.0.0-rc.17",
-    "@vuepress/client": "2.0.0-rc.17",
-    "@vuepress/plugin-prismjs": "^2.0.0-rc.52",
-    "@vuepress/plugin-search": "2.0.0-rc.52",
-    "@vuepress/shared": "^2.0.0-rc.17",
-    "@vuepress/theme-default": "^2.0.0-rc.52",
-    "@vuepress/utils": "2.0.0-rc.17",
-    "autoprefixer": "^10.2.6",
-    "eslint": "^7.31.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-vue": "^7.14.0",
-    "postcss": "^8.4.14",
-    "prettier": "^2.6.2",
-    "sass-loader": "^16.0.2",
-    "tailwindcss": "^3.4.12",
-    "vuepress": "2.0.0-rc.17"
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "sass": "^1.80.3",
+    "tailwindcss": "^3.4.14",
+    "vitepress": "^1.4.1",
+    "vue": "^3.5.12"
   },
   "dependencies": {
-    "@iconscout/unicons": "^4.0.0",
-    "@vueform/slider": "^2.1.7",
-    "@vuepress/plugin-medium-zoom": "2.0.0-beta.66",
-    "randomcolor": "^0.6.2",
-    "vite": "^5.4.7",
     "vue-ellipse-progress": "^2.2.0"
-  },
-  "packageRules": [
-    {
-      "packageNames": [
-        "vuepress",
-        "@vuepress/client"
-      ],
-      "allowedVersions": "!/pre.*$/"
-    }
-  ]
+  }
 }
