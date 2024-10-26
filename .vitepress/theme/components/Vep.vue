@@ -22,7 +22,7 @@ onMounted(() => {
       <slot name="legend"></slot>
     </template>
     <template #legend-caption>
-      <slot name="caption"></slot>
+      <slot name="legend-caption"></slot>
     </template>
   </VueEllipseProgress>
 </template>

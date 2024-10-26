@@ -25,33 +25,16 @@ by default the **[`thickness`](thickness.md)** and **[`emptyThickness`](emptyThi
 
 ### Basic Example
 
+<script setup>
+  import SizeBasic from '../../.vitepress/theme/Guide/Size/SizeBasic.vue';
+  import SizeDependencies from '../../.vitepress/theme/Guide/Size/SizeDependencies.vue';
+</script>
+
 <SizeBasic>
 <template #code>
-<CodeGroup>
-<CodeGroupItem >
 
-```vue
-<template>
-  <ve-progress :progress="50" :size="200">
-    <span slot="legend-caption">200</span>
-  </ve-progress>
-  <ve-progress :progress="50" :size="160">
-    <span slot="legend-caption">160</span>
-  </ve-progress>
-  <ve-progress :progress="50" :size="120">
-    <span slot="legend-caption">120</span>
-  </ve-progress>
-  <ve-progress :progress="50" :size="80">
-    <span slot="legend-caption">80</span>
-  </ve-progress>
-  <ve-progress :progress="50" :size="40">
-    <span slot="legend-caption">40</span>
-  </ve-progress>
-</template>
-```
+<<< @/.vitepress/theme/Guide/Size/Snippet1.vue{vue}
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
 </SizeBasic>
 
@@ -61,3 +44,4 @@ The following examples demonstrates that the `size` property determines the oute
 The internal calculations always adjust to the specified size, the circle lines always remain within the boundaries.
 
 <SizeDependencies/>
+

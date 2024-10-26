@@ -11,8 +11,7 @@ The **[`progress`](./progress)** is the only required property, and you are read
 | Prop                         | Type   | Values       | Default |
 |------------------------------|--------|--------------|---------|
 | **[`progress`](./progress)** | Number | \[-100, 100] |         |
-
-[//]: # (| **[`size`]&#40;./size&#41;**                           | Number                     | >=0                                                                                                                                                 | 200                |)
+| **[`size`](./size)**         | Number | >=0          | 200     |
 
 [//]: # (| **[`line`]&#40;./line&#41;**                           | String                     | "round \| square \| butt"                                                                                                                           | "round"            |)
 

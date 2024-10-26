@@ -14,8 +14,10 @@ const {
   step = 1,
   range = [-100, 100],
   collapse,
+  initMode = "both",
 } = defineProps<{
   range?: [number, number];
+  initMode?: Mode;
   preselectedState?: State;
   step?: number;
   hideState?: boolean;
@@ -24,7 +26,7 @@ const {
   collapse?: boolean;
 }>();
 
-const mode = ref<Mode>("both");
+const mode = ref<Mode>(initMode);
 const state = ref<State>("Normal");
 const slider = ref<number>(Math.round(range[1] / 2) || 0);
 const componentKey = ref<number>(0);
@@ -83,7 +85,7 @@ const toggleCollapsed = () => {
             />
           </svg>
         </button>
-        <example-code-mode v-model="mode" />
+        <example-code-mode v-if="!hideMode" v-model="mode" />
       </div>
     </div>
     <div v-if="!isCollapsed" class="example-code-content flex py-0">
