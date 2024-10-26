@@ -4,7 +4,7 @@
       <div>
         <span>i can</span> <br />
         <span>put </span>
-        <b v-pre style="color: #2d68fc; font-size: 1.5rem">
+        <b style="color: #2d68fc; font-size: 1.5rem">
           {{ counterTick.currentValue }}
         </b>
         <span> anything</span><br />

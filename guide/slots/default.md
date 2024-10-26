@@ -24,6 +24,7 @@ Here are a few examples for the beginning:
 
 <script setup>
 import DefaultSlot from '../../.vitepress/theme/Guide/Slots/DefaultSlot.vue'
+import DefaultSlotColored from '../../.vitepress/theme/Guide/Slots/DefaultSlotColored.vue'
 </script>
 
 <DefaultSlot>
@@ -33,4 +34,15 @@ import DefaultSlot from '../../.vitepress/theme/Guide/Slots/DefaultSlot.vue'
 
 </template>
 </DefaultSlot>
-d
+
+<p>
+
+<DefaultSlotColored>
+<template #code>
+
+<<< @/.vitepress/theme/Guide/Slots/Snippet2.vue{vue}
+
+</template>
+</DefaultSlotColored>
+
+</p>
