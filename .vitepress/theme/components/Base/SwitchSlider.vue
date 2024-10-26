@@ -70,7 +70,7 @@ const isActive = (option: Option) => {
         <span
           v-if="option.icon"
           v-html="option.icon"
-          class="text-white dark:text-gray-300"
+          class="text-gray-500 dark:text-gray-300"
           :class="{
             'text-white dark:text-white': isActive(option),
           }"
@@ -85,14 +85,6 @@ const isActive = (option: Option) => {
   padding: 4px;
   background-color: var(--vp-c-default-soft);
   height: auto;
-  //box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.1);
-  &.round {
-    //border-radius: 30px;
-    label,
-    .switch-indicator {
-      //border-radius: 30px;
-    }
-  }
   &.inverse {
     background-color: white;
     box-shadow: 0 0 5px 2px rgba(#898989, 0.03);

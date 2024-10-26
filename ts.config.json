@@ -25,5 +25,5 @@
     "**/*.vue",
     "**/.vitepress/**/*"
   ],
-  "exclude": ["**/node_modules/**", "**/cache/**", "guide/**"]
+  "exclude": ["**/Snippet*","**/node_modules/**", "**/cache/**", "guide/**"]
 }

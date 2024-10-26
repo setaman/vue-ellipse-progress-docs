@@ -11,7 +11,7 @@ const emit = defineEmits<{
 <template>
   <button
     type="button"
-    class="text-xs text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg px-2 py-1 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30"
+    class="text-xs text-white bg-gray-300 dark:bg-[#24292F] hover:bg-gray-200/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg px-2 py-1 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30"
     @click="emit('toggle')"
   >
     <svg
@@ -44,7 +44,7 @@ const emit = defineEmits<{
   <button
     v-if="!collapsed"
     type="button"
-    class="ml-1 text-xs text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg px-2 py-1 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30"
+    class="ml-1 text-xs text-white bg-gray-300 dark:bg-[#24292F] hover:bg-gray-200/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg px-2 py-1 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30"
     @click="emit('reload')"
   >
     <svg

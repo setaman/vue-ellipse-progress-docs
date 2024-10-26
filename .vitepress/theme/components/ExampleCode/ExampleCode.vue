@@ -24,7 +24,7 @@ const {
   collapse?: boolean;
 }>();
 
-const mode = ref<Mode>("Result");
+const mode = ref<Mode>("both");
 const state = ref<State>("Normal");
 const slider = ref<number>(Math.round(range[1] / 2) || 0);
 const componentKey = ref<number>(0);
@@ -67,7 +67,7 @@ const toggleCollapsed = () => {
       <div v-if="!isCollapsed" class="flex">
         <button
           type="button"
-          class="text-xs text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg px-3 py-2 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-1"
+          class="mr-1 text-xs text-white bg-gray-300 dark:bg-[#24292F] hover:bg-gray-200/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg px-2 py-1 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30"
         >
           <svg
             class="w-4 h-4"
@@ -100,14 +100,14 @@ const toggleCollapsed = () => {
           :noData="noData"
           :determinate="determinate"
         >
+          <vep
+            :progress="progress"
+            :state="state"
+            :loading="loading"
+            :noData="noData"
+            :determinate="determinate"
+          />
         </slot>
-        <vep
-          :progress="progress"
-          :state="state"
-          :loading="loading"
-          :noData="noData"
-          :determinate="determinate"
-        />
       </div>
       <div
         v-if="mode === 'Code' || mode === 'both'"
@@ -155,7 +155,8 @@ const toggleCollapsed = () => {
 .example-code-container {
   background-color: var(--vp-c-bg-soft);
 
-  .language-vue {
+  .language-vue,
+  .language-js {
     margin: 0 !important;
     height: 100%;
 
