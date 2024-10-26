@@ -37,7 +37,6 @@ If **[`legend`](legend.md)** is defined the `progress` will **not** be displayed
 
 <<< @/.vitepress/theme/Guide/Progress/Snippet1.vue#snippet{js-vue}
 
-
 </template>
 </ExampleCode>
 

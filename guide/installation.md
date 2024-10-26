@@ -15,7 +15,7 @@ The docs for the legacy version can be found in [v1-legacy](https://github.com/s
 ## Package Manager
 
 Use your favorite package manager to install the library from NPM. After the installation you have the choice to
-initialize the component as a plugin or to import it directly.
+initialize the component as a plugin or to import it directly in your components.
 
 ::: code-group
 
@@ -29,7 +29,7 @@ yarn add vue-ellipse-progress
 :::
 
 
-### Initialize as Plugin
+## Initialize as Plugin
 
 Import and initialize the component in your `main.js`. By default, after initialization, the component is available as
 `<ve-progress/>` and can be used everywhere. You also are free to define a custom name:
@@ -45,7 +45,7 @@ createApp(App).use(veProgress);
 // createApp(App).use(veProgress, "vep");
 ```
 
-### Import component
+## Import component
 
 You also have the option to import the component directly:
 
@@ -53,13 +53,8 @@ You also have the option to import the component directly:
 <template>
   <ve-progress :progress="50" />
 </template>
-<script>
+<script setup>
 import { VeProgress } from "vue-ellipse-progress";
-
-export default {
-  name: "MyComponent",
-  components: { VeProgress },
-};
 </script>
 ```
 
@@ -110,9 +105,9 @@ Note that Nuxt 3 will automatically scann your `/plugins` directory to register 
 component everywhere:
 ```vue
 <template>
-    <client-only>
-      <ve-progress :progress="50" />
-    </client-only>
+  <client-only>
+    <ve-progress :progress="50" />
+  </client-only>
 </template>
 ```
 
