@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -7,13 +7,13 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Guide', link: '/guide' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: "Guide", link: "/guide" },
+      { text: "Examples", link: "/markdown-examples" },
     ],
 
     sidebar: [
       {
-        text: 'Guide',
+        text: "Guide",
         collapsed: false,
         items: [
           {
@@ -29,7 +29,7 @@ export default defineConfig({
             link: "/guide/usage",
           },
           {
-            text: 'Props',
+            text: "Props",
             collapsed: true,
             link: "/guide/options/index",
             items: [
@@ -41,7 +41,15 @@ export default defineConfig({
                 text: "progress",
                 link: "/guide/options/progress",
               },
-            ]
+              {
+                text: "size",
+                link: "/guide/options/size",
+              },
+              {
+                text: "line",
+                link: "/guide/options/line",
+              },
+            ],
             /*items: [
               {
                 text: "Props overview",
@@ -204,18 +212,21 @@ export default defineConfig({
             text: "Development",
             link: "/guide/development.md",
           },
-        ]
-      }
+        ],
+      },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/setaman/vue-ellipse-progress' }
+      {
+        icon: "github",
+        link: "https://github.com/setaman/vue-ellipse-progress",
+      },
     ],
     footer: {
-      message: 'Released under the MIT License.',
+      message: "Released under the MIT License.",
     },
     search: {
-      provider: 'local'
-    }
-  }
-})
+      provider: "local",
+    },
+  },
+});

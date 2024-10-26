@@ -8,12 +8,11 @@ The **[`progress`](./progress)** is the only required property, and you are read
 
 > Also make sure to check **[slots](../slots/default)**
 
-| Prop                         | Type   | Values       | Default |
-|------------------------------|--------|--------------|---------|
-| **[`progress`](./progress)** | Number | \[-100, 100] |         |
-| **[`size`](./size)**         | Number | >=0          | 200     |
-
-[//]: # (| **[`line`]&#40;./line&#41;**                           | String                     | "round \| square \| butt"                                                                                                                           | "round"            |)
+| Prop                         | Type   | Values                    | Default |
+|------------------------------|--------|---------------------------|---------|
+| **[`progress`](./progress)** | Number | \[-100, 100]              |         |
+| **[`size`](./size)**         | Number | >=0                       | 200     |
+| **[`line`](./line)**         | String | "round \| square \| butt" | "round" |
 
 [//]: # (| **[`thickness`]&#40;./thickness&#41;**                 | Number \| String           | \>=0 as Number or percent value as String                                                                                                           | "5%"               |)
 
