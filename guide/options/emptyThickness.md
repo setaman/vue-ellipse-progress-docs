@@ -22,69 +22,43 @@ and other properties to learn how you can create unique circles
 ```
 
 ### Examples
+<script setup>
+  import ThicknessBasic from '../../.vitepress/theme/Guide/EmptyThickness/ThicknessBasic.vue';
+  import ThicknessRelative from '../../.vitepress/theme/Guide/EmptyThickness/ThicknessRelative.vue';
+  import ThicknessDependencies from '../../.vitepress/theme/Guide/EmptyThickness/ThicknessDependencies.vue';
+</script>
 
-<example-container class="mb-16">
-<template #default="{ loading, slider, noData, determinate }">
-<v-e-p class="mr-2" :size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :empty-thickness="1">
-</v-e-p>
-<v-e-p class="mr-2" :size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :empty-thickness="5">
-</v-e-p>
-<v-e-p class="mr-2" :size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :empty-thickness="15">
-</v-e-p>
-<v-e-p class="mr-2" :size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :empty-thickness="25">
-</v-e-p>
-</template>
+<p>
+
+<ThicknessBasic>
 <template #code>
-<CodeGroup>
-<CodeGroupItem >
 
-```vue
-<template>
-  <ve-progress :progress="50" :empty-thickness="1" />
-  <ve-progress :progress="50" :empty-thickness="5" />
-  <ve-progress :progress="50" :empty-thickness="15" />
-  <ve-progress :progress="50" :empty-thickness="25" />
-</template>
-```
+<<< @/.vitepress/theme/Guide/EmptyThickness/Snippet1.vue{vue}
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
-</example-container>
+</ThicknessBasic>
+
+</p>
 
 When defined as a string, the thickness can be specified as a percentage,
 allowing it to scale relative to the **[`size`](size.md)**:
 
-<example-container class="mb-16">
-<template #default="{ loading, slider, noData, determinate }">
-<v-e-p class="mr-2" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :size="100" empty-thickness="10%"/>
-<v-e-p class="mr-2" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :size="200" empty-thickness="10%"/>
-<v-e-p class="mr-2" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :size="300" empty-thickness="10%"/>
-</template>
+<ThicknessRelative>
 <template #code>
-<CodeGroup>
-<CodeGroupItem >
 
-```vue
-<template>
-  <ve-progress :progress="50" :size="100" empty-thickness="10%" />
-  <ve-progress :progress="50" :size="200" empty-thickness="10%" />
-  <ve-progress :progress="50" :size="300" empty-thickness="10%" />
-</template>
-```
+<<< @/.vitepress/theme/Guide/EmptyThickness/Snippet2.vue{vue}
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
-</example-container>
+</ThicknessRelative>
 
 In the following example you can see how the thickness of the empty line affects other parts of the circle.
 Move the slider to see the effect:
 
-<example-container :range="[0, 100]" :show-modes="false">
-    <template #default="{ progress, slider, loading, noData, determinate }">
-      <div class="border-2 border-solid border-indigo-600 inline-block">
-        <v-e-p :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :empty-thickness="slider" dot="20 white"/>
-      </div>
-    </template>
-</example-container>
+<ThicknessDependencies>
+<template #code="{ progress }">
+
+```js-vue
+<ve-progress :empty-thickness="{{progress}}" dot="20 white" :progress="{{progress}}" />
+```
+</template>
+</ThicknessDependencies>

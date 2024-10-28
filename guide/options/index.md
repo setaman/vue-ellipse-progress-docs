@@ -8,13 +8,14 @@ The **[`progress`](./progress)** is the only required property, and you are read
 
 > Also make sure to check **[slots](../slots/default)**
 
-| Prop                         | Type   | Values                    | Default |
-|------------------------------|--------|---------------------------|---------|
-| **[`progress`](./progress)** | Number | \[-100, 100]              |         |
-| **[`size`](./size)**         | Number | >=0                       | 200     |
-| **[`line`](./line)**         | String | "round \| square \| butt" | "round" |
+| Prop                                     | Type             | Values                                    | Default |
+|------------------------------------------|------------------|-------------------------------------------|---------|
+| **[`progress`](./progress)**             | Number           | \[-100, 100]                              |         |
+| **[`size`](./size)**                     | Number           | >=0                                       | 200     |
+| **[`line`](./line)**                     | String           | "round \| square \| butt"                 | "round" |
+| **[`thickness`](./thickness)**           | Number \| String | \>=0 as Number or percent value as String | "5%"    |
+| **[`emptyThickness`](./emptyThickness)** | Number \| String | \>=0 as Number or percent value as String | "5%"    |
 
-[//]: # (| **[`thickness`]&#40;./thickness&#41;**                 | Number \| String           | \>=0 as Number or percent value as String                                                                                                           | "5%"               |)
 
 [//]: # (| **[`lineMode`]&#40;./lineMode&#41;**                   | String                     | "center \| out \| out-over \| in \| in-over \| top \| bottom [offset]"                                                                              | "center"           |)
 
@@ -22,7 +23,6 @@ The **[`progress`](./progress)** is the only required property, and you are read
 
 [//]: # (| **[`emptyLinePosition`]&#40;./emptyLinePosition&#41;** | String                     | "center \| out \| in [offset]"                                                                                                                      | "center"           |)
 
-[//]: # (| **[`emptyThickness`]&#40;./emptyThickness&#41;**       | Number \| String           | \>=0 as Number or percent value as String                                                                                                           | "5%"               |)
 
 [//]: # (| **[`color`]&#40;./color&#41;**                         | String \| Object           | any color as String or Object to specify gradient &#40;see details&#41;                                                                                     | "#3f79ff"          |)
 

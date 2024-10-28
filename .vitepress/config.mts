@@ -49,6 +49,14 @@ export default defineConfig({
                 text: "line",
                 link: "/guide/options/line",
               },
+              {
+                text: "thickness",
+                link: "/guide/options/thickness",
+              },
+              {
+                text: "emptyThickness",
+                link: "/guide/options/emptyThickness",
+              },
             ],
             /*items: [
               {

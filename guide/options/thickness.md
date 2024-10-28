@@ -23,62 +23,43 @@ and other properties to learn how you can create unique circles
 
 ### Examples
 
-<example-container class="mb-16">
-<template #default="{ loading, slider, noData, determinate }">
-<v-e-p class="mr-2" :size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :thickness="1">
-</v-e-p>
-<v-e-p class="mr-2" :size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :thickness="5">
-</v-e-p>
-<v-e-p class="mr-2" :size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :thickness="15">
-</v-e-p>
-<v-e-p class="mr-2" :size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :thickness="25">
-</v-e-p>
-</template>
+<script setup>
+  import ThicknessBasic from '../../.vitepress/theme/Guide/Thickness/ThicknessBasic.vue';
+  import ThicknessRelative from '../../.vitepress/theme/Guide/Thickness/ThicknessRelative.vue';
+  import ThicknessDependencies from '../../.vitepress/theme/Guide/Thickness/ThicknessDependencies.vue';
+</script>
+
+<p>
+
+<ThicknessBasic>
 <template #code>
-<CodeGroup>
-<CodeGroupItem >
 
-```vue
-<template>
-  <ve-progress :progress="50" :thickness="1" />
-  <ve-progress :progress="50" :thickness="5" />
-  <ve-progress :progress="50" :thickness="15" />
-  <ve-progress :progress="50" :thickness="25" />
-</template>
-```
+<<< @/.vitepress/theme/Guide/Thickness/Snippet1.vue{vue}
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
-</example-container>
+</ThicknessBasic>
+
+</p>
 
 When defined as a string, the thickness can be specified as a percentage,
 allowing it to scale relative to the **[`size`](size.md)**:
 
-<example-container class="mb-16">
-<template #default="{ loading, slider, noData, determinate }">
-<v-e-p class="mr-2" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :size="100" thickness="10%"/>
-<v-e-p class="mr-2" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :size="200" thickness="10%"/>
-<v-e-p class="mr-2" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate" :size="300" thickness="10%"/>
-</template>
+<ThicknessRelative>
 <template #code>
-<CodeGroup>
-<CodeGroupItem >
 
-```vue
-<template>
-  <ve-progress :progress="50" :size="100" thickness="10%" />
-  <ve-progress :progress="50" :size="200" thickness="10%" />
-  <ve-progress :progress="50" :size="300" thickness="10%" />
-</template>
-```
+<<< @/.vitepress/theme/Guide/Thickness/Snippet2.vue{vue}
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
-</example-container>
+</ThicknessRelative>
 
 In the following example you can see how the thickness of the progress line affects other parts of the circle.
 Move the slider to see the effect:
 
-<Thickness/>
+<ThicknessDependencies>
+<template #code="{ progress }">
+
+```js-vue
+<ve-progress :thickness="{{progress}}" dot="20 white" :progress="{{progress}}" />
+```
+</template>
+</ThicknessDependencies>
