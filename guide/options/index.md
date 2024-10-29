@@ -8,16 +8,14 @@ The **[`progress`](./progress)** is the only required property, and you are read
 
 > Also make sure to check **[slots](../slots/default)**
 
-| Prop                                     | Type             | Values                                    | Default |
-|------------------------------------------|------------------|-------------------------------------------|---------|
-| **[`progress`](./progress)**             | Number           | \[-100, 100]                              |         |
-| **[`size`](./size)**                     | Number           | >=0                                       | 200     |
-| **[`line`](./line)**                     | String           | "round \| square \| butt"                 | "round" |
-| **[`thickness`](./thickness)**           | Number \| String | \>=0 as Number or percent value as String | "5%"    |
-| **[`emptyThickness`](./emptyThickness)** | Number \| String | \>=0 as Number or percent value as String | "5%"    |
-
-
-[//]: # (| **[`lineMode`]&#40;./lineMode&#41;**                   | String                     | "center \| out \| out-over \| in \| in-over \| top \| bottom [offset]"                                                                              | "center"           |)
+| Prop                                     | Type             | Values                                                                 | Default  |
+|------------------------------------------|------------------|------------------------------------------------------------------------|----------|
+| **[`progress`](./progress)**             | Number           | \[-100, 100]                                                           |          |
+| **[`size`](./size)**                     | Number           | >=0                                                                    | 200      |
+| **[`line`](./line)**                     | String           | "round \| square \| butt"                                              | "round"  |
+| **[`thickness`](./thickness)**           | Number \| String | \>=0 as Number or percent value as String                              | "5%"     |
+| **[`emptyThickness`](./emptyThickness)** | Number \| String | \>=0 as Number or percent value as String                              | "5%"     |
+| **[`lineMode`](./lineMode)**             | String           | "center \| out \| out-over \| in \| in-over \| top \| bottom [offset]" | "center" |
 
 [//]: # (| **[`linePosition`]&#40;./linePosition&#41;**           | String                     | "center \| out \| in [offset]"                                                                                                                      | "center"           |)
 

@@ -8,16 +8,18 @@
 
 Descriptive string in form `"mode [offset]"` that defines, how the progress line is aligned in relation to empty line.
 The first value ist the `mode` and the optional second is the `offset` that is any negative or positive
-Number and defines the distance between the progress and empty lines. `offset` can be only combined with the `in` and `out`
+Number and defines the distance between the progress and empty lines. 
+
+`offset` can be only combined with the `in` and `out`
 modes. You can understand the modes as the presets that help you to align lines as you want to.
 
 | mode       | description                                                                     |
-| ---------- | ------------------------------------------------------------------------------- |
+|------------|---------------------------------------------------------------------------------|
 | `center`   | this is the default value and both lines are aligned at the baseline (centered) |
 | `in`       | the progress line is inside the empty line                                      |
-| `in-over`  | the progress line is both inside the empty circle and overlaps the empty line   |
+| `in-over`  | the progress line overlaps the empty line and growth inside                     |
 | `out`      | the progress line is outside the empty line                                     |
-| `out-over` | the progress line is both outside the empty circle and overlaps the empty line  |
+| `out-over` | the progress line overlaps the empty line and growth outside                    |
 | `bottom`   | the progress line is aligned at the bottom of the empty line                    |
 | `top`      | the progress line is aligned at the top of the empty line                       |
 
@@ -29,19 +31,21 @@ modes. You can understand the modes as the presets that help you to align lines 
 ```
 
 ### Example
+<script setup>
+  import LineModeBasic from '../../.vitepress/theme/Guide/LineMode/LineModeBasic.vue';
+</script>
 
-<LineMode>
+<p>
+
+<LineModeBasic>
 <template #code="{ data }">
-<CodeGroup>
-<CodeGroupItem >
 
-```vue:no-v-pre
+```js-vue
 <template>
-  <ve-progress :progress="{{data.progress}}" line-mode="{{data.mode}} {{data.offset}}"/>
+  <ve-progress :progress="{{data.progress}}" line-mode="{{data.lineMode}}"/>
 </template>
 ```
-
-</CodeGroupItem>
-</CodeGroup>
 </template>
-</LineMode>
+</LineModeBasic>
+
+</p>

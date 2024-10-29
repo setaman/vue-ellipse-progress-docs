@@ -57,6 +57,10 @@ export default defineConfig({
                 text: "emptyThickness",
                 link: "/guide/options/emptyThickness",
               },
+              {
+                text: "lineMode",
+                link: "/guide/options/lineMode",
+              },
             ],
             /*items: [
               {
