@@ -18,19 +18,24 @@ In general, this prop makes it possible to mimic the SVG2 `stroke-aligment`, whi
 ```
 
 ### Example
+<script setup>
+  import LinePositionBasic from '../../.vitepress/theme/Guide/LinePosition/LinePositionBasic.vue';
+</script>
 
-<LinePosition>
+<p>
+
+<LinePositionBasic>
 <template #code="{ data }">
 <CodeGroup>
 <CodeGroupItem >
 
-```vue:no-v-pre
-<template>
-  <ve-progress :progress="{{data.progress}}" color-fill="#2a2c3c" line-position="{{data.mode}}{{data.offset}}"/>
-</template>
+```js-vue
+<ve-progress line-position="{{data.linePosition}}" color-fill="#2a2c3c" :progress="{{data.progress}}"/>
 ```
 
 </CodeGroupItem>
 </CodeGroup>
 </template>
-</LinePosition>
+</LinePositionBasic>
+
+</p>

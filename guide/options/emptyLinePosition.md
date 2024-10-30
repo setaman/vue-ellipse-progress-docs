@@ -18,25 +18,26 @@ In general, this prop makes it possible to mimic the SVG2 `stroke-aligment`, whi
 ```
 
 ### Example
+<script setup>
+  import EmptyLinePositionBasic from '../../.vitepress/theme/Guide/EmptyLinePosition/EmptyLinePositionBasic.vue';
+</script>
 
-<EmptyLinePosition>
+<p>
+
+<EmptyLinePositionBasic>
 <template #code="{ data }">
-<CodeGroup>
-<CodeGroupItem >
 
-```vue:no-v-pre
-<template>
-  <ve-progress
-    :progress="{{data.progress}}"
-    empty-color-fill="#265cff"
-    :empty-thickness="30"
-    empty-color="rgba(230, 233, 240, 0.1)"
-    empty-line-position="{{ data.mode }}{{ data.offset}}"
-  />
-</template>
+```js-vue
+<ve-progress
+  empty-line-position="{{ data.emptyLinePosition }}"
+  empty-color-fill="#265cff"
+  :empty-thickness="30"
+  empty-color="rgba(230, 233, 240, 0.1)"
+  :progress="{{data.progress}}"
+ />
 ```
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
-</EmptyLinePosition>
+</EmptyLinePositionBasic>
+
+</p>

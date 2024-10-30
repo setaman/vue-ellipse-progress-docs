@@ -41,9 +41,7 @@ modes. You can understand the modes as the presets that help you to align lines 
 <template #code="{ data }">
 
 ```js-vue
-<template>
-  <ve-progress :progress="{{data.progress}}" line-mode="{{data.lineMode}}"/>
-</template>
+<ve-progress :progress="{{data.progress}}" line-mode="{{data.lineMode}}"/>
 ```
 </template>
 </LineModeBasic>

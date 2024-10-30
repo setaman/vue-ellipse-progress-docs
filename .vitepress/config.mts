@@ -61,6 +61,14 @@ export default defineConfig({
                 text: "lineMode",
                 link: "/guide/options/lineMode",
               },
+              {
+                text: "linePosition",
+                link: "/guide/options/linePosition",
+              },
+              {
+                text: "emptyLinePosition",
+                link: "/guide/options/emptyLinePosition",
+              },
             ],
             /*items: [
               {
