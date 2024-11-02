@@ -69,6 +69,10 @@ export default defineConfig({
                 text: "emptyLinePosition",
                 link: "/guide/options/emptyLinePosition",
               },
+              {
+                text: "color",
+                link: "/guide/options/color",
+              },
             ],
             /*items: [
               {
