@@ -40,6 +40,7 @@ The general scheme to create the gradient is defined like follows:
   import ColorGradient from '../../.vitepress/theme/Guide/Color/ColorGradient.vue';
   import ColorBasic from '../../.vitepress/theme/Guide/Color/ColorBasic.vue';
   import ColorGradientAdvanced from '../../.vitepress/theme/Guide/Color/ColorGradientAdvanced.vue';
+  import ColorRandomized from '../../.vitepress/theme/Guide/Color/ColorRandomized.vue';
 </script>
 
 Define the color as string is straightforward.
@@ -73,4 +74,19 @@ The following examples give some inspiration:
 
 </template>
 </ColorGradientAdvanced>
+
+
+Hello
+<p>
+<ColorRandomized>
+<template #code="{ config }">
+
+```js-vue
+<ve-progress v-bind="config" />
+
+const config = ref<PluginConfig>({{ config }});
+```
+</template>
+</ColorRandomized>
+</p>
 

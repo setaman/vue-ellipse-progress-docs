@@ -1,128 +1,68 @@
-export interface Gradient {
-  colors: {
-    color: string;
-    offset: string;
-    opacity?: number;
-  }[];
-  //@defaultValue false
-  radial?: boolean;
-}
+import {
+  Color,
+  Gradient,
+  LineMode,
+  LineModes,
+  LinePositions,
+  Lines,
+  PluginConfig,
+} from "./types";
+import randomColor from "randomcolor";
+import { faker } from "@faker-js/faker";
 
-export interface CounterTick {
-  currentValue: number;
-  currentFormattedValue: string;
-}
-
-export type Color = string | Gradient[];
-
-export enum Lines {
-  round = "round",
-  butt = "butt",
-  square = "square",
-}
-
-export enum LineModes {
-  center = "center",
-  out = "out",
-  in = "in",
-  inOver = "in-over",
-  outOver = "out-over",
-  top = "top",
-  bottom = "bottom",
-}
-
-export enum LinePositions {
-  center = "center",
-  out = "out",
-  in = "in",
-}
-
-export enum Animations {
-  default = "default",
-  rs = "rs",
-  loop = "loop",
-  reverse = "reverse",
-  bounce = "bounce",
-}
-
-export type Offset = number;
-export type Duration = number;
-export type Delay = number;
-export type Legend = `${number}` | `${number}${"," | "."}${number}`;
-export type LineMode = LineModes | `${LineModes} ${Offset}`;
-export type LinePosition = LinePositions | `${LinePositions} ${Offset}`;
-export type DashCount = number;
-export type DashSpacing = number;
-export type Dash =
-  | `strict ${DashCount} ${DashSpacing}`
-  | `${DashCount} ${DashSpacing}`;
-export type Animation =
-  | Animations
-  | `${Animations} ${Duration}`
-  | `${Animations} ${Duration} ${Delay}`;
-
-export interface Loader
-  extends Pick<PluginConfig, "color" | "thickness" | "line" | "lineMode"> {
-  //@defaultValue 0.55
-  opacity?: number;
-  //@defaultValue 1000
-  duration?: number;
-}
-export type DotSizeString = `${number}` | `${number}%`;
-export type DotColor = string;
-export type DotString = `${DotSizeString}` | `${DotSizeString} ${DotColor}`;
-export interface DotObject {
-  size: DotString;
-  [key: string]: unknown;
-}
-export type Dot = number | DotString | DotObject;
-export type Data = Partial<
-  Omit<PluginConfig, "lineMode" | "emptyThickness" | "legend">
->;
-
-export interface PluginConfig {
-  progress: number;
-  //@defaultValue 200
-  size?: number;
-  //@defaultValue Lines.round
-  line?: Line;
-  //@defaultValue "#3f79ff"
-  color?: Color;
-  //@defaultValue "transparent"
-  colorFill?: Color;
-  //@defaultValue "#e6e9f0"
-  emptyColor?: Color;
-  //@defaultValue "transparent"
-  emptyColorFill?: Color;
-  //@defaultValue "5%"
-  thickness?: number | string;
-  //@defaultValue "5%"
-  emptyThickness?: number | string;
-  //@defaultValue LineModes.center
-  lineMode?: LineMode;
-  //@defaultValue LinePositions.center
-  linePosition?: LinePosition;
-  //@defaultValue LinePositions.center
-  emptyLinePosition?: LinePosition;
-  legend?: Legend;
-  hideLegend?: boolean;
-  legendFormatter?: (value: CounterTick) => string;
-  animation?: Animation;
-  loading?: boolean;
-  determinate?: boolean;
-  noData?: boolean;
-  half?: boolean;
-  gap?: boolean;
-  reverse?: boolean;
-  loader?: Loader;
-  //@defaultValue -90
-  angle?: number;
-  //@defaultValue "1rem"
-  fontSize?: number;
-  //@defaultValue "gray"
-  fontColor?: string;
-  legendClass?: string;
-  dash?: Dash;
-  dot?: Dot;
-  data?: Data;
-}
+export const generateRandomColor = (withTransparent = true) =>
+  faker.helpers.arrayElement([
+    randomColor({ luminosity: "dark" }),
+    ...(withTransparent ? ["transparent"] : []),
+  ]);
+export const getRandomLineMode = (): LineMode => {
+  const lineMode = faker.helpers.arrayElement([
+    LineModes.in,
+    LineModes.out,
+    LineModes.center,
+    LineModes.outOver,
+    LineModes.inOver,
+    LineModes.top,
+    LineModes.bottom,
+  ]);
+  return `${lineMode} ${faker.number.int({ min: 0, max: 50 })}`;
+};
+export const getRandomLine = (): Lines =>
+  faker.helpers.arrayElement([Lines.butt, Lines.round, Lines.square]);
+export const getRandomLinePosition = (): LinePositions =>
+  faker.helpers.arrayElement([
+    LinePositions.in,
+    LinePositions.out,
+    LinePositions.center,
+  ]);
+export const getRandomColor = (withTransparent = true): Color => {
+  const gradient = faker.datatype.boolean();
+  return gradient
+    ? getRandomGradientColor()
+    : generateRandomColor(withTransparent);
+};
+export const getRandomGradientColor = (): Gradient => {
+  const gradientsCount = faker.number.int({ min: 2, max: 5 });
+  const offset = 100 / gradientsCount;
+  return {
+    colors: Array.from({ length: gradientsCount }, (_, i) => ({
+      color: generateRandomColor(),
+      offset: i === gradientsCount - 1 ? "100" : `${i * offset}`,
+      opacity: faker.number.float({ min: 0, max: 1 }),
+    })),
+    radial: faker.datatype.boolean(),
+  };
+};
+export const getRandomConfig = (): PluginConfig => ({
+  progress: faker.number.int({ min: 0, max: 100 }),
+  thickness: faker.number.int({ min: 1, max: 30 }),
+  emptyThickness: faker.number.int({ min: 0, max: 30 }),
+  lineMode: getRandomLineMode(),
+  linePosition: getRandomLinePosition(),
+  emptyLinePosition: getRandomLinePosition(),
+  line: getRandomLine(),
+  color: getRandomColor(false),
+  emptyColor: getRandomColor(),
+  colorFill: getRandomColor(),
+  emptyColorFill: getRandomColor(),
+});
