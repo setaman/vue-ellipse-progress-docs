@@ -41,6 +41,7 @@ The general scheme to create the gradient is defined like follows:
   import ColorBasic from '../../.vitepress/theme/Guide/Color/ColorBasic.vue';
   import ColorGradientAdvanced from '../../.vitepress/theme/Guide/Color/ColorGradientAdvanced.vue';
   import ColorRandomized from '../../.vitepress/theme/Guide/Color/ColorRandomized.vue';
+  import ColorAi from '../../.vitepress/theme/Guide/Color/ColorAi.vue';
 </script>
 
 Define the color as string is straightforward.
@@ -88,5 +89,18 @@ const config = ref<PluginConfig>({{ config }});
 ```
 </template>
 </ColorRandomized>
+
+</p>
+
+Just couldn't resist asking ChatGPT to generate some random colors for the progress circle.
+Here are a few suggestions for you to try out.
+<p>
+<ColorAi>
+<template #code>
+
+<<< @/.vitepress/theme/Guide/Color/Snippet4.vue{vue}
+
+</template>
+</ColorAi>
 </p>
 
