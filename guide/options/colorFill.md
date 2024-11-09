@@ -1,32 +1,47 @@
+---
+description: The color of the progress circle fill area.
+head:
+  - - meta
+    - name: keywords
+      content: color, gradient, progress circle, progress bar, vue, vue3, vuejs, vue.js
+---
+
 # `colorFill`
 
 ###### Animated: ✔️
 
-| type             | values                                                | default   |
-| ---------------- | ----------------------------------------------------- | --------- |
+| type             | values                                                | default       |
+|------------------|-------------------------------------------------------|---------------|
 | String \| Object | any CSS color as String or Object to specify gradient | "transparent" |
 
-Defines the fill color of the progress circle. The property accepts any CSS color like `#123`, `rgba(230, 233, 240, 0.1)`
-or `lime` or an Object to define gradients.
+Defines the fill color of the progress circle. The property accepts any CSS color like `#123`,
+`rgba(230, 233, 240, 0.1)`, or `lime`, or an object to define gradients.
 
-The general scheme to define the gradient is defined like follows:
+The general scheme to define the gradient is as follows:
 
 - `:color="{ colors [, radial ]}"`
-  - `radial` - default `false`. Boolean that defines, whether the gradient is radial or linear
-  - `colors` - array that contains the gradient colors as Objects `{ color: "#6546f7", offset: "10" [, opacity: 1] }`
+    - `radial` (optional): Boolean, default is `false`. Defines whether the gradient is radial or linear.
+    - `colors`: Array of objects defining the gradient colors. Each object should have:
+        - `color`: CSS color string (e.g., `"#6546f7"`)
+        - `offset`: String representing the relative start/stop position in the gradient (e.g., `"10"`). It should be a
+          number between 0 and 100.
+        - `opacity` (optional): Number representing the opacity (e.g., `1`)
 
 ::: warning
-Progress circle overlaps the emtpy circle! In the examples you will see the fill color partially covering the empty line.
+Progress circle overlaps the empty circle!
+In the examples, you will see the fill color partially covering the empty line.
 :::
 
 ::: tip
-According to default SVG behaviour, the fill area of the circle is aligned at the baseline of the progress line. With the
-[`linePosition`](linePosition.md) property this behaviour can be adjusted.
+According to default SVG behavior, the fill area of the circle is aligned at the baseline of the progress line.
+With the
+[`linePosition`](linePosition.md) property this behavior can be adjusted.
 :::
 
 ###### Usage: 📜
 
 ```vue
+
 <ve-progress color-fill="#3f79ff" />
 <ve-progress color-fill="lime" />
 <ve-progress color-fill="rgba(230, 233, 240, 0.1)" />
@@ -43,361 +58,37 @@ According to default SVG behaviour, the fill area of the circle is aligned at th
 
 ### Examples
 
-<example-container class="mb-16">
-<template #default="{ progress, loading, slider, noData, determinate }">
-<v-e-p class="mr-2" :size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" color-fill="DimGray"/>
-<v-e-p class="mr-2" :size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" color-fill="#1ABC9C"/>
-<v-e-p class="mr-2" :size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate" color-fill="rgba(255, 87, 51, 0.7)"/>
-<color-fill-random :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate"/>
-</template>
-<template #code="{ progress }">
-<CodeGroup>
-<CodeGroupItem >
+<script setup>
+  import ColorFillBasic from "../../.vitepress/theme/Guide/ColorFill/ColorFillBasic.vue";
+  import ColorFillGradient from "../../.vitepress/theme/Guide/ColorFill/ColorFillGradient.vue";
+  import ColorGradientAdvanced from "../../.vitepress/theme/Guide/ColorFill/ColorGradientAdvanced.vue";
+</script>
 
-```vue:no-v-pre
-<template>
-  <ve-progress :progress="{{ progress }}" color-fill="DimGray"/>
-  <ve-progress :progress="{{ progress }}" color-fill="#1ABC9C"/>
-  <ve-progress :progress="{{ progress }}" color-fill="rgba(255, 87, 51, 0.7)"/>
-</template>
-```
+<ColorFillBasic>
+<template #code>
 
-</CodeGroupItem>
-</CodeGroup>
+<<< @/.vitepress/theme/Guide/ColorFill/Snippet1.vue{vue}
+
 </template>
-</example-container>
+</ColorFillBasic>
 
 The examples below demonstrate how gradient colors can be defined
 
-<color-fill-gradient class="mb-16">
-<template #code="{ progress }">
-<CodeGroup>
-<CodeGroupItem >
+<ColorFillGradient>
+<template #code>
 
-```vue:no-v-pre
-<template>
-  <ve-progress :progress="{{ progress }}" :color-fill="gradient1"/>
-  <ve-progress :progress="{{ progress }}" :color-fill="gradient2"/>
-  <ve-progress :progress="{{ progress }}" :color-fill="gradient3"/>
-</template>
-<script>
-  export default {
-    data: () => ({
-      gradient1: {
-        colors: [
-          {
-            color: "#3498DB",
-            offset: "0",
-            opacity: 0.5
-          },
-          {
-            color: "rgb(72, 201, 176)",
-            offset: "25"
-          },
-          {
-            color: "hsl(48, 89%, 60%, 0.2)",
-            offset: "50"
-          },
-          {
-            color: "Crimson",
-            offset: "75"
-          },
-          {
-            color: "#8A2BE2\t",
-            offset: "100"
-          }
-        ]
-      },
-      gradient2: {
-        radial: true,
-        colors: [
-          {
-            color: "#3498DB",
-            offset: "0",
-            opacity: 0.5
-          },
-          {
-            color: "rgb(72, 201, 176)",
-            offset: "25"
-          },
-          {
-            color: "hsl(48, 89%, 60%, 0.2)",
-            offset: "50"
-          },
-          {
-            color: "Crimson",
-            offset: "75"
-          },
-          {
-            color: "#8A2BE2",
-            offset: "100"
-          }
-        ]
-      },
-    }),
-}
-</script>
-```
+<<< @/.vitepress/theme/Guide/ColorFill/Snippet2.vue{vue}
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
-</color-fill-gradient>
+</ColorFillGradient>
 
 The gradients give a lot of room for experimentation and you can achieve a lot of exciting effects with colors alone.
 The following examples give some inspiration:
 
-<color-fill-gradient-crazy>
-<template #code="{ progress }">
-<CodeGroup>
-<CodeGroupItem >
+<ColorGradientAdvanced>
+<template #code>
 
-```vue:no-v-pre
-<template>
-  <ve-progress :progress="{{ progress }}" :color-fill="gradient1"/>
-  <ve-progress 
-    :progress="{{ progress }}" 
-    :color-fill="gradient2" 
-    color="#7579ff"
-    empty-color="transparent"
-    :thickness="5"
-    :empty-thickness="3"
-    lineMode="out 5"/>
-  <ve-progress 
-    :progress="{{ progress }}" 
-    :color-fill="gradient3" 
-    thickness="2"
-    empty-color="transparent"/>
-  <ve-progress 
-    :progress="{{ progress }}" 
-    :color-fill="gradient4" 
-    line="butt"
-    empty-color="#324c7e"
-    :thickness="46"
-    :emptyThickness="8"
-    :size="180"
-    dash="strict 60 0.8"
-    lineMode="in"/>
-  <ve-progress :progress="{{ progress }}" :color-fill="gradient5" :empty-thickness="2"/>
-  <ve-progress 
-    :progress="{{ progress }}" 
-    :color-fill="gradient4" 
-    :thickness="2"
-    :empty-thickness="1"
-    color="#7579ff"
-    empty-color="#324c7e"
-    dash="strict 60 0.8"
-    lineMode="in-over"/>
-</template>
-<script>
-  export default {
-    data: () => ({
-      gradient1: {
-        radial: true,
-        colors: [
-          {
-            color: "#3260FC",
-            offset: "50",
-            opacity: "0.15",
-          },
-          {
-            color: "#3260FC",
-            offset: "70",
-            opacity: "0.15",
-          },
-          {
-            color: "#3260FC",
-            offset: "70",
-            opacity: "0.1",
-          },
-          {
-            color: "#3260FC",
-            offset: "90",
-            opacity: "1",
-          },
-          {
-            color: "#3260FC",
-            offset: "60",
-            opacity: "1",
-          },
-          {
-            color: "#3260FC",
-            offset: "0",
-            opacity: "0",
-          },
-        ],
-      },
-      gradient2: {
-        radial: true,
-        colors: [
-          {
-            color: "#754fc1",
-            offset: "0",
-            opacity: "0.3",
-          },
-          {
-            color: "#366bfc",
-            offset: "100",
-            opacity: "0.3",
-          },
-        ],
-      },
-      gradient3: {
-        radial: true,
-        colors: [
-          {
-            color: "#3260FC",
-            offset: "49",
-            opacity: 1,
-          },
-          {
-            color: "black",
-            offset: "50",
-            opacity: 0,
-          },
-          {
-            color: "black",
-            offset: "90",
-            opacity: 0,
-          },
-          {
-            color: "#3260FC",
-            offset: "95",
-            opacity: 1,
-          },
-          {
-            color: "#3260FC",
-            offset: "100",
-            opacity: 0.2,
-          },
-        ],
-      },
-      gradient5: {
-        radial: true,
-        colors: [
-          {
-            color: "#3260FC",
-            offset: "89",
-            opacity: 0,
-          },
-          {
-            color: "#3260FC",
-            offset: "91",
-            opacity: 1,
-          },
-          {
-            color: "#3260FC",
-            offset: "93",
-            opacity: 0,
-          },
-          {
-            color: "#3260FC",
-            offset: "95",
-            opacity: 1,
-          },
-          {
-            color: "#3260FC",
-            offset: "97",
-            opacity: 0,
-          },
-          {
-            color: "#3260FC",
-            offset: "99",
-            opacity: 1,
-          },
-          {
-            color: "#3260FC",
-            offset: "100",
-            opacity: 0,
-          },
-        ],
-      },
-      gradient4: {
-        radial: true,
-        colors: [
-          {
-            color: "#3260FC",
-            offset: "50",
-            opacity: "0.2",
-          },
-          {
-            color: "#3260FC",
-            offset: "50",
-            opacity: "0.15",
-          },
-          {
-            color: "#3260FC",
-            offset: "70",
-            opacity: "0.15",
-          },
-          {
-            color: "#3260FC",
-            offset: "70",
-            opacity: "0.1",
-          },
-          {
-            color: "#3260FC",
-            offset: "90",
-            opacity: "0.1",
-          },
-          {
-            color: "transparent",
-            offset: "90",
-            opacity: "0.1",
-          },
-          {
-            color: "transparent",
-            offset: "95",
-            opacity: "0.1",
-          },
-          {
-            color: "transparent",
-            offset: "95",
-            opacity: "0.1",
-          },
-        ],
-      },
-      colorGradient:  {
-        radial: true,
-        colors: [
-          {
-            color: "#3260FC",
-            offset: "50",
-            opacity: "0.0",
-          },
-          {
-            color: "#3260FC",
-            offset: "70",
-            opacity: "0.0",
-          },
-          {
-            color: "#3260FC",
-            offset: "70",
-            opacity: "0.1",
-          },
-          {
-            color: "#3260FC",
-            offset: "90",
-            opacity: "1",
-          },
-          {
-            color: "#3260FC",
-            offset: "60",
-            opacity: "1",
-          },
-          {
-            color: "#3260FC",
-            offset: "0",
-            opacity: "0",
-          },
-        ],
-      },  
-    }),
-}
-</script>
-```
+<<< @/.vitepress/theme/Guide/ColorFill/Snippet3.vue{vue}
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
-</color-fill-gradient-crazy>
+</ColorGradientAdvanced>

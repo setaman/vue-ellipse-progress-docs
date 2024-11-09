@@ -2,9 +2,6 @@
 description: The color of the progress circle line.
 head:
   - - meta
-    - name: description
-      content: The color of the progress circle line.
-  - - meta
     - name: keywords
       content: color, gradient, progress circle, progress bar, vue, vue3, vuejs, vue.js
 ---

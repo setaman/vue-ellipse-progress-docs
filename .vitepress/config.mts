@@ -73,6 +73,10 @@ export default defineConfig({
                 text: "color",
                 link: "/guide/options/color",
               },
+              {
+                text: "colorFill",
+                link: "/guide/options/colorFill",
+              },
             ],
             /*items: [
               {
