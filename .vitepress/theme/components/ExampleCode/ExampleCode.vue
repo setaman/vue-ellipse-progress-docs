@@ -91,7 +91,7 @@ const toggleCollapsed = () => {
     <div v-if="!isCollapsed" class="example-code-content flex py-0">
       <div
         v-if="mode === 'Result' || mode === 'both'"
-        class="example-code-preview p-4 flex-1"
+        class="example-code-preview p-2 flex-1"
         :key="componentKey"
       >
         <slot

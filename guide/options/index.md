@@ -8,26 +8,26 @@ The **[`progress`](./progress)** is the only required property, and you are read
 
 > Also make sure to check **[slots](../slots/default)**
 
-| Prop                                           | Type             | Values                                                                 | Default                  |
-|------------------------------------------------|------------------|------------------------------------------------------------------------|--------------------------|
-| **[`progress`](./progress)**                   | Number           | \[-100, 100]                                                           |                          |
-| **[`size`](./size)**                           | Number           | >=0                                                                    | 200                      |
-| **[`line`](./line)**                           | String           | "round \| square \| butt"                                              | "round"                  |
-| **[`thickness`](./thickness)**                 | Number \| String | \>=0 as Number or percent value as String                              | "5%"                     |
-| **[`emptyThickness`](./emptyThickness)**       | Number \| String | \>=0 as Number or percent value as String                              | "5%"                     |
-| **[`lineMode`](./lineMode)**                   | String           | "center \| out \| out-over \| in \| in-over \| top \| bottom [offset]" | "center"                 |
-| **[`linePosition`](./linePosition)**           | String           | "center \| out \| in [offset]"                                         | "center"                 |
-| **[`emptyLinePosition`](./emptyLinePosition)** | String           | "center \| out \| in [offset]"                                         | "center"                 |
-| **[`color`](./color)**                         | String \| Object | any color as String or Object to specify gradient (see details)        | "#3f79ff"                |
-| **[`colorFill`](./colorFill)**                 | String \| Object | same as **[`color`](./color)**                                         | "transparent"      <br/> |
-| **[`hideLegend`](./hideLegend)**               | Boolean          |                                                                        | true                     |
+| Prop                                           | Type             | Values                                                                         | Default                  |
+|------------------------------------------------|------------------|--------------------------------------------------------------------------------|--------------------------|
+| **[`progress`](./progress)**                   | Number           | \[-100, 100]                                                                   |                          |
+| **[`size`](./size)**                           | Number           | >=0                                                                            | 200                      |
+| **[`line`](./line)**                           | String           | "round \| square \| butt"                                                      | "round"                  |
+| **[`thickness`](./thickness)**                 | Number \| String | \>=0 as Number or percent value as String                                      | "5%"                     |
+| **[`emptyThickness`](./emptyThickness)**       | Number \| String | \>=0 as Number or percent value as String                                      | "5%"                     |
+| **[`lineMode`](./lineMode)**                   | String           | "center \| out \| out-over \| in \| in-over \| top \| bottom [offset]"         | "center"                 |
+| **[`linePosition`](./linePosition)**           | String           | "center \| out \| in [offset]"                                                 | "center"                 |
+| **[`emptyLinePosition`](./emptyLinePosition)** | String           | "center \| out \| in [offset]"                                                 | "center"                 |
+| **[`color`](./color)**                         | String \| Object | any color as String or Object to specify gradient (see details)                | "#3f79ff"                |
+| **[`colorFill`](./colorFill)**                 | String \| Object | same as **[`color`](./color)**                                                 | "transparent"      <br/> |
+| **[`hideLegend`](./hideLegend)**               | Boolean          |                                                                                | true                     |
+| **[`legend`](./legend)**                       | Number \| String | any number, accepts a `.` or `","` as decimals delimiter and simple formatting |                          |
 
 [//]: # (| **[`emptyColor`]&#40;./emptyColor&#41;**               | String \| Object           | same as `color`                                                                                                                                     | "#e6e9f0"          |)
 
 [//]: # (| **[`emptyColorFill`]&#40;./emptyColorFill&#41;**       | String \| Object           | same as `color`                                                                                                                                     | "transparent"      |)
 
 
-[//]: # (| **[`legend`]&#40;./legend&#41;**                       | Number \| String           | any number, accepts a `.` or `","` as decimals delimiter and simple formatting                                                                      |                    |)
 
 [//]: # (| **[`legendFormatter`]&#40;./legendFormatter&#41;**     | Function                   | Function that returns formatted value                                                                                                               |                    |)
 

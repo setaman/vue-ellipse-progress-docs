@@ -1,29 +1,41 @@
+---
+description: The legend property is used to display a value inside the circle. It can be used for simple formatting of the circle legend
+head:
+  - - meta
+    - name: keywords
+      content: legend, progress, circle, progress bar, vue, vue3, vuejs, vue.js
+---
+
 # `legend`
 
 ###### Animated: ✔️
 
 | type             | values                                             | default |
-| ---------------- | -------------------------------------------------- | ------- |
+|------------------|----------------------------------------------------|---------|
 | Number \| String | any number with `.` or `","` as decimals delimiter |         |
 
-Is any Number or String. This property can be applied for simple formatting of the circle legend. As [`progress`](progress.md) only
-accepts values in the range [-100, 100], it is usually useful when values outside this range need to be displayed as circle
-legend. Defining the value as String you can apply very simple formatting with `"."` or `","` as delimiter or set the initial
-counter-placeholder (e.g. "0045.00"). Apart from this the value must be a valid JavaScript Number.
+The `legend` property can be any Number or String.
+While [`progress`](progress.md) only accepts values between -100 and 100, `legend` lets you go beyond that range. You
+can even use `"."` or `","` as a delimiter for simple formatting, or set an initial counter-placeholder like "0045.00".
+Just make sure it's a valid JavaScript Number.
 
 ::: warning Legend vs progress
-The [`progress`](progress.md) must be defined in any case, if defined, `legend` will replace [`progress`](progress.md) only
-as the displayed circle legend! How the [`progress`](progress.md) is calculated in relation to `legend` value is also up to you.
+The [`progress`](progress.md) property is always required. When both `legend` and [`progress`](progress.md) are defined,
+`legend` will take over as the displayed value inside the circle!
+How you calculate the [`progress`](progress.md) based on the `legend` value is entirely up to you.
 :::
 
 ::: tip
-With [`legendFormatter`](legendFormatter.md) or [`scoped slot`](../slots/default.md) you have countless possibilities to customize
-the circle legend. To hide the circle legend use the [`hideLegend`](hideLegend.md) property.
+With [`legendFormatter`](legendFormatter.md) or [`scoped slot`](../slots/default.md),
+you can get creative with the circle legend and highly customize it.
+Want to hide the circle legend?
+Use the [`hideLegend`](hideLegend.md) property.
 :::
 
 ###### Usage: 📜
 
 ```vue
+
 <ve-progress :legend="150" />
 <ve-progress legend="020" />
 <ve-progress legend="200,50" />
@@ -31,96 +43,90 @@ the circle legend. To hide the circle legend use the [`hideLegend`](hideLegend.m
 
 ### Examples
 
-<LegendBasic class="mb-16">
-<template #code>
-<CodeGroup>
-<CodeGroupItem >
-
-```vue:no-v-pre
-<template>
-  <ve-progress :progress="progress" :legend="legend" />
-</template>
-
 <script setup>
-  const maxLegendValue = ref(4000);
-  const legend = ref(2000);
+  import LegendBasic from "../../.vitepress/theme/Guide/Legend/LegendBasic.vue";
+  import LegendAndProgress from "../../.vitepress/theme/Guide/Legend/LegendAndProgress.vue";
+  import LegendFormatting from "../../.vitepress/theme/Guide/Legend/LegendFormatting.vue";
+</script>
+
+Here we imagine the `legend` to be a value between 0 and 4000.
+The `progress` is calculated as a percentage of the `legend` value
+
+<LegendBasic class="mb-10">
+<template #code="{ progress, slider }">
+
+```js-vue
+<template>
+  <ve-progress :legend="{{ slider }}" :progress="{{ progress }}"/>
+</template>
+<script setup>
+  import { ref } from "vue";
+
+  const maxLegendValue = 4000;
+  const legend = ref({{ slider }});
   
   const progress = computed(() => {
-    return (legend.value * 100) / maxLegendValue.value;
+    return (legend.value * 100) / maxLegendValue;
   });
 </script>
 ```
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
 </LegendBasic>
 
-The following example brings more clarity to the relationship between `legend` and [`progress`](progress.md).
-Let's say you need to display a rating from 0 to 5 of a product with 3.5 stars. Setting the [`progress`](progress.md) to 3.5 will
-fill the circle to 3.5 percent, and this is not what we need, since we want to display the percentage of 5 as progress.
-At this moment `legend` becomes very useful. In our component we can calculate the progress like follows:
+The following example clarifies the relationship between `legend` and [`progress`](progress.md). Imagine you need to
+display a product rating from 0 to 5 stars, and the rating is 3.5 stars. If you set the [`progress`](progress.md) to
+3.5, it will fill the circle to 3.5 percent, which is not what we want. Instead, we want to display the percentage of 5
+as progress. This is where `legend` becomes very useful. In our component, we can calculate the progress as follows:
 
 ```js
-...
-this.rating = 3.5;
-this.progress = this.rating * 100 / 5; // the rating percentage
+const rating = 3.5;
+const progress = rating * 100 / 5; // the rating percentage
 ```
 
 And then apply the values:
 
 ```vue
+
 <ve-progress :progress="progress" :legend="rating" />
 ```
 
-As a result, Rating can be displayed as a circle legend and progress will be calculated correctly:
+As a result, the rating can be displayed as a circle legend, and the progress will be calculated correctly:
 
-<LegendAndProgress class="mb-16">
-<template #code>
-<CodeGroup>
-<CodeGroupItem >
+<LegendAndProgress class="mb-10">
+<template #code="{ progress, slider }">
 
-```vue:no-v-pre
+```js-vue
 <template>
-  <ve-progress :progress="progress" :legend="rating" />
+  <ve-progress :legend="{{ slider }}" :progress="{{ progress }}"/>
 </template>
-
 <script setup>
-  const rating = ref(3);
- 
+  import { ref } from "vue";
+
+  const maxStars = 5;
+  const stars = ref({{ slider }});
+  
   const progress = computed(() => {
-    return (rating.value * 100) / 5;
+    return (stars.value * 100) / maxStars;
   });
 </script>
 ```
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
 </LegendAndProgress>
 
-With the `legend` defined as String we can set custom decimals delimiter and apply simplest formatting of the displayed
-value:
+With the `legend` as a String, you can use custom decimal delimiters and easily format the displayed value:
 
-<example-container :show-progress="false">
-<template #default="{ loading, slider, noData, determinate }">
-<v-e-p class="mr-2" :size="160" :progress="50" :loading="loading" :no-data="noData" :determinate="determinate" legend="20,50" font-size="1.6rem"/>
-<v-e-p class="mr-2" :size="160" :progress="50" :loading="loading" :no-data="noData" :determinate="determinate" legend="01000" font-size="1.6rem"/>
-<v-e-p class="mr-2" :size="160" :progress="50" :loading="loading" :no-data="noData" :determinate="determinate" legend="0050,51100" font-size="1.6rem"/>
-</template>
-<template #code>
-<CodeGroup>
-<CodeGroupItem >
+<LegendFormatting class="mb-10">
+<template #code="{ progress }">
 
-```vue
-<template>
-  <ve-progress :progress="50" legend="20,50" />
-  <ve-progress :progress="50" legend="01000" />
-  <ve-progress :progress="50" legend="0050,51100" />
-</template>
+```js-vue
+<ve-progress :legend="3000" :progress="{{ progress }}" />
+<ve-progress legend="20,50" :progress="{{ progress }}" />
+<ve-progress legend="01000" :progress="{{ progress }}" />
+<ve-progress legend="0050,51100" :progress="{{ progress }}" />
+<ve-progress legend="0050.250" :progress="{{ progress }}" />
 ```
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
-</example-container>
+</LegendFormatting>

@@ -78,6 +78,10 @@ export default defineConfig({
                 link: "/guide/options/colorFill",
               },
               {
+                text: "legend",
+                link: "/guide/options/legend",
+              },
+              {
                 text: "hideLegend",
                 link: "/guide/options/hideLegend",
               },
