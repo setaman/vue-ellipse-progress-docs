@@ -20,12 +20,12 @@ The **[`progress`](./progress)** is the only required property, and you are read
 | **[`emptyLinePosition`](./emptyLinePosition)** | String           | "center \| out \| in [offset]"                                         | "center"                 |
 | **[`color`](./color)**                         | String \| Object | any color as String or Object to specify gradient (see details)        | "#3f79ff"                |
 | **[`colorFill`](./colorFill)**                 | String \| Object | same as **[`color`](./color)**                                         | "transparent"      <br/> |
+| **[`hideLegend`](./hideLegend)**               | Boolean          |                                                                        | true                     |
 
 [//]: # (| **[`emptyColor`]&#40;./emptyColor&#41;**               | String \| Object           | same as `color`                                                                                                                                     | "#e6e9f0"          |)
 
 [//]: # (| **[`emptyColorFill`]&#40;./emptyColorFill&#41;**       | String \| Object           | same as `color`                                                                                                                                     | "transparent"      |)
 
-[//]: # (| **[`hideLegend`]&#40;./hideLegend&#41;**               | Boolean                    |                                                                                                                                                     | true               |)
 
 [//]: # (| **[`legend`]&#40;./legend&#41;**                       | Number \| String           | any number, accepts a `.` or `","` as decimals delimiter and simple formatting                                                                      |                    |)
 

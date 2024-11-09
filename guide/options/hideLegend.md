@@ -1,22 +1,31 @@
+---
+description: Boolean that defines whether the circle legend (progress or legend) should be hidden.
+head:
+  - - meta
+    - name: keywords
+      content: hide, legend, progress circle, progress bar, vue, vue3, vuejs, vue.js
+---
+
 # `hideLegend`
 
 ###### Animated: ✔️
 
-| type      | values | default |
-| --------- | ------ | ------- |
-| Boolean   | false  |
+| type    | values | default |
+|---------|--------|---------|
+| Boolean | false  |         |
 
-Boolean that defines whether the circle legend (**[`progress`](progress.md)** or **[`legend`](legend.md)**)
-should be hidden.
+Boolean that defines whether the circle legend (**[`progress`](progress.md)** or **[`legend`](legend.md)**) should be
+hidden.
 
 ::: warning Legend behavior
-A non-valid value for **[`progress`](progress.md)**, the use of the **[`data`](data.md)** property,
-the **[`loading`](loading.md)** and **[`noData`](nodata.md)** states also hide the legend.
+A non-valid value for **[`progress`](progress.md)**, the use of the **[`data`](data.md)** property, or the *
+*[`loading`](loading.md)** and **[`noData`](nodata.md)** states will also hide the legend.
 :::
 
 ### Usage 📜
 
 ```vue
+
 <ve-progress hide-legend />
 <ve-progress :hide-legend="true" />
 <ve-progress :hide-legend="false" />
@@ -24,29 +33,31 @@ the **[`loading`](loading.md)** and **[`noData`](nodata.md)** states also hide t
 
 ### Examples
 
-<hide-legend>
-<template #code="{ progress, hideLegend }">
-<CodeGroup>
-<CodeGroupItem >
+<script setup>
+  import HideLegendBasic from "../../.vitepress/theme/Guide/HideLegend/HideLegendBasic.vue";
+</script>
 
-```vue:no-v-pre
+<HideLegendBasic>
+<template #code="{ progress, hideLegend }">
+
+```js-vue
 <template>
-  <ve-progress :progress="{{ progress }}" :hide-legend="{{ hideLegend }}"/>
-  <ve-progress :progress="{{ progress }}" :hide-legend="{{ hideLegend }}">
+  <ve-progress :hide-legend="{{ hideLegend }}" :progress="{{ progress }}"/>
+  <ve-progress :hide-legend="{{ hideLegend }}" :progress="{{ progress }}">
     <template #legend-caption>
       <p>
         i'm a caption and the legend is <b>{{ hideLegend ? "hidden" : "visible" }}</b>
       </p>
     </template>
   </ve-progress>
-  <ve-progress :progress="{{ progress }}" :hide-legend="{{ hideLegend }}" legend="0150">
+  <ve-progress :hide-legend="{{ hideLegend }}" legend="0150" :progress="{{ progress }}">
     <template #legend-caption>
       <p>
         "legend"as circle legend
       </p>
     </template>
   </ve-progress>
-  <ve-progress progress="evilProgress" :hide-legend="{{ hideLegend }}">
+  <ve-progress :hide-legend="{{ hideLegend }}" progress="evilProgress">
     <template #legend-caption>
       <p>
         i have a very evil "progress" value
@@ -56,7 +67,5 @@ the **[`loading`](loading.md)** and **[`noData`](nodata.md)** states also hide t
 </template>
 ```
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
-</hide-legend>
+</HideLegendBasic>
