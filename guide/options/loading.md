@@ -1,20 +1,30 @@
+---
+description: Boolean that forces loading state. The component provides an indeterminate loading state for the case that your data is not available immediately. With this property set to true you can use the component as the indeterminate progress.
+head:
+  - - meta
+    - name: keywords
+      content: color, gradient, progress circle, progress bar, vue, vue3, vuejs, vue.js
+---
+
 # `loading`
 
 ###### Animated: ✔️
 
-| type      | values | default |
-| --------- | ------ | ------- |
-| Boolean   |        | false   |
+| type    | values | default |
+|---------|--------|---------|
+| Boolean |        | false   |
 
-Boolean that forces loading state. The component provides an indeterminate loading state for the case that your data is 
-not available immediately. With this property set to true you can use the component as the indeterminate progress.
+Boolean that forces loading state. The component provides an indeterminate loading state when your data is not
+immediately available. With this property set to `true`, you can use the component as an indeterminate progress
+indicator.
 
 ::: tip Custom loader
-Custom loading circle can be created with **[`loader`](loader.md)** !
+Custom loading circle can be created with **[`loader`](loader.md)**!
+To show a determinate loading, use **[`determinate`](determinate.md)**.
 :::
 
 ::: warning Legend behavior
-The use of the `loading` state hides the legend.
+The use of the `loading` state hides the **[`legend`](legend.md)**.
 :::
 
 ### Usage 📜
@@ -26,21 +36,22 @@ The use of the `loading` state hides the legend.
 
 ### Examples
 
-<example-container preselectedState="Loading">
-<template #default="{ loading, progress, slider, noData, determinate }">
-<v-e-p class="mr-2" :size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate"></v-e-p>
-</template>
-<template #code="{ loading, progress }">
-<CodeGroup>
-<CodeGroupItem >
+<script setup>
+  import LoadingBasic from "../../.vitepress/theme/Guide/Loading/LoadingBasic.vue";
+</script>
 
-```vue:no-v-pre
+<p>
+
+<LoadingBasic>
+<template #code="{ loading, progress }">
+
+```js-vue
 <template>
-  <ve-progress :progress="{{ progress }}" :loading="{{ loading }}"/>
+  <ve-progress :loading="{{ loading }}" :progress="{{ progress }}"/>
 </template>
 ```
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
-</example-container>
+</LoadingBasic>
+
+</p>

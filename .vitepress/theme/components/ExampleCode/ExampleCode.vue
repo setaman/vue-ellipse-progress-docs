@@ -15,6 +15,7 @@ const {
   range = [-100, 100],
   collapse,
   initMode = "both",
+  preselectedState = "Normal",
 } = defineProps<{
   range?: [number, number];
   initMode?: Mode;
@@ -27,7 +28,7 @@ const {
 }>();
 
 const mode = ref<Mode>(initMode);
-const state = ref<State>("Normal");
+const state = ref<State>(preselectedState);
 const slider = ref<number>(Math.round(range[1] / 2) || 0);
 const componentKey = ref<number>(0);
 const isCollapsed = ref(collapse);

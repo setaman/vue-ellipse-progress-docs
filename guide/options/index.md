@@ -22,6 +22,7 @@ The **[`progress`](./progress)** is the only required property, and you are read
 | **[`colorFill`](./colorFill)**                 | String \| Object | same as **[`color`](./color)**                                                 | "transparent"      <br/> |
 | **[`hideLegend`](./hideLegend)**               | Boolean          |                                                                                | true                     |
 | **[`legend`](./legend)**                       | Number \| String | any number, accepts a `.` or `","` as decimals delimiter and simple formatting |                          |
+| **[`loading`](./loading)**                     | Boolean          |                                                                                | false                    |
 
 [//]: # (| **[`emptyColor`]&#40;./emptyColor&#41;**               | String \| Object           | same as `color`                                                                                                                                     | "#e6e9f0"          |)
 

@@ -42,6 +42,10 @@ export default defineConfig({
                 link: "/guide/options/progress",
               },
               {
+                text: "legend",
+                link: "/guide/options/legend",
+              },
+              {
                 text: "size",
                 link: "/guide/options/size",
               },
@@ -78,12 +82,12 @@ export default defineConfig({
                 link: "/guide/options/colorFill",
               },
               {
-                text: "legend",
-                link: "/guide/options/legend",
-              },
-              {
                 text: "hideLegend",
                 link: "/guide/options/hideLegend",
+              },
+              {
+                text: "loading",
+                link: "/guide/options/loading",
               },
             ],
             /*items: [
