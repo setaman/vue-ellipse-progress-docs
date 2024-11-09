@@ -23,6 +23,7 @@ The **[`progress`](./progress)** is the only required property, and you are read
 | **[`hideLegend`](./hideLegend)**               | Boolean          |                                                                                | true                     |
 | **[`legend`](./legend)**                       | Number \| String | any number, accepts a `.` or `","` as decimals delimiter and simple formatting |                          |
 | **[`loading`](./loading)**                     | Boolean          |                                                                                | false                    |
+| **[`determinate`](./determinate)**             | Boolean          |                                                                                | false                    |
 
 [//]: # (| **[`emptyColor`]&#40;./emptyColor&#41;**               | String \| Object           | same as `color`                                                                                                                                     | "#e6e9f0"          |)
 
@@ -34,11 +35,8 @@ The **[`progress`](./progress)** is the only required property, and you are read
 
 [//]: # (| **[`animation`]&#40;./animation&#41;**                 | String                     | "default \| rs \| loop \| reverse \| bounce [duration delay]"                                                                                       | "default 1000 400" |)
 
-[//]: # (| **[`loading`]&#40;./loading&#41;**                     | Boolean                    |                                                                                                                                                     | false              |)
-
 [//]: # (| **[`loader`]&#40;./loader&#41;**                       | Object                     | { [thickness, color, lineMode, line, opacity ]}                                                                                                     |                    |)
 
-[//]: # (| **[`determinate`]&#40;./determinate&#41;**             | Boolean                    |                                                                                                                                                     | false              |)
 
 [//]: # (| **[`nodata`]&#40;./nodata&#41;**                       | Boolean                    |                                                                                                                                                     | false              |)
 

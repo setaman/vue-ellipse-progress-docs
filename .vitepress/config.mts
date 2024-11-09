@@ -89,6 +89,10 @@ export default defineConfig({
                 text: "loading",
                 link: "/guide/options/loading",
               },
+              {
+                text: "determinate",
+                link: "/guide/options/determinate",
+              },
             ],
             /*items: [
               {

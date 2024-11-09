@@ -2,12 +2,13 @@
 
 ###### Animated: ✔️
 
-| type      | values | default |
-| --------- | ------ | ------- |
-| Boolean   |        | false   |
+| type    | values | default |
+|---------|--------|---------|
+| Boolean |        | false   |
 
-In determinate state the component indicates that the data is being loaded, but also shows the progress circle and the
-**[`legend`](legend.md)** that is faded out in the **[`loading`](loading.md)** state.
+In the determinate state, the component not only shows the progress circle but also indicates that data is being loaded.
+The **[`legend`](legend.md)** is visible, unlike in the **[`loading`](loading.md)** state where it fades out.
+
 
 ::: tip Custom loader
 Custom loading circle can be created with **[`loader`](loader.md)** !
@@ -22,21 +23,22 @@ Custom loading circle can be created with **[`loader`](loader.md)** !
 
 ### Examples
 
-<example-container preselectedState="Determinate">
-<template #default="{ loading, slider, noData, determinate }">
-<v-e-p class="mr-2" :size="160" :progress="slider" :loading="loading" :no-data="noData" :determinate="determinate"></v-e-p>
-</template>
-<template #code="{ determinate, progress }">
-<CodeGroup>
-<CodeGroupItem >
+<script setup>
+  import DeterminateBasic from "../../.vitepress/theme/Guide/Determinate/DeterminateBasic.vue";
+</script>
 
-```vue:no-v-pre
+<p>
+
+<DeterminateBasic>
+<template #code="{ determinate, progress }">
+
+```js-vue
 <template>
-  <ve-progress :progress="{{ progress }}" :determinate="{{ determinate }}"/>
+  <ve-progress :determinate="{{ determinate }}" :progress="{{ progress }}"/>
 </template>
 ```
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
-</example-container>
+</DeterminateBasic>
+
+</p>

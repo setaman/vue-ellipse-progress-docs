@@ -158,13 +158,13 @@ In such a case, you can import the library in a lifecycle hook and initialize th
 </template>
 
 <script setup>
-  import { ref, onMounted } from "vue";
+  import { shallowRef, onMounted } from "vue";
 
-  const VueEllipseProgress = ref(null);
+  const VueEllipseProgress = shallowRef(null);
   
   onMounted(async () => {
     VueEllipseProgress.value = import("vue-ellipse-progress").then((module) => {
-      this.component = module.VeProgress;
+      VueEllipseProgress.value = module.VeProgress;
     });
   })
 </script>
