@@ -12,6 +12,8 @@ import {
   circle7,
   circle8,
   circle9,
+  circle10,
+  circle11,
 } from "./Snippet3.vue";
 
 const circles = ref([
@@ -24,6 +26,8 @@ const circles = ref([
   circle7,
   circle8,
   circle9,
+  circle10,
+  circle11,
 ]);
 </script>
 

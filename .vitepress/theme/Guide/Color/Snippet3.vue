@@ -319,6 +319,79 @@ export const circle9 = {
     ],
   },
 };
+export const circle10 = {
+  dash: "strict 50 0.6",
+  thickness: 10,
+  emptyThickness: 10,
+  radial: true,
+  color: {
+    radial: true,
+    colors: [
+      {
+        color: "#3260FC",
+        offset: "0",
+        opacity: 0.15,
+      },
+      {
+        color: "#3260FC",
+        offset: "99",
+        opacity: 0.15,
+      },
+      {
+        color: "#3260FC",
+        offset: "99",
+        opacity: 1,
+      },
+      {
+        color: "#3260FC",
+        offset: "100",
+        opacity: 1,
+      },
+    ],
+  },
+};
+export const circle11 = {
+  dash: "strict 50 0.8",
+  thickness: 100,
+  line: "butt",
+  emptyThickness: 10,
+  lineMode: "in-over",
+  color: {
+    radial: true,
+    colors: [
+      {
+        color: "transparent",
+        offset: "0",
+        opacity: 0.15,
+      },
+      {
+        color: "transparent",
+        offset: "80",
+        opacity: 0.15,
+      },
+      {
+        color: "#3260FC",
+        offset: "80",
+        opacity: 0.15,
+      },
+      {
+        color: "#3260FC",
+        offset: "99",
+        opacity: 0.15,
+      },
+      {
+        color: "#3260FC",
+        offset: "99",
+        opacity: 1,
+      },
+      {
+        color: "#3260FC",
+        offset: "100",
+        opacity: 1,
+      },
+    ],
+  },
+};
 
 export default {
   setup() {
