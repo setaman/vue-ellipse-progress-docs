@@ -1,10 +1,17 @@
 # Options overview
 
+<script setup>
+  import CircleAnatomy from "../../.vitepress/theme/Guide/CircleAnatomy/CircleAnatomy.vue";
+</script>
+
 The **[`progress`](./progress)** is the only required property, and you are ready to go with just following line:
 
 ```html
 <ve-progress :progress="progress" />
 ```
+
+<CircleAnatomy/>
+    
 
 > Also make sure to check **[slots](../slots/default)**
 
