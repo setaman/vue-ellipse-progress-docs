@@ -1,15 +1,26 @@
+---
+description: Function that returns formatted value as string.
+head:
+  - - meta
+    - name: keywords
+      content: color, gradient, progress circle, progress bar, vue, vue3, vuejs, vue.js
+---
+
 # `legendFormatter`
 
 ###### Animated: ✔️
 
-| type   | values      | default |
-| ------ | ----------- | ------- |
-| Function | Function that returns formatted value  as string |         |
+| type     | values                                                                    | default |
+|----------|---------------------------------------------------------------------------|---------|
+| Function | `(props: object) => string` Function returning formatted value  as string |         |
 
-Is a Function that must return a legend value or HTML string. The function takes counter properties object as argument and
-is called on every counter tick. Here the formatting of [`legend`](legend.md) or [`progress`](progress.md)
-is completely up to you and you have the full freedom to adjust the presentation to your needs. The function can return any
-String value, even HTML.
+You can provide a function to format the circle legend. The function can return any string
+value, even HTML!
+You have full freedom to format the value of the [`legend`](legend.md) or [`progress`](progress.md) as you like.
+
+The circle legend is animated and counts up and down depending on the circle [`animation`](animation.md) configuration.
+The function takes a counter properties object as an argument and is
+called on every counter tick providing the current value of the counter that can be used to format the legend.
 
 ::: tip
 Alternatively you can use [`scoped slot`](../slots/default.md) for custom formatting.
@@ -18,104 +29,97 @@ Alternatively you can use [`scoped slot`](../slots/default.md) for custom format
 ### Usage
 
 ```vue
+
 <ve-progress
   :legend-formatter="({ currentValue }) => `My Format ${currentValue}`"
 />
 ```
-| Exposed props           |                                                                                                                                                                   |
-|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `currentValue`          | The current value of the counter at specific tick. It's always a Number                                                                                           |
-| `currentFormattedValue` | Current value formatted as a String. It's a String representation of the `currentValue` including the formatting wich may be applied with [`legend`](legend.md) |
+
+| Exposed props           |                                                                                                                                                                                             |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `currentValue`          | The current value of the counter at specific animation tick. It's always a Number and represents a value that is passed as [`legend`](legend.md) or [`progress`](progress.md) to the circle |
+| `currentFormattedValue` | Current value formatted as a String. It's a String representation of the `currentValue` including the formatting wich may be applied with [`legend`](legend.md)                             |
 
 ### Examples
 
-The function takes counter properties Object as argument that you can use to define custom formatting.
-`currentValue` is the most relevant property, as it is the actual value at specific counter tick. The return value will be
-displayed as the legend of the circle. Here is a simple example:
+<script setup>
+  import LegendFormatterBasic from "../../.vitepress/theme/Guide/LegendFormatter/LegendFormatterBasic.vue";
+  import LegendFormatterHtml from "../../.vitepress/theme/Guide/LegendFormatter/LegendFormatterHtml.vue";
+  import LegendFormatterProps from "../../.vitepress/theme/Guide/LegendFormatter/LegendFormatterProps.vue";
+</script>
 
-<example-container class="mb-16" >
-<template #default="{ loading, progress, slider, noData, determinate }">
-<v-e-p 
-  :progress="progress" 
-  :loading="loading" 
-  :no-data="noData" 
-  :determinate="determinate"
-  :legend-formatter="({ currentValue }) => `My Format ${currentValue}`"
-></v-e-p>
-</template>
+In the following example, we take the raw `currentValue` value and format it as a string
+
+<LegendFormatterBasic class="mb-10">
 <template #code="{ progress }">
-<CodeGroup>
-<CodeGroupItem >
 
-```vue:no-v-pre
-<template>
-  <ve-progress 
-    :progress="{{ progress }}"
-    :legend-formatter="({ currentValue }) => `My Format ${currentValue}`"
-  />
-</template>
+```js-vue
+<ve-progress
+  :legend-formatter="({ currentValue }) => `My Format ${currentValue}`"
+  :progress="{{ progress }}"
+/>
 ```
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
-</example-container>
+</LegendFormatterBasic>
 
 The formatting function can return HTML as a string to customize the styles of the rendered circle legend.
 You can add more elements, images and pretty much anything here
 
-<LegendFormatterHtml class="mb-16">
-<template #code="{ progress }">
-<CodeGroup>
-<CodeGroupItem >
+<LegendFormatterHtml class="mb-10">
+<template #code>
 
-```vue:no-v-pre
-<template>
-  <ve-progress 
-    :progress="{{progress}}" 
-    :legend-formatter="
-      ({ currentValue }) => `
-        <span style='color: ${currentValue < 0 ? 'red' : 'green'}; font-weight: bold; border-bottom: 2px gray solid'>
-          ${new Intl.NumberFormat('de-DE', {
-            style: 'currency',
-            currency: 'EUR',
-          })
-            .format(currentValue)
-            .trim()
-          }
-          </span>
-        `
-      "
-    />
-</template>
+```js-vue
+<ve-progress
+  :progress="{{progress}}"
+  :legend-formatter="
+    ({ currentValue }) => `
+      <span style='color: ${currentValue < 0 ? 'red' : 'green'}; font-weight: bold; border-bottom: 2px gray solid'>
+        ${new Intl.NumberFormat('de-DE', {
+          style: 'currency',
+          currency: 'EUR',
+        })
+          .format(currentValue)
+          .trim()}
+        </span>
+      `
+  "
+/>
+
 ```
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
 </LegendFormatterHtml>
 
-The internal counter component provides additional properties that might be useful. The properties are calculated for each counter tick.
+The internal counter component provides additional properties that might be useful. The properties are calculated for
+each counter tick.
 
 <LegendFormatterProps>
 <template #code="{ progress, legend }">
-<CodeGroup>
-<CodeGroupItem >
 
-```vue:no-v-pre
+```js-vue
 <template>
-  <ve-progress :progress="{{ progress }}" :legend="{{ legend }}" :legend-formatter="customFormatter"/>
+  <ve-progress 
+    :legend="{{ legend }}" 
+    :legend-formatter="customFormatter" 
+    :progress="{{ progress }}"
+  />
 </template>
-<script setup>
-const customFormatter = (counterTickProps) => {
+<script setup lang="ts">
+
+type CounterProps = {
+  currentValue: number;
+  currentFormattedValue: string;
+  [key: string]: unknown;
+};
+
+const customFormatter = (props: CounterProps) => {
   return `"currentFormattedValue":
-    ${counterTickProps.currentFormattedValue}
+    ${props.currentFormattedValue}
   `;
  }
 </script>
 ```
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
 </LegendFormatterProps>

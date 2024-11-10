@@ -24,20 +24,15 @@ The **[`progress`](./progress)** is the only required property, and you are read
 | **[`legend`](./legend)**                       | Number \| String | any number, accepts a `.` or `","` as decimals delimiter and simple formatting |                          |
 | **[`loading`](./loading)**                     | Boolean          |                                                                                | false                    |
 | **[`determinate`](./determinate)**             | Boolean          |                                                                                | false                    |
+| **[`legendFormatter`](./legendFormatter)**     | Function         | `(props: object) => string` Function returning formatted value  as string      |                          |
+
 
 [//]: # (| **[`emptyColor`]&#40;./emptyColor&#41;**               | String \| Object           | same as `color`                                                                                                                                     | "#e6e9f0"          |)
 
 [//]: # (| **[`emptyColorFill`]&#40;./emptyColorFill&#41;**       | String \| Object           | same as `color`                                                                                                                                     | "transparent"      |)
-
-
-
-[//]: # (| **[`legendFormatter`]&#40;./legendFormatter&#41;**     | Function                   | Function that returns formatted value                                                                                                               |                    |)
-
 [//]: # (| **[`animation`]&#40;./animation&#41;**                 | String                     | "default \| rs \| loop \| reverse \| bounce [duration delay]"                                                                                       | "default 1000 400" |)
 
 [//]: # (| **[`loader`]&#40;./loader&#41;**                       | Object                     | { [thickness, color, lineMode, line, opacity ]}                                                                                                     |                    |)
-
-
 [//]: # (| **[`nodata`]&#40;./nodata&#41;**                       | Boolean                    |                                                                                                                                                     | false              |)
 
 [//]: # (| **[`angle`]&#40;./angle&#41;**                         | Number                     | any Number                                                                                                                                          | -90                |)

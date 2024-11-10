@@ -46,6 +46,10 @@ export default defineConfig({
                 link: "/guide/options/legend",
               },
               {
+                text: "legendFormatter",
+                link: "/guide/options/legendFormatter",
+              },
+              {
                 text: "size",
                 link: "/guide/options/size",
               },
