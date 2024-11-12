@@ -1,3 +1,11 @@
+---
+description: The angle property is used to rotate the progress circle. It can be used to change the starting point of the circle.
+head:
+  - - meta
+    - name: keywords
+      content: color, gradient, progress circle, progress bar, vue, vue3, vuejs, vue.js
+---
+
 # `angle`
 
 ###### Animated: ✔️

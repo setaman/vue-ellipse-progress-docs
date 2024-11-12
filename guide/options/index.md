@@ -34,6 +34,7 @@ The **[`progress`](./progress)** is the only required property, and you are read
 | **[`legendFormatter`](./legendFormatter)**     | Function         | `(props: object) => string` Function returning formatted value  as string      |                          |
 | **[`reverse`](./reverse)**                     | Boolean          |                                                                                | false                    |
 | **[`angle`](./angle)**                         | Number           | any Number                                                                     | -90                      |
+| **[`half`](./half)**                           | Boolean          |                                                                                | false                    |
 
 
 [//]: # (| **[`emptyColor`]&#40;./emptyColor&#41;**               | String \| Object           | same as `color`                                                                                                                                     | "#e6e9f0"          |)
@@ -53,7 +54,6 @@ The **[`progress`](./progress)** is the only required property, and you are read
 
 [//]: # (| **[`dash`]&#40;./dash&#41;**                           | String                     | "[strict] count spacing"                                                                                                                            |                    |)
 
-[//]: # (| **[`half`]&#40;./half&#41;**                           | Boolean                    |                                                                                                                                                     | false              |)
 
 [//]: # (| **[`gap`]&#40;./gap&#41;**                             | Number                     | any Number that defines the gap between multiple circles in pixel                                                                                   | 0                  |)
 

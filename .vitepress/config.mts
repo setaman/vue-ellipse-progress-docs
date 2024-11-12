@@ -98,6 +98,10 @@ export default defineConfig({
                 link: "/guide/options/determinate",
               },
               {
+                text: "half",
+                link: "/guide/options/half",
+              },
+              {
                 text: "angle",
                 link: "/guide/options/angle",
               },
