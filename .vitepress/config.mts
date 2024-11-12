@@ -97,6 +97,14 @@ export default defineConfig({
                 text: "determinate",
                 link: "/guide/options/determinate",
               },
+              {
+                text: "angle",
+                link: "/guide/options/angle",
+              },
+              {
+                text: "reverse",
+                link: "/guide/options/reverse",
+              },
             ],
             /*items: [
               {

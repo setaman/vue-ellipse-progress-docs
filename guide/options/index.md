@@ -32,6 +32,8 @@ The **[`progress`](./progress)** is the only required property, and you are read
 | **[`loading`](./loading)**                     | Boolean          |                                                                                | false                    |
 | **[`determinate`](./determinate)**             | Boolean          |                                                                                | false                    |
 | **[`legendFormatter`](./legendFormatter)**     | Function         | `(props: object) => string` Function returning formatted value  as string      |                          |
+| **[`reverse`](./reverse)**                     | Boolean          |                                                                                | false                    |
+| **[`angle`](./angle)**                         | Number           | any Number                                                                     | -90                      |
 
 
 [//]: # (| **[`emptyColor`]&#40;./emptyColor&#41;**               | String \| Object           | same as `color`                                                                                                                                     | "#e6e9f0"          |)
@@ -42,7 +44,6 @@ The **[`progress`](./progress)** is the only required property, and you are read
 [//]: # (| **[`loader`]&#40;./loader&#41;**                       | Object                     | { [thickness, color, lineMode, line, opacity ]}                                                                                                     |                    |)
 [//]: # (| **[`nodata`]&#40;./nodata&#41;**                       | Boolean                    |                                                                                                                                                     | false              |)
 
-[//]: # (| **[`angle`]&#40;./angle&#41;**                         | Number                     | any Number                                                                                                                                          | -90                |)
 
 [//]: # (| **[`fontSize`]&#40;./fontSize&#41;**                   | String                     | any valid CSS value                                                                                                                                 | "1rem"             |)
 
@@ -58,6 +59,5 @@ The **[`progress`](./progress)** is the only required property, and you are read
 
 [//]: # (| **[`dot`]&#40;./dot&#41;**                             | String \| Number \| Object | Accepts size, color and other styles as Number, descriptive string `"size [color]"` or object `{size [, backgroundColor, widht, borderRadius ...]}` | 0                  |)
 
-[//]: # (| **[`reverse`]&#40;./reverse&#41;**                     | Boolean                    |                                                                                                                                                     | false              |)
 
 [//]: # (| **[`data`]&#40;./data&#41;**                           | Array                      | defines multiple circles, takes as values Objects with almost all props defined above                                                               |                    |)

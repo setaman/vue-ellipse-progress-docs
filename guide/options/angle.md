@@ -2,9 +2,9 @@
 
 ###### Animated: ✔️
 
-| type      | values | default |
-| --------- | ------ | ------- |
-| Number    | any Number | -90 |
+| type   | values     | default |
+|--------|------------|---------|
+| Number | any Number | -90     |
 
 With the `angle` prop the circle can be rotated and thus the starting point can be changed.
 
@@ -16,18 +16,16 @@ With the `angle` prop the circle can be rotated and thus the starting point can 
 
 ### Examples
 
-<Angle>
-<template #code="{ data }">
-<CodeGroup>
-<CodeGroupItem >
+<script setup>
+  import AngleBasic from "../../.vitepress/theme/Guide/Angle/AngleBasic.vue";
+</script>
 
-```vue:no-v-pre
-<template>
-  <ve-progress :progress="{{data.progress}}" :angle="{{data.angle}}"/>
-</template>
+<AngleBasic>
+<template #code="{ angle, reverse }">
+
+```js-vue
+<ve-progress :angle="{{ angle }}" :progress="{{ progress }}"/>
 ```
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
-</Angle>
+</AngleBasic>
