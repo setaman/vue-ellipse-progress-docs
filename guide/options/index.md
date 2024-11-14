@@ -35,6 +35,7 @@ The **[`progress`](./progress)** is the only required property, and you are read
 | **[`reverse`](./reverse)**                     | Boolean          |                                                                                | false                    |
 | **[`angle`](./angle)**                         | Number           | any Number                                                                     | -90                      |
 | **[`half`](./half)**                           | Boolean          |                                                                                | false                    |
+| **[`nodata`](./nodata)**                       | Boolean          |                                                                                | false                    |
 
 
 [//]: # (| **[`emptyColor`]&#40;./emptyColor&#41;**               | String \| Object           | same as `color`                                                                                                                                     | "#e6e9f0"          |)
@@ -43,7 +44,6 @@ The **[`progress`](./progress)** is the only required property, and you are read
 [//]: # (| **[`animation`]&#40;./animation&#41;**                 | String                     | "default \| rs \| loop \| reverse \| bounce [duration delay]"                                                                                       | "default 1000 400" |)
 
 [//]: # (| **[`loader`]&#40;./loader&#41;**                       | Object                     | { [thickness, color, lineMode, line, opacity ]}                                                                                                     |                    |)
-[//]: # (| **[`nodata`]&#40;./nodata&#41;**                       | Boolean                    |                                                                                                                                                     | false              |)
 
 
 [//]: # (| **[`fontSize`]&#40;./fontSize&#41;**                   | String                     | any valid CSS value                                                                                                                                 | "1rem"             |)

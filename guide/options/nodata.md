@@ -1,20 +1,27 @@
+---
+description: The component provides a `noData` state for the case that your data is not available. The circle progress is still empty.
+head:
+  - - meta
+    - name: keywords
+      content: color, gradient, progress circle, progress bar, vue, vue3, vuejs, vue.js
+---
+
 # `noData`
 
 ###### Animated: ✔️
 
-| type      | values | default |
-| --------- | ------ | ------- |
-| Boolean   |        | false   |
+| type    | values | default |
+|---------|--------|---------|
+| Boolean |        | false   |
 
-The component provides a `noData` state for the case that your data is not available. The circle progress is still empty.
-In the `noData` state the component visually communicates that the data is not present and hides the **[`legend`](legend.md)**.
-This behavior is useful if there is no data or an error occurred during loading.
+The `noData` state is perfect for when your data is missing. The progress circle remains empty, clearly indicating the
+absence of data. In this state, the component hides the **[`legend`](legend.md)**, making it noticeable that there's no
+data or an error occurred during loading.
 
 ::: warning Invalid progress
-The component will take the no data state even if you provide an invalid **[`progress`](progress.md)** value
+The component will take the no data state also if you provide an invalid **[`progress`](progress.md)** value
 :::
 
-### Usage 📜
 
 ```vue
 <ve-progress noData />
@@ -23,35 +30,33 @@ The component will take the no data state even if you provide an invalid **[`pro
 
 ### Examples
 
-<example-container preselectedState="No data">
-<template #default="{ loading, progress, slider, noData, determinate }">
-<v-e-p class="mr-2" :size="160" :progress="progress" :loading="loading" :no-data="noData" :determinate="determinate">
-    <template #legend>
-        <span>/100</span>
-    </template>
-    <template #caption>
-        <span>i'm a caption</span>
-    </template>
-</v-e-p>
-</template>
-<template #code="{ noData, progress }">
-<CodeGroup>
-<CodeGroupItem >
+<script setup>
+  import NoData from "../../.vitepress/theme/Guide/NoData/NoData.vue";
+</script>
 
-```vue:no-v-pre
-<template>
-  <ve-progress :progress="{{ progress }}" :noData="{{ noData }}">
-    <template #legend>
-        <span>/100</span>
-    </template>
-    <template #legend-caption>
-        <span>i'm a caption</span>
-    </template>
-  </ve-progress>
-</template>
+<p>
+
+<NoData>
+<template #code="{ noData, progress }">
+
+```js-vue
+<ve-progress :noData="{{ noData }}" :progress="{{ progress }}">
+  <template #legend>
+      <span>/100</span>
+  </template>
+  <template #legend-caption>
+      <span>i'm a caption</span>
+  </template>
+</ve-progress>
+
+<ve-progress :noData="{{ noData }}" progress="Bad progress">
+  <template #legend-caption>
+      <span>Bad progress</span>
+  </template>
+</ve-progress>
 ```
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
-</example-container>
+</NoData>
+
+</p>
