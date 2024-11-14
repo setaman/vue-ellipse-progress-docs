@@ -1,37 +1,50 @@
+---
+description: Dashed circle progress line.
+head:
+  - - meta
+    - name: keywords
+      content: color, gradient, progress circle, progress bar, vue, vue3, vuejs, vue.js, dash, dashed, line, stroke-dasharray
+---
+
 # `dash`
 
 ###### Animated: ✔️
 
 | type   | values                   | default |
 |--------|--------------------------|---------|
-| String | "[strict] count spacing" |         |
+| String | "[strict] amount spacing" |         |
 
-Descriptive string in form `"[strict] count spacing"` that adds dashed empty progress line. This property provides the 
-optional strict mode. In this mode you can define the explicit number of dashes as count with the given relative 
-spacing as number in range >= 0 and < 1. Without strict mode the default behavior of the SVG stroke-dasharray property is 
-used, where the size and spacings of the dashes are defined. Both values `count` and `spacing` are mandatory.
+Descriptive string in the form `"[strict] amount spacing"` that adds a dashed empty progress line. This property offers
+an optional strict mode. In strict mode, you can define the exact number of dashes (`amount`) with the given relative
+spacing (`spacing`) as a number between 0 and 1. Without strict mode, the default behavior of the SVG `stroke-dasharray`
+property is used, where `amount` specifies the size of the dashes, the number of dashes is determined by the circle circumference.
+Both `amount` and `spacing` values are mandatory.
 
 ###### Usage: 📜
 
 ```vue
-<ve-progress dash="strict 60 0.5" /> - 60 dashes with 0.5 relative spacing
+<ve-progress dash="strict 60 0.5" /> - exact 60 dashes with 0.5 relative spacing
 <ve-progress dash="10 10" /> - 10 pixels big dashes with 10 pixels spacing, the number of dashes depends on the empty circle circumference
 ```
 
 ### Example
 
-<dash>
-<template #code="{ data }">
-<CodeGroup>
-<CodeGroupItem >
+<script setup>
+  import DashBasic from "../../.vitepress/theme/Guide/Dash/DashBasic.vue";
+</script>
 
-```vue:no-v-pre
+<p>
+
+<DashBasic>
+<template #code="{ dash, progress }">
+
+```js-vue
 <template>
-  <ve-progress :progress="{{data.progress}}" dash="{{data.dash}}"/>
+  <ve-progress dash="{{dash}}" :progress="{{progress}}"/>
 </template>
 ```
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
-</dash>
+</DashBasic>
+
+</p>

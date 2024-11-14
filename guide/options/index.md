@@ -36,6 +36,7 @@ The **[`progress`](./progress)** is the only required property, and you are read
 | **[`angle`](./angle)**                         | Number           | any Number                                                                     | -90                      |
 | **[`half`](./half)**                           | Boolean          |                                                                                | false                    |
 | **[`nodata`](./nodata)**                       | Boolean          |                                                                                | false                    |
+| **[`dash`](./dash)**                           | String           | "[strict] count spacing"                                                       |                          |
 
 
 [//]: # (| **[`emptyColor`]&#40;./emptyColor&#41;**               | String \| Object           | same as `color`                                                                                                                                     | "#e6e9f0"          |)
@@ -52,7 +53,6 @@ The **[`progress`](./progress)** is the only required property, and you are read
 
 [//]: # (| **[`legendClass`]&#40;./legendClass&#41;**             | String                     | any                                                                                                                                                 |                    |)
 
-[//]: # (| **[`dash`]&#40;./dash&#41;**                           | String                     | "[strict] count spacing"                                                                                                                            |                    |)
 
 
 [//]: # (| **[`gap`]&#40;./gap&#41;**                             | Number                     | any Number that defines the gap between multiple circles in pixel                                                                                   | 0                  |)
