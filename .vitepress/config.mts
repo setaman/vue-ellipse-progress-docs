@@ -90,6 +90,14 @@ export default defineConfig({
                 link: "/guide/options/dash",
               },
               {
+                text: "dot",
+                link: "/guide/options/dot",
+              },
+              {
+                text: "animation",
+                link: "/guide/options/animation",
+              },
+              {
                 text: "hideLegend",
                 link: "/guide/options/hideLegend",
               },

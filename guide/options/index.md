@@ -38,12 +38,12 @@ The **[`progress`](./progress)** is the only required property, and you are read
 | **[`nodata`](./nodata)**                       | Boolean                    |                                                                                                                                                     | false                    |
 | **[`dash`](./dash)**                           | String                     | "[strict] count spacing"                                                                                                                            |                          |
 | **[`dot`](./dot)**                             | String \| Number \| Object | Accepts size, color and other styles as Number, descriptive string `"size [color]"` or object `{size [, backgroundColor, widht, borderRadius ...]}` | 0                        |
+| **[`animation`](./animation)**                 | String                     | "default \| rs \| loop \| reverse \| bounce [duration delay]"                                                                                       | "default 1000 400"       |
 
 
 [//]: # (| **[`emptyColor`]&#40;./emptyColor&#41;**               | String \| Object           | same as `color`                                                                                                                                     | "#e6e9f0"          |)
 
 [//]: # (| **[`emptyColorFill`]&#40;./emptyColorFill&#41;**       | String \| Object           | same as `color`                                                                                                                                     | "transparent"      |)
-[//]: # (| **[`animation`]&#40;./animation&#41;**                 | String                     | "default \| rs \| loop \| reverse \| bounce [duration delay]"                                                                                       | "default 1000 400" |)
 
 [//]: # (| **[`loader`]&#40;./loader&#41;**                       | Object                     | { [thickness, color, lineMode, line, opacity ]}                                                                                                     |                    |)
 
