@@ -137,6 +137,10 @@ export default defineConfig({
                 text: "fontSize",
                 link: "/guide/options/fontSize",
               },
+              {
+                text: "legendClass",
+                link: "/guide/options/legendClass",
+              },
             ],
             /*items: [
               {

@@ -4,7 +4,7 @@
 |--------|--------|---------|
 | String | any    |         |
 
-Passes the specified class to the circle legend to give you the possibility to style it in the CSS manner.
+Pass the specified class to the circle legend to give you the possibility to style it in the CSS manner.
 
 ### Usage 📜
 

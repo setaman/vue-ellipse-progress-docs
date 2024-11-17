@@ -42,6 +42,7 @@ The **[`progress`](./progress)** is the only required property, and you are read
 | **[`loader`](./loader)**                       | Object                     | { \[thickness, color, lineMode, line, opacity \]}                                                                                                   |                          |
 | **[`fontColor`](./fontColor)**                 | String                     | any valid CSS value                                                                                                                                 | "gray"                   |
 | **[`fontSize`](./fontSize)**                   | String                     | any valid CSS value                                                                                                                                 | "1rem"                   |
+| **[`legendClass`](./legendClass)**             | String                     | any                                                                                                                                                 |                          |
 
 
 [//]: # (| **[`emptyColor`]&#40;./emptyColor&#41;**               | String \| Object           | same as `color`                                                                                                                                     | "#e6e9f0"          |)
@@ -50,7 +51,6 @@ The **[`progress`](./progress)** is the only required property, and you are read
 
 
 
-[//]: # (| **[`legendClass`]&#40;./legendClass&#41;**             | String                     | any                                                                                                                                                 |                    |)
 
 [//]: # (| **[`gap`]&#40;./gap&#41;**                             | Number                     | any Number that defines the gap between multiple circles in pixel                                                                                   | 0                  |)
 
