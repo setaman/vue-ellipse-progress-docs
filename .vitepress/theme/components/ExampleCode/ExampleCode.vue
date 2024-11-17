@@ -10,6 +10,7 @@ import ExampleCodeControls from "./ExampleCodeControls.vue";
 type State = "Normal" | "Loading" | "Determinate" | "No data";
 type Mode = "Result" | "Code" | "both";
 
+const slider = defineModel<number>("slider", { required: false });
 const {
   step = 1,
   range = [-100, 100],
@@ -29,7 +30,6 @@ const {
 
 const mode = ref<Mode>(initMode);
 const state = ref<State>(preselectedState);
-const slider = ref<number>(Math.round(range[1] / 2) || 0);
 const componentKey = ref<number>(0);
 const isCollapsed = ref(collapse);
 const states = ["Normal", "Loading", "Determinate", "No data"].map((title) => ({
@@ -55,6 +55,8 @@ const reload = () => {
 const toggleCollapsed = () => {
   isCollapsed.value = !isCollapsed.value;
 };
+
+slider.value = Math.round(range[1] / 2) || 0;
 </script>
 
 <template>

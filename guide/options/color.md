@@ -3,7 +3,7 @@ description: The color of the progress circle line.
 head:
   - - meta
     - name: keywords
-      content: color, gradient, progress circle, progress bar, vue, vue3, vuejs, vue.js
+      content: color, gradient, progress circle, progress bar, vue, vue3, vuejs, vue.js, conic gradient circle
 ---
 
 # `color`
@@ -48,6 +48,11 @@ The general scheme to create the gradient is defined like follows:
 The coloring concept is based on the [SVG specification](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Gradients).
 Only offset and opacity are supported for now.
 In the future releases, more advanced gradient features will be added
+:::
+
+::: tip Conic gradient
+You [asked for it,](https://github.com/setaman/vue-ellipse-progress/issues/107), years later we still miss the ability
+to define conic gradients for SVG elements. Nevertheless, I'll show ou an itresting workaround with **[`dot`](dot.md#conic-gradient)** 
 :::
 
 ### Examples
