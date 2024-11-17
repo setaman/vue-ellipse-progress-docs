@@ -1,3 +1,11 @@
+---
+description: The default scoped slot is used to customize the presentation of the circle legend.
+head:
+  - - meta
+    - name: keywords
+      content: color, gradient, progress circle, progress bar, vue, vue3, vuejs, vue.js, conic gradient circle
+---
+
 # `default`
 
 Use this scoped slot, if you want to customize the presentation of the circle legend and make a use of the animated counter,

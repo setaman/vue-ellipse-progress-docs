@@ -1,6 +1,15 @@
+---
+description: The legend-caption scoped slot is used to customize the presentation of the circle legend caption.
+head:
+  - - meta
+    - name: keywords
+      content: color, gradient, progress circle, progress bar, vue, vue3, vuejs, vue.js, conic gradient circle
+---
+
 # `legend-caption`
 
-In this slot you can put any HTML and style it on your own. This slot is aligned below the legend.
+In this slot, you can put any HTML and style it on your own. 
+The slot is aligned below the legend.
 
 ### Usage 📜
 
@@ -16,37 +25,27 @@ In this slot you can put any HTML and style it on your own. This slot is aligned
 
 ### Examples
 
-<example-container :range="[0, 200]">
-<template #default="{ loading, slider, progress, noData, determinate }">
-<v-e-p :progress="progress" :legend="slider" :loading="loading"
-        :no-data="noData"
-        :determinate="determinate">
+<script setup>
+import LegendCaptionSlot from '../../.vitepress/theme/Guide/Slots/LegendCaptionSlot.vue';
+</script>
+
+<p>
+
+<LegendCaptionSlot>
+<template #code="{ slider, progress }">
+
+```js-vue
+<ve-progress :progress="{{ progress }}" :legend="{{ slider }}">
   <template #legend>
     <span> /200</span>
   </template>
   <template #caption>
     <div>Tasks Done</div>
   </template>
-</v-e-p>
-</template>
-<template #code="{ progress, slider }">
-<CodeGroup>
-<CodeGroupItem >
-
-```vue:no-v-pre
-<template>
-  <ve-progress :progress="{{ progress }}" :legend="{{ slider }}">
-    <template #legend>
-      <span> /200</span>
-    </template>
-    <template #caption>
-      <div>Tasks Done</div>
-    </template>
-  </ve-progress>
-</template>
+<ve-progress>
 ```
 
-</CodeGroupItem>
-</CodeGroup>
 </template>
-</example-container>
+</LegendCaptionSlot>
+
+</p>
