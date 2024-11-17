@@ -17,14 +17,19 @@ props and adjust the presentation of the legend to your needs.
 </ve-progress>
 ```
 
+| Exposed props           |                                                                                                                                                                                             |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `currentValue`          | The current value of the counter at specific animation tick. It's always a Number and represents a value that is passed as [`legend`](legend.md) or [`progress`](progress.md) to the circle |
+| `currentFormattedValue` | Current value formatted as a String. It's a String representation of the `currentValue` including the formatting wich may be applied with [`legend`](legend.md)                             |
+
 ### Examples
 
 There are really no limits and you can customize the appearance of the legend as you like.
 Here are a few examples for the beginning:
 
 <script setup>
-import DefaultSlot from '../../.vitepress/theme/Guide/Slots/DefaultSlot.vue'
-import DefaultSlotColored from '../../.vitepress/theme/Guide/Slots/DefaultSlotColored.vue'
+import DefaultSlot from '../../.vitepress/theme/Guide/Slots/DefaultSlot.vue';
+import DefaultSlotColored from '../../.vitepress/theme/Guide/Slots/DefaultSlotColored.vue';
 </script>
 
 <DefaultSlot>

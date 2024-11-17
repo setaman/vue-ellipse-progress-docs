@@ -60,7 +60,7 @@ const determineColor = (value: number) => {
           <span>20</span>
           <span class="ml-1" style="font-size: 0.9rem">PLAYED</span>
         </template>
-        <template #caption>
+        <template #legend-caption>
           <span>Manchester United</span>
         </template>
       </vep>

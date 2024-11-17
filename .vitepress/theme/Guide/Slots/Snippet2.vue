@@ -13,7 +13,7 @@
       </div>
     </template>
   </ve-progress>
-  <ve-progress :progress="50">
+  <ve-progress :legend="10" :progress="50">
     <template #default="{ counterTick }">
       <span>
         <span class="mr-2" style="font-size: 0.9rem">WON</span>
@@ -23,7 +23,7 @@
       <span>20</span>
       <span class="ml-1" style="font-size: 0.9rem">PLAYED</span>
     </template>
-    <template #caption>
+    <template #legend-caption>
       <span>Manchester United</span>
     </template>
   </ve-progress>
