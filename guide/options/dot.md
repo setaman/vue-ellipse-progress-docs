@@ -1,5 +1,6 @@
 ---
 description: Customize the point indicator at the end of the progress line.
+aside: false
 head:
   - - meta
     - name: keywords

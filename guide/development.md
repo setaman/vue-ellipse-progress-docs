@@ -1,4 +1,38 @@
-# Development
+---
+layout: doc
+editLink: true
+---
+<script setup>
+import {
+  VPTeamPage,
+  VPTeamPageTitle,
+  VPTeamMembers
+} from 'vitepress/theme';
+
+const members = [
+  {
+    avatar: 'https://www.github.com/setaman.png',
+    name: 'Sergej Atamantschuk',
+    title: 'Creator',
+    links: [
+      { icon: 'github', link: 'https://github.com/setaman' },
+    ]
+  },
+]
+</script>
+
+# Maintainers
+<VPTeamPage style="margin-top: 0">
+  <VPTeamPageTitle style="padding-top: 0">
+    <template #lead>
+    </template>
+  </VPTeamPageTitle>
+  <VPTeamMembers
+    :members="members"
+  />
+</VPTeamPage>
+
+## Development
 
 Make sure to take a look at the [contribution](contribution.md) guide to be prepared to the maximum to contribute to this project.
 This plugin is a usual Vue CLI project, and it is very easy to start with the development. 

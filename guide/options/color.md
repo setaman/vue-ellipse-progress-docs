@@ -1,5 +1,6 @@
 ---
 description: The color of the progress circle line.
+aside: false
 head:
   - - meta
     - name: keywords

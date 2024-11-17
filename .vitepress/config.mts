@@ -1,15 +1,23 @@
 import { defineConfig } from "vitepress";
 
+const isDevMode = process.env.NODE_ENV === "development";
+const basePath = process.env.BASE_PATH || "/vue-ellipse-progress-docs/";
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "vue-ellipse-progress docs",
-  description: "A VitePress Site",
+  title: "vue-ellipse-progress",
+  base: isDevMode ? "/" : basePath,
+  description:
+    "vue-ellipse-progress - Beautiful and smooth circular progress bars for your Vue app",
+  lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Guide", link: "/guide" },
       { text: "Examples", link: "/markdown-examples" },
     ],
+    pattern:
+      "https://github.com/setaman/vue-ellipse-progress-docs/tree/main/docs/:path",
 
     sidebar: [
       {

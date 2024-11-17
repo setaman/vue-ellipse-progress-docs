@@ -1,3 +1,7 @@
+---
+pageClass: props-docs
+---
+
 # Options overview
 
 <script setup>

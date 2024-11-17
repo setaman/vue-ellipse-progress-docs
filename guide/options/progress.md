@@ -1,3 +1,8 @@
+---
+description: The progress property takes a Number value in the range [-100, 100] and defines the filled area from progress circle line in percent.
+aside: false
+---
+
 # `progress`
 
 <Badge class="mt-2" type="success" text="Animated" />
@@ -40,8 +45,4 @@ If **[`legend`](legend.md)** is defined the `progress` will **not** be displayed
 </template>
 </ExampleCode>
 
-
-<<< @/.vitepress/theme/Guide/Progress/Snippet1.vue#snippet{js-vue}
-
-d
 </p>
