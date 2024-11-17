@@ -106,6 +106,10 @@ export default defineConfig({
                 link: "/guide/options/loading",
               },
               {
+                text: "loader",
+                link: "/guide/options/loader",
+              },
+              {
                 text: "determinate",
                 link: "/guide/options/determinate",
               },

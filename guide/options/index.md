@@ -39,14 +39,12 @@ The **[`progress`](./progress)** is the only required property, and you are read
 | **[`dash`](./dash)**                           | String                     | "[strict] count spacing"                                                                                                                            |                          |
 | **[`dot`](./dot)**                             | String \| Number \| Object | Accepts size, color and other styles as Number, descriptive string `"size [color]"` or object `{size [, backgroundColor, widht, borderRadius ...]}` | 0                        |
 | **[`animation`](./animation)**                 | String                     | "default \| rs \| loop \| reverse \| bounce [duration delay]"                                                                                       | "default 1000 400"       |
+| **[`loader`](./loader)**                       | Object                     | { \[thickness, color, lineMode, line, opacity \]}                                                                                                   |                          |
 
 
 [//]: # (| **[`emptyColor`]&#40;./emptyColor&#41;**               | String \| Object           | same as `color`                                                                                                                                     | "#e6e9f0"          |)
 
 [//]: # (| **[`emptyColorFill`]&#40;./emptyColorFill&#41;**       | String \| Object           | same as `color`                                                                                                                                     | "transparent"      |)
-
-[//]: # (| **[`loader`]&#40;./loader&#41;**                       | Object                     | { [thickness, color, lineMode, line, opacity ]}                                                                                                     |                    |)
-
 
 [//]: # (| **[`fontSize`]&#40;./fontSize&#41;**                   | String                     | any valid CSS value                                                                                                                                 | "1rem"             |)
 
@@ -54,10 +52,6 @@ The **[`progress`](./progress)** is the only required property, and you are read
 
 [//]: # (| **[`legendClass`]&#40;./legendClass&#41;**             | String                     | any                                                                                                                                                 |                    |)
 
-
-
 [//]: # (| **[`gap`]&#40;./gap&#41;**                             | Number                     | any Number that defines the gap between multiple circles in pixel                                                                                   | 0                  |)
-
-
 
 [//]: # (| **[`data`]&#40;./data&#41;**                           | Array                      | defines multiple circles, takes as values Objects with almost all props defined above                                                               |                    |)

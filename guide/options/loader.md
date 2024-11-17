@@ -1,15 +1,25 @@
+---
+description: The loader property is used to customize the loading circle that is shown in the states loading and determinate.
+head:
+  - - meta
+    - name: keywords
+      content: color, gradient, progress circle, progress bar, vue, vue3, vuejs, vue.js, dash, dashed, line
+---
+
 # `loader`
 
 ###### Animated: ✔️
 
-| type      | values                                                    | default |
-| --------- |-----------------------------------------------------------| ------- |
-| Object    | {[ thickness, color, lineMode, line, duration, opacity ]} |
+| type   | values                                                      | default |
+|--------|-------------------------------------------------------------|---------|
+| Object | {\[ thickness, color, lineMode, line, duration, opacity \]} |         |
 
-With this option defined as Object you can customize the loading circle that is shown in the states
+With this prop defined as Object, you can customize the loading circle that is shown in the states
 [loading](loading.md) and [determinate](determinate.md). Accepted properties are [`color`](color.md), [`thickness`](thickness.md), [`line`](line.md),
 [`lineMode`](lineMode.md), `duration` and `opacity`. `duration` and `opacity` are specific for loading circle. Any valid CSS 
-opacity value can be set as `opacity`. `duration` specifies the speed of the loader animation in milliseconds. If the loader option is not 
+opacity value can be set as `opacity`. `duration` specifies the speed of the loader animation in milliseconds. 
+
+If the loader option is not 
 specified, the loading circle replicates the progress circle with a 0.55 default value for `opacity` and 1000 `duration`.
 
 ### Usage 📜
@@ -20,63 +30,20 @@ specified, the loading circle replicates the progress circle with a 0.55 default
 
 ### Examples
 
-<example-container preselectedState="Determinate">
-<template #default="{ progress, loading, slider, noData, determinate }">
-<v-e-p class="mr-2" 
-    :size="160" 
-    :progress="progress" 
-    :loading="loading" 
-    :no-data="noData" 
-    :determinate="determinate"
-    :loader="{ color: '#F08080' }"    
-></v-e-p>
-<v-e-p class="mr-2" 
-    :size="160" 
-    :progress="progress" 
-    :loading="loading" 
-    :no-data="noData" 
-    :determinate="determinate"
-    :loader="{ color: 'MediumPurple', lineMode: 'in 10', opacity: 1, thickness: 4 }"    
-></v-e-p>
-<v-e-p class="mr-2" 
-    :size="160" 
-    :progress="progress" 
-    :loading="loading" 
-    :no-data="noData" 
-    :determinate="determinate"
-    :loader="{ color: 'blue', lineMode: 'in 10', opacity: 0.7, thickness: 15, duration: 4000 }"    
-></v-e-p>
-</template>
-<template #code="{ loading, progress }">
-<CodeGroup>
-<CodeGroupItem >
+<script setup>
+  import LoaderBasic from "../../.vitepress/theme/Guide/Loader/LoaderBasic.vue";
+</script>
 
-```vue:no-v-pre
-<template>
-  <ve-progress 
-    :progress="{{ progress }}" 
-    :loader="{ color: '#F08080' }"
-  />
-  
-  <ve-progress 
-    :progress="{{ progress }}" 
-    :loader="{ color: 'MediumPurple', lineMode: 'in 10', opacity: 1, thickness: 4 }"
-  />
-  <ve-progress 
-    :progress="{{ progress }}" 
-    :loader="{ 
-      color: 'blue', 
-      lineMode: 'in 10', 
-      opacity: 0.7, 
-      thickness: 15,  
-      duration: 2000 
-    }"
-  />
-</template>
-```
+<p>
 
-</CodeGroupItem>
-</CodeGroup>
+<LoaderBasic>
+<template #code>
+
+<<< @/.vitepress/theme/Guide/Loader/Snippet1.vue
+
 </template>
-</example-container>
+</LoaderBasic>
+
+</p>
+
 
