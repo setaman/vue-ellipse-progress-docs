@@ -40,15 +40,15 @@ The **[`progress`](./progress)** is the only required property, and you are read
 | **[`dot`](./dot)**                             | String \| Number \| Object | Accepts size, color and other styles as Number, descriptive string `"size [color]"` or object `{size [, backgroundColor, widht, borderRadius ...]}` | 0                        |
 | **[`animation`](./animation)**                 | String                     | "default \| rs \| loop \| reverse \| bounce [duration delay]"                                                                                       | "default 1000 400"       |
 | **[`loader`](./loader)**                       | Object                     | { \[thickness, color, lineMode, line, opacity \]}                                                                                                   |                          |
+| **[`fontColor`](./fontColor)**                 | String                     | any valid CSS value                                                                                                                                 | "gray"                   |
+| **[`fontSize`](./fontSize)**                   | String                     | any valid CSS value                                                                                                                                 | "1rem"                   |
 
 
 [//]: # (| **[`emptyColor`]&#40;./emptyColor&#41;**               | String \| Object           | same as `color`                                                                                                                                     | "#e6e9f0"          |)
 
 [//]: # (| **[`emptyColorFill`]&#40;./emptyColorFill&#41;**       | String \| Object           | same as `color`                                                                                                                                     | "transparent"      |)
 
-[//]: # (| **[`fontSize`]&#40;./fontSize&#41;**                   | String                     | any valid CSS value                                                                                                                                 | "1rem"             |)
 
-[//]: # (| **[`fontColor`]&#40;./fontColor&#41;**                 | String                     | any valid CSS value                                                                                                                                 | "gray"             |)
 
 [//]: # (| **[`legendClass`]&#40;./legendClass&#41;**             | String                     | any                                                                                                                                                 |                    |)
 

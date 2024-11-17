@@ -144,3 +144,8 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+.VPBadge.success {
+    border-color: transparent;
+    color: var(--vp-c-green-1);
+    background-color: var(--vp-c-green-soft);
+}

@@ -1,6 +1,6 @@
 # `gap`
 
-###### Animated: ✔️
+<Badge class="mt-2" type="success" text="Animated" />
 
 | type   | values     | default |
 |--------|------------|---------|

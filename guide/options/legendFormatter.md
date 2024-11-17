@@ -8,7 +8,7 @@ head:
 
 # `legendFormatter`
 
-###### Animated: ✔️
+<Badge class="mt-2" type="success" text="Animated" />
 
 | type     | values                                                                    | default |
 |----------|---------------------------------------------------------------------------|---------|
@@ -29,7 +29,6 @@ Alternatively you can use [`scoped slot`](../slots/default.md) for custom format
 ### Usage
 
 ```vue
-
 <ve-progress
   :legend-formatter="({ currentValue }) => `My Format ${currentValue}`"
 />

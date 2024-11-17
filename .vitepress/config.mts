@@ -129,6 +129,14 @@ export default defineConfig({
                 text: "noData",
                 link: "/guide/options/noData",
               },
+              {
+                text: "fontColor",
+                link: "/guide/options/fontColor",
+              },
+              {
+                text: "fontSize",
+                link: "/guide/options/fontSize",
+              },
             ],
             /*items: [
               {
