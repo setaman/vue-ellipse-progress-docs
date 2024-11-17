@@ -16,7 +16,6 @@ export default {
     });
   },
   enhanceApp({ app, router, siteData }) {
-    console.log("=>(index.ts:20)", ExampleCode, CardLink);
     app.component(Vep.name ?? Vep.__name, Vep);
     app.component(CardLink.name ?? CardLink.__name, CardLink);
     app.component(ExampleCode.name ?? ExampleCode.__name, ExampleCode);

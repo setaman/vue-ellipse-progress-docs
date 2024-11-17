@@ -2,7 +2,7 @@ export interface Gradient {
   colors: {
     color: string;
     offset: string;
-    opacity?: number;
+    opacity?: string;
   }[];
   //@defaultValue false
   radial?: boolean;

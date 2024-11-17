@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import DefaultTheme from "vitepress/theme";
-import Vep from "./components/Vep.vue";
+import CircleDemo from "./components/Home/CircleDemo.vue";
 
 const { Layout } = DefaultTheme;
 </script>
@@ -8,15 +8,18 @@ const { Layout } = DefaultTheme;
 <template>
   <Layout>
     <template #home-hero-before>
-      <div class="moving-gradient"></div>
+      <!--      <div class="moving-gradient"></div>-->
     </template>
     <template #home-hero-image>
-      <Vep :progress="10"> </Vep>
+      <CircleDemo />
     </template>
   </Layout>
 </template>
 
 <style scoped lang="scss">
+:deep(.image-bg) {
+  display: none !important;
+}
 /* Background container */
 .moving-gradient {
   position: fixed;
