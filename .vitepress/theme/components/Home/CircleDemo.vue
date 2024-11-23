@@ -138,7 +138,7 @@ const circles = computed<
     translateX: 10,
     legend: `${starsCount.value}`,
     loading: isFetchingStars.value,
-    progress: milestoneProgress.value,
+    progress: 0,
   },
   {
     ...commonProps,
@@ -160,7 +160,8 @@ const circles = computed<
   },
   {
     ...commonProps,
-    caption: "Next milestone: 1000",
+    //caption: "Next milestone: 1000",
+    caption: isFetchingStars.value ? "Loading..." : "",
     translateX: 0,
   },
 ]);
@@ -169,19 +170,20 @@ const setCounterValue = (value: number) => {
   counterValue.value = value;
 };
 
-setTimeout(() => {
-  isFlipped.value = false;
-}, 2000);
-
 axios
   .get("https://api.github.com/repos/setaman/vue-ellipse-progress")
   .then((res) => {
-    isFetchingStars.value = false;
     starsCount.value = res.data.stargazers_count ?? 356;
   })
+  .catch((e) => {
+    console.error(e);
+    starsCount.value = 356;
+  })
   .finally(() => {
-    starsCount.value = 250;
-    isFetchingStars.value = false;
+    // starsCount.value = 250;
+    setTimeout(() => {
+      isFetchingStars.value = false;
+    }, 2000);
   });
 </script>
 
@@ -250,9 +252,9 @@ axios
                 </span>
               </div>
             </template>
-            <!--            <template v-if="c.caption" #legend-caption>
+            <template v-if="c.caption" #legend-caption>
               <div class="mt-10 text-xs text-slate-600">{{ c.caption }}</div>
-            </template>-->
+            </template>
           </vep>
         </div>
       </div>
@@ -285,6 +287,10 @@ axios
   </div>
 </template>
 <style scoped lang="scss">
+:root {
+  --text-color: #231557;
+}
+
 .circles {
   transform-style: preserve-3d;
   &.flipped {
@@ -350,13 +356,24 @@ axios
   }
 }
 
+.dark {
+  .animate-character {
+    background-image: linear-gradient(
+      -225deg,
+      #896cff 0%,
+      #726488 29%,
+      #f0d355 67%,
+      #896cff 100%
+    );
+  }
+}
 .animate-character {
   text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
     #231557 0%,
     #44107a 29%,
-    #f0d355 67%,
+    #ffd300 67%,
     #231557 100%
   );
   background-size: auto auto;
