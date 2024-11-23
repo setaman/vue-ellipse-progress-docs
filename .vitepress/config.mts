@@ -3,6 +3,8 @@ import { defineConfig } from "vitepress";
 const isDevMode = process.env.NODE_ENV === "development";
 const basePath = process.env.BASE_PATH || "/vue-ellipse-progress-docs/";
 
+console.log("=>(config.mts:7) process.env.NODE_ENV", process.env.NODE_ENV);
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "vue-ellipse-progress",

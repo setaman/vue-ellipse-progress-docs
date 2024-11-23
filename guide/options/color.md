@@ -53,7 +53,8 @@ In the future releases, more advanced gradient features will be added
 
 ::: tip Conic gradient
 You [asked for it,](https://github.com/setaman/vue-ellipse-progress/issues/107), years later we still miss the ability
-to define conic gradients for SVG elements. Nevertheless, I'll show ou an itresting workaround with **[`dot`](dot.md#conic-gradient)** 
+to define conic gradients for SVG elements.
+Nevertheless, I'll show ou an interesting workaround with **[`dot`](dot.md#conic-gradient)** 
 :::
 
 ### Examples
@@ -75,7 +76,7 @@ Define the color as string is straightforward.
 </ColorBasic>
 
 The examples below demonstrate how gradient colors can be defined. Make sure to switch circle states to see, what
-cool [loader](<.(loader.md)>)
+cool [loader](loader.md)
 affects you can achieve with gradient colors.
 
 <ColorGradient>

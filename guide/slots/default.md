@@ -8,8 +8,8 @@ head:
 
 # `default`
 
-Use this scoped slot, if you want to customize the presentation of the circle legend and make a use of the animated counter,
-so your formatting is still animated. This works similar to the [`legendFormatter`](#legendformatter) and is just
+Use this scoped slot if you want to customize the presentation of the circle legend and make a use of the animated counter,
+so your formatting is still animated. This works similar to the [`legendFormatter`](../options/legendFormatter.md) and is just
 an alternative way to provide a custom format. You can access animated counter properties through the scoped slot
 props and adjust the presentation of the legend to your needs.
 
@@ -25,10 +25,10 @@ props and adjust the presentation of the legend to your needs.
 </ve-progress>
 ```
 
-| Exposed props           |                                                                                                                                                                                             |
-|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `currentValue`          | The current value of the counter at specific animation tick. It's always a Number and represents a value that is passed as [`legend`](legend.md) or [`progress`](progress.md) to the circle |
-| `currentFormattedValue` | Current value formatted as a String. It's a String representation of the `currentValue` including the formatting wich may be applied with [`legend`](legend.md)                             |
+| Exposed props           |                                                                                                                                                                                                                   |
+|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `currentValue`          | The current value of the counter at specific animation tick. It's always a Number and represents a value that is passed as [`legend`](../options/legend.md) or [`progress`](../options/progress.md) to the circle |
+| `currentFormattedValue` | Current value formatted as a String. It's a String representation of the `currentValue` including the formatting wich may be applied with [`legend`](../options/legend.md)                                        |
 
 ### Examples
 

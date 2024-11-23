@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Vep from "../../components/Vep.vue";
-import { PluginConfig } from "../../types";
+import { Lines, PluginConfig } from "../../types";
 import { computed, ref } from "vue";
 import axios from "axios";
 
@@ -8,8 +8,9 @@ const milestone = 500;
 const isFlipped = ref(false);
 const isFetchingStars = ref(true);
 const starsCount = ref(0);
+const counterValue = ref(0);
 const commonProps: Partial<PluginConfig> = {
-  dot: "10 transparent",
+  dot: "1 transparent",
   hideLegend: true,
   color: "transparent",
   emptyColor: "transparent",
@@ -17,10 +18,14 @@ const commonProps: Partial<PluginConfig> = {
   animation: "default 4000 1000",
   emptyThickness: 2,
   thickness: 4,
+  line: Lines.butt,
 };
 
 const milestoneProgress = computed(() => {
-  return (starsCount.value / milestone) * 100;
+  return (counterValue.value / milestone) * 100;
+});
+const progressOffsetForConicGradient = computed(() => {
+  return `${milestoneProgress.value - 10}%`;
 });
 const progressForConicGradient = computed(() => {
   return `${milestoneProgress.value}%`;
@@ -138,8 +143,9 @@ const circles = computed<
   {
     ...commonProps,
     class: "with-dot",
-    dot: "10 blue",
+    dot: "1 transparent",
     translateX: -20,
+    animation: "default 0 0",
     legend: `${starsCount.value}`,
     loading: isFetchingStars.value,
     progress: milestoneProgress.value,
@@ -159,6 +165,10 @@ const circles = computed<
   },
 ]);
 
+const setCounterValue = (value: number) => {
+  counterValue.value = value;
+};
+
 setTimeout(() => {
   isFlipped.value = false;
 }, 2000);
@@ -170,7 +180,7 @@ axios
     starsCount.value = res.data.stargazers_count ?? 356;
   })
   .finally(() => {
-    starsCount.value = 356;
+    starsCount.value = 250;
     isFetchingStars.value = false;
   });
 </script>
@@ -205,6 +215,7 @@ axios
               v-if="c.defaultSlot"
               #default="{ counterTick: { currentValue } }"
             >
+              {{ setCounterValue(currentValue) }}
               <div class="flex items-end">
                 <div class="flex">
                   <svg
@@ -227,16 +238,16 @@ axios
                       />
                     </g>
                   </svg>
-                  <b class="animate-charcter" style="font-size: 1.3rem">{{
-                    currentValue
-                  }}</b>
+                  <b class="animate-character" style="font-size: 1.3rem">
+                    {{ currentValue }}
+                  </b>
                 </div>
                 <span class="text-xs text-slate-600 dark:text-slate-400 mx-1">
                   /
                 </span>
-                <span class="text-xs text-slate-600 dark:text-slate-400">{{
-                  milestone
-                }}</span>
+                <span class="text-xs text-slate-600 dark:text-slate-400">
+                  {{ milestone }}
+                </span>
               </div>
             </template>
             <!--            <template v-if="c.caption" #legend-caption>
@@ -291,22 +302,27 @@ axios
 
 .with-dot {
   :deep(.ep-circle--progress__dot-container) {
-    // transform: none !important;
+    transform: none !important;
+  }
+  :deep(.ep-circle--progress__dot.hidden) {
+    transform: none !important;
   }
   :deep(.ep-circle--progress__dot) {
     position: relative;
+    left: -1.5px;
+    top: -2px;
     display: block;
     width: 200px !important;
     height: 200px !important;
-    background: transparent !important;
+    //background: rgba(255, 0, 0, 0.38) !important;
     border-radius: 100% !important;
 
     &:after {
       transition: 0.3s;
       --startColor: rgba(63, 121, 255, 0.1);
       --endColor: #3f79ff;
-      --from: -0deg;
-      --thickness: 10px;
+      --from: 0deg;
+      --thickness: 4.5px;
       // we bind the computed progress value to reactively update the gradient
       --progress: v-bind(progressForConicGradient);
       content: "";
@@ -320,9 +336,9 @@ axios
       left: 0;
       background: conic-gradient(
         from var(--from),
-        red 0%,
-        var(--endColor) 20%,
-        transparent 50%,
+        #324c7e 0%,
+        #324c7e v-bind(progressOffsetForConicGradient),
+        #f0d355 var(--progress),
         transparent var(--progress)
       );
       mask: radial-gradient(
@@ -334,7 +350,7 @@ axios
   }
 }
 
-.animate-charcter {
+.animate-character {
   text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
