@@ -135,11 +135,11 @@ slider.value = Math.round(range[1] / 2) || 0;
       </div>
     </div>
     <div
-      v-if="!isCollapsed && !hideSlider"
+      v-if="!isCollapsed"
       class="example-code-footer block md:flex justify-between p-2"
     >
       <div class="flex-1 flex items-center">
-        <div class="example-code-slider w-full">
+        <div v-if="!hideSlider" class="example-code-slider w-full">
           <vueform-slider
             v-model.number="slider"
             class="w-full"
@@ -150,7 +150,9 @@ slider.value = Math.round(range[1] / 2) || 0;
         </div>
       </div>
       <div v-if="!hideState" class="flex-1 pt-5 md:pt-0 md:pl-3">
-        <SwitchSlider v-model="state" :options="states" :size="100" />
+        <div class="flex justify-end">
+          <SwitchSlider v-model="state" :options="states" :size="100" />
+        </div>
       </div>
     </div>
   </div>

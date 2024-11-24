@@ -164,6 +164,10 @@ export default defineConfig({
                 text: "gap",
                 link: "/guide/options/gap",
               },
+              {
+                text: "data",
+                link: "/guide/options/data",
+              },
             ],
           },
           {
