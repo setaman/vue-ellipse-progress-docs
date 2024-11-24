@@ -18,26 +18,48 @@ export default defineConfig({
     nav: [
       { text: "Guide", link: "/guide" },
       { text: "Examples", link: "/markdown-examples" },
+      {
+        text: "v2",
+        items: [
+          {
+            text: "Migrate from v1",
+            link: "/migration/v1",
+          },
+          {
+            text: "Changelog",
+            link: "https://github.com/setaman/vue-ellipse-progress/blob/master/CHANGELOG.md",
+          },
+          {
+            text: "Roadmap",
+            link: "https://github.com/users/setaman/projects/1",
+          },
+        ],
+      },
     ],
     pattern:
       "https://github.com/setaman/vue-ellipse-progress-docs/tree/main/docs/:path",
 
-    sidebar: [
-      {
+    sidebar: {
+      "/guide/": {
         text: "Guide",
-        collapsed: false,
         items: [
           {
-            text: "Quick start",
+            text: "Introduction",
             link: "/guide/index",
-          },
-          {
-            text: "Installation",
-            link: "/guide/installation",
-          },
-          {
-            text: "Usage",
-            link: "/guide/usage",
+            items: [
+              {
+                text: "Quick start",
+                link: "/guide/index",
+              },
+              {
+                text: "Installation",
+                link: "/guide/installation",
+              },
+              {
+                text: "Usage",
+                link: "/guide/usage",
+              },
+            ],
           },
           {
             text: "Props",
@@ -207,7 +229,7 @@ export default defineConfig({
           },
         ],
       },
-    ],
+    },
 
     socialLinks: [
       {
