@@ -3,7 +3,7 @@
 </template>
 <script lang="ts">
 export const circle1 = {
-  colorFill: {
+  emptyColorFill: {
     radial: true,
     colors: [
       {
@@ -42,10 +42,10 @@ export const circle1 = {
 export const circle2 = {
   color: "#7579ff",
   emptyColor: "transparent",
-  thickness: "5",
-  emptyThickness: "3",
+  thickness: 5,
+  emptyThickness: 3,
   lineMode: "out 5",
-  colorFill: {
+  emptyColorFill: {
     radial: true,
     colors: [
       {
@@ -64,7 +64,7 @@ export const circle2 = {
 export const circle3 = {
   thickness: 2,
   emptyColor: "transparent",
-  colorFill: {
+  emptyColorFill: {
     radial: true,
     colors: [
       {
@@ -138,7 +138,7 @@ export const circle4 = {
       },
     ],
   },
-  colorFill: {
+  emptyColorFill: {
     radial: true,
     colors: [
       {
@@ -186,7 +186,7 @@ export const circle4 = {
 };
 export const circle5 = {
   emptyThickness: 2,
-  colorFill: {
+  emptyColorFill: {
     radial: true,
     colors: [
       {
@@ -234,7 +234,7 @@ export const circle6 = {
   emptyColor: "#324c7e",
   dash: "strict 60 0.8",
   lineMode: "in-over",
-  colorFill: {
+  emptyColorFill: {
     radial: true,
     colors: [
       {

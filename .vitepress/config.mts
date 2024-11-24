@@ -101,6 +101,10 @@ export default defineConfig({
                 link: "/guide/options/emptyColor",
               },
               {
+                text: "emptyColorFill",
+                link: "/guide/options/emptyColorFill",
+              },
+              {
                 text: "dash",
                 link: "/guide/options/dash",
               },

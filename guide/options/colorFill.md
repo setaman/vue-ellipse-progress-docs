@@ -82,7 +82,7 @@ The examples below demonstrate how gradient colors can be defined
 </template>
 </ColorFillGradient>
 
-The gradients give a lot of room for experimentation and you can achieve a lot of exciting effects with colors alone.
+The gradients give a lot of room for experimentation, and you can achieve a lot of exciting effects with colors alone.
 The following examples give some inspiration:
 
 <ColorGradientAdvanced>

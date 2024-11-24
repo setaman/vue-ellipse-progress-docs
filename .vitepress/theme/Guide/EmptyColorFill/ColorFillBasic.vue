@@ -28,8 +28,9 @@ onMounted(() => {
         :loading="loading"
         :no-data="noData"
         :determinate="determinate"
+        :line-mode="i === 1 ? 'in 10' : ''"
         :size="150"
-        :color-fill="c"
+        :empty-color-fill="c"
       >
       </vep>
     </template>

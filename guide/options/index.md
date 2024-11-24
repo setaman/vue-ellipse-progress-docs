@@ -48,8 +48,7 @@ The **[`progress`](./progress)** is the only required property, and you are read
 | **[`fontColor`](./fontColor)**                 | String                     | any valid CSS value                                                                                                                                 | "gray"                   |
 | **[`fontSize`](./fontSize)**                   | String                     | any valid CSS value                                                                                                                                 | "1rem"                   |
 | **[`legendClass`](./legendClass)**             | String                     | any                                                                                                                                                 |                          |
-
-[//]: # (| **[`emptyColorFill`]&#40;./emptyColorFill&#41;**       | String \| Object           | same as `color`                                                                                                                                     | "transparent"      |)
+| **[`emptyColorFill`](./emptyColorFill)**       | String \| Object           | same as `color`                                                                                                                                     | "transparent"            |
 
 
 

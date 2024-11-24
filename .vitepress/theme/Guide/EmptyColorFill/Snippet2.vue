@@ -35,16 +35,16 @@ export const gradient1: Gradient = {
 export const gradient2: Gradient = {
   colors: [
     {
-      color: "#ffffff",
+      color: "#3498DB",
       offset: "0",
     },
     {
-      color: "#f8f9fa",
-      offset: "70",
+      color: "rgb(72, 201, 176)",
+      offset: "25",
     },
     {
-      color: "#edf1f5",
-      offset: "100",
+      color: "hsl(48, 89%, 60%, 0.2)",
+      offset: "50",
     },
     {
       color: "Crimson",

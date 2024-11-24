@@ -12,23 +12,23 @@ import { onMounted, ref } from "vue";
 
 const circles = ref([
   {
-    colorFill: gradient1,
+    emptyColorFill: gradient1,
   },
   {
-    colorFill: gradient2,
+    emptyColorFill: gradient2,
   },
   {
-    colorFill: gradient3,
+    emptyColorFill: gradient3,
     lineMode: "in 10",
   },
   {
-    colorFill: gradient4,
+    emptyColorFill: gradient4,
   },
 ]);
 
 onMounted(() => {
   setInterval(() => {
-    randomizeGradient(circles.value[3].colorFill);
+    randomizeGradient(circles.value[3].emptyColorFill);
   }, 1000);
 });
 </script>
