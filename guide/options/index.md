@@ -31,6 +31,7 @@ The **[`progress`](./progress)** is the only required property, and you are read
 | **[`emptyLinePosition`](./emptyLinePosition)** | String                     | "center \| out \| in [offset]"                                                                                                                      | "center"                 |
 | **[`color`](./color)**                         | String \| Object           | any color as String or Object to specify gradient (see details)                                                                                     | "#3f79ff"                |
 | **[`colorFill`](./colorFill)**                 | String \| Object           | same as **[`color`](./color)**                                                                                                                      | "transparent"      <br/> |
+| **[`emptyColor`](./emptyColor)**               | String \| Object           | same as **[`color`](./color)**                                                                                                                      | "#e6e9f0"                |
 | **[`hideLegend`](./hideLegend)**               | Boolean                    |                                                                                                                                                     | true                     |
 | **[`legend`](./legend)**                       | Number \| String           | any number, accepts a `.` or `","` as decimals delimiter and simple formatting                                                                      |                          |
 | **[`loading`](./loading)**                     | Boolean                    |                                                                                                                                                     | false                    |
@@ -47,9 +48,6 @@ The **[`progress`](./progress)** is the only required property, and you are read
 | **[`fontColor`](./fontColor)**                 | String                     | any valid CSS value                                                                                                                                 | "gray"                   |
 | **[`fontSize`](./fontSize)**                   | String                     | any valid CSS value                                                                                                                                 | "1rem"                   |
 | **[`legendClass`](./legendClass)**             | String                     | any                                                                                                                                                 |                          |
-
-
-[//]: # (| **[`emptyColor`]&#40;./emptyColor&#41;**               | String \| Object           | same as `color`                                                                                                                                     | "#e6e9f0"          |)
 
 [//]: # (| **[`emptyColorFill`]&#40;./emptyColorFill&#41;**       | String \| Object           | same as `color`                                                                                                                                     | "transparent"      |)
 

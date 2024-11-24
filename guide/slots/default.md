@@ -1,5 +1,6 @@
 ---
 description: The default scoped slot is used to customize the presentation of the circle legend.
+aside: false
 head:
   - - meta
     - name: keywords

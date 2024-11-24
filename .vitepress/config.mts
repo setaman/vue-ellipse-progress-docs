@@ -1,14 +1,15 @@
 import { defineConfig } from "vitepress";
 
-const isDevMode = process.env.NODE_ENV === "development";
-const basePath = process.env.BASE_PATH || "/vue-ellipse-progress-docs/";
-
-console.log("=>(config.mts:7) process.env.NODE_ENV", process.env.NODE_ENV);
+const isDevMode = process.env.NODE_ENV !== "production";
+const basePath = isDevMode
+  ? "/"
+  : process.env.BASE_PATH || "/vue-ellipse-progress-docs/";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "vue-ellipse-progress",
-  base: isDevMode ? "/" : basePath,
+  base: basePath,
+  head: [["link", { rel: "icon", href: `${basePath}favicon.ico` }]],
   description:
     "vue-ellipse-progress - Beautiful and smooth circular progress bars for your Vue app",
   lastUpdated: true,
@@ -94,6 +95,10 @@ export default defineConfig({
               {
                 text: "colorFill",
                 link: "/guide/options/colorFill",
+              },
+              {
+                text: "emptyColor",
+                link: "/guide/options/emptyColor",
               },
               {
                 text: "dash",

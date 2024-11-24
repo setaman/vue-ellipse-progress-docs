@@ -1,9 +1,18 @@
+---
+description: The width and height of the circle in pixel.
+aside: false
+head:
+  - - meta
+    - name: keywords
+      content: color, gradient, progress circle, progress bar, vue, vue3, vuejs, vue.js, conic gradient circle
+---
+
 # `size`
 
 <Badge class="mt-2" type="success" text="Animated" />
 
 | type   | values | default |
-| ------ | ------ | ------- |
+|--------|--------|---------|
 | Number | >= 0   | 200     |
 
 Defines the width and height of the circle in pixel. Specifically, the value defines the dimensions of the circle container,
