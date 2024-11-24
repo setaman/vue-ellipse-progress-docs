@@ -76,9 +76,10 @@ export interface DotObject {
   [key: string]: unknown;
 }
 export type Dot = number | DotString | DotObject;
-export type Data = Partial<
+export type DataConfig = Partial<
   Omit<PluginConfig, "lineMode" | "emptyThickness" | "legend">
 >;
+export type Data = DataConfig[];
 
 export interface PluginConfig {
   progress: number;
@@ -112,7 +113,7 @@ export interface PluginConfig {
   determinate?: boolean;
   noData?: boolean;
   half?: boolean;
-  gap?: boolean;
+  gap?: number;
   reverse?: boolean;
   loader?: Loader;
   //@defaultValue -90

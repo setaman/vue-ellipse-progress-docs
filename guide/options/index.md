@@ -49,10 +49,6 @@ The **[`progress`](./progress)** is the only required property, and you are read
 | **[`fontSize`](./fontSize)**                   | String                     | any valid CSS value                                                                                                                                 | "1rem"                   |
 | **[`legendClass`](./legendClass)**             | String                     | any                                                                                                                                                 |                          |
 | **[`emptyColorFill`](./emptyColorFill)**       | String \| Object           | same as `color`                                                                                                                                     | "transparent"            |
-
-
-
-
-[//]: # (| **[`gap`]&#40;./gap&#41;**                             | Number                     | any Number that defines the gap between multiple circles in pixel                                                                                   | 0                  |)
+| **[`gap`](./gap)**                             | Number                     | any Number that defines the gap between multiple circles in pixel                                                                                   | 0                        |
 
 [//]: # (| **[`data`]&#40;./data&#41;**                           | Array                      | defines multiple circles, takes as values Objects with almost all props defined above                                                               |                    |)

@@ -135,7 +135,7 @@ slider.value = Math.round(range[1] / 2) || 0;
       </div>
     </div>
     <div
-      v-if="!isCollapsed"
+      v-if="!isCollapsed && !hideSlider"
       class="example-code-footer block md:flex justify-between p-2"
     >
       <div class="flex-1 flex items-center">
@@ -149,7 +149,7 @@ slider.value = Math.round(range[1] / 2) || 0;
           />
         </div>
       </div>
-      <div class="flex-1 pt-5 md:pt-0 md:pl-3">
+      <div v-if="!hideState" class="flex-1 pt-5 md:pt-0 md:pl-3">
         <SwitchSlider v-model="state" :options="states" :size="100" />
       </div>
     </div>
