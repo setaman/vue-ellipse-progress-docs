@@ -111,6 +111,8 @@ const progress = computed(() => {
   }
 }
 .circle-3 {
+  // circle-3 has a more complex hack. :after plays the empty gray line covering the circle progress - :before
+  // as the progress goes up, the :before line is revealed, creating a progress line with a gradient
   :deep(.ep-circle--progress__dot) {
     &:after {
       --startColor: transparent;

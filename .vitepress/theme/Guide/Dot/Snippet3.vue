@@ -64,29 +64,4 @@
     }
   }
 }
-.my-circle3 {
-  :deep(.ep-circle--progress__dot) {
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 1px;
-      height: 70%;
-      background-color: DarkCyan;
-      bottom: 15%;
-      left: 5px;
-    }
-    &:before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 1px;
-      height: 70%;
-      background-color: DarkCyan;
-      border-radius: 50%;
-      bottom: 15%;
-      right: 5px;
-    }
-  }
-}
 </style>

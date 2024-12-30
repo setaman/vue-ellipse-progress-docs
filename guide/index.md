@@ -1,8 +1,12 @@
 # vue-ellipse-progress
 
+<div class="guide-introduction-labels">
+
 [![NPM Version](https://img.shields.io/npm/v/vue-ellipse-progress?style=for-the-badge&color=success)](https://www.npmjs.com/package/vue-ellipse-progress)
 ![GitHub](https://img.shields.io/github/license/setaman/vue-ellipse-progress?style=for-the-badge)
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/setaman/vue-ellipse-progress/build.yml?style=for-the-badge)
+
+</div>    
 
 A dependency-free simple, flexible and smooth Vue.js plugin to create beautiful circle progress bars, implemented with SVG.
 Start creating circles in three steps:
