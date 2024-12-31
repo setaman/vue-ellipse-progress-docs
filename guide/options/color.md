@@ -30,7 +30,6 @@ The general scheme to create the gradient is defined like follows:
 ###### Usage: 📜
 
 ```vue
-
 <ve-progress color="#3f79ff" />
 <ve-progress color="lime" />
 <ve-progress color="rgba(230, 233, 240, 0.1)" />
@@ -54,7 +53,7 @@ In the future releases, more advanced gradient features will be added
 ::: tip Conic gradient
 You [asked for it,](https://github.com/setaman/vue-ellipse-progress/issues/107), years later we still miss the ability
 to define conic gradients for SVG elements.
-Nevertheless, I'll show ou an interesting workaround with **[`dot`](dot.md#conic-gradient)** 
+Nevertheless, I'll show you an interesting workaround with **[`dot`](dot.md#conic-gradient)** 
 :::
 
 ### Examples

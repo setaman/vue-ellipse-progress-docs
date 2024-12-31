@@ -1,3 +1,12 @@
+---
+description: The thickness of the progress line can be customized.
+aside: false
+head:
+  - - meta
+    - name: keywords
+      content: legend, progress, circle, progress bar, vue, vue3, vuejs, vue.js
+---
+
 # `thickness`
 
 <Badge class="mt-2" type="success" text="Animated" />

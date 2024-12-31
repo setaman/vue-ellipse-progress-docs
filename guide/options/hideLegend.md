@@ -1,5 +1,6 @@
 ---
 description: Boolean that defines whether the circle legend (progress or legend) should be hidden.
+aside: false
 head:
   - - meta
     - name: keywords
@@ -19,13 +20,12 @@ hidden.
 
 ::: warning Legend behavior
 A non-valid value for **[`progress`](progress.md)**, the use of the **[`data`](data.md)** property, or the *
-*[`loading`](loading.md)** and **[`noData`](nodata.md)** states will also hide the legend.
+*[`loading`](loading.md)** and **[`noData`](noData)** states will also hide the legend.
 :::
 
 ### Usage 📜
 
 ```vue
-
 <ve-progress hide-legend />
 <ve-progress :hide-legend="true" />
 <ve-progress :hide-legend="false" />

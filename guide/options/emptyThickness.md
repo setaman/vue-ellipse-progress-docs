@@ -1,3 +1,12 @@
+---
+description: The emptyThickness property defines the thickness of the empty progress circle line.
+aside: false
+head:
+  - - meta
+    - name: keywords
+      content: color, gradient, progress circle, progress bar, vue, vue3, vuejs, vue.js, conic gradient circle
+---
+
 # `emptyThickness`
 
 <Badge class="mt-2" type="success" text="Animated" />

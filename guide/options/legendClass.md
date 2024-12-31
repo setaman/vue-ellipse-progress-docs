@@ -1,3 +1,12 @@
+---
+description: Customize the class of the progress circle legend.
+aside: false
+head:
+  - - meta
+    - name: keywords
+      content: legend, progress, circle, progress bar, vue, vue3, vuejs, vue.js
+---
+
 # `legendClass`
 
 | type   | values | default |

@@ -1,5 +1,6 @@
 ---
 description: The loader property is used to customize the loading circle that is shown in the states loading and determinate.
+aside: false
 head:
   - - meta
     - name: keywords

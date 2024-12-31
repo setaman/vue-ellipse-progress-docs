@@ -1,5 +1,6 @@
 ---
 description: Function that returns formatted value as string.
+aside: false
 head:
   - - meta
     - name: keywords

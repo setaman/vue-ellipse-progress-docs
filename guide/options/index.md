@@ -4,18 +4,11 @@ pageClass: props-docs
 
 # Options overview
 
-<script setup>
-  import CircleAnatomy from "../../.vitepress/theme/Guide/CircleAnatomy/CircleAnatomy.vue";
-</script>
-
 The **[`progress`](./progress)** is the only required property, and you are ready to go with just following line:
 
 ```html
 <ve-progress :progress="progress" />
 ```
-
-<CircleAnatomy/>
-    
 
 > Also make sure to check **[slots](../slots/default)**
 
@@ -40,7 +33,7 @@ The **[`progress`](./progress)** is the only required property, and you are read
 | **[`reverse`](./reverse)**                     | Boolean                    |                                                                                                                                                     | false                    |
 | **[`angle`](./angle)**                         | Number                     | any Number                                                                                                                                          | -90                      |
 | **[`half`](./half)**                           | Boolean                    |                                                                                                                                                     | false                    |
-| **[`nodata`](./nodata)**                       | Boolean                    |                                                                                                                                                     | false                    |
+| **[`noData`](./noData)**                       | Boolean                    |                                                                                                                                                     | false                    |
 | **[`dash`](./dash)**                           | String                     | "[strict] count spacing"                                                                                                                            |                          |
 | **[`dot`](./dot)**                             | String \| Number \| Object | Accepts size, color and other styles as Number, descriptive string `"size [color]"` or object `{size [, backgroundColor, widht, borderRadius ...]}` | 0                        |
 | **[`animation`](./animation)**                 | String                     | "default \| rs \| loop \| reverse \| bounce [duration delay]"                                                                                       | "default 1000 400"       |

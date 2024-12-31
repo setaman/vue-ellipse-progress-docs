@@ -1,5 +1,6 @@
 ---
 description: The animation property defines the initial animation of the progress circle line.
+aside: false
 head:
   - - meta
     - name: keywords

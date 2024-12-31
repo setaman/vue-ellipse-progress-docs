@@ -1,3 +1,12 @@
+---
+description: Descriptive string in form "mode [offset]" that defines, how the progress line is aligned in relation to empty line.
+aside: false
+head:
+  - - meta
+    - name: keywords
+      content: legend, progress, circle, progress bar, vue, vue3, vuejs, vue.js
+---
+
 # `lineMode`
 
 <Badge class="mt-2" type="success" text="Animated" />

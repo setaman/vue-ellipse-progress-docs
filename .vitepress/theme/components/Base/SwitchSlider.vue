@@ -56,7 +56,7 @@ const isActive = (option: Option) => {
       ></span>
       <label
         v-for="option in options"
-        class="rounded-md"
+        class="rounded-md text-sm md:text-base"
         :style="{ color: color }"
         :class="{ active: isActive(option) }"
         :key="option.title"
@@ -75,7 +75,7 @@ const isActive = (option: Option) => {
             'text-white dark:text-white': isActive(option),
           }"
         />
-        <span v-else>{{ option.title }}</span>
+        <span v-else class="">{{ option.title }}</span>
       </label>
     </div>
   </div>

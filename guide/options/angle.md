@@ -1,5 +1,6 @@
 ---
 description: The angle property is used to rotate the progress circle. It can be used to change the starting point of the circle.
+aside: false
 head:
   - - meta
     - name: keywords
@@ -28,8 +29,10 @@ With the `angle` prop the circle can be rotated and thus the starting point can 
   import AngleBasic from "../../.vitepress/theme/Guide/Angle/AngleBasic.vue";
 </script>
 
+<p>
+
 <AngleBasic>
-<template #code="{ angle, reverse }">
+<template #code="{ angle, progress }">
 
 ```js-vue
 <ve-progress :angle="{{ angle }}" :progress="{{ progress }}"/>
@@ -37,3 +40,5 @@ With the `angle` prop the circle can be rotated and thus the starting point can 
 
 </template>
 </AngleBasic>
+
+</p>

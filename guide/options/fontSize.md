@@ -1,5 +1,6 @@
 ---
 description: Customize the font size of the progress circle legend.
+aside: false
 head:
   - - meta
     - name: keywords

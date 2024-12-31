@@ -12,7 +12,7 @@ const gap = ref(10);
   <example-code>
     <template #default="{ progress, loading, noData, determinate }">
       <label class="block mb-5">
-        Gap
+        Gap:
         <vueform-slider
           v-model.number="gap"
           class="example-code-slider my-4 w-full"

@@ -1,5 +1,6 @@
 ---
 description: Customize the font color of the progress circle legend.
+aside: false
 head:
   - - meta
     - name: keywords

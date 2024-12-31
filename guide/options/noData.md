@@ -1,5 +1,6 @@
 ---
 description: The component provides a `noData` state for the case that your data is not available. The circle progress is still empty.
+aside: false
 head:
   - - meta
     - name: keywords

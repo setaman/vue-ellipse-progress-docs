@@ -39,6 +39,8 @@ by default the **[`thickness`](thickness.md)** and **[`emptyThickness`](emptyThi
   import SizeDependencies from '../../.vitepress/theme/Guide/Size/SizeDependencies.vue';
 </script>
 
+<p>
+
 <SizeBasic>
 <template #code>
 
@@ -46,6 +48,8 @@ by default the **[`thickness`](thickness.md)** and **[`emptyThickness`](emptyThi
 
 </template>
 </SizeBasic>
+
+</p>
 
 ### Size depending calculations
 

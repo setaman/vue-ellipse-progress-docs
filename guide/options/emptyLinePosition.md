@@ -1,3 +1,12 @@
+---
+description: The empty line position property defines the alignment of the empty line in relation to the empty circle fill area.
+aside: false
+head:
+  - - meta
+    - name: keywords
+      content: color, gradient, progress circle, progress bar, vue, vue3, vuejs, vue.js, conic gradient circle
+---
+
 # `emptyLinePosition`
 
 <Badge class="mt-2" type="success" text="Animated" />
@@ -30,9 +39,10 @@ In general, this prop makes it possible to mimic the SVG2 `stroke-aligment`, whi
 ```js-vue
 <ve-progress
   empty-line-position="{{ data.emptyLinePosition }}"
-  empty-color-fill="#265cff"
-  :empty-thickness="30"
-  empty-color="rgba(230, 233, 240, 0.1)"
+  :empty-thickness="{{ data.emptyThickness }}"
+  :thickness="10"
+  empty-color-fill="#596bff"
+  empty-color="rgba(230, 233, 240, 1)"
   :progress="{{data.progress}}"
  />
 ```

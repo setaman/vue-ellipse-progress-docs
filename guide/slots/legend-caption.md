@@ -1,5 +1,6 @@
 ---
 description: The legend-caption scoped slot is used to customize the presentation of the circle legend caption.
+aside: false
 head:
   - - meta
     - name: keywords

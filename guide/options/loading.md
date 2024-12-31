@@ -1,5 +1,6 @@
 ---
 description: Boolean that forces loading state. The component provides an indeterminate loading state for the case that your data is not available immediately. With this property set to true you can use the component as the indeterminate progress.
+aside: false
 head:
   - - meta
     - name: keywords

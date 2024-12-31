@@ -149,7 +149,8 @@ It also applies to **[`dash`](./dash)**, **[`loader`](./loader.md)** and **[`ani
 </template>
 </DataLoader>
 
-`data` enables us to create stunning loaders like these
+[//]: # (`data` enables us to create stunning loaders like these)
+[//]: # (Add coll animated loaders)
           
 It is also important to mention that no property in
 <code>data</code> Objects is required. We can create circles by just

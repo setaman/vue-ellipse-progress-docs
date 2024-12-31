@@ -1,5 +1,6 @@
 ---
 description: The legend property is used to display a value inside the circle. It can be used for simple formatting of the circle legend
+aside: false
 head:
   - - meta
     - name: keywords

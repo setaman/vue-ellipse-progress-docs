@@ -13,13 +13,10 @@ hero:
     - theme: alt
       text: Configuration
       link: /guide/options/index
-    - theme: alt
-      text: Examples
-      link: /examples
 
 features:
   - title: Beautiful progress bars
-    details: Flexible and smooth Vue.js plugin. Whether you require sleek progress bars or stylish loading spinners, the plugin has you covered
+    details: Flexible and smooth Vue.js plugin. Whether you require sleek progress bars, stylish loading spinners, or even go beyond circles, the plugin has you covered
   - title: Simplicity First
     details: Designed for simplicity, offering good defaults for a quick start and equipped with flexible configuration options
   - title: Without Dependencies

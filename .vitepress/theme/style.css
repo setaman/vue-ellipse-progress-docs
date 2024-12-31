@@ -145,12 +145,12 @@
 }
 
 .VPBadge.success {
-    border-color: transparent;
-    color: var(--vp-c-green-1);
-    background-color: var(--vp-c-green-soft);
+  border-color: transparent;
+  color: var(--vp-c-green-1);
+  background-color: var(--vp-c-green-soft);
 }
 
 .guide-introduction-labels p{
-    display: flex;
-    justify-content: start;
+  display: flex;
+  justify-content: start;
 }

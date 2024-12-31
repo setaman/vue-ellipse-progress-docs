@@ -1,5 +1,6 @@
 ---
 description: The prop flips the circle, and the progress circle fills counterclockwise. Alternatively you can just set a negative value for progress.
+aside: false
 head:
   - - meta
     - name: keywords

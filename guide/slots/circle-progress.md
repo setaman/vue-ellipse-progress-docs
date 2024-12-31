@@ -1,5 +1,6 @@
 ---
 description: The circle-progress scoped slot is used to customize the appearance of the circle progress.
+aside: false
 head:
   - - meta
     - name: keywords

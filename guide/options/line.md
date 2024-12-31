@@ -1,3 +1,12 @@
+---
+description: The line cap of the progress circle can be customized.
+aside: false
+head:
+  - - meta
+    - name: keywords
+      content: legend, progress, circle, progress bar, vue, vue3, vuejs, vue.js
+---
+
 # `line`
 
 <Badge class="mt-2" type="success" text="Animated" />
@@ -21,6 +30,8 @@ Internally the CSS property `stroke-linecap` is used.
   import LineBasic from '../../.vitepress/theme/Guide/Line/LineBasic.vue';
 </script>
 
+<p>
+
 <LineBasic>
 <template #code>
 
@@ -28,3 +39,5 @@ Internally the CSS property `stroke-linecap` is used.
 
 </template>
 </LineBasic>
+
+</p>

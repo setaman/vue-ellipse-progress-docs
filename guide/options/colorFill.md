@@ -1,5 +1,6 @@
 ---
 description: The color of the progress circle fill area.
+aside: false
 head:
   - - meta
     - name: keywords

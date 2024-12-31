@@ -1,5 +1,6 @@
 ---
 description: Dashed circle progress line.
+aside: false
 head:
   - - meta
     - name: keywords

@@ -36,7 +36,7 @@ const linePosition = computed(() => {
         />
       </label>
       <label class="block my-4">
-        Thickness: {{ thickness }}
+        Empty thickness: {{ thickness }}
         <vueform-slider
           v-model.number="thickness"
           class="example-code-slider mt-2 w-full"
@@ -50,18 +50,23 @@ const linePosition = computed(() => {
         :no-data="noData"
         :determinate="determinate"
         :size="150"
-        :thickness="thickness"
+        :thickness="10"
         :empty-line-position="linePosition"
-        :empty-thickness="30"
-        empty-color-fill="#265cff"
-        empty-color="rgba(230, 233, 240, 0.1)"
+        :empty-thickness="thickness"
+        empty-color-fill="#596bff"
+        empty-color="rgba(230, 233, 240, 1)"
       >
       </vep>
     </template>
     <template #code="{ progress }">
       <slot
         name="code"
-        :data="{ mode, emptyLinePosition: linePosition, progress }"
+        :data="{
+          mode,
+          emptyLinePosition: linePosition,
+          emptyThickness: thickness,
+          progress,
+        }"
       >
       </slot>
     </template>

@@ -1,3 +1,12 @@
+---
+description: The determinate state indicates that data is being loaded.
+aside: false
+head:
+  - - meta
+    - name: keywords
+      content: color, gradient, progress circle, progress bar, vue, vue3, vuejs, vue.js, conic gradient circle
+---
+
 # `determinate`
 
 <Badge class="mt-2" type="success" text="Animated" />
