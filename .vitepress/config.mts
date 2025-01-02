@@ -35,12 +35,14 @@ export default defineConfig({
         ],
       },
     ],
-    pattern:
-      "https://github.com/setaman/vue-ellipse-progress-docs/tree/main/docs/:path",
+    editLink: {
+      pattern:
+        "https://github.com/setaman/vue-ellipse-progress-docs/tree/main/docs/:path",
+    },
 
     sidebar: {
       "/guide/": {
-        // text: "Guide",
+        base: "",
         items: [
           {
             text: "Introduction",
