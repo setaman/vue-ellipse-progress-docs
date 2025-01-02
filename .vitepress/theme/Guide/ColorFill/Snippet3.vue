@@ -1,5 +1,5 @@
 <template>
-  <ve-progress v-for="c in circles" v-bind="c" :progress="50" />
+  <ve-progress v-for="(c, i) in circles" v-bind="c" :key="i" :progress="50" />
 </template>
 <script lang="ts">
 export const circle1 = {

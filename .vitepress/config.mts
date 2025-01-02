@@ -40,7 +40,7 @@ export default defineConfig({
 
     sidebar: {
       "/guide/": {
-        text: "Guide",
+        // text: "Guide",
         items: [
           {
             text: "Introduction",

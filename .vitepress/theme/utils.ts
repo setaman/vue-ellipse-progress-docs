@@ -48,7 +48,7 @@ export const getRandomGradientColor = (): Gradient => {
     colors: Array.from({ length: gradientsCount }, (_, i) => ({
       color: generateRandomColor(),
       offset: i === gradientsCount - 1 ? "100" : `${i * offset}`,
-      opacity: faker.number.float({ min: 0, max: 1 }),
+      opacity: faker.number.float({ min: 0, max: 1 }).toString(),
     })),
     radial: faker.datatype.boolean(),
   };

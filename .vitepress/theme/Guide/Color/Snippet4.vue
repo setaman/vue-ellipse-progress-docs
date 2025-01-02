@@ -2,13 +2,16 @@
   <div class="flex flex-wrap gap-1">
     <div v-for="(c, i) in configs" :key="i">
       <h6>{{ c.title }}</h6>
-      <ve-progress v-for="c in configs" :color="c.color" :progress="50" />
+      <ve-progress
+        v-for="c in configs"
+        :key="c.title"
+        :color="c.color"
+        :progress="50"
+      />
     </div>
   </div>
 </template>
 <script lang="ts">
-import Vep from "../../components/Vep.vue";
-
 export const configs = [
   {
     title: "Color Ai",
@@ -98,7 +101,6 @@ export const configs = [
 ];
 
 export default {
-  components: { Vep },
   setup() {
     return {
       configs,

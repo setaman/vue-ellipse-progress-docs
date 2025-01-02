@@ -1,5 +1,5 @@
 <template>
-  <ve-progress v-for="c in circles" v-bind="c" :progress="50" />
+  <ve-progress v-for="(c, i) in circles" v-bind="c" :progress="50" :key="i" />
 </template>
 <script lang="ts">
 import { Data, PluginConfig } from "../../types";

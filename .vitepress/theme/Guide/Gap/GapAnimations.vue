@@ -30,7 +30,7 @@ onMounted(() => {
       </vep>
     </template>
     <template #code="{ progress }">
-      <slot name="code" :gap :progress> </slot>
+      <slot name="code" :progress> </slot>
     </template>
   </example-code>
 </template>

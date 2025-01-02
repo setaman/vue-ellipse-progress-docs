@@ -14,7 +14,6 @@ const size = 150;
         :no-data="noData"
         :determinate="determinate"
         :size
-        :angle
       >
         <template #legend>
           <span>/100</span>

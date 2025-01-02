@@ -5,7 +5,7 @@
       <div v-for="(chart, i) in data" :key="i">
         <span
           class="chart-legend"
-          :style="{ backgroundColor: chart.color }"
+          :style="{ backgroundColor: chart.color as string }"
         ></span>
         <span>Data {{ i + 1 }}</span>
       </div>

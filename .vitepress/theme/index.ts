@@ -15,7 +15,7 @@ export default {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
     });
   },
-  enhanceApp({ app, router, siteData }) {
+  enhanceApp({ app }) {
     app.component(Vep.name ?? Vep.__name, Vep);
     app.component(CardLink.name ?? CardLink.__name, CardLink);
     app.component(ExampleCode.name ?? ExampleCode.__name, ExampleCode);

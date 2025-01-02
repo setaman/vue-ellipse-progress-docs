@@ -65,7 +65,7 @@ const isActive = (option: Option) => {
           type="radio"
           :checked="isActive(option)"
           :value="option.title"
-          @input="model = $event.target.value"
+          @input="model = option.title"
         />
         <span
           v-if="option.icon"
