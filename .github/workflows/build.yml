@@ -4,7 +4,10 @@ on:
   pull_request:
     branches:
       - "*"
-  workflow_dispatch:
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -19,9 +22,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
 
+      - name: Run TS check
+        run: npm run type-check
+
+      - name: Run lint
+        run: npm run lint
+
       - name: Build VuePress site
-        run: yarn docs:build
+        run: npm run docs:build

@@ -1,13 +1,12 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./index.html",
-    "./docs/.vuepress/theme/**/*.{vue,js,ts,jsx,tsx}",
-    "./docs/guide/**/*.md",
-  ],
+  content: ["./.vitepress/theme/**/*.{vue,ts}", "./guide/**/*.md"],
+  darkMode: "selector",
   corePlugins: {
     preflight: false,
   },
-  /*purge: [
-    './docs/!**!/!*.vue',
-  ],*/
+  theme: {
+    extend: {},
+  },
+  plugins: [],
 };
