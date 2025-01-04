@@ -23,22 +23,22 @@ createApp(App).use(veProgress);
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
   <div>
-    <CardLink link="/guide/installation.html" title="Installation options">
+    <CardLink link="guide/installation.html" title="Installation options">
       Learn what possibilities you have to include the component in your project
     </CardLink>
   </div>
   <div>
-    <CardLink class="fill" link="/guide/options/" title="Configuration">
+    <CardLink class="fill" link="guide/options/" title="Configuration">
       Explore wide range of configuration options through the properties and slots
     </CardLink>
   </div>
 <div>
-    <CardLink link="/guide/compatibility.html" title="Compatibility">
+    <CardLink link="guide/compatibility.html" title="Compatibility">
       Check, if the plugin meets your compatibility requirements 
     </CardLink>
   </div>
   <div>
-    <CardLink class="fill" link="/guide/contribution.html" title="Contribution">
+    <CardLink class="fill" link="guide/contribution.html" title="Contribution">
       Any help is very much appreciated
     </CardLink>
   </div>

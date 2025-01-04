@@ -1,13 +1,22 @@
 <script setup lang="ts">
-defineProps<{
+import { useData } from "vitepress";
+import { computed } from "vue";
+
+const { link } = defineProps<{
   title: string;
   link: string;
 }>();
+
+const data = useData();
+
+const normalizedLink = computed(() => {
+  return `${data.site.value.base}${link}`;
+});
 </script>
 
 <template>
   <a
-    :href="link"
+    :href="normalizedLink"
     class="h-full block max-w-sm p-4 bg-gray-100 rounded-lg hover:bg-gray-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 no-underline"
     style="text-decoration: none"
   >
