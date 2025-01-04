@@ -20,6 +20,12 @@ const { Layout } = DefaultTheme;
 :deep(.image-bg) {
   display: none !important;
 }
+:deep(.image-container) {
+  transform: none !important;
+}
+:deep(.image) {
+  margin: -30px 0 0 0;
+}
 /* Background container */
 .moving-gradient {
   position: fixed;
@@ -95,5 +101,17 @@ const { Layout } = DefaultTheme;
 
 :deep(.image-bg) {
   background-image: none !important;
+}
+
+@media (min-width: 640px) {
+  :deep(.image) {
+    margin: -50px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  :deep(.container .text) {
+    display: none;
+  }
 }
 </style>

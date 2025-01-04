@@ -189,7 +189,7 @@ axios
 
 <template>
   <div>
-    <div class="flex flex-col justify-center">
+    <div class="flex justify-center">
       <div
         class="circles cursor-pointer"
         :class="{ flipped: isFlipped }"
