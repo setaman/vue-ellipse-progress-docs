@@ -68,7 +68,7 @@ Just add the following line to your HTML and initialize the component as plugin:
 <html lang="en">
   <body>
     <div id="app"></div>
-    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue-ellipse-progress/dist/veprogress.umd.min.js"></script>
 
     <script>
