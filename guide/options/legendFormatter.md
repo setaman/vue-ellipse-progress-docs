@@ -1,5 +1,5 @@
 ---
-description: Function that returns formatted value as string.
+description: Function that returns formatted value as string
 aside: false
 head:
   - - meta
@@ -11,20 +11,23 @@ head:
 
 <Badge class="mt-2" type="success" text="Animated" />
 
-| type     | values                                                                    | default |
-|----------|---------------------------------------------------------------------------|---------|
-| Function | `(props: object) => string` Function returning formatted value  as string |         |
+| type     | values                                                                   | default |
+|----------|--------------------------------------------------------------------------|---------|
+| Function | `(props: object) => string` Function returning formatted value as string |         |
 
-You can provide a function to format the circle legend. The function can return any string
-value, even HTML!
-You have full freedom to format the value of the [`legend`](legend.md) or [`progress`](progress.md) as you like.
+The `legendFormatter` property allows you to provide a custom function to format the circle legend displayed in the
+center of the circle.
+This function can
+return any string value, including HTML, giving you full control over the legend's appearance.
 
-The circle legend is animated and counts up and down depending on the circle [`animation`](animation.md) configuration.
-The function takes a counter properties object as an argument and is
-called on every counter tick providing the current value of the counter that can be used to format the legend.
+The circle legend is animated according to the circle's [`animation`](animation.md) configuration.
+The `legendFormatter` will be called on every animation tick, providing the current value of the counter that can be
+used to format the legend.
+The value of the counter at a specific animation tick represents the value that is passed as
+[`legend`](legend.md) or [`progress`](progress.md) to the circle.
 
 ::: tip
-Alternatively you can use [`scoped slot`](../slots/default.md) for custom formatting.
+Alternatively, you can use a [`scoped slot`](../slots/default.md) for custom formatting.
 :::
 
 ### Usage
@@ -35,10 +38,10 @@ Alternatively you can use [`scoped slot`](../slots/default.md) for custom format
 />
 ```
 
-| Exposed props           |                                                                                                                                                                                             |
-|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `currentValue`          | The current value of the counter at specific animation tick. It's always a Number and represents a value that is passed as [`legend`](legend.md) or [`progress`](progress.md) to the circle |
-| `currentFormattedValue` | Current value formatted as a String. It's a String representation of the `currentValue` including the formatting wich may be applied with [`legend`](legend.md)                             |
+| Exposed props           | Description                                                                                                                                                                                      |
+|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `currentValue`          | The current value of the counter at a specific animation tick. It's always a Number and represents the value that is passed as [`legend`](legend.md) or [`progress`](progress.md) to the circle. |
+| `currentFormattedValue` | The current value formatted as a String. It's a String representation of the `currentValue`, including any formatting applied with [`legend`](legend.md).                                        |
 
 ### Examples
 
@@ -48,7 +51,7 @@ Alternatively you can use [`scoped slot`](../slots/default.md) for custom format
   import LegendFormatterProps from "../../.vitepress/theme/Guide/LegendFormatter/LegendFormatterProps.vue";
 </script>
 
-In the following example, we take the raw `currentValue` value and format it as a string
+In the following example, we take the raw `currentValue` and format it as a string:
 
 <LegendFormatterBasic class="mb-10">
 <template #code="{ progress }">
@@ -63,8 +66,8 @@ In the following example, we take the raw `currentValue` value and format it as 
 </template>
 </LegendFormatterBasic>
 
-The formatting function can return HTML as a string to customize the styles of the rendered circle legend.
-You can add more elements, images and pretty much anything here
+The formatting function can return HTML as a string to customize the styles of the rendered circle legend. You can add
+more elements, images, and pretty much anything here:
 
 <LegendFormatterHtml class="mb-10">
 <template #code>
@@ -91,8 +94,8 @@ You can add more elements, images and pretty much anything here
 </template>
 </LegendFormatterHtml>
 
-The internal counter component provides additional properties that might be useful. The properties are calculated for
-each counter tick.
+The internal counter component provides additional properties that might be useful. These properties are calculated for
+each counter tick:
 
 <LegendFormatterProps>
 <template #code="{ progress, legend }">

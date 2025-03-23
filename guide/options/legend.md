@@ -15,15 +15,19 @@ head:
 |------------------|----------------------------------------------------|---------|
 | Number \| String | any number with `.` or `","` as decimals delimiter |         |
 
-The `legend` property can be any Number or String.
-While [`progress`](progress.md) only accepts values between -100 and 100, `legend` lets you go beyond that range. You
-can even use `"."` or `","` as a delimiter for simple formatting, or set an initial counter-placeholder like "0045.00".
-Just make sure it's a valid JavaScript Number.
+The `legend` property is used to display a value inside the circle.
+It accepts any Number or String, allowing for flexible formatting options.
+
+This property is useful when you want to display values beyond the typical
+progress range of -100 to 100, apply custom formatting, or show initial counter values with leading zeros.
+
+You can use `"."` or `","` as a delimiter for simple formatting, or set an initial
+counter-placeholder like "0045.00". Just ensure it's a valid JavaScript Number.
 
 ::: warning Legend vs progress
 The [`progress`](progress.md) property is always required. When both `legend` and [`progress`](progress.md) are defined,
-`legend` will take over as the displayed value inside the circle!
-How you calculate the [`progress`](progress.md) based on the `legend` value is entirely up to you.
+`legend` will take over as the displayed value inside the
+circle. The `progress` property is still required and should be calculated based on the `legend` value as needed.
 :::
 
 ::: tip
@@ -36,7 +40,6 @@ Use the [`hideLegend`](hideLegend.md) property.
 ###### Usage: 📜
 
 ```vue
-
 <ve-progress :legend="150" />
 <ve-progress legend="020" />
 <ve-progress legend="200,50" />
@@ -58,10 +61,10 @@ The `progress` is calculated as a percentage of the `legend` value
 
 ```js-vue
 <template>
-  <ve-progress :legend="{{ slider }}" :progress="{{ progress }}"/>
+  <ve-progress :legend="legend" :progress="{{ progress }}"/>
 </template>
 <script setup>
-  import { ref } from "vue";
+  import { ref, computed } from "vue";
 
   const maxLegendValue = 4000;
   const legend = ref({{ slider }});
@@ -88,7 +91,6 @@ const progress = rating * 100 / 5; // the rating percentage
 And then apply the values:
 
 ```vue
-
 <ve-progress :progress="progress" :legend="rating" />
 ```
 
@@ -99,10 +101,10 @@ As a result, the rating can be displayed as a circle legend, and the progress wi
 
 ```js-vue
 <template>
-  <ve-progress :legend="{{ slider }}" :progress="{{ progress }}"/>
+  <ve-progress :legend="stars" :progress="{{ progress }}"/>
 </template>
 <script setup>
-  import { ref } from "vue";
+  import { ref, computed } from "vue";
 
   const maxStars = 5;
   const stars = ref({{ slider }});
@@ -116,7 +118,7 @@ As a result, the rating can be displayed as a circle legend, and the progress wi
 </template>
 </LegendAndProgress>
 
-With the `legend` as a String, you can use custom decimal delimiters and easily format the displayed value:
+With the `legend` is a String, you can use custom decimal delimiters and easily format the displayed value:
 
 <LegendFormatting class="mb-10">
 <template #code="{ progress }">
