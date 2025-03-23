@@ -30,8 +30,7 @@ with the **[`reverse`](reverse.md)** property.
 The `progress` is always used to fill the progress circle line, it should always be in the range [-100, 100] and invalid
 Numbers lead to **[`noData`](noData)** state. 
 If you want to customize and style what the circle legend displays, you can use the **[`legend`](legend.md)** property,
-For advanced use cases, please use **[`legend`](legend.md)** 
-and take a look at **[`legendFormatter`](legendFormatter.md)** or the **[`default slot`](../slots/default.md)**.
+also take a look at **[`legendFormatter`](legendFormatter.md)** or the **[`default slot`](../slots/default.md)**.
 
 If **[`legend`](legend.md)** is defined, the `progress` will **not** be displayed as the circle legend.
 :::
