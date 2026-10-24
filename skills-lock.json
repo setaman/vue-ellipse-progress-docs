@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "vitepress": {
+      "source": "antfu/skills",
+      "sourceType": "github",
+      "skillPath": "skills/vitepress/SKILL.md",
+      "computedHash": "4fa65b441c03a570dbd472649d144d82fd67bdb6169048d6abad02a5cddb26dd"
+    }
+  }
+}
