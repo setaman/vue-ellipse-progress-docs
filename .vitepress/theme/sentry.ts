@@ -16,7 +16,7 @@ export function initSentry(app: App, router: Router) {
     environment: import.meta.env?.PROD ? "production" : "development",
     release: __SENTRY_RELEASE__ || undefined,
     integrations: [Sentry.browserTracingIntegration()],
-    tracesSampleRate: 0.2,
+    tracesSampleRate: 1.0,
   });
 
   // VitePress is an SPA: record each client-side navigation as its own page view.
