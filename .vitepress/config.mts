@@ -3,7 +3,8 @@ import { sentryVitePlugin } from "@sentry/vite-plugin";
 
 // Loads .env locally; in CI the values come from process.env.
 const env = { ...loadEnv("", process.cwd(), ""), ...process.env };
-const sentryAuthToken = env.SENTRY_AUTH_TOKEN;
+const sentryUpload =
+  !!env.SENTRY_AUTH_TOKEN && !!env.SENTRY_ORG && !!env.SENTRY_PROJECT;
 
 const isDevMode = process.env.NODE_ENV !== "production";
 const basePath = isDevMode
@@ -25,11 +26,11 @@ export default defineConfig({
         env.SENTRY_RELEASE ?? env.GITHUB_SHA ?? "",
       ),
     },
-    build: { sourcemap: !!sentryAuthToken },
-    plugins: sentryAuthToken
+    build: { sourcemap: sentryUpload },
+    plugins: sentryUpload
       ? [
           sentryVitePlugin({
-            authToken: sentryAuthToken,
+            authToken: env.SENTRY_AUTH_TOKEN,
             org: env.SENTRY_ORG,
             project: env.SENTRY_PROJECT,
             release: { name: env.SENTRY_RELEASE ?? env.GITHUB_SHA },
