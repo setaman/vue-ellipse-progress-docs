@@ -109,3 +109,9 @@ dist
 .vitepress/cache
 
 agent-memory
+
+# Secrets
+.env
+.env.*
+!.env.example
+.env.sentry-build-plugin

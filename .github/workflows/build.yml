@@ -33,5 +33,10 @@ jobs:
       - name: Run lint
         run: npm run lint
 
-      - name: Build VuePress site
+      - name: Build VitePress site
+        env:
+          SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ vars.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ vars.SENTRY_PROJECT }}
         run: npm run docs:build
