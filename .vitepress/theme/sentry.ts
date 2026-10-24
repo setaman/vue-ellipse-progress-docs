@@ -6,7 +6,7 @@ import * as Sentry from "@sentry/vue";
 declare const __SENTRY_DSN__: string;
 declare const __SENTRY_RELEASE__: string;
 
-/** Client-only Sentry setup: errors, page views (tracing) and session replay. */
+/** Client-only Sentry setup: errors and page views (tracing). */
 export function initSentry(app: App, router: Router) {
   if (typeof window === "undefined" || !__SENTRY_DSN__) return;
 
@@ -15,13 +15,8 @@ export function initSentry(app: App, router: Router) {
     dsn: __SENTRY_DSN__,
     environment: import.meta.env?.PROD ? "production" : "development",
     release: __SENTRY_RELEASE__ || undefined,
-    integrations: [
-      Sentry.browserTracingIntegration(),
-      Sentry.replayIntegration(),
-    ],
+    integrations: [Sentry.browserTracingIntegration()],
     tracesSampleRate: 0.2,
-    replaysSessionSampleRate: 0.1,
-    replaysOnErrorSampleRate: 1.0,
   });
 
   // VitePress is an SPA: record each client-side navigation as its own page view.
