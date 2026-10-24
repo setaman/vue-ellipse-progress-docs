@@ -36,4 +36,4 @@ Project skills live in `.claude/skills/` (e.g. `vitepress`, recorded in `skills-
 
 ## Sentry
 
-Errors and page views (no session replay, no PII) go to Sentry (`.vitepress/theme/sentry.ts`, client-only). Env vars (see `.env.example`): `SENTRY_DSN` (enables it; no-op if empty), and for sourcemap upload at build `SENTRY_AUTH_TOKEN`, `SENTRY_ORG`, `SENTRY_PROJECT`. In CI these come from GitHub secrets/vars.
+Errors and page views (no session replay, no PII) go to Sentry (`.vitepress/theme/sentry.ts`, client-only). Env vars (see `.env.example`): `SENTRY_DSN` (enables it; no-op if empty), and for sourcemap upload at build `SENTRY_AUTH_TOKEN`, `SENTRY_ORG`, `SENTRY_PROJECT`. In CI these come from GitHub secrets.
