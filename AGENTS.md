@@ -29,3 +29,7 @@ No test suite. CI (`.github/workflows/build.yml`, on PRs) runs `npm ci`, type-ch
 
 - Prop docs pages follow a shared structure: frontmatter (`description`, `aside: false`, `keywords`), `# \`prop\``, a type/values/default table, prose, then demo components. Mirror an existing page in `guide/options/` when adding one.
 - Git flow: work on a feature branch (`feat/`, `fix/`, `chore/`) and open a PR; do not commit directly to `main` (it auto-deploys).
+
+## Skills
+
+Project skills live in `.claude/skills/` (e.g. `vitepress`, recorded in `skills-lock.json`). Always discover the available skills at the start of a task and read the ones relevant to it before making changes — for example, consult the `vitepress` skill when touching config, theme, Markdown or Vue-in-Markdown. Pick skills by task relevance. Treat them as reference, not gospel: the `vitepress` skill targets VitePress 2 alpha while this site runs 1.x, so verify version-specific advice against `package.json`.
