@@ -1,4 +1,9 @@
-import { defineConfig } from "vitepress";
+import { defineConfig, loadEnv } from "vitepress";
+import { sentryVitePlugin } from "@sentry/vite-plugin";
+
+// Loads .env locally; in CI the values come from process.env.
+const env = { ...loadEnv("", process.cwd(), ""), ...process.env };
+const sentryAuthToken = env.SENTRY_AUTH_TOKEN;
 
 const isDevMode = process.env.NODE_ENV !== "production";
 const basePath = isDevMode
@@ -13,6 +18,29 @@ export default defineConfig({
   description:
     "vue-ellipse-progress - Beautiful and smooth circular progress bars for your Vue app",
   lastUpdated: true,
+  vite: {
+    define: {
+      __SENTRY_DSN__: JSON.stringify(env.SENTRY_DSN ?? ""),
+      __SENTRY_RELEASE__: JSON.stringify(
+        env.SENTRY_RELEASE ?? env.GITHUB_SHA ?? "",
+      ),
+    },
+    build: { sourcemap: !!sentryAuthToken },
+    plugins: sentryAuthToken
+      ? [
+          sentryVitePlugin({
+            authToken: sentryAuthToken,
+            org: env.SENTRY_ORG,
+            project: env.SENTRY_PROJECT,
+            release: { name: env.SENTRY_RELEASE ?? env.GITHUB_SHA },
+            sourcemaps: {
+              filesToDeleteAfterUpload: [".vitepress/dist/**/*.map"],
+            },
+            telemetry: false,
+          }),
+        ]
+      : [],
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

@@ -33,3 +33,7 @@ No test suite. CI (`.github/workflows/build.yml`, on PRs) runs `npm ci`, type-ch
 ## Skills
 
 Project skills live in `.claude/skills/` (e.g. `vitepress`, recorded in `skills-lock.json`). Always discover the available skills at the start of a task and read the ones relevant to it before making changes — for example, consult the `vitepress` skill when touching config, theme, Markdown or Vue-in-Markdown. Pick skills by task relevance. Treat them as reference, not gospel: the `vitepress` skill targets VitePress 2 alpha while this site runs 1.x, so verify version-specific advice against `package.json`.
+
+## Sentry
+
+Errors, page views and session replay go to Sentry (`.vitepress/theme/sentry.ts`, client-only). Env vars (see `.env.example`): `SENTRY_DSN` (enables it; no-op if empty), and for sourcemap upload at build `SENTRY_AUTH_TOKEN`, `SENTRY_ORG`, `SENTRY_PROJECT`. In CI these come from GitHub secrets/vars.

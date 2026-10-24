@@ -6,6 +6,7 @@ import "./style.css";
 import Vep from "./components/Vep.vue";
 import CardLink from "./components/Base/CardLink.vue";
 import Home from "./Home.vue";
+import { initSentry } from "./sentry";
 import ExampleCode from "./components/ExampleCode/ExampleCode.vue";
 
 export default {
@@ -15,7 +16,8 @@ export default {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
     });
   },
-  enhanceApp({ app }) {
+  enhanceApp({ app, router }) {
+    initSentry(app, router);
     app.component(Vep.name ?? Vep.__name, Vep);
     app.component(CardLink.name ?? CardLink.__name, CardLink);
     app.component(ExampleCode.name ?? ExampleCode.__name, ExampleCode);
